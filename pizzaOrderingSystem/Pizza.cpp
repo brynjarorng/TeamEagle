@@ -15,9 +15,15 @@ Pizza::Pizza(int size, double price, Topping topping, string name){
 }
 
 Pizza();
-set_size(int size);
+set_size(int size){
+    this -> size = size
+}
 //Set the size of the pizza
-set_price(int price);
+set_price(int price){
+    this -> price = price;
+}
 //set the price of the pizza
-set_topping(Topping topping);
+set_topping(Topping topping){
+    this -> topping = topping;
+}
 //set the toppings of the pizza
