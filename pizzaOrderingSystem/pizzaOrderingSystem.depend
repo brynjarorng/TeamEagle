@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1511963763 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\main.cpp
+	<iostream>
+	"ManagerUI.h"
+
+1511963733 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\managerui.cpp
+
+1511963115 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\managerui.h
+	<iostream>
+
+1511963746 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\managerui.cpp
+	"ManagerUI.h"
+

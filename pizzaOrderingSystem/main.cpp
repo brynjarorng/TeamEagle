@@ -1,9 +1,13 @@
 #include <iostream>
+#include "ManagerUI.h"
 
 using namespace std;
 
 int main()
 {
-    cout << "Hello pizza!" << endl;
+    ManagerUI manager;
+
+    manager.manager_menu();
+
     return 0;
 }
