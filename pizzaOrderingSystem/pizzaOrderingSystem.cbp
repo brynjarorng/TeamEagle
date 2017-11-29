@@ -32,6 +32,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="ManagerUI.cpp" />
+		<Unit filename="ManagerUI.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
