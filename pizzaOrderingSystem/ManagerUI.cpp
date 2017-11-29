@@ -19,13 +19,13 @@ void ManagerUI::manager_menu() {
         print_submenu();
         break;
     case 't':
-        cout << "Topping" << endl;
+        toppings_submenu();
         break;
     case 'p':
-        cout << "Pizza size" << endl;
+        size_submenu();
         break;
     case 'm':
-        cout << "Make a new pizza" << endl;
+        pizza_submenu();
         break;
     default:
         cout << "Incorrect selection! \nPlease try again." << endl;
@@ -57,7 +57,7 @@ void ManagerUI::print_submenu() {
         break;
     default:
         cout << "Incorrect selection! \nPlease try again." << endl;
-        manager_menu();
+        print_submenu();
         break;
     }
 
@@ -65,14 +65,84 @@ void ManagerUI::print_submenu() {
 
 //enters a submenu for printing out all available Pizza info
 void ManagerUI::toppings_submenu() {
+     char selector = ' ';
 
+    cout << "Toppings:" << endl;
+    cout << "(a) Add toppings" << endl;
+    cout << "(r) Remove toppings" << endl;
+    cout << "(s) See all toppings" << endl;
+
+    cin >> selector;
+
+    switch(selector) {
+    case 'p':
+        cout << "Add toppings" << endl;
+        break;
+    case 't':
+        cout << "Remove toppings" << endl;
+        break;
+    case 's':
+        cout << "All toppings" << endl;
+        break;
+    default:
+        cout << "Incorrect selection! \nPlease try again." << endl;
+        toppings_submenu();
+        break;
+    }
 }
 //Gives the manager an option to add or remove toppings and their price
 void ManagerUI::size_submenu() {
+     char selector = ' ';
 
+    cout << "Sizes:" << endl;
+    cout << "(a) Add size" << endl;
+    cout << "(r) Remove size" << endl;
+    cout << "(s) See all sizes" << endl;
+
+    cin >> selector;
+
+    switch(selector) {
+    case 'a':
+        cout << "Add sizes" << endl;
+        break;
+    case 'r':
+        cout << "Remove sizes" << endl;
+        break;
+    case 's':
+        cout << "All sizes" << endl;
+        break;
+    default:
+        cout << "Incorrect selection! \nPlease try again." << endl;
+        size_submenu();
+        break;
+    }
 }
 //Allows the manager to create, remove or change available pizza sizes in inches
 void ManagerUI::pizza_submenu() {
+         char selector = ' ';
+
+    cout << "Pizzas:" << endl;
+    cout << "(a) Add a new pizza" << endl;
+    cout << "(r) Remove an old pizza" << endl;
+    cout << "(s) See all pizzas" << endl;
+
+    cin >> selector;
+
+    switch(selector) {
+    case 'a':
+        cout << "Add pizza" << endl;
+        break;
+    case 'r':
+        cout << "Remove pizza" << endl;
+        break;
+    case 's':
+        cout << "All pizzas" << endl;
+        break;
+    default:
+        cout << "Incorrect selection! \nPlease try again." << endl;
+        pizza_submenu();
+        break;
+    }
 
 }
 //Gives the manager an option to add or remove pizzas and their price
