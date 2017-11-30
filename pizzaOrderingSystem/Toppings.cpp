@@ -1,7 +1,7 @@
-#include "toppings.h"
-Toppings::Toppings()
-{
-	
+#include "Toppings.h"
+
+Toppings::Toppings(){
+
 }
 void Toppings::convert_string_cstring(string in)
 {
@@ -17,13 +17,13 @@ Toppings::Toppings(string name, double price)
 {
    	this -> price = price;
 	convert_string_cstring(name);
-	
+
 }
 string Toppings::get_name()
 {
 	return cname;
 }
-	
+
 ostream& operator << (ostream& outs, const Toppings& topping)
 {
 	outs << topping.cname << " " << topping.price << endl;
@@ -52,4 +52,3 @@ string Toppings::namegame()
 	}
 	return return_string;
 }
-
