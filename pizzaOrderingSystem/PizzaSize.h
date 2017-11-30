@@ -3,15 +3,14 @@
 
 
 
-class PizzaSize
-{
+class PizzaSize{
     public:
         PizzaSize();
         PizzaSize(int pizza_size, int price);
         void set_price(int price);
 
     private:
-        int pizza_size();
+        int pizza_size;
         int price;
 };
 
