@@ -1,10 +1,14 @@
-#include "MainUi.h"
+<<<<<<< HEAD
+#include <iostream>
+#include "ManagerUI.h"
 
-int main ()
+using namespace std;
+
+int main()
 {
-	MainUi main;
+    ManagerUI manager;
 
-	main.insert_topping();
-	
-	return 0;
+    manager.manager_menu();
+
+    return 0;
 }

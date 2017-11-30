@@ -9,9 +9,9 @@ class FstreamClass
 public:
 	FstreamClass();
 	~FstreamClass();
-	void print_list();
+	//void print_list();
 	void write_toppings(Toppings topping);
-	void read_toppings();
+	Toppings* read_toppings();
 	//write_sizes();
 	//read_sizes();
 	//write_pizzas();

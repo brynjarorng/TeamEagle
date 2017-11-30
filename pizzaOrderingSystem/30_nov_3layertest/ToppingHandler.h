@@ -14,7 +14,7 @@ class ToppingHandler
     protected:
 
     private:
-        fstreamClass repo;
+        FstreamClass repo;
 };
 
 #endif // TOPPINGHANDLER_H
