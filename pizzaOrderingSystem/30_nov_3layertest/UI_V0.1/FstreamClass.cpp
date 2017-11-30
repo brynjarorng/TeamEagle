@@ -15,7 +15,7 @@ FstreamClass::~FstreamClass()
 {
  //
 }
-void FstreamClass ::write_toppings(Toppings topping)
+void FstreamClass::write_toppings(Toppings topping)
 {
 	ofstream fout("toppings.dat", ios::binary|ios::app);
 	fout.write((char*)(&topping), sizeof(Toppings));

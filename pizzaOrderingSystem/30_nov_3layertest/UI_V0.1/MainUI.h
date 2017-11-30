@@ -1,7 +1,8 @@
 #ifndef MAINUI_H
 #define MAINUI_H
-#include "ManagerUI.h"
 
+#include "ManagerUI.h"
+#include "StdInput.h"
 
 class MainUI
 {
@@ -11,6 +12,8 @@ class MainUI
         //prints the welcome message, create console art?
         void print_selector();
         //prints all available login options
+        char lower(char instring);
+        //helper function to send input to to lower function
 
 
     private:
