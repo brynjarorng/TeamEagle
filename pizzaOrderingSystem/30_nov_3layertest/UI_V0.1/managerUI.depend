@@ -1,0 +1,90 @@
+# depslib dependency file v1.0
+1512049656 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\30_nov_3layertest\managerui\fstreamclass.cpp
+	"FstreamClass.h"
+
+1512049687 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\30_nov_3layertest\managerui\fstreamclass.h
+	<iostream>
+	"Toppings.h"
+	<vector>
+	<fstream>
+
+1512049801 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\30_nov_3layertest\managerui\toppings.h
+	<string>
+	<iostream>
+	<cstring>
+	<string>
+
+1512049597 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\30_nov_3layertest\managerui\main.cpp
+	<iostream>
+	"ManagerUI.h"
+
+1512049731 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\30_nov_3layertest\managerui\managerui.h
+	"ToppingHandler.h"
+	<iostream>
+
+1512049772 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\30_nov_3layertest\managerui\toppinghandler.h
+	"Toppings.h"
+	"FstreamClass.h"
+	<iostream>
+
+1512049709 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\30_nov_3layertest\managerui\mainui.cpp
+	"MainUI.h"
+
+1512049702 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\30_nov_3layertest\managerui\mainui.h
+
+1512050136 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\30_nov_3layertest\managerui\managerui.cpp
+	"ManagerUI.h"
+	<stdlib.h>
+
+1512049783 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\30_nov_3layertest\managerui\toppinghandler.cpp
+	"ToppingHandler.h"
+
+1512049820 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\30_nov_3layertest\managerui\toppings.cpp
+	"Toppings.h"
+
+1512049656 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\30_nov_3layertest\ui_v0.1\fstreamclass.cpp
+	"FstreamClass.h"
+
+1512049687 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\30_nov_3layertest\ui_v0.1\fstreamclass.h
+	<iostream>
+	"Toppings.h"
+	<vector>
+	<fstream>
+
+1512049801 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\30_nov_3layertest\ui_v0.1\toppings.h
+	<string>
+	<iostream>
+	<cstring>
+	<string>
+
+1512049783 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\30_nov_3layertest\ui_v0.1\toppinghandler.cpp
+	"ToppingHandler.h"
+
+1512049772 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\30_nov_3layertest\ui_v0.1\toppinghandler.h
+	"Toppings.h"
+	"FstreamClass.h"
+	<iostream>
+
+1512049820 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\30_nov_3layertest\ui_v0.1\toppings.cpp
+	"Toppings.h"
+
+1512051171 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\30_nov_3layertest\ui_v0.1\main.cpp
+	<iostream>
+	"MainUI.h"
+
+1512052601 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\30_nov_3layertest\ui_v0.1\mainui.h
+	"ManagerUI.h"
+
+1512051782 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\30_nov_3layertest\ui_v0.1\mainui.cpp
+	"MainUI.h"
+	<iostream>
+	"ManagerUI.h"
+
+1512051945 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\30_nov_3layertest\ui_v0.1\managerui.cpp
+	"ManagerUI.h"
+	<stdlib.h>
+
+1512050644 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\30_nov_3layertest\ui_v0.1\managerui.h
+	"ToppingHandler.h"
+	<iostream>
+
