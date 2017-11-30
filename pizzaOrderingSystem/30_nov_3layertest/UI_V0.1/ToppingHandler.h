@@ -1,7 +1,7 @@
 #ifndef TOPPINGHANDLER_H
 #define TOPPINGHANDLER_H
 
-
+#include <stdlib.h>
 #include "Toppings.h"
 #include "FstreamClass.h"
 #include <iostream>
