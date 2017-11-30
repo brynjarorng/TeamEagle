@@ -36,7 +36,8 @@ void ManagerUI::manager_menu() {
 }
 //Prints out the main selector page for the manager
 void ManagerUI::print_submenu() {
-     char selector = ' ';
+    system("CLS");
+    char selector = ' ';
 
     cout << "Information:" << endl;
     cout << "(t) Toppings" << endl;
@@ -65,7 +66,8 @@ void ManagerUI::print_submenu() {
 
 //enters a submenu for printing out all available Pizza info
 void ManagerUI::toppings_submenu() {
-     char selector = ' ';
+    system("CLS");
+    char selector = ' ';
 
     cout << "Toppings:" << endl;
     cout << "(a) Add toppings" << endl;
@@ -75,10 +77,10 @@ void ManagerUI::toppings_submenu() {
     cin >> selector;
 
     switch(selector) {
-    case 'p':
+    case 'a':
         cout << "Add toppings" << endl;
         break;
-    case 't':
+    case 'r':
         cout << "Remove toppings" << endl;
         break;
     case 's':
@@ -92,7 +94,8 @@ void ManagerUI::toppings_submenu() {
 }
 //Gives the manager an option to add or remove toppings and their price
 void ManagerUI::size_submenu() {
-     char selector = ' ';
+    system("CLS");
+    char selector = ' ';
 
     cout << "Sizes:" << endl;
     cout << "(a) Add size" << endl;
@@ -119,7 +122,8 @@ void ManagerUI::size_submenu() {
 }
 //Allows the manager to create, remove or change available pizza sizes in inches
 void ManagerUI::pizza_submenu() {
-         char selector = ' ';
+    system("CLS");
+    char selector = ' ';
 
     cout << "Pizzas:" << endl;
     cout << "(a) Add a new pizza" << endl;

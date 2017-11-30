@@ -1,13 +1,13 @@
 #include "Pizza.h"
 #include "Toppings.h"
 
-Pizza::Pizza(){
+inline Pizza::Pizza(){
     this -> price = 0;
     //this -> Topping = " ";  ///?????
     this -> name = " ";
 }
 
-Pizza::Pizza(double price, Toppings toppings, string name){
+inline Pizza::Pizza(double price, Toppings toppings, string name){
     this -> price = price;
     this -> toppings = toppings;
     this -> name = name;
