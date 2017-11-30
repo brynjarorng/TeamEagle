@@ -1,13 +1,21 @@
 #include "ToppingHandler.h"
-
+void ToppingHandler::operator =(Toppings* copy) 
+{
+	delete[] toppings_list;
+	toppings_list = copy;
+}
 ToppingHandler::ToppingHandler()
 {
-	//
+	toppings_list = new Toppings[0];
+ 
 }
 
 ToppingHandler::~ToppingHandler()
 {
-	delete[] toppings_list;
+	if (toppings_list != 0)
+	{
+		delete[] toppings_list;
+	}
 }
 
 void ToppingHandler::create_topping() {

@@ -11,6 +11,8 @@ class ToppingHandler
     public:
         ToppingHandler();
 		~ToppingHandler();
+		void operator =(Toppings* copy);
+		//Copy constructor
         void create_topping();
         void print_toppings();
     protected:

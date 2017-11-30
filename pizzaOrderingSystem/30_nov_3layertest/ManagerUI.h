@@ -1,6 +1,6 @@
 #ifndef MANAGERUI_H
 #define MANAGERUI_H
-//#include "ToppingHandler.h"
+#include "ToppingHandler.h"
 #include <iostream>
  using namespace std;
 
@@ -29,7 +29,7 @@ class ManagerUI
 
         *////Put in another class
     private:
-//        ToppingHandler handler;
+       ToppingHandler handler;
 };
 
 #endif // MANAGERUI_H

@@ -47,14 +47,14 @@ void ManagerUI::print_submenu() {
     cout << "(s) Pizza size" << endl;
 
     cin >> selector;
-
+	//ToppingHandler handler;
     switch(selector) {
     case 't':
-        cout << "Pizza's" << endl;
+          handler.print_toppings();
         break;
     case 'p':
-        cout << "Toppings" << endl;
-        //handler.print_toppings();
+        cout << "Print" << endl;		
+		
         break;
     case 's':
         cout << "size" << endl;
@@ -81,9 +81,8 @@ void ManagerUI::toppings_submenu() {
     switch(selector) {
     case 'a':
         cout << "Add toppings" << endl;
-        //handler.create_topping();
-		cout << "Kalli ____________";
-        break;
+        handler.create_topping();
+		break;
     case 'r':
         cout << "Remove toppings" << endl;
         break;
