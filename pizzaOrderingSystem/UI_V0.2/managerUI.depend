@@ -121,7 +121,7 @@
 	"ManagerUI.h"
 	"StdInput.h"
 
-1512065510 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v0.1\managerui.h
+1512072554 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v0.1\managerui.h
 	"ToppingHandler.h"
 	<iostream>
 	<cstdlib>
@@ -142,7 +142,7 @@
 	<iostream>
 	"ManagerUI.h"
 
-1512065566 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v0.1\managerui.cpp
+1512072605 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v0.1\managerui.cpp
 	"ManagerUI.h"
 
 1512062516 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v0.1\stdinput.cpp
