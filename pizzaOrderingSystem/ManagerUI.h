@@ -2,10 +2,11 @@
 #define MANAGERUI_H
 
 #include <iostream>
+#include <stdlib.h>
+
  using namespace std;
 
-class ManagerUI
-{
+class ManagerUI{
     public:
         ManagerUI();
         void manager_menu();
