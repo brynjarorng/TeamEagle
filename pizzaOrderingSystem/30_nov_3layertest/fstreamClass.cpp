@@ -45,6 +45,9 @@ Toppings* FstreamClass::read_toppings()
 
 //	return &topping_list;
 }
+int FstreamClass::get_topping_list_size() const {
+	return topping_list_size;
+}
 /*write_sizes();
 read_sizes();
 write_pizzas();

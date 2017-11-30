@@ -1,6 +1,6 @@
 #ifndef MANAGERUI_H
 #define MANAGERUI_H
-#include "ToppingHandler.h"
+//#include "ToppingHandler.h"
 #include <iostream>
  using namespace std;
 
@@ -8,6 +8,7 @@ class ManagerUI
 {
     public:
         ManagerUI();
+		~ManagerUI();
         void manager_menu();
         //Prints out the main selector page for the manager
         void print_submenu();
@@ -18,8 +19,6 @@ class ManagerUI
         //Allows the manager to create, remove or change available pizza sizes in inches
         void pizza_submenu();
         //Gives the manager an option to add or remove pizzas and their price
-
-
         /*
             void print_pizza_list();
             //Calls a function to print out the pizza list
@@ -30,9 +29,7 @@ class ManagerUI
 
         *////Put in another class
     private:
-        ToppingHandler handler;
-
-
+//        ToppingHandler handler;
 };
 
 #endif // MANAGERUI_H

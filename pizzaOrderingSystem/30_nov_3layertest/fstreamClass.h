@@ -12,6 +12,7 @@ public:
 	//void print_list();
 	void write_toppings(Toppings topping);
 	Toppings* read_toppings();
+	int get_topping_list_size() const;
 	//write_sizes();
 	//read_sizes();
 	//write_pizzas();

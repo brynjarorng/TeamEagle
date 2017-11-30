@@ -2,7 +2,10 @@
 ManagerUI::ManagerUI() {
 
 }
-
+ManagerUI::~ManagerUI()
+{
+	
+}
 void ManagerUI::manager_menu() {
     char selector = ' ';
 
@@ -51,7 +54,7 @@ void ManagerUI::print_submenu() {
         break;
     case 'p':
         cout << "Toppings" << endl;
-        handler.print_toppings();
+        //handler.print_toppings();
         break;
     case 's':
         cout << "size" << endl;
@@ -78,7 +81,8 @@ void ManagerUI::toppings_submenu() {
     switch(selector) {
     case 'a':
         cout << "Add toppings" << endl;
-        handler.create_topping();
+        //handler.create_topping();
+		cout << "Kalli ____________";
         break;
     case 'r':
         cout << "Remove toppings" << endl;
@@ -148,3 +152,4 @@ void ManagerUI::pizza_submenu() {
 
 }
 //Gives the manager an option to add or remove pizzas and their price
+
