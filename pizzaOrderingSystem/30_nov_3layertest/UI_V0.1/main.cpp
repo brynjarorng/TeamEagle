@@ -7,8 +7,7 @@ int main()
 {
     MainUI ui;
 
-    ui.print_welcome();
-    ui.print_selector();
+    ui.print_selector(0);
 
     return 0;
 }

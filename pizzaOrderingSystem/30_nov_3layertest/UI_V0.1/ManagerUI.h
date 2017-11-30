@@ -8,13 +8,12 @@
 #include "StdInput.h"
  using namespace std;
 
-class ManagerUI
-{
+class ManagerUI {
     public:
         ManagerUI();
-        void manager_menu();
+        void manager_menu(bool run);
         //Prints out the main selector page for the manager
-        void print_submenu();
+        void print_submenu(bool run);
         //enters a submenu for printing out all available Pizza info
         void toppings_submenu();
         //Gives the manager an option to add or remove toppings and their price
@@ -40,6 +39,7 @@ class ManagerUI
         *////Put in another class
     private:
        ToppingHandler handler;
+       bool run;
 };
 
 #endif // MANAGERUI_H
