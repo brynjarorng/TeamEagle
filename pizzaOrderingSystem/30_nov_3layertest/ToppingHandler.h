@@ -11,16 +11,14 @@ class ToppingHandler
     public:
         ToppingHandler();
 		~ToppingHandler();
-		void operator =(Toppings* copy);
-		//Copy constructor
         void create_topping();
         void print_toppings();
-    protected:
-
+        void operator =(Toppings* copy);
+		//Copy constructor
     private:
-        FstreamClass repo;
+        ToppingsRepo repo;
 		Toppings* toppings_list;
-		int toppings_list_size;
+		int toppings_list_count;
 };
 
 #endif // TOPPINGHANDLER_H

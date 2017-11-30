@@ -1,13 +1,9 @@
 #include "ToppingHandler.h"
-void ToppingHandler::operator =(Toppings* copy) 
-{
-	delete[] toppings_list;
-	toppings_list = copy;
-}
+
 ToppingHandler::ToppingHandler()
 {
 	toppings_list = new Toppings[0];
- 
+
 }
 
 ToppingHandler::~ToppingHandler()
@@ -26,14 +22,19 @@ void ToppingHandler::create_topping() {
 }
 
 void ToppingHandler::print_toppings() {
-	
-	toppings_list = repo.read_toppings();
+
+	toppings_list = repo.read();
 	//Retreive current toppings list from repository.
-	toppings_list_size = repo.get_topping_list_size();
-	for (int i = 0; i < toppings_list_size; i++) 
+	toppings_list_size = repo.get_list_count();
+	for (int i = 0; i < toppings_list_size; i++)
 	{
 		cout << toppings_list[i] << endl;
 	}
-	
+
 }
 
+void ToppingHandler::operator =(Toppings* copy)
+{
+	delete[] toppings_list;
+	toppings_list = copy;
+}
