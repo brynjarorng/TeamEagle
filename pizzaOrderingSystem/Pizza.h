@@ -1,7 +1,8 @@
 #ifndef PIZZA_H
 #define PIZZA_H
 
-#include "Topping.h"
+#include "Toppings.h"
+#include "PizzaSize.h"
 
 using namespace std;
 
@@ -10,19 +11,17 @@ class Pizza
 {
     public:
         Pizza();
-        Pizza(int size, double price, Topping topping, string name);    ///This??? or
-        set_size(int size);                             ///These three???
-        //Set the size of the pizza
-        set_price(int price);
+        Pizza(double price, Toppings toppings, string name);    ///This??? or
+        void set_price(int price);   ///These three???
         //set the price of the pizza
-        set_topping(Topping topping);
+        void set_topping(Toppings toppings);
         //set the toppings of the pizza
 
     private:
         string name;
         int pizza_size;
         double price;
-        Topping topping;
+        Toppings toppings;
 
 };
 

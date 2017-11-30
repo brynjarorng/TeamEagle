@@ -1,9 +1,10 @@
 #include "PizzaSize.h"
+using namespace std;
 
 PizzaSize::PizzaSize()
 {
     this -> price = 0;
-    this -> piza_size = 0;
+    this -> pizza_size = 0;
 }
 
 PizzaSize::PizzaSize(int pizza_size, int price){
@@ -11,6 +12,6 @@ PizzaSize::PizzaSize(int pizza_size, int price){
     this -> price = price;
 }
 
-void PizzaSize::set_size(int price){
+void PizzaSize::set_price(int price){
     this -> price = price;
 }
