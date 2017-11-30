@@ -17,4 +17,8 @@ void ToppingHandler::create_topping() {
     repo.write_topping(topping);
 }
 
+void ToppingHandler::print_toppings() {
+    repo.read_toppings();
+}
+
 

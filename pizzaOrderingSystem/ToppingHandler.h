@@ -10,7 +10,7 @@ class ToppingHandler
     public:
         ToppingHandler();
         void create_topping();
-
+        void print_toppings();
     protected:
 
     private:
