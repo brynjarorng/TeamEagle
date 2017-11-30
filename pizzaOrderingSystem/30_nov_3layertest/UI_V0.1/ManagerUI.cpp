@@ -1,5 +1,4 @@
 #include "ManagerUI.h"
-#include <stdlib.h>
 
 ManagerUI::ManagerUI() {
 
@@ -20,6 +19,7 @@ void ManagerUI::manager_menu() {
     cout << ": ";
 
     cin >> selector;
+    selector = lower(selector);
 
     switch(selector) {
     case 'i':
@@ -61,10 +61,15 @@ void ManagerUI::print_submenu() {
     cout << ": ";
 
     cin >> selector;
-	//ToppingHandler handler;
+    selector = lower(selector);
+
     switch(selector) {
     case 't':
-          handler.print_toppings();
+        system("CLS");
+        handler.print_toppings();
+        cout << "------------------------------------------------------" << endl;
+        system("PAUSE");
+        print_submenu();
         break;
     case 'p':
         cout << "Print" << endl;
@@ -101,6 +106,7 @@ void ManagerUI::toppings_submenu() {
     cout << ": ";
 
     cin >> selector;
+    selector = lower(selector);
 
     switch(selector) {
     case 'a':
@@ -139,6 +145,7 @@ void ManagerUI::size_submenu() {
     cout << ": ";
 
     cin >> selector;
+    selector = lower(selector);
 
     switch(selector) {
     case 'a':
@@ -176,6 +183,7 @@ void ManagerUI::pizza_submenu() {
     cout << ": ";
 
     cin >> selector;
+    selector = lower(selector);
 
     switch(selector) {
     case 'a':
@@ -208,7 +216,7 @@ void ManagerUI::terminate(){
 
     cout << "Are you sure you want to quit (y/n)? ";
         cin >> cont;
-        cont = tolower(cont);
+        cont = lower(cont);
 
     if(cont == 'y'){
         cout << "Good Bye!" << endl;
@@ -226,3 +234,11 @@ void ManagerUI::ret_to_main(){
     ui.print_welcome();
     ui.print_selector();
 }
+//returns to the User selection
+
+char ManagerUI::lower(char instring) {
+    StdInput s;
+    instring = s.to_lower_case(instring);
+    return instring;
+}
+//calls a function to put input to lower case

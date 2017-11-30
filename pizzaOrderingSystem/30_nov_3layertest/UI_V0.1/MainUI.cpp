@@ -27,6 +27,7 @@ void MainUI::print_selector()
     cout << ": ";
 
     cin >> selector;
+    selector = lower(selector);
 
     switch(selector) {
     case 'm':
@@ -46,4 +47,10 @@ void MainUI::print_selector()
         print_selector();
         break;
     }
+}
+
+char MainUI::lower(char instring) {
+    StdInput s;
+    instring = s.to_lower_case(instring);
+    return instring;
 }

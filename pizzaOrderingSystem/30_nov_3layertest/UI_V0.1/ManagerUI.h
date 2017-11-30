@@ -5,6 +5,7 @@
 #include <iostream>
 #include <cstdlib>
 #include "MainUI.h"
+#include "StdInput.h"
  using namespace std;
 
 class ManagerUI
@@ -27,6 +28,7 @@ class ManagerUI
         //returns to the manager selector page
         void terminate();
         //kills the program
+        char lower(char instring);
         /*
             void print_pizza_list();
             //Calls a function to print out the pizza list
