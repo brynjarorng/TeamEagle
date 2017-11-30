@@ -6,14 +6,17 @@ ManagerUI::ManagerUI() {
 }
 
 void ManagerUI::manager_menu() {
-    system("CLS");
     char selector = ' ';
+
+    system("CLS");
 
     cout << "Menu" << endl;
     cout << "(i) Pizza information" << endl;
     cout << "(t) Toppings" << endl;
     cout << "(p) Pizza size" << endl;
     cout << "(m) Make a new pizza" << endl;
+    cout << "(r) Return to User selection" << endl;
+    cout << "(q) Terminate program" << endl;
     cout << ": ";
 
     cin >> selector;
@@ -31,6 +34,12 @@ void ManagerUI::manager_menu() {
     case 'm':
         pizza_submenu();
         break;
+    case 'r':
+        ret_to_main();
+        break;
+    case 'q':
+        terminate();
+        break;
     default:
         cout << "Incorrect selection! \nPlease try again." << endl;
         manager_menu();
@@ -47,6 +56,8 @@ void ManagerUI::print_submenu() {
     cout << "(t) Toppings" << endl;
     cout << "(p) Pizzas" << endl;
     cout << "(s) Pizza size" << endl;
+    cout << "(b) Back to menu" << endl;
+    cout << "(q) Terminate program" << endl;
     cout << ": ";
 
     cin >> selector;
@@ -61,6 +72,12 @@ void ManagerUI::print_submenu() {
         break;
     case 's':
         cout << "size" << endl;
+        break;
+    case 'b':
+        manager_menu();
+        break;
+    case 'q':
+        terminate();
         break;
     default:
         cout << "Incorrect selection! \nPlease try again." << endl;
@@ -79,6 +96,8 @@ void ManagerUI::toppings_submenu() {
     cout << "(a) Add toppings" << endl;
     cout << "(r) Remove toppings" << endl;
     cout << "(s) See all toppings" << endl;
+    cout << "(b) Back to menu" << endl;
+    cout << "(q) Terminate program" << endl;
     cout << ": ";
 
     cin >> selector;
@@ -95,6 +114,12 @@ void ManagerUI::toppings_submenu() {
         cout << "All toppings" << endl;
         handler.print_toppings();
         break;
+    case 'b':
+        manager_menu();
+        break;
+    case 'q':
+        terminate();
+        break;
     default:
         cout << "Incorrect selection! \nPlease try again." << endl;
         toppings_submenu();
@@ -109,6 +134,7 @@ void ManagerUI::size_submenu() {
     cout << "Sizes:" << endl;
     cout << "(a) Add size" << endl;
     cout << "(r) Remove size" << endl;
+    cout << "(b) Back to menu" << endl;
     cout << "(s) See all sizes" << endl;
     cout << ": ";
 
@@ -123,6 +149,12 @@ void ManagerUI::size_submenu() {
         break;
     case 's':
         cout << "All sizes" << endl;
+        break;
+    case 'q':
+        terminate();
+        break;
+    case 'b':
+        manager_menu();
         break;
     default:
         cout << "Incorrect selection! \nPlease try again." << endl;
@@ -139,6 +171,8 @@ void ManagerUI::pizza_submenu() {
     cout << "(a) Add a new pizza" << endl;
     cout << "(r) Remove an old pizza" << endl;
     cout << "(s) See all pizzas" << endl;
+    cout << "(b) Back to menu" << endl;
+    cout << "(q) Terminate program" << endl;
     cout << ": ";
 
     cin >> selector;
@@ -153,6 +187,12 @@ void ManagerUI::pizza_submenu() {
     case 's':
         cout << "All pizzas" << endl;
         break;
+    case 'b':
+        manager_menu();
+        break;
+    case 'q':
+        terminate();
+        break;
     default:
         cout << "Incorrect selection! \nPlease try again." << endl;
         pizza_submenu();
@@ -162,3 +202,27 @@ void ManagerUI::pizza_submenu() {
 }
 //Gives the manager an option to add or remove pizzas and their price
 
+void ManagerUI::terminate(){
+    system("CLS");
+    char cont;
+
+    cout << "Are you sure you want to quit (y/n)? ";
+        cin >> cont;
+        cont = tolower(cont);
+
+    if(cont == 'y'){
+        cout << "Good Bye!" << endl;
+        exit(0);
+    }
+    print_submenu();
+    //Double check if user wants to quit, else runs the
+    //manager UI again
+}
+
+void ManagerUI::ret_to_main(){
+    MainUI ui;
+
+    system("CLS");
+    ui.print_welcome();
+    ui.print_selector();
+}

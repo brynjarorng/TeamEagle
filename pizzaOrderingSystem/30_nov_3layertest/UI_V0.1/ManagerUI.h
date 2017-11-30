@@ -3,6 +3,8 @@
 
 #include "ToppingHandler.h"
 #include <iostream>
+#include <cstdlib>
+#include "MainUI.h"
  using namespace std;
 
 class ManagerUI
@@ -19,6 +21,12 @@ class ManagerUI
         //Allows the manager to create, remove or change available pizza sizes in inches
         void pizza_submenu();
         //Gives the manager an option to add or remove pizzas and their price
+        void ret_to_main();
+        //returns to the main menu selector
+        void ret_to_manager();
+        //returns to the manager selector page
+        void terminate();
+        //kills the program
         /*
             void print_pizza_list();
             //Calls a function to print out the pizza list
