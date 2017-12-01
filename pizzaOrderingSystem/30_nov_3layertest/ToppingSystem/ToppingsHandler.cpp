@@ -7,30 +7,54 @@ ToppingsHandler::ToppingsHandler()
 
 ToppingsHandler::~ToppingsHandler()
 {
-	if (toppings_list != 0)
-	{
 		delete[] toppings_list;
-	}
 }
 
-void ToppingsHandler::create_toppings() {
+void ToppingsHandler::create_toppings()
+{
     Toppings topping;
-	
+
     cin >> topping;
 
     repo.write(topping);
 }
 
-void ToppingsHandler::print_toppings() {
-
+void ToppingsHandler::print_toppings()
+{
 	toppings_list = repo.read();
 	//Retreive current toppings list from repository.
 	toppings_list_count = repo.get_list_count();
-	for (int i = 0; i < toppings_list_count; i++)
-	{
+	for (int i = 0; i < toppings_list_count; i++) {
 		cout << toppings_list[i] << endl;
 	}
+}
 
+bool ToppingsHandler::validate(string topping_name)
+{
+    string name;
+    toppings_list = repo.read();
+    toppings_list_count = repo.get_list_count();
+    for(int i = 0; i < toppings_list_count; i++) {
+        name = toppings_list[i].name;
+        if(name == topping_name) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+Topping ToppingsHandler::get_topping(string topping_name)
+{
+    string name;
+    toppings_list = repo.read();
+    toppings_list_count = repo.get_list_count();
+    for(int i = 0; i < toppings_list_count; i++) {
+        name = toppings_list[i].name;
+        if(name == topping_name) {
+            return toppings_list[i];
+        }
+    }
 }
 
 void ToppingsHandler::operator =(Toppings* copy)

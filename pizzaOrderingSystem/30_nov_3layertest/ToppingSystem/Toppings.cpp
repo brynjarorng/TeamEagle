@@ -28,6 +28,7 @@ double Toppings::get_price()
 {
 	return this->price;
 }
+
 ostream& operator << (ostream& outs, const Toppings& topping)
 {
 	outs << topping.cname  << " " << topping.price << endl;

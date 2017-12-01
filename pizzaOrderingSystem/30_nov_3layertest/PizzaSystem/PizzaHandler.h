@@ -19,6 +19,7 @@ private:
     PizzaRepo pizzarepo;
     Pizza* pizza_list;
     int pizza_list_count;
+    ToppingsHandler toppingshandler;
 };
 
 
