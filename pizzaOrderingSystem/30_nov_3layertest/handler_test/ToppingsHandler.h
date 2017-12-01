@@ -1,10 +1,12 @@
-#ifndef TOPPINGSHANDLER_H
-#define TOPPINGSHANDLER_H
+#ifndef TOPPINGHANDLER_H
+#define TOPPINGHANDLER_H
+
+#include "Toppings.h"
 #include "ToppingsRepo.h"
-#include <string.h>
+#include <iostream>
 using namespace std;
 
-class ToppingsHandler
+class ToppingsHandler : public ToppingsRepo
 {
     public:
         ToppingsHandler();
@@ -19,22 +21,11 @@ class ToppingsHandler
         void operator =(Toppings* copy);
 		//First delete memory assigned to the private pointer of type Toppings,
 		//and then make it equal to copy.
-		bool validate(string topping_name);
-		//Takes a name of a topping and iterates through the list of toppings
-		//from the repo and returns true if it matches a valid topping name.
-        Toppings get_topping(string topping_name);
-        //Takes a name of a topping and iterates through the list of toppings
-        //from the repo and returns the topping of a matching name.
-		///NOTE:SOLVE LATER PROBLEM WHEN TOPPING DOES NOT EXIST.
-		//TEMPORARY SOLUTION; MAKE INSTANCE OF THE RETURNED TOPPING SOME
-		//STATIC VALUE.
     private:
-        ToppingsRepo repo;
-		//Access to the data layer is through ToppingsRepo.
-		Toppings* toppings_list;
+  		Toppings* toppings_list;
 		//The list of toppings that recevies information from the ToppingsRepo.
 		int toppings_list_count;
 		//Size of the above list.
 };
 
-#endif // TOPPINGSHANDLER_H
+#endif // TOPPINGHANDLER_H

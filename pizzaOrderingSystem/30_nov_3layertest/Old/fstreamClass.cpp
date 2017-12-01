@@ -13,7 +13,7 @@ FstreamClass::FstreamClass()
 }
 FstreamClass::~FstreamClass()
 {
- //
+	//
 }
 void FstreamClass ::write_toppings(Toppings topping)
 {
