@@ -42,6 +42,18 @@ ManagerUI::ManagerUI(string type, string option1, string option2, string option3
     this -> option5 = option5;
 }
 
+ManagerUI::ManagerUI(string type, string option1, string option2, string option3, string option4, string option5, string option6) {
+    run = 0;
+    options = 5;
+    this -> type = type;
+    this -> option1 = option1;
+    this -> option2 = option2;
+    this -> option3 = option3;
+    this -> option4 = option4;
+    this -> option5 = option5;
+    this -> option6 = option6;
+}
+
 int ManagerUI::menuUI(bool run){
 
 switch (options){
@@ -126,6 +138,34 @@ switch (options){
         cout << ("(3) ") << option3 << endl;
         cout << ("(4) ") << option4 << endl;
         cout << ("(5) ") << option5 << endl;
+        cout << "(r) Return to User selection" << endl;
+        cout << "(q) Terminate program" << endl;
+
+        if(run) {
+            cout << "Incorrect input" << endl;
+        }
+
+        cout << ": ";
+
+        cin >> selector;
+        selector = lower(selector);
+
+        ret_val = selector_func();
+        //Sends false to incorrect input (0) and returns
+        //interpretation of the user input
+
+        break;
+
+    case 6:
+        system("CLS");
+
+        cout << "----" << type << "----" << endl;
+        cout << ("(1) ") << option1 << endl;
+        cout << ("(2) ") << option2 << endl;
+        cout << ("(3) ") << option3 << endl;
+        cout << ("(4) ") << option4 << endl;
+        cout << ("(5) ") << option5 << endl;
+        cout << ("(6) ") << option6 << endl;
         cout << "(r) Return to User selection" << endl;
         cout << "(q) Terminate program" << endl;
 

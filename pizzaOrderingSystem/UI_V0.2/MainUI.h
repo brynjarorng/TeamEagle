@@ -28,6 +28,10 @@ class MainUI
         //to pizza_creator(), info_creator() and topping_creator();
         void baker_ui();
         //The baker UI, nothing less, nothing more (maybe a little bit more ;) )
+        void phone_status_ui(int ret_val);
+        void phone_selector(bool selector);
+
+
 
 
     private:

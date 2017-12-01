@@ -11,6 +11,9 @@ using namespace std;
     //UI var. for Manager
     ManagerUI baker_menu("Baker:", "Toggle in oven", "Toggle ready");
     //Baker UI
+    ManagerUI phone_status_menu("Get status of:", "Current orders", "Pizas", "Toppings");
+    ManagerUI phone_menu("Phone orders: ", "New order", "Get all orders", "status");
+    //Telephone clerk
     //global decl. of UI elements
 
 MainUI::MainUI()
@@ -50,9 +53,8 @@ void MainUI::print_selector(bool run) {
         break;
     case 't':
         system("CLS");
-        cout << "Work in progress: TELEPHONE!" << endl;
-        system("PAUSE");
-        print_selector(0);
+        cout << "Work in progress:" << endl;
+        phone_selector(selector);
         break;
     case 's':
         system("CLS");
@@ -94,7 +96,7 @@ void MainUI::terminate(){
     //manager UI again
 }
 
-void MainUI::manager_selector(bool selector) {
+void MainUI::manager_selector(bool selectorn) {
     ret_val = manager.menuUI(0);
 
     if(ret_val == 99) {
@@ -248,3 +250,60 @@ void MainUI::baker_ui(){
         ///Toggle ready
     }
 }
+
+
+void MainUI::phone_selector(bool selector) {
+    ret_val = phone_menu.menuUI(0);
+
+    if(ret_val == 99) {
+        print_selector(0);
+        ///Returns to User selector
+
+    } else if(ret_val == 1) {
+        ret_val = phone_menu.menuUI(0);
+        cout << "New order function" << endl;
+        system("PAUSE");
+        phone_selector(1);
+        ///New order menu
+
+    } else if(ret_val == 2) {
+        ret_val = phone_menu.menuUI(0);
+        cout << "Get all current orders" << endl;
+        system("PAUSE");
+        phone_selector(0);
+        ///To topping menu
+
+    } else if(ret_val == 3) {
+        ret_val = phone_menu.menuUI(0);
+        phone_status_ui(ret_val);
+        phone_selector(0);
+        ///To size menu
+    }
+
+}
+
+void MainUI::phone_status_ui(int ret_val) {
+    if(ret_val == 99) {
+        phone_selector(0);
+        //Go one level up, to manager menu
+    } else if(ret_val == 1) {
+        system("CLS");
+        cout << "Current orders: missing function call" << endl;
+        system("PAUSE");
+        phone_status_ui(0);
+        //Add toppings
+    } else if(ret_val == 2) {
+        system("CLS");
+        cout << "Pizza list: missing function call" << endl;
+        system("PAUSE");
+        phone_status_ui(0);
+        //remove toppings
+    } else if(ret_val == 3) {
+        system("CLS");
+        cout << "Topping list: missing function call" << endl;
+        system("PAUSE");
+        phone_status_ui(0);
+        //see all toppings
+    }
+}
+

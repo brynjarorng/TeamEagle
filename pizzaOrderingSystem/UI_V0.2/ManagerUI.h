@@ -11,6 +11,7 @@
 class ManagerUI {
     public:
         ManagerUI();
+        ManagerUI(string type, string option1, string option2, string option3, string option4, string option5, string option6);
         ManagerUI(string type, string option1, string option2, string option3, string option4, string option5);
         ManagerUI(string type, string option1, string option2, string option3, string option4);
         ManagerUI(string type, string option1, string option2, string option3);
@@ -31,7 +32,7 @@ class ManagerUI {
         ToppingHandler handler;
         bool run;
         int options;
-        string option1, option2, option3, option4, option5;
+        string option1, option2, option3, option4, option5, option6;
         string type;            ///type of menu
         char selector;          ///select the appropriate option
         int ret_val;            ///Val to return to indicate what option was chosen
