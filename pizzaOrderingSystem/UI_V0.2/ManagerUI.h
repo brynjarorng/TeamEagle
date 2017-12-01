@@ -14,6 +14,7 @@ class ManagerUI {
         ManagerUI(string type, string option1, string option2, string option3, string option4, string option5);
         ManagerUI(string type, string option1, string option2, string option3, string option4);
         ManagerUI(string type, string option1, string option2, string option3);
+        ManagerUI(string type, string option1, string option2);
         int menuUI(bool run);
         //Calls the main UI
         void ret_to_main();

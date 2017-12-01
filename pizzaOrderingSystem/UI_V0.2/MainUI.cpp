@@ -8,6 +8,9 @@ using namespace std;
     ManagerUI topping_menu("Toppings:", "Add toppings", "Remove toppings", "See all toppings");
     ManagerUI info_menu("Info:", "Toppings", "Pizzas", "Pizza sizes");
     ManagerUI new_pizza_menu("Create a new pizza:", "Create pizza", "Remove pizza", "See all pizas");
+    //UI var. for Manager
+    ManagerUI baker_menu("Baker:", "Toggle in oven", "Toggle ready");
+    //Baker UI
     //global decl. of UI elements
 
 MainUI::MainUI()
@@ -42,10 +45,8 @@ void MainUI::print_selector(bool run) {
             ///The manager selection UI page
         break;
     case 'b':
-        system("CLS");
-        cout << "Work in progress: BAKER!" << endl;
-        system("PAUSE");
-        print_selector(0);
+            baker_ui();
+            ///The baker menu page
         break;
     case 't':
         system("CLS");
@@ -94,27 +95,30 @@ void MainUI::terminate(){
 }
 
 void MainUI::manager_selector(bool selector) {
-ret_val = manager.menuUI(0);
-        if(ret_val == 99) {
-            print_selector(0);
-            ///Returns to User selector
+    ret_val = manager.menuUI(0);
 
-        } else if(ret_val == 1) {
-            ret_val = info_menu.menuUI(0);
-            info_creator(ret_val);
-            ///To pizza info menu
+    if(ret_val == 99) {
+        print_selector(0);
+        ///Returns to User selector
 
-        } else if(ret_val == 2) {
-            ret_val = topping_menu.menuUI(0);
-            topping_creator(ret_val);
-            ///To topping menu
+    } else if(ret_val == 1) {
+        ret_val = info_menu.menuUI(0);
+        info_creator(ret_val);
+        ///To pizza info menu
 
-        } else if(ret_val == 3) {
-            ///To size menu
+    } else if(ret_val == 2) {
+        ret_val = topping_menu.menuUI(0);
+        topping_creator(ret_val);
+        ///To topping menu
 
-        } else if(ret_val == 4) {
-            ///To create a new pizza menu
-        }
+    } else if(ret_val == 3) {
+        ///To size menu
+
+    } else if(ret_val == 4) {
+        ret_val = new_pizza_menu.menuUI(0);
+        pizza_creator(ret_val);
+        ///To create a new pizza menu
+    }
 
 
 }
@@ -146,18 +150,27 @@ void MainUI::info_creator(int ret_val) {
 }
 
 void MainUI::topping_creator(int ret_val) {
+    char cont = 0;
     if(ret_val == 99) {
         manager_selector(0);
         //Go one level up, to manager menu
     } else if(ret_val == 1) {
         cout << "Add toppings" << endl;
-        handler.create_topping();
+        do{
+            handler.create_topping();
+            do{
+                cout << "Do you want to input more Toppings (y/n)? ";
+                cin >> cont;
+                cont = lower(cont);
+            } while(cont == 'y' && cont == 'n');
+        } while(cont == 'y');
         manager_selector(0);
         //Add toppings
     } else if(ret_val == 2) {
         system("CLS");
-        cout << "remove toppings";
+        cout << "remove toppings" << endl;
         system("PAUSE");
+        manager_selector(0);
         //remove toppings
     } else if(ret_val == 3) {
         system("CLS");
@@ -187,9 +200,51 @@ void MainUI::pizza_creator(int ret_val) {
     } else if(ret_val == 3) {
         system("CLS");
         cout << "See all pizzas: Missing handler" << endl;
-        handler.print_toppings();
         system("PAUSE");
         manager_selector(0);
         //see all toppings
+    }
+}
+
+void MainUI::baker_ui(){
+    char cont;
+    system("CLS");
+
+    cout << "Print out list of pizzas her" << endl;
+
+    ret_val = baker_menu.menuUI(0);
+
+    if(ret_val == 99) {
+        print_selector(0);
+        ///Returns to User selector
+
+    } else if(ret_val == 1) {
+        ///MISSING FUNCTION CALLS
+        do{
+            do{
+                system("CLS");
+                cout << "Print out list of pizzas her" << endl;
+                cout << "Do you want to toggle another pizza in oven (y/n)? ";
+                cin >> cont;
+                cont = lower(cont);
+            } while(cont == 'y' && cont == 'n');
+        } while(cont == 'y');
+        baker_ui();
+        ///Toggle in oven
+
+    } else if(ret_val == 2) {
+        ///MISSING FUNCTION CALLS
+        do{
+            do{
+                system("CLS");
+                cout << "Print out list of pizzas her" << endl;
+                cout << "Do you want to toggle more pizzas ready (y/n)? ";
+                cin >> cont;
+                cont = lower(cont);
+            } while(cont == 'y' && cont == 'n');
+        } while(cont == 'y');
+
+        baker_ui();
+        ///Toggle ready
     }
 }
