@@ -14,10 +14,13 @@ class MainUI
         //helper function to send input to to lower function
         void terminate();
         //kills the program
+        void toppingCreator(int ret_val);
+
 
 
     private:
         bool run;
+        int ret_val;
 };
 
 #endif // MAINUI_H

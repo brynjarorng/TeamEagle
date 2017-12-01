@@ -1,23 +1,49 @@
 #include "ManagerUI.h"
 
 ManagerUI::ManagerUI() {
-    run = 0;
+
 }
 
-int ManagerUI::menuUI(){
+ManagerUI::ManagerUI(string type, string option1, string option2, string option3) {
+    run = 0;
+    options = 3;
+    this -> type = type;
+    this -> option1 = option1;
+    this -> option2 = option2;
+    this -> option3 = option3;
+}
+
+ManagerUI::ManagerUI(string type, string option1, string option2, string option3, string option4) {
+    run = 0;
+    options = 4;
+    this -> type = type;
+    this -> option1 = option1;
+    this -> option2 = option2;
+    this -> option3 = option3;
+    this -> option4 = option4;
+}
+
+ManagerUI::ManagerUI(string type, string option1, string option2, string option3, string option4, string option5) {
+    run = 0;
+    options = 5;
+    this -> type = type;
+    this -> option1 = option1;
+    this -> option2 = option2;
+    this -> option3 = option3;
+    this -> option4 = option4;
+    this -> option5 = option5;
+}
+
+int ManagerUI::menuUI(bool run){
 
 switch (options){
-    string type;    ///type of menu
-    char selector;  ///select the appropriate option
-    string optionXX ///text to output as an option
-    int ret_val = 0;///Val to return to indicate what option was chosen
-
-
     case 3:
-        cout << type << endl;
-        cout << option1 << endl;
-        cout << option2 << endl;
-        cout << option3 << endl;
+        system("CLS");
+
+        cout << "----" << type << "----" << endl;
+        cout << ("(1) ") << option1 << endl;
+        cout << ("(2) ") << option2 << endl;
+        cout << ("(3) ") << option3 << endl;
         cout << "(r) Return to User selection" << endl;
         cout << "(q) Terminate program" << endl;
 
@@ -29,15 +55,21 @@ switch (options){
 
         cin >> selector;
         selector = lower(selector);
+
+        ret_val = selector_func();
+        //Sends false to incorrect input (0) and returns
+        //interpretation of the user input
 
         break;
 
     case 4:
-        cout << type << endl;
-        cout << option1 << endl;
-        cout << option2 << endl;
-        cout << option3 << endl;
-        cout << option4 << endl;
+        system("CLS");
+
+        cout << "----" << type << "----" << endl;
+        cout << ("(1) ") << option1 << endl;
+        cout << ("(2) ") << option2 << endl;
+        cout << ("(3) ") << option3 << endl;
+        cout << ("(4) ") << option4 << endl;
         cout << "(r) Return to User selection" << endl;
         cout << "(q) Terminate program" << endl;
 
@@ -49,15 +81,21 @@ switch (options){
 
         cin >> selector;
         selector = lower(selector);
+
+        ret_val = selector_func();
+        //Sends false to incorrect input (0) and returns
+        //interpretation of the user input
         break;
 
     case 5:
-        cout << type << endl;
-        cout << option1 << endl;
-        cout << option2 << endl;
-        cout << option3 << endl;
-        cout << option4 << endl;
-        cout << option5 << endl;
+        system("CLS");
+
+        cout << "----" << type << "----" << endl;
+        cout << ("(1) ") << option1 << endl;
+        cout << ("(2) ") << option2 << endl;
+        cout << ("(3) ") << option3 << endl;
+        cout << ("(4) ") << option4 << endl;
+        cout << ("(5) ") << option5 << endl;
         cout << "(r) Return to User selection" << endl;
         cout << "(q) Terminate program" << endl;
 
@@ -69,10 +107,15 @@ switch (options){
 
         cin >> selector;
         selector = lower(selector);
+
+        ret_val = selector_func();
+        //Sends false to incorrect input (0) and returns
+        //interpretation of the user input
+
         break;
 }
 
-
+    return ret_val;
 
 }
 
@@ -91,7 +134,7 @@ void ManagerUI::terminate(){
         cout << "Good Bye!" << endl;
         exit(0);
     }
-    list_submenu(0);
+    menuUI(0);
     //Double check if user wants to quit, else runs the
     //manager UI again
 }
@@ -111,12 +154,11 @@ char ManagerUI::lower(char instring) {
 }
 //calls a function to put input to lower case
 
-int selector_func(bool selector) {
-    if(selector > 47 + option && selector < 58){
+int ManagerUI::selector_func() {
+    if((selector > 47 + options) && (selector < 58)){
         menuUI(1);
     }
     //if number inputed is too high send back to main function
-
 switch(selector) {
     case '1':
         ret_val = 1;
@@ -134,7 +176,7 @@ switch(selector) {
         ret_val = 5;
         break;
     case 'r':
-        ret_to_main();
+        ret_val = 99;
         break;
     case 'q':
         terminate();
@@ -143,5 +185,6 @@ switch(selector) {
         menuUI(1);
         break;
 
+}
     return ret_val;
 }
