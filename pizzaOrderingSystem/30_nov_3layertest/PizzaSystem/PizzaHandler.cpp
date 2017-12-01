@@ -27,9 +27,8 @@ void PizzaHandler::create_menu_pizza()
     string toppingname;
     for(int i = 0; i < get_toppingcount(); i++) {
         cin >> toppingname;
-        Toppings topping;
-        if(topping.validate()){
-            pizza.add_topping(topping.get_topping(toppingname));
+        if(toppingshandler.validate(toppingname){
+            pizza.add_topping(toppingshandler.get_topping(toppingname));
         }
         else {
             cout << "Topping does not exist in database";
@@ -37,7 +36,6 @@ void PizzaHandler::create_menu_pizza()
     }
 
     pizzarepo.write(pizza);
-
 }
 
 Pizza PizzaHandler::create_pizza()
@@ -47,9 +45,8 @@ Pizza PizzaHandler::create_pizza()
     string toppingname;
     for(int i = 0; i < get_toppingcount(); i++) {
         cin >> toppingname;
-        Toppings topping;
-        if(topping.validate()){
-            pizza.add_topping(topping.get_topping(toppingname));
+        if(toppingshandler.validate(toppingname)){
+            pizza.add_topping(toppingshandler.get_topping(toppingname));
         }
         else {
             cout << "Topping does not exist in database";

@@ -11,12 +11,12 @@ class Toppings
 {
 public:
 	Toppings();
-	//Initializes cname[0] = '\0' and price to 0.0. 
+	//Initializes cname[0] = '\0' and price to 0.0.
 	Toppings(string name, double price);
 	//Sets this ->price to price, and converts name to a corresponding
 	//charachter array.
 	//string namegame();
-	
+
 	friend ostream& operator << (ostream& outs, const Toppings& topping);
 	//Outstreams name of topping followed by a whitespace and then the price
 	//of the topping.
@@ -27,8 +27,8 @@ public:
 	//Returns the name of topping
 	double get_price();
 private:
-	static const int CNAME_SIZE = 21;
-	char cname[CNAME_SIZE];	//Name of topping.
+	static const int NAME_SIZE = 21;
+	char name[NAME_SIZE];	//Name of topping.
 	double price;
 	void append_null(int index);
 	//Postcondtion: cname[index - 1] is now '\0'

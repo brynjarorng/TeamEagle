@@ -25,6 +25,7 @@ private:
     char name[MAX_NAME_SIZE];
     Toppings topping[MAX_TOPPINGS];
     int toppingcount;
+    enum status = {pending, baking, ready};
 };
 
 #endif // PIZZA_H
