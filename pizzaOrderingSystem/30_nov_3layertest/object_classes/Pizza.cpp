@@ -36,7 +36,7 @@ istream& operator >> (istream& ins, Pizza& pizza)
         }
 
         pizza.toppingcount++;
-        cin >> topping >> 0;
+        ins >> topping >> 0;
     }
     // Temp solution, takes only topping name with default price 0.
 
