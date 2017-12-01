@@ -24,7 +24,10 @@ class MainUI
         //Function that calls all required handler
         //functions to create, (remove) or see all pizzas
         void manager_selector(bool selector);
-
+        //First branch under the login  screen, points
+        //to pizza_creator(), info_creator() and topping_creator();
+        void baker_ui();
+        //The baker UI, nothing less, nothing more (maybe a little bit more ;) )
 
 
     private:
