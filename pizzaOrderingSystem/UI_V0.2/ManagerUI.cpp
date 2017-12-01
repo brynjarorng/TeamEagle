@@ -155,7 +155,7 @@ char ManagerUI::lower(char instring) {
 //calls a function to put input to lower case
 
 int ManagerUI::selector_func() {
-    if((selector > 47 + options) && (selector < 58)){
+    if((selector > 48 + options) && (selector < 58)){
         menuUI(1);
     }
     //if number inputed is too high send back to main function

@@ -4,9 +4,11 @@
 
 using namespace std;
 
-    ManagerUI manager("Menu", "Pizza information", "Toppings", "Pizza size", "Make a new pizza");
-    ManagerUI topping_menu("Toppings", "Add toppings", "Remove toppings", "See all toppings");
-
+    ManagerUI manager("Menu:", "Pizza information", "Toppings", "Pizza size", "Make a new pizza");
+    ManagerUI topping_menu("Toppings:", "Add toppings", "Remove toppings", "See all toppings");
+    ManagerUI info_menu("Info:", "Toppings", "Pizzas", "Pizza sizes");
+    ManagerUI new_pizza_menu("Create a new pizza:", "Create pizza", "Remove pizza", "See all pizas");
+    //global decl. of UI elements
 
 MainUI::MainUI()
 {
@@ -36,35 +38,24 @@ void MainUI::print_selector(bool run) {
 
     switch(selector) {
     case 'm':
-        ret_val = manager.menuUI(0);
-        if(ret_val == 99) {
-            print_selector(0);
-            ///Returns to User selector
-        } else if(ret_val == 1) {
-            ///To pizza info menu
-        } else if(ret_val == 2) {
-            ret_val = topping_menu.menuUI(0);
-            toppingCreator(ret_val);
-            ///To topping menu
-        } else if(ret_val == 3) {
-            ///To size menu
-        } else if(ret_val == 4) {
-            ///To create a new pizza menu
-        }
-
+            manager_selector(selector);
+            ///The manager selection UI page
         break;
     case 'b':
-        cout << "Nothing to see here!" << endl;
+        system("CLS");
+        cout << "Work in progress: BAKER!" << endl;
         system("PAUSE");
         print_selector(0);
         break;
     case 't':
-        cout << "Nothing to see here!" << endl;
+        system("CLS");
+        cout << "Work in progress: TELEPHONE!" << endl;
         system("PAUSE");
         print_selector(0);
         break;
     case 's':
-        cout << "Nothing to see here!" << endl;
+        system("CLS");
+        cout << "Work in progress: SALES!" << endl;
         print_selector(0);
         system("PAUSE");
         break;
@@ -76,6 +67,7 @@ void MainUI::print_selector(bool run) {
         print_selector(1);
         break;
     }
+
 }
 
 char MainUI::lower(char instring) {
@@ -101,16 +93,103 @@ void MainUI::terminate(){
     //manager UI again
 }
 
-void MainUI::toppingCreator(int ret_val) {
+void MainUI::manager_selector(bool selector) {
+ret_val = manager.menuUI(0);
+        if(ret_val == 99) {
+            print_selector(0);
+            ///Returns to User selector
+
+        } else if(ret_val == 1) {
+            ret_val = info_menu.menuUI(0);
+            info_creator(ret_val);
+            ///To pizza info menu
+
+        } else if(ret_val == 2) {
+            ret_val = topping_menu.menuUI(0);
+            topping_creator(ret_val);
+            ///To topping menu
+
+        } else if(ret_val == 3) {
+            ///To size menu
+
+        } else if(ret_val == 4) {
+            ///To create a new pizza menu
+        }
+
+
+}
+
+void MainUI::info_creator(int ret_val) {
     if(ret_val == 99) {
+        manager_selector(0);
         //Go one level up, to manager menu
-        manager.menuUI(0);
+    } else if(ret_val == 1) {
+        cout << "Print toppings: " << endl;
+        system("CLS");
+        handler.print_toppings();
+        system("PAUSE");
+        manager_selector(0);
+        //print all toppings
+    } else if(ret_val == 2) {
+        system("CLS");
+        cout << "Print all pizzas: " << endl;
+        system("PAUSE");
+        manager_selector(0);
+        //print all pizza sizes
+    } else if(ret_val == 3) {
+        system("CLS");
+        cout << "Print all pizza sizes: " << endl;
+        system("PAUSE");
+        manager_selector(0);
+        //print all pre-made pizzas
+}
+}
 
-    } else if(0) {
+void MainUI::topping_creator(int ret_val) {
+    if(ret_val == 99) {
+        manager_selector(0);
+        //Go one level up, to manager menu
+    } else if(ret_val == 1) {
+        cout << "Add toppings" << endl;
+        handler.create_topping();
+        manager_selector(0);
+        //Add toppings
+    } else if(ret_val == 2) {
+        system("CLS");
+        cout << "remove toppings";
+        system("PAUSE");
+        //remove toppings
+    } else if(ret_val == 3) {
+        system("CLS");
+        cout << "All toppings" << endl;
+        handler.print_toppings();
+        system("PAUSE");
+        manager_selector(0);
+        //see all toppings
+    }
+}
 
-    } else if(0) {
-
-    } else if(0) {
-
+void MainUI::pizza_creator(int ret_val) {
+    if(ret_val == 99) {
+        manager_selector(0);
+        //Go one level up, to manager menu
+    } else if(ret_val == 1) {
+        system("CLS");
+        cout << "Create a new pizza: Missing handler" << endl;
+        system("PAUSE");
+        manager_selector(0);
+        //Add toppings
+    } else if(ret_val == 2) {
+        system("CLS");
+        cout << "Remove an old pizza: Missing handler";
+        system("PAUSE");
+        //remove toppings
+    } else if(ret_val == 3) {
+        system("CLS");
+        cout << "See all pizzas: Missing handler" << endl;
+        handler.print_toppings();
+        system("PAUSE");
+        manager_selector(0);
+        //see all toppings
     }
 }

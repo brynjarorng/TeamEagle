@@ -173,7 +173,7 @@
 	<iostream>
 	"MainUI.h"
 
-1512126046 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v0.2\mainui.h
+1512133827 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v0.2\mainui.h
 	"ManagerUI.h"
 	"StdInput.h"
 
@@ -193,7 +193,7 @@
 1512062204 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v0.2\stdinput.h
 	<iostream>
 
-1512126505 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v0.2\mainui.cpp
+1512134033 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v0.2\mainui.cpp
 	"MainUI.h"
 	<iostream>
 	"ManagerUI.h"
@@ -207,6 +207,6 @@
 1512049820 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v0.2\toppings.cpp
 	"Toppings.h"
 
-1512124427 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v0.2\managerui.cpp
+1512131825 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v0.2\managerui.cpp
 	"ManagerUI.h"
 

@@ -14,13 +14,23 @@ class MainUI
         //helper function to send input to to lower function
         void terminate();
         //kills the program
-        void toppingCreator(int ret_val);
+        void topping_creator(int ret_val);
+        //Function that calls all required handler
+        //functions to create, (remove) or see all toppings
+        void info_creator(int ret_val);
+        //Function that calls all required handler
+        //functions to view info about toppings, pizzas and (sizes)
+        void pizza_creator(int ret_val);
+        //Function that calls all required handler
+        //functions to create, (remove) or see all pizzas
+        void manager_selector(bool selector);
 
 
 
     private:
         bool run;
         int ret_val;
+        ToppingHandler handler;
 };
 
 #endif // MAINUI_H
