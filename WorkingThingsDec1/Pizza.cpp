@@ -8,7 +8,7 @@ Pizza::Pizza() {
 	price = 0.0;
 }
 
-ostream& operator << (ostream& outs,  Pizza& pizza) {
+ostream& operator << (ostream& outs,   Pizza& pizza) {
 	outs << pizza.name << " " << pizza.price;
 
 	for (int i = 0; i < pizza.toppingcount; i++) {
@@ -29,8 +29,7 @@ istream& operator >> (istream& ins, Pizza& pizza) {
 	return ins;
 }
 
-void Pizza::set_name(string name)
-{
+void Pizza::set_name(string name) {
 	int size_of_string = name.length();
 	if (size_of_string <= MAX_NAME_SIZE) {
 		name_count = (size_of_string);
@@ -38,10 +37,9 @@ void Pizza::set_name(string name)
 	else {
 		name_count = (MAX_NAME_SIZE);
 	}
-	strncpy(this ->name, name.c_str(), MAX_NAME_SIZE);
+	strncpy(this ->name, name.c_str(), name_count);
 	
 	append_null();
-
 }
 void Pizza::append_null() {
 	name[name_count] = '\0';
@@ -55,11 +53,14 @@ void Pizza::add_topping(Toppings topping) {
     toppingcount++;
 }
 
-int Pizza::get_toppingcount() {
+int Pizza::get_toppingcount() const{
     return this->toppingcount;
 }
 
-Toppings* Pizza::get_toppings() {
+Toppings* Pizza::get_toppings()  {
 	
 	return this ->topping;
+}
+int Pizza::get_max_toppings() const {
+	return this ->MAX_TOPPINGS;
 }
