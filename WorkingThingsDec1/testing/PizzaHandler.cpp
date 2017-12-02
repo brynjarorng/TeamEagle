@@ -73,7 +73,6 @@ bool PizzaHandler::validate_pizza(string pizza_name) {
     return false;
 }
 
-
 bool PizzaHandler::validate_pizza(string pizza_name, int &index) {
     string name;
 
@@ -107,6 +106,19 @@ Pizza PizzaHandler::get_menu_pizza(string pizza_name) {
     return remove_later;
 }
 
+Pizza PizzaHandler::get_menu_pizza(int index) {
+
+    Pizza remove_later;
+    pizza_list_count = pizzarepo.get_list_count();
+    pizza_list = pizzarepo.read();
+
+    if(index >= 0 && index < list_count) {
+        return pizza_list[index];
+    }
+
+    remove_later.set_name("ERRROR! NOT A PIZZA!");
+    return remove_later;
+}
 
 void PizzaHandler::print_pizzas() {
     pizza_list = pizzarepo.read();

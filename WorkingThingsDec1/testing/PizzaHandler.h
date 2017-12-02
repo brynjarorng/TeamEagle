@@ -14,10 +14,16 @@ public:
     bool validate_pizza(string pizza_name);
     //Gets pizza name and iterates through the pizza menu and
     //returns true if a pizza matches name;
+    bool validate_pizza(string pizza_name, int &index);
+    //Method overload - takes index integer reference and changes it
+    //to the corresponding index of the pizza in the pizza list if found.
     Pizza get_menu_pizza(string pizza_name);
     //Gets Pizza name and iterates through the pizza menu and
     //returns the pizza of the matching name.
     /// --- > validate_pizza must be called first < ---
+    Pizza get_menu_pizza(int index);
+    //Takes index as parameter and returns the pizza with the
+    //corresponding index number.
     Pizza create_special_pizza();
     //Creates a special order pizza and returns it to caller.
     void print_pizzas();
