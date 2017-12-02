@@ -43,7 +43,7 @@ void PizzaHandler::create_menu_pizza() {
     pizzarepo.write(pizza);
 }
 
-Pizza PizzaHandler::create_pizza() {
+Pizza PizzaHandler::create_special_pizza() {
     add_toppings();
 
     this ->toppings = pizza.get_toppings();
