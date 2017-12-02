@@ -7,8 +7,7 @@
 #include <fstream>
 using namespace std;
 
-class FstreamClass
-{
+class FstreamClass {
 public:
 	FstreamClass();
 	~FstreamClass();

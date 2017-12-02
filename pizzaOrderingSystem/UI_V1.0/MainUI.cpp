@@ -4,28 +4,43 @@
 
 using namespace std;
 
-    ManagerUI manager("Menu:", "Pizza information", "Toppings", "Pizza size", "Make a new pizza");
-    ManagerUI topping_menu("Toppings:", "Add toppings", "Remove toppings", "See all toppings");
+
     ManagerUI info_menu("Info:", "Toppings", "Pizzas", "Pizza sizes");
+    //Set the text on the 'Toppings info' submenu. Used for looking
+    //at all available food ordering options
+    ManagerUI toppings_menu("Toppings:", "Add toppings", "Remove toppings", "See all toppings");
+    //Set the text on the 'toppings' submenu page
     ManagerUI new_pizza_menu("Create a new pizza:", "Create pizza", "Remove pizza", "See all pizas");
-    //UI var. for Manager
+    //set the text on the 'create new pizza' submenu
+    //SIZE STILL NEEDS TO BE IMPLEMENTED!
+    ManagerUI manager("Menu:", "Pizza information", "Toppings", "Pizza size", "Make a new pizza");
+    //Set the text on the default manager menu page
+    ///UI var. for Manager
+
     ManagerUI baker_menu("Baker:", "Toggle in oven", "Toggle ready");
-    //Baker UI
+    //Set the text on the default Baker menu page
+    ///Baker UI (WILL CHANGE IN FULL SYSTEM!)
+
     ManagerUI phone_status_menu("Get status of:", "Current orders", "Pizzas", "Toppings");
+    //Set the text on the 'status' submenu for the phone clerk
     ManagerUI phone_menu("Phone orders: ", "New order", "Get all orders", "status");
-    //Telephone clerk
+    //Set the text on the default phone clerk menu
+    ///Telephone clerk
+
     ManagerUI clerk_order_menu("Orders:", "Option A", "Option B", "Option C");
+    //Set the text on 'order' submenu. For marking paid, sent and picked up
     ManagerUI clerk_status_menu("Get status of:", "Current orders", "Pizzas", "Toppings");
+    //Set the text on the 'status of order and items' submenu
     ManagerUI clerk_menu("Salesman orders: ", "New order", "Get all orders", "status", "Order details");
-    //Sales clerk
+    //Set the text on the default Sales clerk menu
+    ///Sales clerk
     //global decl. of UI elements
 
-MainUI::MainUI()
-{
+MainUI::MainUI() {
     run = 0;
 }
 
-void MainUI::print_selector(bool run) {
+void MainUI::print_login_selector(bool run) {
     system("CLS");
 
     char selector = ' ';
@@ -52,24 +67,27 @@ void MainUI::print_selector(bool run) {
             ///The manager selection UI page
         break;
     case 'b':
-            baker_ui();
+            baker_selector();
             ///The baker menu page
         break;
     case 't':
-        system("CLS");
-        phone_selector(selector);
+            system("CLS");
+            phone_selector(selector);
+            ///The phone clerk menu page
         break;
     case 's':
-        system("CLS");
-        clerk_selector(selector);
-        system("PAUSE");
+            system("CLS");
+            clerk_selector(selector);
+            ///The store clerk selector page
         break;
     case 'q':
-        terminate();
+            terminate();
+            ///Halts the program
         break;
     default:
-        system("CLS");
-        print_selector(1);
+            system("CLS");
+            print_login_selector(1);
+            ///Print the login selector again with the error message
         break;
     }
 
@@ -81,7 +99,7 @@ char MainUI::lower(char instring) {
     return instring;
 }
 
-void MainUI::terminate(){
+void MainUI::terminate() {
     system("CLS");
     char cont;
 
@@ -93,7 +111,7 @@ void MainUI::terminate(){
         cout << "Good Bye!" << endl;
         exit(0);
     }
-    print_selector(0);
+    print_login_selector(0);
     //Double check if user wants to quit, else runs the
     //manager UI again
 }
@@ -102,7 +120,7 @@ void MainUI::manager_selector(bool selectorn) {
     ret_val = manager.menuUI(0);
 
     if(ret_val == 99) {
-        print_selector(0);
+        print_login_selector(0);
         ///Returns to User selector
 
     } else if(ret_val == 1) {
@@ -111,7 +129,7 @@ void MainUI::manager_selector(bool selectorn) {
         ///To pizza info menu
 
     } else if(ret_val == 2) {
-        ret_val = topping_menu.menuUI(0);
+        ret_val = toppings_menu.menuUI(0);
         topping_creator(ret_val);
         ///To topping menu
 
@@ -161,10 +179,11 @@ void MainUI::topping_creator(int ret_val) {
     } else if(ret_val == 1) {
         cout << "Add toppings" << endl;
         do{
-            handler.create_topping();
+            handler.create_toppings();
             do{
                 cout << "Do you want to input more Toppings (y/n)? ";
                 cin >> cont;
+                //system("PAUSE");
                 cont = lower(cont);
             } while(cont == 'y' && cont == 'n');
         } while(cont == 'y');
@@ -210,7 +229,7 @@ void MainUI::pizza_creator(int ret_val) {
     }
 }
 
-void MainUI::baker_ui(){
+void MainUI::baker_selector() {
     char cont;
     system("CLS");
 
@@ -219,7 +238,7 @@ void MainUI::baker_ui(){
     ret_val = baker_menu.menuUI(0);
 
     if(ret_val == 99) {
-        print_selector(0);
+        print_login_selector(0);
         ///Returns to User selector
 
     } else if(ret_val == 1) {
@@ -233,7 +252,7 @@ void MainUI::baker_ui(){
                 cont = lower(cont);
             } while(cont == 'y' && cont == 'n');
         } while(cont == 'y');
-        baker_ui();
+        baker_selector();
         ///Toggle in oven
 
     } else if(ret_val == 2) {
@@ -248,7 +267,7 @@ void MainUI::baker_ui(){
             } while(cont == 'y' && cont == 'n');
         } while(cont == 'y');
 
-        baker_ui();
+        baker_selector();
         ///Toggle ready
     }
 }
@@ -258,7 +277,7 @@ void MainUI::phone_selector(bool selector) {
     ret_val = phone_menu.menuUI(0);
 
     if(ret_val == 99) {
-        print_selector(0);
+        print_login_selector(0);
         ///Returns to User selector
 
     } else if(ret_val == 1) {
@@ -311,7 +330,7 @@ void MainUI::clerk_selector(bool selector) {
     ret_val = clerk_menu.menuUI(0);
 
     if(ret_val == 99) {
-        print_selector(0);
+        print_login_selector(0);
         ///Returns to User selector
 
     } else if(ret_val == 1) {

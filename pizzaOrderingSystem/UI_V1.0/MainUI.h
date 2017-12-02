@@ -4,11 +4,10 @@
 #include "ManagerUI.h"
 #include "StdInput.h"
 
-class MainUI
-{
+class MainUI {
     public:
         MainUI();
-        void print_selector(bool run);
+        void print_login_selector(bool run);
         //prints all available login options
         char lower(char instring);
         //helper function to send input to to lower function
@@ -26,20 +25,25 @@ class MainUI
         void manager_selector(bool selector);
         //First branch under the login  screen, points
         //to pizza_creator(), info_creator() and topping_creator();
-        void baker_ui();
+        void baker_selector();
         //The baker UI, nothing less, nothing more (maybe a little bit more ;) )
         void phone_status_ui(int ret_val);
+        //Calls functions to get status of current orders,
+        //all pizzas and all toppings
         void phone_selector(bool selector);
+        //Main landing page for the phone operator
         void clerk_status_ui(int ret_val);
+        //Calls functions to get status of current orders,
+        //all pizzas and all toppings
         void clerk_selector(bool selector);
-
+        //Main landing page for the store clerk operator
 
 
 
     private:
         bool run;
         int ret_val;
-        ToppingHandler handler;
+        ToppingsHandler handler;
 };
 
 #endif // MAINUI_H

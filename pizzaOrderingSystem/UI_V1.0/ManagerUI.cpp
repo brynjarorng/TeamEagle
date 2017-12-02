@@ -54,9 +54,9 @@ ManagerUI::ManagerUI(string type, string option1, string option2, string option3
     this -> option6 = option6;
 }
 
-int ManagerUI::menuUI(bool run){
+int ManagerUI::menuUI(bool run) {
 
-switch (options){
+switch (options) {
     case 2:
 
         cout << "----" << type << "----" << endl;
@@ -192,7 +192,7 @@ switch (options){
 
 
 
-void ManagerUI::terminate(){
+void ManagerUI::terminate() {
     system("CLS");
     char cont;
 
@@ -200,7 +200,7 @@ void ManagerUI::terminate(){
         cin >> cont;
         cont = lower(cont);
 
-    if(cont == 'y'){
+    if(cont == 'y') {
         cout << "Good Bye!" << endl;
         exit(0);
     }
@@ -209,11 +209,11 @@ void ManagerUI::terminate(){
     //manager UI again
 }
 
-void ManagerUI::ret_to_main(){
+void ManagerUI::ret_to_main() {
     MainUI ui;
 
     system("CLS");
-    ui.print_selector(0);
+    ui.print_login_selector(0);
 }
 //returns to the User selection
 

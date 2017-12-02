@@ -6,8 +6,7 @@
 using namespace std;
 
 
-class StdInput
-{
+class StdInput {
     public:
         StdInput();
         char to_lower_case(char instring);

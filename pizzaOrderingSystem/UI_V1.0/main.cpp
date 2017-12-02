@@ -3,11 +3,10 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
     MainUI ui;
 
-    ui.print_selector(0);
+    ui.print_login_selector(0);
 
     return 0;
 }

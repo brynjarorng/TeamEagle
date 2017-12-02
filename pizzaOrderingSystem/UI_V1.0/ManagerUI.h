@@ -1,7 +1,7 @@
 #ifndef MANAGERUI_H
 #define MANAGERUI_H
 
-#include "ToppingHandler.h"
+#include "ToppingsHandler.h"
 #include <iostream>
 #include <cstdlib>
 #include "MainUI.h"
@@ -29,7 +29,7 @@ class ManagerUI {
         int selector_func();
 
     private:
-        ToppingHandler handler;
+        ToppingsHandler handler;
         bool run;
         int options;
         string option1, option2, option3, option4, option5, option6;
