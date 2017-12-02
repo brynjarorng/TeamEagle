@@ -12,7 +12,7 @@ PizzaHandler::~PizzaHandler() {
 void PizzaHandler::add_toppings() {
     string toppingname;
 
-    for(int i = 0; i < pizza.get_max_toppings; i++) {
+    for(int i = 0; i < pizza.get_max_toppings(); i++) {
     cin >> toppingname;
 
         if (toppingname == "q") {
@@ -58,6 +58,39 @@ Pizza PizzaHandler::create_pizza() {
 
 	return pizza;
 }
+
+bool PizzaHandler::validate_pizza(string pizza_name) {
+    string name;
+
+    pizza_list = pizzarepo.read();
+    pizza_list_count = pizzarepo.get_list_count();
+    for(int i = 0; i < pizza_list_count; i++) {
+        name = pizza_list[i].get_name();
+        if(name == pizza_name) {
+            return true;
+        }
+    }
+    return false;
+}
+
+Pizza PizzaHandler::get_menu_pizza(string pizza_name) {
+
+    Pizza remove_later;
+
+    string name;
+
+    pizza_list = pizzarepo.read();
+    pizza_list_count = pizzarepo.get_list_count();
+    for(int i = 0; i < pizza_list_count; i++) {
+        name = pizza_list[i].get_name();
+        if(name == pizza_name) {
+            return pizza_list[i];
+        }
+    }
+    remove_later.set_name("ERRROR! NOT A PIZZA!");
+    return remove_later;
+}
+
 
 void PizzaHandler::print_pizzas() {
     pizza_list = pizzarepo.read();

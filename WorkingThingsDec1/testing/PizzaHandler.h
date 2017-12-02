@@ -11,7 +11,14 @@ public:
     ~PizzaHandler();
     void create_menu_pizza();
     //Creates pizza and sends it to the menu pizza repository.
-    Pizza create_pizza();
+    bool validate_pizza(string pizza_name);
+    //Gets pizza name and iterates through the pizza menu and
+    //returns true if a pizza matches name;
+    Pizza get_menu_pizza(string pizza_name);
+    //Gets Pizza name and iterates through the pizza menu and
+    //returns the pizza of the matching name.
+    /// --- > validate_pizza must be called first < ---
+    Pizza create_special_pizza();
     //Creates a special order pizza and returns it to caller.
     void print_pizzas();
     //Fetches list of pizzas from the repo and prints it to the screen.
