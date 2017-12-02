@@ -32,7 +32,7 @@ void ToppingsHandler::print_toppings()
 bool ToppingsHandler::validate(string topping_name)
 {
     string name;
-	
+
     toppings_list = repo.read();
     toppings_list_count = repo.get_list_count();
     for(int i = 0; i < toppings_list_count; i++) {
@@ -48,7 +48,7 @@ bool ToppingsHandler::validate(string topping_name)
 Toppings ToppingsHandler::get_topping(string topping_name)
 {
 	Toppings remove_later("ERROR! NOT A TOPPING!", 0);
-	
+
     string name;
     toppings_list = repo.read();
     toppings_list_count = repo.get_list_count();
@@ -58,9 +58,9 @@ Toppings ToppingsHandler::get_topping(string topping_name)
             return toppings_list[i];
         }
     }
-  
+
 		return remove_later;
-	
+
 }
 
 void ToppingsHandler::operator =(Toppings* copy)
