@@ -37,6 +37,8 @@ class MainUI {
         //all pizzas and all toppings
         void clerk_selector(bool selector);
         //Main landing page for the store clerk operator
+        void customer_selector(bool selector);
+        //Main landing page for the customer
 
 
 

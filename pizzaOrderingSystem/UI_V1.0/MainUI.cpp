@@ -27,13 +27,15 @@ using namespace std;
     //Set the text on the default phone clerk menu
     ///Telephone clerk
 
-    ManagerUI clerk_order_menu("Orders:", "Option A", "Option B", "Option C");
+    ManagerUI clerk_order_menu("Orders:", "Current orders", "Pizzas", "Toppings");
     //Set the text on 'order' submenu. For marking paid, sent and picked up
     ManagerUI clerk_status_menu("Get status of:", "Current orders", "Pizzas", "Toppings");
     //Set the text on the 'status of order and items' submenu
     ManagerUI clerk_menu("Salesman orders: ", "New order", "Get all orders", "status", "Order details");
     //Set the text on the default Sales clerk menu
     ///Sales clerk
+
+    ManagerUI customer_menu("Customer portal:", "Order a new pizza", "Order status", "Pizza list", "Topping list");
     //global decl. of UI elements
 
 MainUI::MainUI() {
@@ -51,6 +53,7 @@ void MainUI::print_login_selector(bool run) {
     cout << "(m) Manager" << endl;
     cout << "(b) Baker" << endl;
     cout << "(t) Telephone operator" << endl;
+    cout << "(c) Customer portal" << endl;
     cout << "(s) Sales clerk" << endl;
     cout << "(q) Quit" << endl;
     if(run){
@@ -79,6 +82,11 @@ void MainUI::print_login_selector(bool run) {
             system("CLS");
             clerk_selector(selector);
             ///The store clerk selector page
+        break;
+    case 'c':
+            system("CLS");
+            customer_selector(selector);
+            ///The customer selector page
         break;
     case 'q':
             terminate();
@@ -382,6 +390,39 @@ void MainUI::clerk_status_ui(int ret_val) {
         system("PAUSE");
         clerk_status_ui(0);
         //see all toppings
+    }
+}
+
+void MainUI::customer_selector(bool selector) {
+    ret_val = customer_menu.menuUI(0);
+
+    if(ret_val == 99) {
+        print_login_selector(0);
+        ///Returns to User selector
+
+    } else if(ret_val == 1) {
+        cout << "New order" << endl;
+        system("PAUSE");
+        customer_selector(0);
+        ///New order menu
+
+    } else if(ret_val == 2) {
+        cout << "See current order status" << endl;
+        system("PAUSE");
+        customer_selector(0);
+        ///To topping menu
+
+    } else if(ret_val == 3) {
+        cout << "Pizza list" << endl;
+        system("PAUSE");
+        customer_selector(0);
+        ///To order completion menu
+
+    } else if(ret_val == 4) {
+        cout << "Toppings list" << endl;
+        system("PAUSE");
+        customer_selector(0);
+        ///To size menu
     }
 }
 
