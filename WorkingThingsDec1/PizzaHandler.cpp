@@ -11,8 +11,6 @@ PizzaHandler::~PizzaHandler() {
 
 void PizzaHandler::create_menu_pizza() {
 
-	Pizza pizza;
-
     string name;
     cin >> name;
     pizza.set_name(name);
@@ -51,7 +49,7 @@ Pizza PizzaHandler::create_pizza()
 			break;
 		}
 		
-        if(toppingshandler.validate(toppingname)){
+        if(toppingshandler.validate(toppingname)) {
 
 		   pizza.add_topping(toppingshandler.get_topping(toppingname));
 			
@@ -83,8 +81,7 @@ void PizzaHandler::print_pizzas() {
     }
 }
 
-void PizzaHandler::operator = (Pizza* copy)
-{
+void PizzaHandler::operator = (Pizza* copy) {
     delete[] pizza_list;
     pizza_list = copy;
 }
