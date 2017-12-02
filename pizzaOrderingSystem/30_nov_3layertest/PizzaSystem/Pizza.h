@@ -16,7 +16,6 @@ public:
     void add_topping(Toppings topping);
     int get_toppingcount();
     Toppings* get_toppings();
-    void
 
 private:
     static const int MAX_TOPPINGS = 10;
