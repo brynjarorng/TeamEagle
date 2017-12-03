@@ -37,17 +37,27 @@ void PizzaHandler::add_toppings() {
 void PizzaHandler::create_menu_pizza() {
 
     string name;
-
+    //Temporary cout
+    cout << "Name: ";
     cin >> name;
+
     pizza.set_name(name);
 
+    //Temporary cout
+    cout << "Price: ";
     double price;
     cin >> price;
     pizza.set_price(price);
 
+
     add_toppings();
 
     pizzarepo.write(pizza);
+    reset_pizza();
+}
+void PizzaHandler::reset_pizza() {
+    Pizza new_pizza;
+    this ->pizza = new_pizza;
 }
 
 Pizza PizzaHandler::create_special_pizza() {
@@ -63,7 +73,10 @@ Pizza PizzaHandler::create_special_pizza() {
     pizza.set_price(price);
     pizza.set_name("Special order");
 
-	return pizza;
+    Pizza new_pizza = this-> pizza;
+    reset_pizza();
+
+	return new_pizza;
 }
 
 bool PizzaHandler::validate_pizza(string pizza_name) {

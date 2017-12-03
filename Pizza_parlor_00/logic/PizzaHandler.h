@@ -46,7 +46,7 @@ private:
 	Toppings* toppings;
     Pizza* pizza_list;
     int pizza_list_count;
-
+    void reset_pizza();
 };
 
 #endif // PIZZAHANDLER_H_INCLUDED

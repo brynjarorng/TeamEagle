@@ -2,7 +2,6 @@
 #define PIZZA_H
 #include "PizzaStatus.h" //{pending, baking, ready}.
 #include "Toppings.h"
-#include <iostream>
 #include <string.h>
 
 using namespace std;
@@ -53,6 +52,7 @@ private:
 	//Choose from pending, baking or ready.
 	void append_null();
 	//Appends '\0' to name[name_count - 1];
+
 };
 
 #endif // PIZZA_H

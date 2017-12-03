@@ -1,3 +1,6 @@
+#ifndef ORDER_H_INCLUDED
+#define ORDER_H_INCLUDED
+
 #include "Order.h"
 
 Order::Order() {
@@ -71,42 +74,19 @@ void Order::set_order_number(int number) {
 
 	this ->order_number = number;
 }
+
+int Order::get_order_number() {
+    return this ->order_number;
+}
 void Order::add_pizza(Pizza pizza) {
 	if(pizzas_in_order_count <= MAX_ORDER_SIZE) {
 
 		this ->pizzas_in_order[this ->pizzas_in_order_count] = pizza;
-		this ->pizzas_in_order_count++;
+        this ->pizzas_in_order_count++;
 	}
 
 	else {
 		cout << "Order has reached maximum size!" << endl;
 	}
 }
-void Order::add_pizza_to_order(PizzaType pizzatype) {
-
-	PizzaHandler pizzahandler;
-	Pizza temp_pizza;
-
-	if (pizzatype == menu_pizza) {
-
-		string pizza_name;
-		cin >> pizza_name;
-
-		bool on_menu = pizzahandler.validate_pizza(pizza_name);
-		if (on_menu) {
-			temp_pizza = pizzahandler.get_menu_pizza(pizza_name);
-			add_pizza(temp_pizza);
-		}
-		else {
-			cout << "Pizza not on menu! " << endl;
-		}
-	}
-	else if (pizzatype == special_pizza) {
-		temp_pizza = pizzahandler.create_special_pizza();
-		add_pizza(temp_pizza);
-	}
-	else {
-		cout << "---(SYSTEM)NOT A PIZZATYPE---"  << endl;
-	}
-}
-
+#endif

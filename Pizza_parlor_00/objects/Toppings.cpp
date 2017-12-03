@@ -5,10 +5,9 @@ Toppings::Toppings(){
 	name[0] = '\0';
 	price = 0.0;
 }
-void Toppings::convert_string_cstring(string in)
-{
-	int i = 0;
-	while(i < NAME_SIZE && i < in.length())
+void Toppings::convert_string_cstring(string in) {
+	unsigned int i = 0;
+	while( i < NAME_SIZE && i < in.length())
 	{
 		name[i] = in[i];
 		i++;

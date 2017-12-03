@@ -4,11 +4,17 @@
 #include "PizzaHandler.h"
 #include "PizzaStatus.h"
 
+
 class OrderHandler
 {
 public:
     OrderHandler();
-    void mark_pizza_baking(int index, PizzaStatus status);
+    ~OrderHandler();
+    OrderHandler(const OrderHandler &copy);
+    //Copy constructor.
+    OrderHandler& operator = (const OrderHandler& right_side);
+    //Ensure that this instance will be a distinct copy of right_side.
+    void mark_pizza_status(int index, PizzaStatus status);
     //Takes index of pizza and a status as parameters and marks the pizza
     //with the corresponding index in the order with either
     //baking (in oven) or ready (out of oven).
@@ -32,6 +38,7 @@ private:
     Order order;
     Pizza pizza;
     Pizza* pizza_list;
+
 
 };
 

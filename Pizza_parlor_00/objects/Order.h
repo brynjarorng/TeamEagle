@@ -1,7 +1,6 @@
 #ifndef ORDER_H
 #define ORDER_H
-
-#include "PizzaHandler.h"
+#include "Pizza.h"
 #include "PizzaType.h"
 class Order {
 
@@ -23,13 +22,13 @@ public:
 	friend istream& operator >>(istream& ins, Order& order);
 	//Instream is one occurrence of pizza wich will be the next element
 	//in the private member array containing the pizzas in the order.
-	void add_pizza_to_order(PizzaType pizzatype);
-	//Add pizza to order, if Pizzatype = menu_pizza the a pizza of type
-	//menu_pizza is added to the order, if PizzaType = special_pizza
-	//then a pizza of type special pizza is added. If the Pizzatype is
-	//neither of these, an error message is printed.
+    void add_pizza(Pizza pizza);
+	//If pizzas_in_order_count <= MAX_ORDER_SIZE, pizza is added
+	//to order, else an error message is printed to the screen.
 	void set_order_number(int number);
 	//Sets the order_number of this instance of order equal to number
+	int get_order_number();
+	//Returns the order number.
 	bool ready();
 	//Return value is true if all pizzas in orders are ready.
 	//False otherwise.
@@ -48,9 +47,6 @@ private:
     //Number of this instance of order.
 	void all_pizzas_ready();
     //Returns true if all pizzas are marked ready.
-	void add_pizza(Pizza pizza);
-	//If pizzas_in_order_count <= MAX_ORDER_SIZE, pizza is added
-	//to order, else an error message is printed to the screen.
-};
 
-#endif // ORDER_H
+};
+#endif //ORDER
