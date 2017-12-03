@@ -3,9 +3,9 @@
 #include "PizzaHandler.h"
 #include "PizzaType.h"
 class Order {
-	
+
 public:
-	
+
 	Order();
 	//Initializes order_ready and order_delivered to false,
 	//also the pizza count in the order is set to 0.
@@ -22,13 +22,11 @@ public:
 	friend istream& operator >>(istream& ins, Order& order);
 	//Instream is one occurrence of pizza wich will be the next element
 	//in the private member array containing the pizzas in the order.
-	void add_pizza_to_order(PizzaType pizzatype);
-	//Add pizza to order, if Pizzatype = menu_pizza the a pizza of type
-	//menu_pizza is added to the order, if PizzaType = special_pizza
-	//then a pizza of type special pizza is added. If the Pizzatype is
-	//neither of these, an error message is printed.
+
 	void set_order_number(int number);
 	//Sets the order_number of this instance of order equal to number
+	int get_order_number();
+	//Returns the order number.
 	bool ready();
 	//Return value is true if all pizzas in orders are ready.
 	//False otherwise.
