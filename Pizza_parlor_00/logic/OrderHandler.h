@@ -1,8 +1,8 @@
 #ifndef ORDERHANDLER_H
 #define ORDERHANDLER_H
 #include "OrderRepo.h"
-#include "PizzaHandler"
-#include "PizzaStatusEnum.h"
+#include "PizzaHandler.h"
+#include "PizzaStatus.h"
 
 class OrderHandler
 {
@@ -27,7 +27,7 @@ public:
 private:
     OrderRepo order_repo;
     Order* orders;
-    int orders_count;r
+    int order_count;
     PizzaHandler pizzahandler;
     Order order;
     Pizza pizza;

@@ -46,13 +46,21 @@ void OrderHandler::generate_order_no() {
 
 Order OrderHandler::get_last_order() {
     Order last;
-    int order_count = order_repo.get_list_count();
-    orders = order_repo.read();
+    order_count = order_repo.get_current_count();
+    orders = order_repo.current_read();
     last = orders[order_count - 1];
 
     return last;
 }
 
+void OrderHandler::print_current_list() {
+    orders = order_repo.current_read();
+    order_count = order_repo.get_current_count();
+
+    for(int i = 0; i < order_count; i++) {
+        cout << orders[i];
+    }
+}
 void OrderHandler::add_pizza_to_order(PizzaType pizzatype) {
 	if (pizzatype == menu_pizza) {
 
