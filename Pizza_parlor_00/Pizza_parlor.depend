@@ -1,0 +1,52 @@
+# depslib dependency file v1.0
+1512304250 source:c:\users\Ívar\desktop\pizz\pizza_parlor\objects\toppings.cpp
+	"Toppings.h"
+
+1512308047 c:\users\Ívar\desktop\pizz\pizza_parlor\objects\toppings.h
+	<string>
+	<iostream>
+	<cstring>
+
+1512315874 source:c:\users\Ívar\desktop\pizz\pizza_parlor\main.cpp
+	<iostream>
+	"PizzaHandler.h"
+
+1512307901 c:\users\Ívar\desktop\pizz\pizza_parlor\data\toppingsrepo.h
+	"Toppings.h"
+	<fstream>
+
+1512304497 source:c:\users\Ívar\desktop\pizz\pizza_parlor\data\toppingsrepo.cpp
+	"ToppingsRepo.h"
+
+1512306182 source:c:\users\Ívar\desktop\pizz\pizza_parlor\logic\toppingshandler.cpp
+	"ToppingsHandler.h"
+
+1512306182 c:\users\Ívar\desktop\pizz\pizza_parlor\logic\toppingshandler.h
+	"ToppingsRepo.h"
+	<string.h>
+
+1512310699 source:c:\users\Ívar\desktop\pizz\pizza_parlor\objects\pizza.cpp
+	"Pizza.h"
+
+1512309247 c:\users\Ívar\desktop\pizz\pizza_parlor\objects\pizza.h
+	"PizzaStatus.h"
+	"Toppings.h"
+	<iostream>
+	<string.h>
+
+1512308913 c:\users\Ívar\desktop\pizz\pizza_parlor\datatypes\pizzastatus.h
+
+1512311804 source:c:\users\Ívar\desktop\pizz\pizza_parlor\data\pizzarepo.cpp
+	"PizzaRepo.h"
+
+1512311804 c:\users\Ívar\desktop\pizz\pizza_parlor\data\pizzarepo.h
+	"Pizza.h"
+	<fstream>
+
+1512314729 source:c:\users\Ívar\desktop\pizz\pizza_parlor\logic\pizzahandler.cpp
+	"PizzaHandler.h"
+
+1512314349 c:\users\Ívar\desktop\pizz\pizza_parlor\logic\pizzahandler.h
+	"ToppingsHandler.h"
+	"PizzaRepo.h"
+
