@@ -17,6 +17,7 @@
 					<Add directory="data" />
 					<Add directory="logic" />
 					<Add directory="datatypes" />
+					<Add directory="UI" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -30,6 +31,7 @@
 					<Add directory="data" />
 					<Add directory="logic" />
 					<Add directory="datatypes" />
+					<Add directory="UI" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -40,6 +42,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="UI/UI.cpp" />
+		<Unit filename="UI/UI.h" />
 		<Unit filename="data/OrderRepo.cpp" />
 		<Unit filename="data/OrderRepo.h" />
 		<Unit filename="data/PizzaRepo.cpp" />
@@ -56,8 +60,12 @@
 		<Unit filename="logic/OrderHandler.h" />
 		<Unit filename="logic/PizzaHandler.cpp" />
 		<Unit filename="logic/PizzaHandler.h" />
+		<Unit filename="logic/StdInput.cpp" />
+		<Unit filename="logic/StdInput.h" />
 		<Unit filename="logic/ToppingsHandler.cpp" />
 		<Unit filename="logic/ToppingsHandler.h" />
+		<Unit filename="logic/UIHandler.cpp" />
+		<Unit filename="logic/UIHandler.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="objects/Order.cpp" />
 		<Unit filename="objects/Order.h" />
