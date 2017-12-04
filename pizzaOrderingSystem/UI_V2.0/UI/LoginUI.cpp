@@ -1,7 +1,6 @@
 #include "LoginUI.h"
 
-LoginUI::LoginUI()
-{
+LoginUI::LoginUI() {
 
 }
 
@@ -28,23 +27,23 @@ void LoginUI::login_portal(bool run) {
 
     switch(select) {
     case 'm':
-
+        mUI.manager_menu(0);
             ///The manager selection UI page
         break;
     case 'b':
-
+        bUI.baker_menu();
             ///The baker menu page
         break;
     case 't':
-
+        pUI.phone_menu(0);
             ///The phone clerk menu page
         break;
     case 's':
-
+        sUI.store_menu(0);
             ///The store clerk selector page
         break;
     case 'c':
-
+        cUI.customer_menu(0);
             ///The customer selector page
         break;
     case 'q':

@@ -1,17 +1,15 @@
 #include "BakerUI.h"
 
 
-BakerUI::BakerUI()
-{
+BakerUI::BakerUI() {
 
 }
 
-void BakerUI::baker_menu() {
+int BakerUI::baker_menu() {
     system("CLS");
-    cout << "----Baker menu----";
+    cout << "----Baker menu----" << endl;
     system("Pause");
-
-    lUI.login_portal(0);
+    return 0;
 }
 
 void BakerUI::terminate() {

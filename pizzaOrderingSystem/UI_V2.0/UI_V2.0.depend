@@ -1,19 +1,110 @@
 # depslib dependency file v1.0
-1446667744 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\main.cpp
+1512415125 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\main.cpp
 	<iostream>
-
-1512406702 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\bakerui.cpp
-	"BakerUI.h"
-
-1512406218 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\bakerui.h
 	"LoginUI.h"
-	<iostream>
 
-1512405470 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\loginui.h
+1512413256 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\loginui.h
 	<iostream>
 	<stdlib.h>
 	<vector>
+	"ManagerUI.h"
+	"BakerUI.h"
+	"PhoneClerkUI.h"
+	"StoreClerkUI.h"
+	"CustomerUI.h"
 
-1512406079 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\loginui.cpp
+1512414891 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\managerui.h
+	<stdlib.h>
+	<iostream>
+
+1512414991 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\bakerui.h
+	<iostream>
+	<stdlib.h>
+	<iostream>
+
+1512415348 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\phoneclerkui.h
+	<stdlib.h>
+	<iostream>
+
+1512415353 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\storeclerkui.h
+	<stdlib.h>
+	<iostream>
+
+1512414943 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\customerui.h
+	<stdlib.h>
+	<iostream>
+
+1512416985 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\managerui.cpp
+	"ManagerUI.h"
+
+1512393964 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\uitemplate.cpp
+	"UITemplate.h"
+
+1512393964 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\uitemplate.h
+
+1512410764 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\loginui.cpp
 	"LoginUI.h"
+
+1512049069 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\/..\main.cpp
+	<iostream>
+	"ManagerUI.h"
+
+1512407585 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\main.cpp
+	<iostream>
+	"LoginUI.h"
+
+1512407585 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\/.\main.cpp
+	<iostream>
+	"LoginUI.h"
+
+1512410747 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\/ui\loginui.h
+	<iostream>
+	<stdlib.h>
+	<vector>
+	"ManagerUI.h"
+	"BakerUI.h"
+	"PhoneClerkUI.h"
+	"StoreClerkUI.h"
+	"CustomerUI.h"
+
+1512412124 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\\ui\managerui.h
+	"/UI/LoginUI.h"
+
+1512410919 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\\ui\bakerui.h
+	"LoginUI.h"
+	<iostream>
+
+1512410747 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\\ui\loginui.h
+	<iostream>
+	<stdlib.h>
+	<vector>
+	"ManagerUI.h"
+	"BakerUI.h"
+	"PhoneClerkUI.h"
+	"StoreClerkUI.h"
+	"CustomerUI.h"
+
+1512408525 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\\ui\phoneclerkui.h
+	"LoginUI.h"
+
+1512407495 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\\ui\storeclerkui.h
+	"LoginUI.h"
+
+1512407953 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\\ui\customerui.h
+	"LoginUI.h"
+
+1512416577 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\bakerui.cpp
+	"BakerUI.h"
+
+1512414938 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\customerui.cpp
+	"CustomerUI.h"
+
+1512410764 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\loginui.cpp
+	"LoginUI.h"
+
+1512416634 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\phoneclerkui.cpp
+	"PhoneClerkUI.h"
+
+1512415071 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\storeclerkui.cpp
+	"StoreClerkUI.h"
 

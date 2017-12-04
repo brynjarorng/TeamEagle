@@ -1,21 +1,21 @@
-#ifndef PHONECLERKUI_H
-#define PHONECLERKUI_H
+#ifndef STORECLERK_H
+#define STORECLERK_H
 
 //#include "LoginUI.h"
 #include <stdlib.h>
 #include <iostream>
 using namespace std;
 
-class PhoneClerkUI {
+class StoreClerkUI {
     public:
-        PhoneClerkUI();
-        int phone_menu(char run);
+        StoreClerkUI();
+        int store_menu(char run);
         char lower(char instr);
         void terminate();
 
     private:
         char select;
-       // ToppingsHandler handler;
+//        ToppingsHandler handler;
 };
 
-#endif // PHONECLERKUI_H
+#endif // STORECLERK_H

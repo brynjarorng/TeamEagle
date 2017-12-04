@@ -1,11 +1,11 @@
 #include "CustomerUI.h"
 
-UserUI::UserUI()
+CustomerUI::CustomerUI()
 {
 
 }
 
-void UserUI::customer_menu(bool run) {
+int CustomerUI::customer_menu(bool run) {
 system("CLS");
 
     cout << "----Store portal----" << endl;
@@ -60,7 +60,11 @@ system("CLS");
         break;
 
     case 'b':
-        lUI.login_portal(0);
+        return 0;
+        break;
+
+    case 'q':
+        terminate();
         break;
 
     default:
@@ -68,9 +72,10 @@ system("CLS");
         break;
     }
 
+    return 0;
 }
 
-void UserUI::terminate() {
+void CustomerUI::terminate() {
     system("CLS");
     char cont;
 
@@ -87,7 +92,7 @@ void UserUI::terminate() {
     //manager UI again
 }
 
-char UserUI::lower(char instring) {
+char CustomerUI::lower(char instring) {
     instring = tolower(instring);
     return instring;
 }

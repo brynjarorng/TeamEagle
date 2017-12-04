@@ -1,20 +1,21 @@
 #ifndef USERUI_H
 #define USERUI_H
 
-#include "LoginUI.h"
 
-class UserUI
-{
+#include <stdlib.h>
+#include <iostream>
+using namespace std;
+
+class CustomerUI {
     public:
-        UserUI();
-        void customer_menu(bool run);
+        CustomerUI();
+        int customer_menu(bool run);
         char lower(char instr);
         void terminate();
 
     private:
-        LoginUI lUI;
         char select;
-        ToppingsHandler handler;
+        //ToppingsHandler handler;
 };
 
 #endif // USERUI_H

@@ -1,21 +1,23 @@
 #ifndef BAKERUI_H
 #define BAKERUI_H
 
-#include "LoginUI.h"
+//#include "LoginUI.h"
+#include <iostream>
+#include <stdlib.h>
 #include <iostream>
 
+using namespace std;
 
-class BakerUI
-{
+class BakerUI {
     public:
         BakerUI();
-        void baker_menu();
+        int baker_menu();
         char lower(char instr);
         void terminate();
 
 
     private:
-        LoginUI lUI;
+
 };
 
 #endif // BAKERUI_H

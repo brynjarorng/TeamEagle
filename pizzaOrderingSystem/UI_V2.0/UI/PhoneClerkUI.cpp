@@ -1,11 +1,10 @@
 #include "PhoneClerkUI.h"
 
-PhoneClerkUI::PhoneClerkUI()
-{
+PhoneClerkUI::PhoneClerkUI() {
 
 }
 
-void PhoneClerkUI::phone_menu(bool run) {
+int PhoneClerkUI::phone_menu(char run) {
 
     system("CLS");
 
@@ -14,7 +13,7 @@ void PhoneClerkUI::phone_menu(bool run) {
     cout << "(A) See all orders in progress" << endl;
     cout << "(M) See all pizzas on menu" << endl;
     cout << "(T) See all toppings" << endl;
-    cout << "(L) See all old orders today" << endl;
+    cout << "(O) See all old orders today" << endl;
     cout << "(B) Go back to login portal" << endl;
     cout << "(q) Quit" << endl;
     if(run){
@@ -31,45 +30,50 @@ void PhoneClerkUI::phone_menu(bool run) {
         system("CLS");
         cout << "New order" << endl;
         system("PAUSE");
-        phone_status_menu(0);
+        phone_menu(0);
         break;
 
     case 'a':
         system("CLS");
         cout << "See all orders" << endl;
         system("PAUSE");
-        phone_status_menu(0);
+        phone_menu(0);
         break;
 
     case 'm':
         system("CLS");
         cout <<  "See all pizzas on menu" << endl;
         system("PAUSE");
-        phone_status_menu(0);
+        phone_menu(0);
         break;
 
     case 't':
         system("CLS");
-        handler.print_toppings();
+//        handler.print_toppings();
         system("PAUSE");
-        phone_status_menu(0);
+        phone_menu(0);
         break;
 
-    case 'l':
+    case 'o':
         system("CLS");
         cout <<  "See everything ordered today" << endl;
         system("PAUSE");
-        phone_status_menu(0);
+        phone_menu(0);
         break;
 
     case 'b':
-        lUI.login_portal(0);
+        //return 0;
+        break;
+
+    case 'q':
+        terminate();
         break;
 
     default:
         phone_menu(1);
         break;
     }
+    return 0;
 }
 
 void PhoneClerkUI::terminate() {

@@ -1,12 +1,11 @@
-#include "StoreClerk.h"
+#include "StoreClerkUI.h"
 
-StoreClerk::StoreClerk()
-{
+StoreClerkUI::StoreClerkUI() {
 
 }
 
 
-void StoreClerkUI::store_menu(bool run) {
+int StoreClerkUI::store_menu(char run) {
 
     system("CLS");
 
@@ -32,52 +31,57 @@ void StoreClerkUI::store_menu(bool run) {
         system("CLS");
         cout << "New order" << endl;
         system("PAUSE");
-        store_status_menu(0);
+        store_menu(0);
         break;
 
     case 'a':
         system("CLS");
         cout << "See all orders" << endl;
         system("PAUSE");
-        store_status_menu(0);
+        store_menu(0);
         break;
 
     case 'm':
         system("CLS");
         cout <<  "See all pizzas on menu" << endl;
         system("PAUSE");
-        store_status_menu(0);
+        store_menu(0);
         break;
 
     case 't':
         system("CLS");
-        handler.print_toppings();
+//        handler.print_toppings();
         system("PAUSE");
-        store_status_menu(0);
+        store_menu(0);
         break;
 
     case 'l':
         system("CLS");
         cout <<  "See everything ordered today" << endl;
         system("PAUSE");
-        store_status_menu(0);
+        store_menu(0);
         break;
 
     case 'p':
         system("CLS");
         cout <<  "Mark orders paid or picked up" << endl;
         system("PAUSE");
-        store_status_menu(0);
+        store_menu(0);
         break;
 
     case 'b':
-        lUI.login_portal(0);
+        return 0;
+        break;
+
+    case 'q':
+        terminate();
         break;
 
     default:
-        phone_menu(1);
+        store_menu(1);
         break;
     }
+    return 0;
 }
 
 void StoreClerkUI::terminate() {
