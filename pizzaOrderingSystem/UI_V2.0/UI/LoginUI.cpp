@@ -15,8 +15,8 @@ void MainUI::login_portal(bool run) {
     cout << "(m) Manager" << endl;
     cout << "(b) Baker" << endl;
     cout << "(t) Telephone operator" << endl;
-    cout << "(c) Customer portal" << endl;
     cout << "(s) Sales clerk" << endl;
+    cout << "(c) Customer portal" << endl;
     cout << "(q) Quit" << endl;
     if(run){
         cout << "Incorrect input!" << endl;

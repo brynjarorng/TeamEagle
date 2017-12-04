@@ -2,7 +2,7 @@
 
 PhoneClerkUI::PhoneClerkUI()
 {
-    //ctor
+
 }
 
 void PhoneClerkUI::phone_menu(bool run) {
@@ -31,12 +31,14 @@ void PhoneClerkUI::phone_menu(bool run) {
         system("CLS");
         cout << "New order" << endl;
         system("PAUSE");
+        phone_status_menu(0);
         break;
 
     case 'a':
         system("CLS");
         cout << "See all orders" << endl;
         system("PAUSE");
+        phone_status_menu(0);
         break;
 
     case 'm':
@@ -51,6 +53,7 @@ void PhoneClerkUI::phone_menu(bool run) {
         handler.print_toppings();
         system("PAUSE");
         phone_status_menu(0);
+        break;
 
     case 'l':
         system("CLS");

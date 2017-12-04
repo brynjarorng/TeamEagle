@@ -15,7 +15,7 @@ void StoreClerkUI::store_menu(bool run) {
     cout << "(A) See all orders in progress" << endl;
     cout << "(M) See all pizzas on menu" << endl;
     cout << "(T) See all toppings" << endl;
-    cout << "(M) Mark orders paid/picked up"
+    cout << "(P) Mark orders paid/picked up" << endl;
     cout << "(L) See all old orders today" << endl;
     cout << "(B) Go back to login portal" << endl;
     cout << "(q) Quit" << endl;
@@ -27,18 +27,19 @@ void StoreClerkUI::store_menu(bool run) {
     cin >> select;
     select = lower(select);
 
-    switch (select)
-    {
+    switch (select) {
     case 'n':
         system("CLS");
         cout << "New order" << endl;
         system("PAUSE");
+        store_status_menu(0);
         break;
 
     case 'a':
         system("CLS");
         cout << "See all orders" << endl;
         system("PAUSE");
+        store_status_menu(0);
         break;
 
     case 'm':
@@ -53,10 +54,18 @@ void StoreClerkUI::store_menu(bool run) {
         handler.print_toppings();
         system("PAUSE");
         store_status_menu(0);
+        break;
 
     case 'l':
         system("CLS");
         cout <<  "See everything ordered today" << endl;
+        system("PAUSE");
+        store_status_menu(0);
+        break;
+
+    case 'p':
+        system("CLS");
+        cout <<  "Mark orders paid or picked up" << endl;
         system("PAUSE");
         store_status_menu(0);
         break;
