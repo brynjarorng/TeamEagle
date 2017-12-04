@@ -38,10 +38,15 @@ void OrderHandler::mark_pizza_status(int index, PizzaStatus status) {
     pizza_list[index].set_status(status);
 }
 
-void OrderHandler::generate_order_no() {
-    Order last = get_last_order();
-    int new_order_number = 1 + last.get_order_number();
-    order.set_order_number(new_order_number);
+void OrderHandler::generate_order_no()
+    if(order_repo.get_current_count != 0) {
+        Order last = get_last_order();
+        int new_order_number = 1 + last.get_order_number();
+        order.set_order_number(new_order_number);
+    }
+    else {
+        order.set_order_number(1);
+    }
 }
 
 Order OrderHandler::get_last_order() {
