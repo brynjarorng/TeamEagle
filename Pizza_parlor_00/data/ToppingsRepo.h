@@ -3,7 +3,7 @@
 
 #include "Toppings.h"
 #include <fstream>
-
+#include <vector>
 class ToppingsRepo {
 
 public:
@@ -19,11 +19,13 @@ public:
 	//The allocated memory must be deleted where the pointer is received.
 	int get_list_count() const;
 	//Returns the size of the above list.
+	vector<Toppings> read_vector();
 
 private:
 	Toppings topping;
 	Toppings* list;
 	int list_count;
+	vector<Toppings> topping_list;
 };
 
 

@@ -160,7 +160,7 @@ void UI::info_creator(int ret_val) {
     } else if(ret_val == 1) {
         cout << "Print toppings: " << endl;
         system("CLS");
-        handler.print_toppings();
+       // handler.print_toppings();
         system("PAUSE");
         manager_selector(0);
         //print all toppings
@@ -187,7 +187,7 @@ void UI::topping_creator(int ret_val) {
     } else if(ret_val == 1) {
         cout << "Add toppings" << endl;
         do{
-            handler.create_toppings();
+            //handler.add_topping(topping);
             do{
                 cout << "Do you want to input more Toppings (y/n)? ";
                 cin >> cont;
@@ -206,7 +206,7 @@ void UI::topping_creator(int ret_val) {
     } else if(ret_val == 3) {
         system("CLS");
         cout << "All toppings" << endl;
-        handler.print_toppings();
+        //handler.print_toppings();
         system("PAUSE");
         manager_selector(0);
         //see all toppings

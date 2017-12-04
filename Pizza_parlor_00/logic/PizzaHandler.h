@@ -13,9 +13,13 @@ public:
     //Destructor
     PizzaHandler (const PizzaHandler& copy);
     //Copy constructor
-    void create_menu_pizza();
+    bool set_name(string name, Pizza& pizza);
+    //Takes name from UI and checks if valid,
+    //If valid, then name is assigned and returns TRUE.
+    //Else return false.
+    void create_new_pizza(const Pizza& pizza);
     //Creates pizza and sends it to the menu pizza repository.
-    bool validate_pizza(string pizza_name);
+    bool validate_name(string pizza_name);
     //Gets pizza name and iterates through the pizza menu and
     //returns true if a pizza matches name;
     bool validate_pizza(string pizza_name, int &index);
@@ -34,13 +38,13 @@ public:
     //Fetches list of pizzas from the repo and prints it to the screen.
     PizzaHandler& operator = (const PizzaHandler& right_side);
     //Overloading the = operator for dynamic array handling.
-    void add_toppings();
+    bool add_topping(string name, Pizza& pizza);
     //Gets user input of a topping name, and checks if it exists,
     //if it does it'll be added to the pizza.
     //Loops until maximum topping number is reached or until user inputs "q".
 private:
 
-    Pizza pizza;
+  Pizza pizza;
     PizzaRepo pizzarepo;
     ToppingsHandler toppingshandler;
 	Toppings* toppings;

@@ -77,7 +77,7 @@ void OrderHandler::add_pizza_to_order(PizzaType pizzatype) {
 		string pizza_name;
 		cin >> pizza_name;
 
-		bool on_menu = pizzahandler.validate_pizza(pizza_name);
+		bool on_menu = pizzahandler.validate_name(pizza_name);
 		if (on_menu) {
 			pizza = pizzahandler.get_menu_pizza(pizza_name);
 			order.add_pizza(pizza);

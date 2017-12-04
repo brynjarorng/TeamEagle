@@ -24,6 +24,7 @@ public:
 	string get_name();
 	//Returns the name of topping
 	double get_price();
+	//Returns the price of the topping
 private:
 	static const int NAME_SIZE = 21;
 	char name[NAME_SIZE];	//Name of topping.

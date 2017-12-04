@@ -2,6 +2,7 @@
 #define TOPPINGSHANDLER_H
 #include "ToppingsRepo.h"
 #include <string.h>
+#include <vector>
 using namespace std;
 
 class ToppingsHandler
@@ -14,11 +15,13 @@ class ToppingsHandler
 		//Destructor
 		ToppingsHandler(const ToppingsHandler& copy_object);
 		//Copy constructor.
-        void create_toppings();
-		//Prompts the user to input the name and price of the toppings,
-		//and appends to a list saved in the home folder.
-        void print_toppings();
-		//Prints the list of Toppings in the same order as the current list.
+        bool add_topping(Toppings topping);
+        //Precondition: topping contains information that was input from the UI.
+        //Postcondition: if the topping contains the information in the correct format
+        //then the topping is sent to the repository and the return value is TRUE.
+        //Else nothing is done and the return value is FALSE.
+        vector<Toppings> get_topping_list();
+		//Returns vector of the list of Toppings in the same order as the current list.
         ToppingsHandler& operator =(const ToppingsHandler& right_side);
 		//First delete memory assigned to the private pointer of type Toppings,
 		//and then make it equal to copy.

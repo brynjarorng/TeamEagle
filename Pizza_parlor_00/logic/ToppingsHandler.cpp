@@ -17,23 +17,9 @@ ToppingsHandler::ToppingsHandler(const ToppingsHandler& copy_object) {
     }
 }
 
-void ToppingsHandler::create_toppings()
+vector<Toppings> ToppingsHandler::get_topping_list()
 {
-    Toppings topping;
-
-    cin >> topping;
-
-    repo.write(topping);
-}
-
-void ToppingsHandler::print_toppings()
-{
-	toppings_list = repo.read();
-	//Retreive current toppings list from repository.
-	toppings_list_count = repo.get_list_count();
-	for (int i = 0; i < toppings_list_count; i++) {
-		cout << toppings_list[i] << endl;
-	}
+    return repo.read_vector();
 }
 
 bool ToppingsHandler::validate(string topping_name)
@@ -49,6 +35,14 @@ bool ToppingsHandler::validate(string topping_name)
         }
     }
 
+    return false;
+}
+
+bool ToppingsHandler::add_topping(Toppings topping) {
+    if(validate(topping.get_name())) {
+        this ->repo.write(topping);
+        return true;
+    }
     return false;
 }
 

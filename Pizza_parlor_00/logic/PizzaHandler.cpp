@@ -16,44 +16,26 @@ PizzaHandler::PizzaHandler (const PizzaHandler& copy) {
     }
 }
 
-void PizzaHandler::add_toppings() {
-    string toppingname;
-
-    for(int i = 0; i < pizza.get_max_toppings(); i++) {
-    cin >> toppingname;
-
-        if (toppingname == "q") {
-            break;
-        }
-        if (toppingshandler.validate(toppingname)) {
-            pizza.add_topping(toppingshandler.get_topping(toppingname));
-        }
-        else {
-            cout << "Topping does not exist in database, please try again." << endl;
-        }
+bool PizzaHandler::set_name(string name, Pizza& pizzaa) {
+    if(!validate_name(name)) {
+        pizzaa.set_name(name);
+        return true;
     }
+    return false;
 }
 
-void PizzaHandler::create_menu_pizza() {
+bool PizzaHandler::add_topping(string topping_name, Pizza& pizza) {
+        if (toppingshandler.validate(topping_name)) {
+            pizza.add_topping(toppingshandler.get_topping(topping_name));
 
-    string name;
-    //Temporary cout
-    cout << "Name: ";
-    cin >> name;
-
-    pizza.set_name(name);
-
-    //Temporary cout
-    cout << "Price: ";
-    double price;
-    cin >> price;
-    pizza.set_price(price);
+            return true;
+        }
+        return false;
+    }
 
 
-    add_toppings();
-
+void PizzaHandler::create_new_pizza(const Pizza& pizza) {
     pizzarepo.write(pizza);
-    reset_pizza();
 }
 void PizzaHandler::reset_pizza() {
     Pizza new_pizza;
@@ -61,7 +43,7 @@ void PizzaHandler::reset_pizza() {
 }
 
 Pizza PizzaHandler::create_special_pizza() {
-    add_toppings();
+//    add_topping();
 
     this ->toppings = pizza.get_toppings();
     double price = 0;
@@ -79,7 +61,7 @@ Pizza PizzaHandler::create_special_pizza() {
 	return new_pizza;
 }
 
-bool PizzaHandler::validate_pizza(string pizza_name) {
+bool PizzaHandler::validate_name(string pizza_name) {
     string name;
 
     pizza_list = pizzarepo.read();
