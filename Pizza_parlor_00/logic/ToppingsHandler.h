@@ -15,7 +15,15 @@ class ToppingsHandler
 		//Destructor
 		ToppingsHandler(const ToppingsHandler& copy_object);
 		//Copy constructor.
-        bool add_topping(Toppings topping);
+		bool set_name(string name, Toppings& topping);
+		//Checks whether name exists in database, if not
+		//then name is set to topping and returns TRUE.
+		//Else return false.
+		bool set_price(double price, Toppings& topping);
+		//Checks whether price is a positive number,
+		//if positive then price is set to topping and returns TRUE.
+		//Else return false.
+        void create_topping(Toppings& topping);
         //Precondition: topping contains information that was input from the UI.
         //Postcondition: if the topping contains the information in the correct format
         //then the topping is sent to the repository and the return value is TRUE.

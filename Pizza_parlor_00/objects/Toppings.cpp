@@ -9,7 +9,7 @@ void Toppings::convert_string_cstring(string in) {
 	unsigned int i = 0;
 	while( i < NAME_SIZE && i < in.length())
 	{
-		name[i] = in[i];
+		this ->name[i] = in[i];
 		i++;
 	}
 	append_null(i + 1);
@@ -27,6 +27,15 @@ double Toppings::get_price()
 {
 	return this->price;
 }
+
+void Toppings::set_name(string name) {
+    convert_string_cstring(name);
+}
+
+void Toppings::set_price(double price) {
+    this ->price = price;
+}
+
 ostream& operator << (ostream& outs, const Toppings& topping)
 {
 	outs << topping.name  << " " << topping.price << endl;
@@ -46,6 +55,8 @@ void Toppings::append_null(int index)
 {
 	this -> name[index - 1] = '\0';
 }
+
+
 /*string Toppings::namegame()
 {
 	string return_string;
