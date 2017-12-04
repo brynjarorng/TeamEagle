@@ -25,6 +25,10 @@ public:
 	//Returns the name of topping
 	double get_price();
 	//Returns the price of the topping
+	void set_name(string name);
+	//Sets the name of the topping
+	void set_price(double price);
+	//Sets the name of the topping
 private:
 	static const int NAME_SIZE = 21;
 	char name[NAME_SIZE];	//Name of topping.

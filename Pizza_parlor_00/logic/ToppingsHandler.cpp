@@ -7,6 +7,7 @@ ToppingsHandler::ToppingsHandler() {
 
 ToppingsHandler::~ToppingsHandler() {
 		delete[] toppings_list;
+
 }
 ToppingsHandler::ToppingsHandler(const ToppingsHandler& copy_object) {
 
@@ -38,12 +39,27 @@ bool ToppingsHandler::validate(string topping_name)
     return false;
 }
 
-bool ToppingsHandler::add_topping(Toppings topping) {
-    if(validate(topping.get_name())) {
-        this ->repo.write(topping);
+
+bool ToppingsHandler::set_name(string name, Toppings& topping) {
+    if(!validate(name)) {
+        topping.set_name(name);
         return true;
     }
+
     return false;
+}
+bool ToppingsHandler::set_price(double price, Toppings& topping) {
+    if(price >= 0) {
+        topping.set_price(price);
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+void ToppingsHandler::create_topping(Toppings& topping) {
+        repo.write(topping);
 }
 
 Toppings ToppingsHandler::get_topping(string topping_name)
@@ -60,7 +76,7 @@ Toppings ToppingsHandler::get_topping(string topping_name)
         }
     }
 
-		return remove_later;
+    return remove_later;
 }
 
 ToppingsHandler& ToppingsHandler::operator =(const ToppingsHandler& right_side)
