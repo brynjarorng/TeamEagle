@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="UI" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="UI" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -32,6 +34,20 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="UI/BakerUI.cpp" />
+		<Unit filename="UI/BakerUI.h" />
+		<Unit filename="UI/LoginUI.cpp" />
+		<Unit filename="UI/LoginUI.h" />
+		<Unit filename="UI/ManagerUI.cpp" />
+		<Unit filename="UI/ManagerUI.h" />
+		<Unit filename="UI/PhoneClerkUI.cpp" />
+		<Unit filename="UI/PhoneClerkUI.h" />
+		<Unit filename="UI/StoreClerk.cpp" />
+		<Unit filename="UI/StoreClerk.h" />
+		<Unit filename="UI/UITemplate.cpp" />
+		<Unit filename="UI/UITemplate.h" />
+		<Unit filename="UI/CustomerUI.cpp" />
+		<Unit filename="UI/CustomerUI.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

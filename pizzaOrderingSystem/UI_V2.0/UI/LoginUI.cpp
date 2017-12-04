@@ -6,7 +6,7 @@ LoginUI::LoginUI()
 }
 
 
-void MainUI::login_portal(bool run) {
+void LoginUI::login_portal(bool run) {
     system("CLS");
 
     cout << "Welcome to pizza & co." << endl << endl;
@@ -23,10 +23,10 @@ void MainUI::login_portal(bool run) {
     }
     cout << ": ";
 
-    cin >> selector;
+    cin >> select;
     select = lower(select);
 
-    switch(selector) {
+    switch(select) {
     case 'm':
 
             ///The manager selection UI page
@@ -53,7 +53,7 @@ void MainUI::login_portal(bool run) {
         break;
     default:
             system("CLS");
-            print_login_selector(1);
+            login_portal(1);
             ///Print the login selector again with the error message
         break;
     }
@@ -62,7 +62,7 @@ void MainUI::login_portal(bool run) {
 
 
 
-void MainUI::terminate() {
+void LoginUI::terminate() {
     system("CLS");
     char cont;
 
@@ -74,16 +74,12 @@ void MainUI::terminate() {
         cout << "Good Bye!" << endl;
         exit(0);
     }
-    print_login_selector(0);
+    login_portal(0);
     //Double check if user wants to quit, else runs the
     //manager UI again
 }
-///Every UI has this termination class
 
-char MainUI::lower(char instring) {
-    StdInput s;
-    instring = s.to_lower_case(instring);
+char LoginUI::lower(char instring) {
+    instring = tolower(instring);
     return instring;
 }
-
-///Every class has this to lower function

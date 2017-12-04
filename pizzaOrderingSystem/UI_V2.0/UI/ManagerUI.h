@@ -15,6 +15,8 @@ class ManagerUI
         void info_menu(bool run);
         void topping_menu(bool run);
         void menu_pizza_menu(bool run);
+        char lower(char instr);
+        void terminate();
 
     private:
         LoginUI lUI;

@@ -1,4 +1,4 @@
-#include "UserUI.h"
+#include "CustomerUI.h"
 
 UserUI::UserUI()
 {
@@ -60,7 +60,7 @@ system("CLS");
         break;
 
     case 'b':
-        lui.login_portal(0);
+        lUI.login_portal(0);
         break;
 
     default:
@@ -69,4 +69,27 @@ system("CLS");
     }
 
 }
+
+void UserUI::terminate() {
+    system("CLS");
+    char cont;
+
+    cout << "Are you sure you want to quit (y/n)? ";
+        cin >> cont;
+        cont = lower(cont);
+
+    if(cont == 'y'){
+        cout << "Good Bye!" << endl;
+        exit(0);
+    }
+    customer_menu(0);
+    //Double check if user wants to quit, else runs the
+    //manager UI again
+}
+
+char UserUI::lower(char instring) {
+    instring = tolower(instring);
+    return instring;
+}
+
 

@@ -1,7 +1,6 @@
 #include "ManagerUI.h"
 
-ManagerUI::ManagerUI()
-{
+ManagerUI::ManagerUI() {
 
 }
 
@@ -30,20 +29,21 @@ void ManagerUI::manager_menu(bool run) {
 
     } else if(select == 'i') {
 
-        info_creator();
+        info_menu(0);
         ///To pizza info menu
 
     } else if(select == 'T') {
 
-        topping_creator(ret_val);
+        topping_menu(0);
         ///To topping menu
 
     } else if(select == 'S') {
+        size_menu(0);
         ///To size menu
 
     } else if(select == 'N') {
 
-        pizza_creator(ret_val);
+        menu_pizza_menu(0);
         ///To create a new pizza menu
     }
 }
@@ -99,8 +99,6 @@ void ManagerUI::info_menu(bool run) {
 }
 
 void ManagerUI::topping_menu(bool run) {
-    char cont;
-
     system("CLS");
 
     cout << "----Information portal----" << endl;
@@ -146,9 +144,43 @@ void ManagerUI::topping_menu(bool run) {
     }
 }
 
-void MainUI::menu_pizza_menu(bool run) {
-    char cont;
+void MainUI::size_menu(bool run) {
+    system("CLS");
 
+    cout << "----Size editor portal----" << endl;
+    cout << "(T) Add size" << endl;
+    cout << "(S) Remove size" << endl;
+    cout << "(B) Go back" << endl;
+    cout << "(q) Quit" << endl;
+    if(run){
+        cout << "Incorrect input!" << endl;
+    }
+    cout << ": ";
+
+    cin >> select;
+    select = lower(select);
+
+    switch (select)
+    {
+    case 'a':
+        system("CLS");
+        cout << "Add a new size";
+        system("PAUSE");
+        break;
+
+    case 'd':
+        system("CLS");
+        cout << "Remove a size";
+        system("PAUSE");
+        break;
+
+    default:
+        menu_pizza_menu(1);
+        break;
+    }
+}
+
+void MainUI::menu_pizza_menu(bool run) {
     system("CLS");
 
     cout << "----Information portal----" << endl;
@@ -168,19 +200,13 @@ void MainUI::menu_pizza_menu(bool run) {
     {
     case 'a':
         system("CLS");
-        cout << "Create a new pizza: Missing handler";
+        cout << "Create a new pizza";
         system("PAUSE");
-        break;
-
-    case 'c':
-        system("CLS");
-        cout << "Change an existing pizza: Missing handler";
-        sustem("PAUSE");
         break;
 
     case 'd':
         system("CLS");
-        cout << "Remove a pizza from menu: Missing handler";
+        cout << "Remove a pizza from menu";
         system("PAUSE");
         break;
 
@@ -189,4 +215,27 @@ void MainUI::menu_pizza_menu(bool run) {
         break;
     }
 }
+
+void ManagerUI::terminate() {
+    system("CLS");
+    char cont;
+
+    cout << "Are you sure you want to quit (y/n)? ";
+        cin >> cont;
+        cont = lower(cont);
+
+    if(cont == 'y'){
+        cout << "Good Bye!" << endl;
+        exit(0);
+    }
+    manager_menu(0);
+    //Double check if user wants to quit, else runs the
+    //manager UI again
+}
+
+char ManagerUI::lower(char instring) {
+    instring = tolower(instring);
+    return instring;
+}
+
 

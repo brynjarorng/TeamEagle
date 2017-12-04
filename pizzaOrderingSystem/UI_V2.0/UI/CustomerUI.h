@@ -7,10 +7,13 @@ class UserUI
 {
     public:
         UserUI();
+        void customer_menu(bool run);
+        char lower(char instr);
+        void terminate();
 
     private:
         LoginUI lUI;
-        bool select;
+        char select;
         ToppingsHandler handler;
 };
 

@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1446667744 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\main.cpp
+	<iostream>
+
+1512406702 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\bakerui.cpp
+	"BakerUI.h"
+
+1512406218 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\bakerui.h
+	"LoginUI.h"
+	<iostream>
+
+1512405470 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\loginui.h
+	<iostream>
+	<stdlib.h>
+	<vector>
+
+1512406079 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\loginui.cpp
+	"LoginUI.h"
+

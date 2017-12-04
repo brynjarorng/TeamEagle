@@ -72,6 +72,29 @@ void PhoneClerkUI::phone_menu(bool run) {
     }
 }
 
+void PhoneClerkUI::terminate() {
+    system("CLS");
+    char cont;
+
+    cout << "Are you sure you want to quit (y/n)? ";
+        cin >> cont;
+        cont = lower(cont);
+
+    if(cont == 'y'){
+        cout << "Good Bye!" << endl;
+        exit(0);
+    }
+    phone_menu(0);
+    //Double check if user wants to quit, else runs the
+    //manager UI again
+}
+
+char PhoneClerkUI::lower(char instring) {
+    instring = tolower(instring);
+    return instring;
+}
+
+
 
 
 

@@ -5,14 +5,18 @@
 #include <stdlib.h>
 #include <vector>
 
+using namespace std;
+
 class LoginUI
 {
     public:
         LoginUI();
         void login_portal(bool run);
+        char lower(char instr);
+        void terminate();
 
     private:
-        char selector;
+        char select;
 };
 
 #endif // LOGINUI_H
