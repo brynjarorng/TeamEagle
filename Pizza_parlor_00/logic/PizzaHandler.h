@@ -17,14 +17,16 @@ public:
     //Takes name from UI and checks if valid,
     //If valid, then name is assigned and returns TRUE.
     //Else return false.
-    void create_new_pizza(const Pizza& pizza);
-    //Creates pizza and sends it to the menu pizza repository.
+    void create_new_menu_pizza(Pizza& pizza) ;
+    //Calls validate_new_pizza does not throw exceptions then the
     bool validate_name(string pizza_name);
     //Gets pizza name and iterates through the pizza menu and
     //returns true if a pizza matches name;
-    bool validate_pizza(string pizza_name, int &index);
-    //Method overload - takes index integer reference and changes it
-    //to the corresponding index of the pizza in the pizza list if found.
+    bool validate_new_pizza(Pizza& pizza) throw(InvalidName, InvalidPrice);
+    //Validates new pizza that's being added to database.
+    //If a pizza already has the same name it will throw InvalidName and return false.
+    //If the price is below 0 it will throw InvalidPrice and return false.
+    //Else return true.
     Pizza get_menu_pizza(string pizza_name);
     //Gets Pizza name and iterates through the pizza menu and
     //returns the pizza of the matching name.
@@ -49,7 +51,7 @@ public:
     void reset_pizza(Pizza& pizza);
 private:
 
-    Pizza pizza;
+   // Pizza pizza;
     PizzaRepo pizzarepo;
     ToppingsHandler toppingshandler;
 	Toppings* toppings;

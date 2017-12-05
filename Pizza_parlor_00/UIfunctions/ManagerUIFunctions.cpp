@@ -1,6 +1,6 @@
 #include <PizzaHandler.h>
 #include <ToppingsHandler.h
-
+/*
 void make_pizza() {
     Pizza pizza;
     PizzaHandler pizzahandler;
@@ -100,4 +100,129 @@ void create_topping() {
         cin >> choice;
     }
 }
+*/
+void create_topping() {
+    char choice = '\0';
+    int max_tries = 5;
+    while(choice != 'n') {
+        Toppings topping;
+        ToppingsHandler handler;
 
+        string name;
+        cout << "Name: ";
+        cin >> name;
+        topping.set_name(name);
+
+        double price;
+        cout << "Price: ";
+        cin >> price;
+        topping.set_price(price);
+
+        cout << endl << topping << endl;
+        cout << "Would you like to add this topping to the database? (y/n) ";
+        cin >> choice;
+
+        if(choice == 'y') {
+            for(int i = 0; i <= max_tries; i++) {
+                try {
+                    handler.create_topping(topping);
+                    i = max_tries;
+                }
+                catch(InvalidName e) {
+                    cout << "Topping already exists" << endl;
+                    i = max_tries;
+                }
+                catch(InvalidPrice e) {
+                    if(i >= max_tries) {
+                        cout << "Out of tries!" << endl;
+                        break;
+                    }
+                    cout << "Try again (" << max_tries - i << ") left." << endl;
+                    cout << "Price must be a positive number, try another:  ";
+                    cin >> price;
+                    topping.set_price(price);
+                }
+            }
+        }
+
+        choice = '\0';
+
+        cout << endl << "Would you like to add more toppings? (y/n) ";
+        cin >> choice;
+        cout << endl;
+    }
+}
+
+void make_new_menu_pizza() {
+    Pizza pizza;
+    PizzaHandler pizzahandler;
+    ToppingsHandler toppingshandler;
+    Toppings topping;
+    int max_tries = 5;
+    char choice = '\0';
+
+    string name;
+    cout << "Name: ";
+    cin >> name;
+    pizza.set_name(name);
+
+    double price;
+    cout << "Price: ";
+    cin >> price;
+    pizza.set_price(price);
+
+    string topping_name;
+    for(int i = 0; (choice != 'n') && i < pizza.get_max_toppings(); i++) {
+        cout << "Add a topping: ";
+        cin >> topping_name;
+        try{
+            Toppings topptopp;
+            topptopp = toppingshandler.get_topping(topping_name);
+            pizza.add_topping(topptopp);
+            cout << "Would you like to add another topping? (y/n) ";
+            cin >> choice;
+        }
+        catch(InvalidName e) {
+            cout << "Topping does not exist, try again." << endl;
+            i--;
+        }
+    }
+
+    choice = '\0';
+
+    cout << endl << pizza << endl;
+    cout << "Would you like to add this pizza to the menu? (y/n) ";
+    cin >> choice;
+
+    if(choice == 'y') {
+        for(int i = 0, j = 0; i <= max_tries && j <= max_tries;) {
+            try{
+                pizzahandler.create_new_menu_pizza(pizza);
+                i = max_tries +1;
+                j = max_tries +1;
+            }
+            catch(InvalidName e) {
+                if(i >= max_tries) {
+                    cout << "Out of tries!" << endl;
+                    break;
+                }
+                cout << "Try again (" << max_tries - i << ") left." << endl;
+                cout << "Pizza name is taken, try another: ";
+                cin >> name;
+                pizza.set_name(name);
+                i++;
+            }
+            catch(InvalidPrice e) {
+                if(j >= max_tries) {
+                    cout << "Out of tries!" << endl;
+                    break;
+                }
+                cout << "Try again (" << max_tries - j << ") left." << endl;
+                cout << "Price must be a positive number, try another: ";
+                cin >> price;
+                pizza.set_price(price);
+                j++;
+            }
+        }
+    }
+}
