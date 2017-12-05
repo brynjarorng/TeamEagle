@@ -5,83 +5,104 @@ StoreClerkUI::StoreClerkUI() {
 }
 
 
-int StoreClerkUI::store_menu(char run) {
+bool StoreClerkUI::store_menu(bool run, bool& continueRun) {
+    try{
+        system("CLS");
 
-    system("CLS");
+        cout << "----Store portal----" << endl;
+        cout << "(N) New order" << endl;
+        cout << "(A) See all orders in progress" << endl;
+        cout << "(M) See all pizzas on menu" << endl;
+        cout << "(T) See all toppings" << endl;
+        cout << "(P) Mark orders paid/picked up" << endl;
+        cout << "(L) See all old orders today" << endl;
+        cout << "(B) Go back to login portal" << endl;
+        cout << "(q) Quit" << endl;
+        if(run){
+            cout << "Incorrect input!" << endl;
+        }
+        cout << ": ";
 
-    cout << "----Store portal----" << endl;
-    cout << "(N) New order" << endl;
-    cout << "(A) See all orders in progress" << endl;
-    cout << "(M) See all pizzas on menu" << endl;
-    cout << "(T) See all toppings" << endl;
-    cout << "(P) Mark orders paid/picked up" << endl;
-    cout << "(L) See all old orders today" << endl;
-    cout << "(B) Go back to login portal" << endl;
-    cout << "(q) Quit" << endl;
-    if(run){
-        cout << "Incorrect input!" << endl;
+        cin >> select;
+        select = lower(select);
+
+        switch (select) {
+        case 'n':
+            system("CLS");
+            cout << "New order" << endl;
+            system("PAUSE");
+
+
+            continueRun = 1;
+            return 0;
+            break;
+
+        case 'a':
+            system("CLS");
+            cout << "See all orders" << endl;
+            system("PAUSE");
+
+            continueRun = 1;
+            return 0;
+            break;
+
+        case 'm':
+            system("CLS");
+            cout <<  "See all pizzas on menu" << endl;
+            system("PAUSE");
+
+            continueRun = 1;
+            return 0;
+            break;
+
+        case 't':
+            system("CLS");
+    //        handler.print_toppings();
+            system("PAUSE");
+
+            continueRun = 1;
+            return 0;
+            break;
+
+        case 'l':
+            system("CLS");
+            cout <<  "See everything ordered today" << endl;
+            system("PAUSE");
+
+            continueRun = 1;
+            return 0;
+            break;
+
+        case 'p':
+            system("CLS");
+            cout <<  "Mark orders paid or picked up" << endl;
+            system("PAUSE");
+
+            continueRun = 1;
+            return 0;
+            break;
+
+        case 'b':
+            continueRun = 0;
+            return 0;
+            break;
+
+        case 'q':
+            terminate();
+            break;
+
+        }
+        throw(InvalidInputException());
+
     }
-    cout << ": ";
 
-    cin >> select;
-    select = lower(select);
-
-    switch (select) {
-    case 'n':
-        system("CLS");
-        cout << "New order" << endl;
-        system("PAUSE");
-        store_menu(0);
-        break;
-
-    case 'a':
-        system("CLS");
-        cout << "See all orders" << endl;
-        system("PAUSE");
-        store_menu(0);
-        break;
-
-    case 'm':
-        system("CLS");
-        cout <<  "See all pizzas on menu" << endl;
-        system("PAUSE");
-        store_menu(0);
-        break;
-
-    case 't':
-        system("CLS");
-//        handler.print_toppings();
-        system("PAUSE");
-        store_menu(0);
-        break;
-
-    case 'l':
-        system("CLS");
-        cout <<  "See everything ordered today" << endl;
-        system("PAUSE");
-        store_menu(0);
-        break;
-
-    case 'p':
-        system("CLS");
-        cout <<  "Mark orders paid or picked up" << endl;
-        system("PAUSE");
-        store_menu(0);
-        break;
-
-    case 'b':
-        return 0;
-        break;
-
-    case 'q':
-        terminate();
-        break;
-
-    default:
-        store_menu(1);
-        break;
+    catch(InvalidInputException e) {
+        continueRun = 1;
+        return 1;
     }
+
     return 0;
+
 }
 
 void StoreClerkUI::terminate() {
@@ -94,11 +115,8 @@ void StoreClerkUI::terminate() {
 
     if(cont == 'y'){
         cout << "Good Bye!" << endl;
-        exit(0);
+        exit(1);
     }
-    store_menu(0);
-    //Double check if user wants to quit, else runs the
-    //manager UI again
 }
 
 char StoreClerkUI::lower(char instring) {

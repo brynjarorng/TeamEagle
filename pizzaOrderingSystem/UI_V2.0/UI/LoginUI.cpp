@@ -1,60 +1,88 @@
 #include "LoginUI.h"
 
 LoginUI::LoginUI() {
-
+    this ->continueRun = 0;
 }
 
 
-void LoginUI::login_portal(bool run) {
-    system("CLS");
+bool LoginUI::login_portal(bool run) {
+    try {
 
-    cout << "Welcome to pizza & co." << endl << endl;
+        system("CLS");
 
-    cout << "----LOGIN SELECTOR----" << endl;
-    cout << "(m) Manager" << endl;
-    cout << "(b) Baker" << endl;
-    cout << "(t) Telephone operator" << endl;
-    cout << "(s) Sales clerk" << endl;
-    cout << "(c) Customer portal" << endl;
-    cout << "(q) Quit" << endl;
-    if(run){
-        cout << "Incorrect input!" << endl;
+        cout << "Welcome to pizza & co." << endl << endl;
+
+        cout << "----LOGIN SELECTOR----" << endl;
+        cout << "(m) Manager" << endl;
+        cout << "(b) Baker" << endl;
+        cout << "(t) Telephone operator" << endl;
+        cout << "(s) Sales clerk" << endl;
+        cout << "(c) Customer portal" << endl;
+        cout << "(q) Quit" << endl;
+        if(run){
+            cout << "Incorrect input!" << endl;
+        }
+        cout << ": ";
+
+        cin >> select;
+        select = lower(select);
+
+        switch(select) {
+        case 'm':
+            run = 0;
+            do{
+                run = mUI.manager_menu(run, continueRun);
+            } while(continueRun);
+            return 0;
+                ///The manager selection UI page
+            break;
+
+        case 'b':
+            run = 0;
+            do{
+                run = bUI.baker_menu(run, continueRun);
+            } while(continueRun);
+            return 0;
+                ///The baker menu page
+            break;
+
+        case 't':
+            run = 0;
+            do{
+                run = pUI.phone_menu(run, continueRun);
+            } while(continueRun);
+            return 0;
+                ///The phone clerk menu page
+            break;
+
+        case 's':
+            run = 0;
+            do{
+                run = sUI.store_menu(run, continueRun);
+            } while(continueRun);
+            return 0;
+                ///The store clerk selector page
+            break;
+
+        case 'c':
+            run = 0;
+            do{
+                run = cUI.customer_menu(run, continueRun);
+            } while(continueRun);
+            return 0;
+                ///The customer selector page
+            break;
+
+        case 'q':
+                terminate();
+                ///Halts the program
+            break;
+        }
+        throw (InvalidInputException());
     }
-    cout << ": ";
 
-    cin >> select;
-    select = lower(select);
-
-    switch(select) {
-    case 'm':
-        mUI.manager_menu(0);
-            ///The manager selection UI page
-        break;
-    case 'b':
-        bUI.baker_menu();
-            ///The baker menu page
-        break;
-    case 't':
-        pUI.phone_menu(0);
-            ///The phone clerk menu page
-        break;
-    case 's':
-        sUI.store_menu(0);
-            ///The store clerk selector page
-        break;
-    case 'c':
-        cUI.customer_menu(0);
-            ///The customer selector page
-        break;
-    case 'q':
-            terminate();
-            ///Halts the program
-        break;
-    default:
-            system("CLS");
-            login_portal(1);
-            ///Print the login selector again with the error message
-        break;
+    catch (InvalidInputException e) {
+        return 1;
     }
 
 }
