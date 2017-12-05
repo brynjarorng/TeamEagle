@@ -44,7 +44,7 @@ private:
 	char name[MAX_NAME_SIZE];
 	int name_count;
 
-	static const int MAX_TOPPINGS = 80;
+	static const int MAX_TOPPINGS = 3;
 	Toppings topping[MAX_TOPPINGS];
     int toppingcount;
     PizzaStatus status;

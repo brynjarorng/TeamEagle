@@ -143,3 +143,11 @@ PizzaHandler& PizzaHandler::operator = (const PizzaHandler& right_side) {
     }
     return *this;
 }
+ bool PizzaHandler::max_toppings(const Pizza& pizza) {
+    if (pizza.get_toppingcount() < pizza.get_max_toppings()) {
+        return false;
+    }
+    else {
+        return true;
+    }
+ }
