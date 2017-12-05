@@ -115,7 +115,7 @@ void ManagerUI::info_menu(bool run) {
 }
 
 void ManagerUI::topping_menu(bool run) {
-    bool cont;
+    char cont;
     system("CLS");
 
     cout << "----Topping portal----" << endl;
@@ -134,15 +134,14 @@ void ManagerUI::topping_menu(bool run) {
     switch (select) {
     case 'a':                   ///VERY BROKEN, DO NOT KNOW WHY (CIN?????)
         system("CLS");
-       // do{
+        do{
             //handler.create_toppings();
-       //     do{
+            do{
                 cout << "Do you want to input more Toppings (y/n)? " << endl;
-        //        cin >> cont;
-       //         cont = lower(cont);
-       //     } while(cont == 'y' && cont == 'n');
-       // } while(cont == 'y');
-        system("PAUSE");
+                cin >> cont;
+                cont = lower(cont);
+            } while(cont == 'y' && cont == 'n');
+        } while(cont == 'y');
         topping_menu(0);
         break;
 

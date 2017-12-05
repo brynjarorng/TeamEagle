@@ -34,7 +34,7 @@
 	<stdlib.h>
 	<iostream>
 
-1512416985 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\managerui.cpp
+1512417033 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\managerui.cpp
 	"ManagerUI.h"
 
 1512393964 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\uitemplate.cpp
@@ -96,15 +96,15 @@
 1512416577 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\bakerui.cpp
 	"BakerUI.h"
 
-1512414938 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\customerui.cpp
+1512417050 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\customerui.cpp
 	"CustomerUI.h"
 
 1512410764 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\loginui.cpp
 	"LoginUI.h"
 
-1512416634 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\phoneclerkui.cpp
+1512417072 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\phoneclerkui.cpp
 	"PhoneClerkUI.h"
 
-1512415071 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\storeclerkui.cpp
+1512417078 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\storeclerkui.cpp
 	"StoreClerkUI.h"
 
