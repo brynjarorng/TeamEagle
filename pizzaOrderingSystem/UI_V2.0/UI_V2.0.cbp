@@ -48,8 +48,6 @@
 		<Unit filename="UI/PhoneClerkUI.h" />
 		<Unit filename="UI/StoreClerkUI.cpp" />
 		<Unit filename="UI/StoreClerkUI.h" />
-		<Unit filename="UI/UITemplate.cpp" />
-		<Unit filename="UI/UITemplate.h" />
 		<Unit filename="exceptions/InvalidInputException.cpp" />
 		<Unit filename="exceptions/InvalidInputException.h" />
 		<Unit filename="main.cpp" />
