@@ -39,12 +39,16 @@ public:
     PizzaHandler& operator = (const PizzaHandler& right_side);
     //Overloading the = operator for dynamic array handling.
     bool add_topping(string name, Pizza& pizza);
-    //Gets user input of a topping name, and checks if it exists,
-    //if it does it'll be added to the pizza.
-    //Loops until maximum topping number is reached or until user inputs "q".
+    //If name is a name of a topping existing in the current list
+    //of toppings, then the topping is added to the pizza and
+    //the return value is TRUE. Else nothing is done and the return
+    //value is FALSE.
+    bool max_toppings(const Pizza& pizza);
+    //The return value is FALSE if more toppings can be added.
+    //the return value is TRUE if max toppings is reached.
 private:
 
-  Pizza pizza;
+    Pizza pizza;
     PizzaRepo pizzarepo;
     ToppingsHandler toppingshandler;
 	Toppings* toppings;
