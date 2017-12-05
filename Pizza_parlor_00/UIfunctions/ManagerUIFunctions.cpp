@@ -53,7 +53,7 @@ void make_pizza() {
         pizzahandler.create_new_pizza(pizza);
     }
 }
-
+/*
 void create_topping() {
     char choice = '\0';
 
@@ -98,6 +98,50 @@ void create_topping() {
 
         cout << endl << "Would you like to add more toppings? (y/n) ";
         cin >> choice;
+    }
+}
+*/
+void create_topping() {
+    char choice = '\0';
+
+    while(choice != 'n') {
+        Toppings topping;
+        ToppingsHandler handler;
+
+        string name;
+        cout << "Name: ";
+        cin >> name;
+        topping.set_name(name);
+
+        double price;
+        cout << "Price: ";
+        cin >> price;
+        topping.set_price(price);
+
+        cout << endl << topping << endl;
+        cout << "Would you like to add this topping to the database? (y/n) ";
+        cin >> choice;
+
+        if(choice == 'y') {
+            try {
+                handler.create_topping(topping);
+            }
+            catch(InvalidName e) {
+                cout << "Topping already exists" << endl;
+            }
+            catch(InvalidPrice e) {
+                cout << "Price must be a positive number, try again: ";
+                cin >> price;
+                topping.set_price(price);
+                handler.create_topping(topping);
+            }
+        }
+
+        choice = '\0';
+
+        cout << endl << "Would you like to add more toppings? (y/n) ";
+        cin >> choice;
+        cout << endl;
     }
 }
 

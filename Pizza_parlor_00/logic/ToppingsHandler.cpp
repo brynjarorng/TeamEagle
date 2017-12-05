@@ -18,12 +18,22 @@ ToppingsHandler::ToppingsHandler(const ToppingsHandler& copy_object) {
     }
 }
 
+void ToppingsHandler::print_toppings()
+{
+	toppings_list = repo.read();
+	//Retreive current toppings list from repository.
+	toppings_list_count = repo.get_list_count();
+	for (int i = 0; i < toppings_list_count; i++) {
+		cout << toppings_list[i] << endl;
+	}
+}
+
 vector<Toppings> ToppingsHandler::get_topping_list()
 {
     return repo.read_vector();
 }
 
-bool ToppingsHandler::validate(string topping_name)
+/*bool ToppingsHandler::validate(string topping_name)
 {
     string name;
 
@@ -37,9 +47,31 @@ bool ToppingsHandler::validate(string topping_name)
     }
 
     return false;
+}*/
+
+bool ToppingsHandler::validate_new_topping(Toppings& topping) throw(InvalidName, InvalidPrice)
+{
+
+    if(topping.get_price() < 0) {
+        throw InvalidPrice();
+        return false;
+    }
+
+    vector<Toppings>toppings_vector = repo.read_vector();
+    string name_from_list;
+    string name = topping.get_name();
+    for(int i = 0; i < toppings_vector.size(); i++) {
+        name_from_list = toppings_vector.at(i).get_name();
+        if(name == name_from_list) {
+            throw InvalidName();
+            return false;
+        }
+    }
+
+    return true;
 }
 
-
+/*
 bool ToppingsHandler::set_name(string name, Toppings& topping) {
     if(!validate(name)) {
         topping.set_name(name);
@@ -57,15 +89,15 @@ bool ToppingsHandler::set_price(double price, Toppings& topping) {
         return false;
     }
 }
-
+*/
 void ToppingsHandler::create_topping(Toppings& topping) {
+    if(validate_new_topping(topping)) {
         repo.write(topping);
+    }
 }
 
-Toppings ToppingsHandler::get_topping(string topping_name)
+Toppings ToppingsHandler::get_topping(string topping_name) throw (InvalidName())
 {
-	Toppings remove_later("ERROR! NOT A TOPPING!", 0);
-
     string name;
     toppings_list = repo.read();
     toppings_list_count = repo.get_list_count();
@@ -76,7 +108,7 @@ Toppings ToppingsHandler::get_topping(string topping_name)
         }
     }
 
-    return remove_later;
+    throw InvalidName();
 }
 
 ToppingsHandler& ToppingsHandler::operator =(const ToppingsHandler& right_side)
