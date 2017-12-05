@@ -7,23 +7,25 @@
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/UI_V2.0" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/UI_V2" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="UI" />
+					<Add directory="exceptions" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/UI_V2.0" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/UI_V2" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="UI" />
+					<Add directory="exceptions" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -36,6 +38,8 @@
 		</Compiler>
 		<Unit filename="UI/BakerUI.cpp" />
 		<Unit filename="UI/BakerUI.h" />
+		<Unit filename="UI/CustomerUI.cpp" />
+		<Unit filename="UI/CustomerUI.h" />
 		<Unit filename="UI/LoginUI.cpp" />
 		<Unit filename="UI/LoginUI.h" />
 		<Unit filename="UI/ManagerUI.cpp" />
@@ -46,8 +50,8 @@
 		<Unit filename="UI/StoreClerkUI.h" />
 		<Unit filename="UI/UITemplate.cpp" />
 		<Unit filename="UI/UITemplate.h" />
-		<Unit filename="UI/CustomerUI.cpp" />
-		<Unit filename="UI/CustomerUI.h" />
+		<Unit filename="exceptions/InvalidInputException.cpp" />
+		<Unit filename="exceptions/InvalidInputException.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
