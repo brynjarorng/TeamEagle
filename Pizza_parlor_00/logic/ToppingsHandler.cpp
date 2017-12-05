@@ -33,7 +33,7 @@ vector<Toppings> ToppingsHandler::get_topping_list()
     return repo.read_vector();
 }
 
-/*bool ToppingsHandler::validate(string topping_name)
+bool ToppingsHandler::validate(string topping_name)
 {
     string name;
 
@@ -47,7 +47,7 @@ vector<Toppings> ToppingsHandler::get_topping_list()
     }
 
     return false;
-}*/
+}
 
 bool ToppingsHandler::validate_new_topping(Toppings& topping) throw(InvalidName, InvalidPrice)
 {
@@ -60,7 +60,7 @@ bool ToppingsHandler::validate_new_topping(Toppings& topping) throw(InvalidName,
     vector<Toppings>toppings_vector = repo.read_vector();
     string name_from_list;
     string name = topping.get_name();
-    for(int i = 0; i < toppings_vector.size(); i++) {
+    for(int i = 0; i < (int)toppings_vector.size(); i++) {
         name_from_list = toppings_vector.at(i).get_name();
         if(name == name_from_list) {
             throw InvalidName();
@@ -96,7 +96,7 @@ void ToppingsHandler::create_topping(Toppings& topping) {
     }
 }
 
-Toppings ToppingsHandler::get_topping(string topping_name) throw (InvalidName())
+Toppings ToppingsHandler::get_topping(string topping_name) throw (InvalidName)
 {
     string name;
     toppings_list = repo.read();
@@ -109,6 +109,7 @@ Toppings ToppingsHandler::get_topping(string topping_name) throw (InvalidName())
     }
 
     throw InvalidName();
+    return Toppings("ERROR", 0);
 }
 
 ToppingsHandler& ToppingsHandler::operator =(const ToppingsHandler& right_side)

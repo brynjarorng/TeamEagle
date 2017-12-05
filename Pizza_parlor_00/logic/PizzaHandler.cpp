@@ -34,8 +34,10 @@ bool PizzaHandler::add_topping(string topping_name, Pizza& pizza) {
     }
 
 
-void PizzaHandler::create_new_pizza(const Pizza& pizza) {
-    pizzarepo.write(pizza);
+void PizzaHandler::create_new_menu_pizza(Pizza& pizza) {
+    if(validate_new_pizza(pizza)) {
+        pizzarepo.write(pizza);
+    }
 }
 
 void PizzaHandler::reset_pizza(Pizza& pizza) {
@@ -71,19 +73,26 @@ bool PizzaHandler::validate_name(string pizza_name) {
     return false;
 }
 
-bool PizzaHandler::validate_pizza(string pizza_name, int &index) {
-    string name;
-
+bool PizzaHandler::validate_new_pizza(Pizza& pizza) throw(InvalidName, InvalidPrice){
+    string list_name;
+    string name = pizza.get_name();
     pizza_list = pizzarepo.read();
+
     pizza_list_count = pizzarepo.get_list_count();
     for(int i = 0; i < pizza_list_count; i++) {
-        name = pizza_list[i].get_name();
-        if(name == pizza_name) {
-            index = i;
-            return true;
+        list_name = pizza_list[i].get_name();
+        if(name == list_name) {
+            throw InvalidName();
+            return false;
         }
     }
-    return false;
+
+    if(pizza.get_price() < 0) {
+        throw InvalidPrice();
+        return false;
+    }
+
+    return true;
 }
 
 Pizza PizzaHandler::get_menu_pizza(string pizza_name) {
