@@ -37,28 +37,24 @@ bool PizzaHandler::add_topping(string topping_name, Pizza& pizza) {
 void PizzaHandler::create_new_pizza(const Pizza& pizza) {
     pizzarepo.write(pizza);
 }
-void PizzaHandler::reset_pizza() {
+
+void PizzaHandler::reset_pizza(Pizza& pizza) {
     Pizza new_pizza;
-    this ->pizza = new_pizza;
+    pizza = new_pizza;
 }
+void PizzaHandler::create_special_pizza(Pizza& pizza) {
 
-Pizza PizzaHandler::create_special_pizza() {
-//    add_topping();
 
-    this ->toppings = pizza.get_toppings();
     double price = 0;
+    Toppings* top = pizza.get_toppings();
+    int toppingscount = pizza.get_toppingcount();
 
-    for(int i = 0; i < pizza.get_toppingcount(); i++) {
-        price += toppings[i].get_price();
+    for(int i = 0; i < toppingscount; i++) {
+        price += top[i].get_price();
     }
 
     pizza.set_price(price);
     pizza.set_name("Special order");
-
-    Pizza new_pizza = this-> pizza;
-    reset_pizza();
-
-	return new_pizza;
 }
 
 bool PizzaHandler::validate_name(string pizza_name) {

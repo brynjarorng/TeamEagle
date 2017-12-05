@@ -32,8 +32,8 @@ public:
     Pizza get_menu_pizza(int index);
     //Takes index as parameter and returns the pizza with the
     //corresponding index number.
-    Pizza create_special_pizza();
-    //Creates a special order pizza and returns it to caller.
+    void create_special_pizza(Pizza& pizza);
+    //Creates a special order pizza.
     void print_pizzas();
     //Fetches list of pizzas from the repo and prints it to the screen.
     PizzaHandler& operator = (const PizzaHandler& right_side);
@@ -46,6 +46,7 @@ public:
     bool max_toppings(const Pizza& pizza);
     //The return value is FALSE if more toppings can be added.
     //the return value is TRUE if max toppings is reached.
+    void reset_pizza(Pizza& pizza);
 private:
 
     Pizza pizza;
@@ -54,7 +55,7 @@ private:
 	Toppings* toppings;
     Pizza* pizza_list;
     int pizza_list_count;
-    void reset_pizza();
+
 };
 
 #endif // PIZZAHANDLER_H_INCLUDED
