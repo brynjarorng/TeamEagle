@@ -24,15 +24,17 @@ class ToppingsHandler
 		//Checks whether price is a positive number,
 		//if positive then price is set to topping and returns TRUE.
 		//Else return false.*/
-		bool validate_new_topping(Toppings& topping) throw(InvalidName, InvalidPrice);
+		bool validate_name(Toppings& topping);
 		//Validates new topping that's being added to database.
-		//If a topping already has the same name it will throw InvalidName.
-		//If the price is below 0 it will throw InvalidPrice.
-        void create_topping(Toppings& topping);
+		//If a topping already has the same name it return false;
+        bool validate_price(Toppings& topping);
+        //Validates the price of a topping.
+        //If price is below zero it will return false.
+        void create_topping(Toppings& topping) throw(InvalidName, InvalidPrice);
         //Precondition: topping contains information that was input from the UI.
-        //Postcondition: if the validate_new_topping function returns TRUE then
+        //Postcondition: if the validate_name and validate_price functions return TRUE then
         //the topping will be sent to the repository.
-        //Else nothing is done.
+        //Else it will throw an exception
         void print_toppings();
 		//Prints the list of Toppings in the same order as the current list.
         vector<Toppings> get_topping_list();
