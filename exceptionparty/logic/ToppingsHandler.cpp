@@ -49,11 +49,10 @@ bool ToppingsHandler::validate(string topping_name)
     return false;
 }
 
-bool ToppingsHandler::validate_name(Toppings& topping)
+bool ToppingsHandler::validate_name(string name)
 {
     vector<Toppings>toppings_vector = repo.read_vector();
     string name_from_list;
-    string name = topping.get_name();
     for(int i = 0; i < (int)toppings_vector.size(); i++) {
         name_from_list = toppings_vector.at(i).get_name();
         if(name == name_from_list) {
@@ -63,10 +62,11 @@ bool ToppingsHandler::validate_name(Toppings& topping)
     return false;
 }
 
-bool ToppingsHandler::validate_price(Toppings& topping) {
-    if(topping.get_price() < 0) {
+bool ToppingsHandler::validate_price(double price) {
+    if(price < 0) {
         return false;
     }
+    return true;
 }
 
 /*
@@ -89,10 +89,10 @@ bool ToppingsHandler::set_price(double price, Toppings& topping) {
 }
 */
 void ToppingsHandler::create_topping(Toppings& topping) throw(InvalidName, InvalidPrice) {
-    if(validate_name(topping())) {
+    if(!validate_name(topping.get_name())) {
         throw InvalidName();
     }
-    if(validate_price(topping)) {
+    if(!validate_price(topping.get_price())) {
         throw InvalidPrice();
     }
     repo.write(topping);

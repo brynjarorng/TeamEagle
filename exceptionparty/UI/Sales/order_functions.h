@@ -18,7 +18,7 @@ PizzaType menu_or_special();
 //Postcondition: If the user has entered the correct input, then the return
 //value is the type of pizza selected. Otherwise the user cans choose to retry
 //or exit.
-bool toppings_to_special(Pizza& pizza);
+void toppings_to_special(Pizza& pizza);
 //Precondition: the reference instance of Pizza has been created and the use
 //is ready to enter toppings from the keyboard.
 //Postcondition: The user is prompt to input toppings, and if the toppings
@@ -30,14 +30,14 @@ bool yes();
 //Input is a character, the function prompts the user to input a selection of (y) or (n)
 //if the selectuon is neither, the user is asked again until either answer is recevied.
 //if the input is 'y' then the return value is true, else the return value is false.
-void add_pizzas(Pizza& pizza, Order& order);
+void add_pizzas(Order& order);
 //Prompts the user to select the type of pizza (menu or special) and allows
 //the user to repeat the action provided the maximum order count has not been reached.
-void add_menu_pizza(Pizza& pizza, Order& order);
+void add_menu_pizza(Order& order);
 //Adds pizza selected by the user on the menu.
 //The return value is TRUE if the pizza was added to the menu,
 //FALSE otherwise.
-void add_special_pizza(Pizza& pizza, Order& order);
+void add_special_pizza(Order& order);
 //Pizza with selected toppings is added to the order.
 void print_pizzas_toppings(Pizza pizza);
 //Precondition: Pizza contains toppings to print.
@@ -82,25 +82,24 @@ void print_orders(Order_Status status) {
 bool new_order() {
 
     Order order;
-    Pizza pizza;
 
     OrderHandler orderhandler;
     orderhandler.generate_order_no(order);
     cout << "Order #" << order.get_order_number() << endl;
 
-    add_pizzas(pizza, order);
+    add_pizzas(order);
     system("clear");
 
     print_order(order);
     if (order.get_order_count() > 0) {
-        cout << "Is this the correct order? (y/n)";
+        cout << "Is this the correct order? (y/n) ";
         if (yes()) {
             orderhandler.add_order(order);
             return false;
         }
         else {
             cout << "Order was not added" << endl;
-            cout << "Retry? (y/n)";
+            cout << "Retry? (y/n) ";
             if (yes()) {
                 return true;
             }
@@ -110,27 +109,30 @@ bool new_order() {
         if (yes()) {
             return true;
     }
+    return false;
 }
-void add_pizzas(Pizza& pizza, Order& order) {
+void add_pizzas(Order& order) {
 
     OrderHandler orderhandler;
     PizzaType pizzatype;
 
+
     pizzatype = menu_or_special();
+
 
     bool user_choice;
     do
     {
-        if (orderhandler.max_order_count(order)) {
+        /*if (orderhandler.max_order_count(order)) {
             cout << "Maximum order has been reached!" << endl;
             break;
-        }
+        }*/
         if (pizzatype == menu_pizza) {
-            add_menu_pizza(pizza, order);
+            add_menu_pizza(order);
 
         }
         if (pizzatype == special_pizza) {
-            add_special_pizza(pizza, order);
+            add_special_pizza(order);
         }
         cout << "Do you wish to add more pizzas to the order?";
         user_choice = yes();
@@ -147,15 +149,17 @@ PizzaType menu_or_special() {
     PizzaType pizzatype;
 
     bool quit = false;
+            char type;
+
     while (!quit) {
-         cout << "Press m for menu pizza, s for special pizza:";
-        char type;
+         cout << "Press m for menu pizza, s for special pizza: ";
         cin >> type;
         if (type == 'm') {
             pizzatype = menu_pizza;
             quit = true;
         }
         else if (type == 's') {
+
             pizzatype = special_pizza;
             quit = true;
         }
@@ -170,78 +174,68 @@ PizzaType menu_or_special() {
     }
     return pizzatype;
 }
-void add_menu_pizza(Pizza& pizza, Order& order) {
-
+void add_menu_pizza(Order& order) {
+    Pizza pizza;
     PizzaHandler pizzahandler;
 
     string pizza_name;
-    cout << "Enter name of pizza:";
+    cout << "Enter name of pizza: ";
     cin >> pizza_name;
 
-    bool on_menu = pizzahandler.validate_name(pizza_name);
-    if (on_menu) {
+    try {
         pizza = pizzahandler.get_menu_pizza(pizza_name);
         print_pizza(pizza);
-        cout << "Do you want to add this pizza? (y/n)";
+        cout << "Do you want to add this pizza? (y/n) ";
         if (yes()) {
             order.add_pizza(pizza);
-            //pizzahandler.reset_pizza(pizza);
-            }
+        }
     }
-    else {
-        cout << "Pizza not on menu! " << endl;
+    catch(InvalidName e) {
+        cout << "Pizza not on menu!" << endl;
     }
 }
 
-bool toppings_to_special(Pizza& pizza) {
+void toppings_to_special(Pizza& pizza) {
 
     PizzaHandler pizzahandler;
+    ToppingsHandler toppingshandler;
 
     string topping_name = " ";
     cout << "Enter toppings, insert q when finished: ";
     cin >> topping_name;
 
     while (topping_name != "q") {
-        bool toppings_exists =
-                pizzahandler.add_topping(topping_name, pizza);
-        if (!toppings_exists) {
+        try {
+            pizza.add_topping(toppingshandler.get_topping(topping_name));
+        }
+        catch(InvalidName e) {
             cout << "Topping not on list!" << endl;
         }
 
-        cout << "Enter next topping:";
+        cout << "Enter next topping: ";
         cin >> topping_name;
-        if (topping_name == "q") {
-            break;
-        }
 
         if (pizzahandler.max_toppings(pizza)) {
-            cout << "Maximum topping has been reached, do you want to add this pizza"
-                 << "to the order?: ";
-            print_pizza(pizza);
-
-            char in;
-            cin >> in;
-            if (in == 'y') {
-                return true;
-            }
-            else {
-                return false;
-            }
+            cout << "Maximum topping has been reached." << endl;
+            break;
         }
     }
-    pizzahandler.create_special_pizza(pizza);
-    print_pizza(pizza);
-    cout << "Do you want to add this pizza to the order? (y/n)";
-    return (yes());
-}
-void add_special_pizza(Pizza& pizza, Order& order) {
-      PizzaHandler pizzahandler;
-    if (toppings_to_special(pizza)) {
-        pizzahandler.create_special_pizza(pizza);
-        order.add_pizza(pizza);
-        }
 
-    pizzahandler.reset_pizza(pizza);
+}
+void add_special_pizza(Order& order) {
+    Pizza pizza;
+    PizzaHandler pizzahandler;
+
+    pizza.set_name("Special order");
+    toppings_to_special(pizza);
+
+    pizza.set_price(pizzahandler.calc_price(pizza));
+
+    print_pizza(pizza);
+    cout << "Do you want to add this pizza to the order? (y/n) ";
+    if(yes()) {
+        order.add_pizza(pizza);
+    }
 }
 
 bool yes() {
@@ -253,9 +247,10 @@ bool yes() {
     else if (input == 'n') {
         return false;
     }
-        cout << "Please select either (y) or (n)" << endl;
+        cout << "Please select either (y) or (n) " << endl;
         return yes();
 }
+
 void print_pizzas_toppings(Pizza pizza) {
 
 
@@ -322,7 +317,7 @@ void mark_delivered() {
 
     int remove_order_nr;
 
-    cout << "Press (p) to print current orders, or insert the number of order to mark ready:";
+    cout << "Press (p) to print current orders, or insert the number of order to mark ready: ";
     string remove_order;
     cin >> remove_order;
     char first_digit;

@@ -35,7 +35,7 @@ public:
 	double get_price();
 	//Returns the price of this instance of pizza.
 	string get_name();
-	//Returns the name of this instance of pizza;
+	//Returns the name of this instance of pizza
 private:
 
 	double price;
@@ -44,7 +44,7 @@ private:
 	char name[MAX_NAME_SIZE];
 	int name_count;
 
-	static const int MAX_TOPPINGS = 3;
+	static const int MAX_TOPPINGS = 80;
 	Toppings topping[MAX_TOPPINGS];
     int toppingcount;
     PizzaStatus status;

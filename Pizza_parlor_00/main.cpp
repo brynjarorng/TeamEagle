@@ -1,18 +1,20 @@
 #include <iostream>
 #include "OrderHandler.h"
 #include "Pizza.h"
-#include "PizzaHandler.h"
-
-//#include <UI.h>
+#include "UI/Sales/order_functions.h"
+#include <stdlib.h>
 using namespace std;
+
+
 
 int main()
 {
-    PizzaHandler handler;
-handler.print_pizzas();
+    //bool test;
+    new_order();
+    //mark_delivered();
+    //print_orders(not_delivered);
+
+
+    return 0;
 }
-
-
-
-
 

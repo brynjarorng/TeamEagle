@@ -2,7 +2,7 @@
 
 OrderHandler::OrderHandler() {
     orders = new Order[0];
-    order_count = 0;
+    order_count = order_repo.get_current_count();
 }
 
 OrderHandler::~OrderHandler() {
@@ -38,7 +38,7 @@ void OrderHandler::mark_pizza_status(int index, PizzaStatus status) {
     pizza_list[index].set_status(status);
 }
 
-void OrderHandler::generate_order_no() {
+void OrderHandler::generate_order_no(Order& order) {
     if(order_repo.get_current_count() != 0) {
         Order last = get_last_order();
         int new_order_number = 1 + last.get_order_number();
@@ -59,40 +59,46 @@ Order OrderHandler::get_last_order() {
 }
 
 void OrderHandler::print_current_list() {
+
     orders = order_repo.current_read();
 
     order_count = order_repo.get_current_count();
-    cout << "print_current_list: " << order_count <<"------------------" << endl;
+    cout << "print_current_list: " << endl;
 
     for(int i = 0; i < order_count; i++) {
         cout << orders[i];
-        cout << "*!*!";
     }
 }
-void OrderHandler::add_pizza_to_order(PizzaType pizzatype) {
-	if (pizzatype == menu_pizza) {
+void OrderHandler::add_order(const Order& order) {
+    order_repo.current_write(order);
+}
+bool OrderHandler::max_order_count(Order order) {
+    if (order.get_order_count() < order.get_max_orders()) {
+        return false;
+    }
+    return false;
+}
+bool OrderHandler::delivered(int order_number) {
 
-        //Temporary cout
-        cout << "Enter name of pizza:";
-		string pizza_name;
-		cin >> pizza_name;
+    bool found;
+    this ->orders = order_repo.current_read();
 
-		bool on_menu = pizzahandler.validate_name(pizza_name);
-		if (on_menu) {
-			pizza = pizzahandler.get_menu_pizza(pizza_name);
-			order.add_pizza(pizza);
-			this ->order_repo.current_write(order);
-		}
-		else {
-			cout << "Pizza not on menu! " << endl;
-		}
-	}
-	else if (pizzatype == special_pizza) {
-		pizza = pizzahandler.create_special_pizza();
-		order.add_pizza(pizza);
-		this ->order_repo.current_write(order);
-	}
-	else {
-		cout << "---(SYSTEM)NOT A PIZZATYPE---"  << endl;
-	}
+    for (int i =0; i < order_count; i++) {
+        if (this ->orders[i].get_order_number() == order_number) {
+            this ->orders[i].set_delivered();
+            found = true;
+        }
+        else found = false;
+    }
+    if (found == true) {
+        this ->order_repo.overwrite_list(this ->orders, order_count);
+    }
+    return found;
+}
+ Order* OrderHandler::get_orders() {
+    this ->orders = order_repo.current_read();
+    return this ->orders;
+ }
+int OrderHandler::get_order_count() const {
+    return this ->order_count;
 }

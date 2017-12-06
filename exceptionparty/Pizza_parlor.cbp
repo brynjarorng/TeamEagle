@@ -42,6 +42,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="C:/Users/vikto/Desktop/teameagle/Pizza_parlor_00/exceptions" />
 		</Compiler>
 		<Unit filename="UI/Sales/order_functions.h">
 			<Option compile="1" />
@@ -60,6 +61,10 @@
 		<Unit filename="datatypes/PizzaType.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="exceptions/InvalidName.cpp" />
+		<Unit filename="exceptions/InvalidName.h" />
+		<Unit filename="exceptions/InvalidPrice.cpp" />
+		<Unit filename="exceptions/InvalidPrice.h" />
 		<Unit filename="logic/OrderHandler.cpp" />
 		<Unit filename="logic/OrderHandler.h" />
 		<Unit filename="logic/PizzaHandler.cpp" />
