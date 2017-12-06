@@ -18,6 +18,7 @@
 					<Add directory="logic" />
 					<Add directory="datatypes" />
 					<Add directory="UI" />
+					<Add directory="UIfunctions" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -42,6 +43,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="UI/Sales/order_functions.h">
+			<Option compile="1" />
+		</Unit>
 		<Unit filename="UI/UI.cpp" />
 		<Unit filename="UI/UI.h" />
 		<Unit filename="data/OrderRepo.cpp" />

@@ -21,7 +21,7 @@ public:
 	//about pizza status: pizza in oven (T/F) and pizza ready (T/F).
 	friend istream& operator >>(istream& ins, Order& order);
 	//Instream is one occurrence of pizza wich will be the next element
-	//in the private member array containing the pizzas in the order.
+	//in the private member array containing the pizzas in the order.d
     void add_pizza(Pizza pizza);
 	//If pizzas_in_order_count <= MAX_ORDER_SIZE, pizza is added
 	//to order, else an error message is printed to the screen.
@@ -34,6 +34,10 @@ public:
 	//False otherwise.
 	int get_order_count();
 	//Returns the number of pizzas in the order.
+	int get_max_orders();
+	//Returns the maximum allowed orders.
+	Pizza* get_pizzas_in_order();
+	//Returns the list of pizza in the current order.
 private:
 	static const int MAX_ORDER_SIZE = 100;
 

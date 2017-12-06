@@ -29,6 +29,8 @@ public:
 	//Returns the size of the above list
     //void move_to_archived(int order_number);
 	//Moves an order in the current order to archived order.
+	void overwrite_list(Order* order, int list_count);
+	//Rewrites the "current_orders.dat" with order.
 
 private:
 

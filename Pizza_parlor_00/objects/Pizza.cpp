@@ -14,13 +14,13 @@ ostream& operator << (ostream& outs, Pizza& pizza) {
 
 	for (int i = 0; i < pizza.toppingcount; i++) {
 	  outs << " " << pizza.topping[i].get_name();
-	}
+	//}
 
 	outs << endl;
 
 	return outs;
 }
-
+}
 istream& operator >> (istream& ins, Pizza& pizza) {
 
 	ins >> pizza.name >> pizza.price;

@@ -18,18 +18,26 @@ public:
     //Takes index of pizza and a status as parameters and marks the pizza
     //with the corresponding index in the order with either
     //baking (in oven) or ready (out of oven).
-    void generate_order_no();
+    void generate_order_no(Order& order);
     //Reads the order no. of the last order and assigns current
     //order a number that's last order no + 1.
     void print_current_list();
     //Get's list of current orders from repo and prints them out to screen.
     Order get_last_order();
     //Get's the order list from the repo and returns the last order.
-    void add_pizza_to_order(PizzaType pizzatype);
-	//Add pizza to order, if Pizzatype = menu_pizza the a pizza of type
-	//menu_pizza is added to the order, if PizzaType = special_pizza
-	//then a pizza of type special pizza is added. If the Pizzatype is
-	//neither of these, an error message is printed.
+    void add_order(const Order& order);
+    //
+    bool max_order_count(Order order);
+    //Return value is TRUE if the maximum order has been reached
+    //False otherwise.
+    bool delivered(int order_number);
+    //The order with the corresponding order_number is marked as delivered
+    //in the current order list
+    Order* get_orders();
+    //Returns the list of orders.
+    //Needs to be deleted where it is received.
+    int get_order_count() const;
+    //Returns the current order count list.
 private:
     OrderRepo order_repo;
     Order* orders;
@@ -38,8 +46,6 @@ private:
     Order order;
     Pizza pizza;
     Pizza* pizza_list;
-
-
 };
 
 #endif // ORDERHANDLER_H

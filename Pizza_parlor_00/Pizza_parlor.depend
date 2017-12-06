@@ -2,20 +2,20 @@
 1512304250 source:c:\users\Ívar\desktop\pizz\pizza_parlor\objects\toppings.cpp
 	"Toppings.h"
 
-1512304250 h"
+1512383774 h"
 
 1512308047 c:\users\Ívar\desktop\pizz\pizza_parlor\objects\toppings.h
 	<string>
 	<iostream>
 	<cstring>
 
-1512309247 
+1512383774 
 
 1512315874 source:c:\users\Ívar\desktop\pizz\pizza_parlor\main.cpp
 	<iostream>
 	"PizzaHandler.h"
 
-1512314729 ler.h"
+1512407941 ler.h"
 
 1512307901 c:\users\Ívar\desktop\pizz\pizza_parlor\data\toppingsrepo.h
 	"Toppings.h"
@@ -24,12 +24,12 @@
 1512304497 source:c:\users\Ívar\desktop\pizz\pizza_parlor\data\toppingsrepo.cpp
 	"ToppingsRepo.h"
 
-1512304497 epo.h"
+1512400380 epo.h"
 
 1512306182 source:c:\users\Ívar\desktop\pizz\pizza_parlor\logic\toppingshandler.cpp
 	"ToppingsHandler.h"
 
-1512306182 andler.h"
+1512400852 andler.h"
 
 1512306182 c:\users\Ívar\desktop\pizz\pizza_parlor\logic\toppingshandler.h
 	"ToppingsRepo.h"
@@ -49,7 +49,7 @@
 1512311804 source:c:\users\Ívar\desktop\pizz\pizza_parlor\data\pizzarepo.cpp
 	"PizzaRepo.h"
 
-1512314349 .h"
+1512400726 .h"
 
 1512311804 c:\users\Ívar\desktop\pizz\pizza_parlor\data\pizzarepo.h
 	"Pizza.h"
@@ -134,6 +134,8 @@
 	"OrderRepo.h"
 	"PizzaHandler.h"
 	"PizzaStatus.h"
+
+1512383774 us.h"
 
 1512331454 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/objects/Order.cpp
 	"Order.h"
@@ -242,4 +244,126 @@
 	"UI.h"
 	<iostream>
 	"UIHandler.h"
+
+1512552243 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/data/OrderRepo.cpp
+	"OrderRepo.h"
+	<cstdlib>
+
+1512548841 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/data/OrderRepo.h
+	"Order.h"
+	<fstream>
+	<string>
+
+1512493883 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/objects/Order.h
+	"Pizza.h"
+	"PizzaType.h"
+
+1512487292 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/objects/Pizza.h
+	"PizzaStatus.h"
+	"Toppings.h"
+	<string.h>
+
+1512408099 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/datatypes/PizzaStatus.h
+
+1512462085 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/objects/Toppings.h
+	<string>
+	<iostream>
+	<cstring>
+
+1512408099 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/datatypes/PizzaType.h
+
+1512477119 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/data/PizzaRepo.cpp
+	"PizzaRepo.h"
+
+1512408099 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/data/PizzaRepo.h
+	"Pizza.h"
+	<fstream>
+
+1512410781 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/data/ToppingsRepo.cpp
+	"ToppingsRepo.h"
+
+1512410781 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/data/ToppingsRepo.h
+	"Toppings.h"
+	<fstream>
+	<vector>
+
+1512552243 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/logic/OrderHandler.cpp
+	"OrderHandler.h"
+
+1512551291 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/logic/OrderHandler.h
+	"OrderRepo.h"
+	"PizzaHandler.h"
+	"PizzaStatus.h"
+
+1512486112 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/logic/PizzaHandler.h
+	"ToppingsHandler.h"
+	"PizzaRepo.h"
+
+1512462085 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/logic/ToppingsHandler.h
+	"ToppingsRepo.h"
+	<string.h>
+	<vector>
+
+1512486637 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/logic/PizzaHandler.cpp
+	"PizzaHandler.h"
+
+1512408099 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/logic/StdInput.cpp
+	"StdInput.h"
+
+1512408099 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/logic/StdInput.h
+	<iostream>
+
+1512477119 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/logic/ToppingsHandler.cpp
+	"ToppingsHandler.h"
+
+1512408099 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/logic/UIHandler.cpp
+	"UIHandler.h"
+
+1512408099 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/logic/UIHandler.h
+	"ToppingsHandler.h"
+	<iostream>
+	<cstdlib>
+	"UI.h"
+	"StdInput.h"
+
+1512408099 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/UI/UI.h
+	"UIHandler.h"
+	"StdInput.h"
+
+1512489088 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/objects/Order.cpp
+	"Order.h"
+
+1512487342 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/objects/Pizza.cpp
+	"Pizza.h"
+
+1512462085 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/objects/Toppings.cpp
+	"Toppings.h"
+
+1512410781 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/UI/UI.cpp
+	"UI.h"
+	<iostream>
+	"UIHandler.h"
+
+1512552311 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/main.cpp
+	<iostream>
+	"OrderHandler.h"
+	"Pizza.h"
+	"UI/Sales/order_functions.h"
+	<stdlib.h>
+
+1512483379 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/UIfunctions/Sales/SalesUIFunctions.h
+	"OrderHandler.h"
+	"Pizza.h"
+
+1512552053 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/UI/Sales/order_functions.h
+	<stdlib.h>
+	"OrderHandler.h"
+	"Pizza.h"
+	<iomanip>
+
+1512552053 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor_00/UI/Sales/order_functions.h
+	<stdlib.h>
+	"OrderHandler.h"
+	"Pizza.h"
+	<iomanip>
 

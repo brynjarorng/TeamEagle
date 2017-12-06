@@ -13,6 +13,13 @@ void OrderRepo::current_write(Order order) {
 	fout.write((char*)(&order), sizeof(Order));
 	fout.close();
 }
+void OrderRepo::overwrite_list(Order* order, int list_count) {
+
+	ofstream fout("current_orders.dat", ios::binary);
+	fout.seekp(ios::beg);
+	fout.write((char*)(order), sizeof(Order)*list_count);
+	fout.close();
+}
 
 //Order* OrderRepo::archived_read() {
 	//read(archived);
@@ -27,7 +34,6 @@ void OrderRepo::read() {
     this ->current_list_count = get_current_count();
 
 	ifstream fin("current_orders.dat", ios::binary);
-
 	if (fin.is_open()) {
 
 		this ->list = new Order[current_list_count];
@@ -38,13 +44,18 @@ void OrderRepo::read() {
 	}
 }
 int OrderRepo::get_current_count()  const{
-		ifstream fin("current_orders.dat");
-		fin.seekg(0, fin.end);
-		int record_count = fin.tellg() / sizeof(Order);
-		fin.seekg(0, fin.beg);
-		fin.close();
 
-        cout << "get_current_cout: " << record_count << "---------" << endl;
+    int record_count;
+    ifstream fin("current_orders.dat", ios::binary);
+    if (fin.is_open()) {
+        fin.seekg(0, fin.end);
+		record_count = fin.tellg() / sizeof(Order);
+        fin.seekg(0, fin.beg);
+		fin.close();
+		}
+    else {
+        record_count = 0;
+    }
         return record_count;
 }
 

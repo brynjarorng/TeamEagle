@@ -1,9 +1,11 @@
 #ifndef SALESUIFUNCTIONS_H_INCLUDED
 #define SALESUIFUNCTIONS_H_INCLUDED
 
+#include <stdlib.h>
 #include "OrderHandler.h"
 #include "Pizza.h"
-using namespace std;
+#include <iomanip>
+enum Order_Status{delivered, all, not_delivered};
 bool new_order();
 //Precondition: The user is ready to enter a new order.
 //Postcondition: The user gets a menu where he can create a new order.
@@ -40,34 +42,48 @@ void print_pizzas_toppings(Pizza pizza);
 //Postcondition: Toppings of pizza have been printed to the screen.
 void print_pizza(Pizza pizza);
 //Prints the name of the pizza followed by its topping and lastly the price.
+void print_order(Order order);
+//Prints the order to the screen.
 void mark_delivered();
 //Lets the user mark an order delivered.
+void print_orders(Order_Status status);
+//status should be delivered for printing only delivered pizzas, not_delivered
+//for printing all pizzas but those delivered and all for printing all pizzas.
+void print_orders(Order_Status status) {
 
-/*void mark_delivered(Order& order) {
-    //print orders
-    int remove_order_nr;
-    cout << "Enter the number you wish to mark deliverd:";
-    cin >> remove_order_nr;
+    OrderHandler orderhandler;
+    Order* current_orders = orderhandler.get_orders();
+    int ordercount = orderhandler.get_order_count();
 
-
-    //input order number to mark delivered
-    //remove the order with the correspondin number.
+    Order temp_order;
+    for (int i = 0; i < ordercount; i ++) {
+       switch (status) {
+            case delivered:
+                 if (current_orders[i].delivered()) {
+                        print_order(current_orders[i]);
+                        }
+                 break;
+            case not_delivered:
+                 if (!current_orders[i].delivered()) {
+                        print_order(current_orders[i]);
+                        }
+                break;
+            case all:
+                print_order(current_orders[i]);
+                break;
+        }
+    }
 }
-*/
-
-
 bool new_order() {
-
     Order order;
     Pizza pizza;
     OrderHandler orderhandler;
-
     orderhandler.generate_order_no(order);
     cout << "Order #" << order.get_order_number() << endl;
 
     add_pizzas(pizza, order);
-
-    cout << order << endl;
+    system("clear");
+    print_order(order);
     if (order.get_order_count() > 0) {
         cout << "Is this the correct order? (y/n)";
         if (yes()) {
@@ -239,9 +255,67 @@ void print_pizzas_toppings(Pizza pizza) {
     cout << "."  << endl;
 }
 void print_pizza(Pizza pizza) {
-    cout << pizza.get_name() << endl;
+    cout << "*" << pizza.get_name() <<endl;
     print_pizzas_toppings(pizza);
     cout << "Price: " << pizza.get_price() << endl;
 }
 
+void print_order(Order order) {
+    cout << "Order #" << order.get_order_number() << endl;
+    for (int i = 0; i < 10; i++) {
+            cout << "-";
+    }
+    cout << endl;
+
+    Pizza* pizzas_in_order = order.get_pizzas_in_order();
+    Pizza temp_pizza;
+    for (int i = 0; i < order.get_order_count(); i++) {
+        temp_pizza = pizzas_in_order[i];
+        print_pizza(temp_pizza);
+        cout << endl;
+    }
+    cout << endl;
+}
+
+void print_current_orders(char& refresh) {
+
+    OrderHandler orderhandler;
+    Order* current_orders = orderhandler.get_orders();
+    int ordercount = orderhandler.get_order_count();
+
+    Order temp_order;
+    int counter = 2;
+
+    for (int i = 0; i < ordercount; i ++) {
+        if (counter == 0) {
+            cout << "Press n to get the next screen or enter number of order\n";
+            cin >> refresh;
+            if (isdigit(refresh)) {
+                break;
+            }
+        }
+        print_order(current_orders[i]);
+        counter--;
+    // delete [] current_orders;
+    }
+    cin >> refresh;
+}
+void mark_delivered() {
+
+    int remove_order_nr;
+
+    cout << "Press (p) to print current orders, or insert the number of order to mark ready:";
+    string remove_order;
+    cin >> remove_order;
+    char first_digit;
+    if (remove_order == "p") {
+        print_current_orders(first_digit);
+    }
+    remove_order_nr = atoi(remove_order.c_str());
+
+    OrderHandler orderhandler;
+    if (!orderhandler.delivered(remove_order_nr)) {
+        cout << "Order nr not on list!" << endl;
+    }
+}
 #endif // SALESUIFUNCTIONS_H_INCLUDED

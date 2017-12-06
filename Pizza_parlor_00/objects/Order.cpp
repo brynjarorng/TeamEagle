@@ -28,16 +28,13 @@ int Order::get_order_count() {
 
 ostream& operator <<(ostream& outs, Order& order) {
 
-	for (int i = 0; i < order.pizzas_in_order_count; i++) {
-
-		outs << "Order nr #" << order.order_number << endl;
+    outs << "Order nr #" << order.order_number << endl;
 
 		for (int i = 0; i < order.pizzas_in_order_count; i++) {
 
 			outs << order.pizzas_in_order[i] << endl;
 		}
-	}
-	return outs;
+    return outs;
 }
 
 istream& operator >>(istream& ins, Order& order) {
@@ -88,5 +85,12 @@ void Order::add_pizza(Pizza pizza) {
 	else {
 		cout << "Order has reached maximum size!" << endl;
 	}
+}
+int Order::get_max_orders() {
+    return this ->MAX_ORDER_SIZE;
+}
+Pizza* Order::get_pizzas_in_order() {
+    Pizza* new_list = this ->pizzas_in_order;
+    return new_list;
 }
 #endif
