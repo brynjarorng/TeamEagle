@@ -1,5 +1,6 @@
 #include <PizzaHandler.h>
 #include <ToppingsHandler.h
+#include
 /*
 void make_pizza() {
     Pizza pizza;
@@ -104,6 +105,7 @@ void create_topping() {
 void create_topping() {
     char choice = '\0';
     int max_tries = 5;
+
     while(choice != 'n') {
         Toppings topping;
         ToppingsHandler handler;
@@ -158,7 +160,6 @@ void make_new_menu_pizza() {
     PizzaHandler pizzahandler;
     ToppingsHandler toppingshandler;
     Toppings topping;
-    int max_tries = 5;
     char choice = '\0';
 
     string name;
@@ -194,35 +195,34 @@ void make_new_menu_pizza() {
     cout << "Would you like to add this pizza to the menu? (y/n) ";
     cin >> choice;
 
-    if(choice == 'y') {
-        for(int i = 0, j = 0; i <= max_tries && j <= max_tries;) {
-            try{
-                pizzahandler.create_new_menu_pizza(pizza);
-                i = max_tries +1;
-                j = max_tries +1;
-            }
-            catch(InvalidName e) {
-                if(i >= max_tries) {
-                    cout << "Out of tries!" << endl;
-                    break;
+        if(choice == 'y') {
+            choice = '\0';
+            while(choice != 'n') {
+                choice = '\0';
+                try{
+                    pizzahandler.create_new_menu_pizza(pizza);
+                    choice = 'n';
                 }
-                cout << "Try again (" << max_tries - i << ") left." << endl;
-                cout << "Pizza name is taken, try another: ";
-                cin >> name;
-                pizza.set_name(name);
-                i++;
-            }
-            catch(InvalidPrice e) {
-                if(j >= max_tries) {
-                    cout << "Out of tries!" << endl;
-                    break;
+                catch(InvalidName e) {
+                    cout << "Pizza name is taken, try again? (y/n) ";
+                    cin >> choice;
+                    if(choice == 'y') {
+                        cout << "Name: "
+                        cin >> name;
+                        pizza.set_name(name);
+                    }
                 }
-                cout << "Try again (" << max_tries - j << ") left." << endl;
-                cout << "Price must be a positive number, try another: ";
-                cin >> price;
-                pizza.set_price(price);
-                j++;
-            }
+                catch(InvalidPrice e) {
+                    cout << "Price must be a positive number, try again? (y/n) ";
+                    cin >> choice;
+
+                    if(choice == 'y') {
+                        cout << "Price: "
+                        cin >> price;
+                        pizza.set_price(price);
+                    }
+                }
         }
     }
+
 }
