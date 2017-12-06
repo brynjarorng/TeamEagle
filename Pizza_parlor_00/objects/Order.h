@@ -38,9 +38,11 @@ public:
 	//Returns the maximum allowed orders.
 	Pizza* get_pizzas_in_order();
 	//Returns the list of pizza in the current order.
+	double get_total();
+	//Returns the total price of order.
 private:
 	static const int MAX_ORDER_SIZE = 100;
-
+    //
 	bool order_ready;
     //True if all pizzas are ready in order.
 	bool order_delivered;
@@ -51,6 +53,9 @@ private:
     //Number of this instance of order.
 	void all_pizzas_ready();
     //Returns true if all pizzas are marked ready.
+    double total_price;
+    void calulate_total();
+    //Calculates the order total and sets this->total_price equal to the total.
 
 };
 #endif //ORDER

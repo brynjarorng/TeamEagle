@@ -93,4 +93,16 @@ Pizza* Order::get_pizzas_in_order() {
     Pizza* new_list = this ->pizzas_in_order;
     return new_list;
 }
+double Order::get_total() {
+    calulate_total();
+    return this ->total_price;
+}
+void Order::calulate_total()  {
+
+    double order_calc = 0;
+    for (int i = 0; i < pizzas_in_order_count; i++ ) {
+        order_calc += pizzas_in_order[i].get_price();
+    }
+    this ->total_price = order_calc;
+}
 #endif

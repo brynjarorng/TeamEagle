@@ -6,6 +6,8 @@
 #include "Pizza.h"
 #include <iomanip>
 enum Order_Status{delivered, all, not_delivered};
+void print_lines (int line_count);
+//Print line_count length of dashed line followed by an endl.
 bool new_order();
 //Precondition: The user is ready to enter a new order.
 //Postcondition: The user gets a menu where he can create a new order.
@@ -43,7 +45,7 @@ void print_pizzas_toppings(Pizza pizza);
 void print_pizza(Pizza pizza);
 //Prints the name of the pizza followed by its topping and lastly the price.
 void print_order(Order order);
-//Prints the order to the screen.
+//Prints the refrence instance of order to the screen.
 void mark_delivered();
 //Lets the user mark an order delivered.
 void print_orders(Order_Status status);
@@ -56,17 +58,20 @@ void print_orders(Order_Status status) {
     int ordercount = orderhandler.get_order_count();
 
     Order temp_order;
+
     for (int i = 0; i < ordercount; i ++) {
        switch (status) {
             case delivered:
                  if (current_orders[i].delivered()) {
-                        print_order(current_orders[i]);
-                        }
+
+                     print_order(current_orders[i]);
+                 }
                  break;
             case not_delivered:
                  if (!current_orders[i].delivered()) {
-                        print_order(current_orders[i]);
-                        }
+
+                     print_order(current_orders[i]);
+                 }
                 break;
             case all:
                 print_order(current_orders[i]);
@@ -75,14 +80,17 @@ void print_orders(Order_Status status) {
     }
 }
 bool new_order() {
+
     Order order;
     Pizza pizza;
+
     OrderHandler orderhandler;
     orderhandler.generate_order_no(order);
     cout << "Order #" << order.get_order_number() << endl;
 
     add_pizzas(pizza, order);
     system("clear");
+
     print_order(order);
     if (order.get_order_count() > 0) {
         cout << "Is this the correct order? (y/n)";
@@ -135,21 +143,29 @@ void add_pizzas(Pizza& pizza, Order& order) {
 
 
 PizzaType menu_or_special() {
+
     PizzaType pizzatype;
 
-    cout << "Press m for menu pizza, s for special pizza:";
-    char type;
-    cin >> type;
-    if (type == 'm') {
-        pizzatype = menu_pizza;
-    }
-    else if (type == 's') {
-        pizzatype = special_pizza;
-    }
-    else {
-        cout << "Wrong choice, do you want to try again? (y/n)";
-        if (yes()) {
-            pizzatype = menu_or_special();//Repeat the function.
+    bool quit = false;
+    while (!quit) {
+         cout << "Press m for menu pizza, s for special pizza:";
+        char type;
+        cin >> type;
+        if (type == 'm') {
+            pizzatype = menu_pizza;
+            quit = true;
+        }
+        else if (type == 's') {
+            pizzatype = special_pizza;
+            quit = true;
+        }
+        else {
+            cout << "Wrong choice, insert any key to try again or r to return to menu.";
+            char in;
+            cin >> in;
+            if (in == 'r') {//Temporary until it is known where to return.
+                exit(0);
+            }
         }
     }
     return pizzatype;
@@ -161,6 +177,7 @@ void add_menu_pizza(Pizza& pizza, Order& order) {
     string pizza_name;
     cout << "Enter name of pizza:";
     cin >> pizza_name;
+
     bool on_menu = pizzahandler.validate_name(pizza_name);
     if (on_menu) {
         pizza = pizzahandler.get_menu_pizza(pizza_name);
@@ -168,7 +185,7 @@ void add_menu_pizza(Pizza& pizza, Order& order) {
         cout << "Do you want to add this pizza? (y/n)";
         if (yes()) {
             order.add_pizza(pizza);
-            pizzahandler.reset_pizza(pizza);
+            //pizzahandler.reset_pizza(pizza);
             }
     }
     else {
@@ -181,7 +198,7 @@ bool toppings_to_special(Pizza& pizza) {
     PizzaHandler pizzahandler;
 
     string topping_name = " ";
-    cout << "Enter topping: ";
+    cout << "Enter toppings, insert q when finished: ";
     cin >> topping_name;
 
     while (topping_name != "q") {
@@ -262,19 +279,21 @@ void print_pizza(Pizza pizza) {
 
 void print_order(Order order) {
     cout << "Order #" << order.get_order_number() << endl;
-    for (int i = 0; i < 10; i++) {
-            cout << "-";
-    }
-    cout << endl;
-
+    print_lines(10);
     Pizza* pizzas_in_order = order.get_pizzas_in_order();
     Pizza temp_pizza;
+
+    int endl_count = order.get_order_count() - 1;
+
     for (int i = 0; i < order.get_order_count(); i++) {
-        temp_pizza = pizzas_in_order[i];
-        print_pizza(temp_pizza);
-        cout << endl;
+        print_pizza(pizzas_in_order[i]);
+        if (endl_count > 0)
+            cout << endl;
+        endl_count--;
     }
-    cout << endl;
+   print_lines(10);
+   cout << "Total price: " << order.get_total() << endl;
+   print_lines(10);
 }
 
 void print_current_orders(char& refresh) {
@@ -296,7 +315,6 @@ void print_current_orders(char& refresh) {
         }
         print_order(current_orders[i]);
         counter--;
-    // delete [] current_orders;
     }
     cin >> refresh;
 }
@@ -317,5 +335,11 @@ void mark_delivered() {
     if (!orderhandler.delivered(remove_order_nr)) {
         cout << "Order nr not on list!" << endl;
     }
+}
+void print_lines (int line_count) {
+    for (int i = 0; i <line_count; i++) {
+        cout << "-";
+    }
+    cout << endl;
 }
 #endif // SALESUIFUNCTIONS_H_INCLUDED
