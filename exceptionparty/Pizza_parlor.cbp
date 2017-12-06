@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Pizza_parlor" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Pizza_parlor" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="objects" />
+					<Add directory="data" />
+					<Add directory="logic" />
+					<Add directory="datatypes" />
+					<Add directory="UI" />
+					<Add directory="UIfunctions" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Pizza_parlor" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="objects" />
+					<Add directory="data" />
+					<Add directory="logic" />
+					<Add directory="datatypes" />
+					<Add directory="UI" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="C:/Users/vikto/Desktop/teameagle/Pizza_parlor_00/exceptions" />
+		</Compiler>
+		<Unit filename="UI/Sales/order_functions.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="UI/UI.cpp" />
+		<Unit filename="UI/UI.h" />
+		<Unit filename="data/OrderRepo.cpp" />
+		<Unit filename="data/OrderRepo.h" />
+		<Unit filename="data/PizzaRepo.cpp" />
+		<Unit filename="data/PizzaRepo.h" />
+		<Unit filename="data/ToppingsRepo.cpp" />
+		<Unit filename="data/ToppingsRepo.h" />
+		<Unit filename="datatypes/PizzaStatus.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="datatypes/PizzaType.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="exceptions/InvalidName.cpp" />
+		<Unit filename="exceptions/InvalidName.h" />
+		<Unit filename="exceptions/InvalidPrice.cpp" />
+		<Unit filename="exceptions/InvalidPrice.h" />
+		<Unit filename="logic/OrderHandler.cpp" />
+		<Unit filename="logic/OrderHandler.h" />
+		<Unit filename="logic/PizzaHandler.cpp" />
+		<Unit filename="logic/PizzaHandler.h" />
+		<Unit filename="logic/StdInput.cpp" />
+		<Unit filename="logic/StdInput.h" />
+		<Unit filename="logic/ToppingsHandler.cpp" />
+		<Unit filename="logic/ToppingsHandler.h" />
+		<Unit filename="logic/UIHandler.cpp" />
+		<Unit filename="logic/UIHandler.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="objects/Order.cpp" />
+		<Unit filename="objects/Order.h" />
+		<Unit filename="objects/Pizza.cpp" />
+		<Unit filename="objects/Pizza.h" />
+		<Unit filename="objects/Toppings.cpp" />
+		<Unit filename="objects/Toppings.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
