@@ -73,11 +73,29 @@ void EmployeeSaleryHandler::add_to_vector(string strArr[]) {
     catch(SaleryAlreadyExistsException e) {
         vector<Employee> temp;
         temp.clear();
+
         temp = repo.read_all();
-        temp.erase(temp.begin() + (pos));
-        temp.push_back(emp1);
-        repo.overwrite(pos, temp);              //Liklega eh ad her
-        temp.clear();
+
+        for(int i = 0; i < temp.size(); i++) {
+            cout << temp[i] << endl;
+        }
+        system("PAUSE");
+
+            temp.erase(temp.begin() + (pos));
+
+        for(int i = 0; i < temp.size(); i++) {
+            cout << temp[i] << endl;
+        }
+        system("PAUSE");
+            temp.resize(temp.size()-1);
+            temp.push_back(emp1);
+            repo.overwrite(pos, temp);              //Liklega eh ad her
+
+        for(int i = 0; i < temp.size(); i++) {
+            cout << temp[i] << endl;
+        }
+        system("PAUSE");
+            temp.clear();
 
     }
 
