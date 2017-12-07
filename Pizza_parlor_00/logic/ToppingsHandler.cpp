@@ -32,6 +32,10 @@ vector<Toppings> ToppingsHandler::get_topping_list()
 {
     return repo.read_vector();
 }
+vector<Toppings> ToppingsHandler::get_toppings_list()
+{
+    return repo.test_read_vector();
+}
 
 bool ToppingsHandler::validate(string topping_name)
 {
@@ -89,7 +93,7 @@ bool ToppingsHandler::set_price(double price, Toppings& topping) {
 }
 */
 void ToppingsHandler::create_topping(Toppings& topping) throw(InvalidName, InvalidPrice) {
-    if(validate_name(topping())) {
+    if(validate_name(topping)) {
         throw InvalidName();
     }
     if(validate_price(topping)) {

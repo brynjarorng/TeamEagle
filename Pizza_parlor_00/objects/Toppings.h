@@ -29,6 +29,12 @@ public:
 	//Sets the name of the topping
 	void set_price(double price);
 	//Sets the name of the topping
+	void set_hotkey(char letter, int n);
+	//Sets the hotkey
+	char hotkey();
+	//Get the character-part of the hotkey.
+	int hotnum();
+	//Get the integer part of the hotkey.
 private:
 	static const int NAME_SIZE = 21;
 	char name[NAME_SIZE];	//Name of topping.
@@ -36,6 +42,10 @@ private:
 	void append_null(int index);
 	//Postcondtion: cname[index - 1] is now '\0'
 	void convert_string_cstring(string in);
+	//---
+	char letter_hotkey;
+	int number_hotkey;
+	//---
 };
 
 #endif // TOPPINGS_H
