@@ -56,7 +56,16 @@ void Toppings::append_null(int index)
 	this -> name[index - 1] = '\0';
 }
 
-
+void Toppings::set_hotkey(char letter, int n) {
+    this ->letter_hotkey = letter;
+    this ->number_hotkey = n;
+}
+char Toppings::hotkey() {
+    return letter_hotkey;
+}
+int Toppings::hotnum() {
+    return number_hotkey;
+}
 /*string Toppings::namegame()
 {
 	string return_string;
