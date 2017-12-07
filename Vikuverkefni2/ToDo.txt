@@ -14,8 +14,6 @@ Laga:
 
 					Filterar á input (exceptions)
 	Bæta við filter: 
-		-neitar user að slá inn mánuð 0
-		-neitar user að slá inn ár sem lætur user vera eldri en t.d. 120 ára
 		-kastar villu ef slegið er inn bil í SSN, salary, month og year
 		-örugglega eh. meira 
 		

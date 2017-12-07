@@ -56,8 +56,6 @@ void EmployeeSaleryHandler::add_to_vector(string strArr[]) {
             tempYear = empVectorTemp.at(i).get_year(empVectorTemp.at(i));
             tempMonth = empVectorTemp.at(i).get_month(empVectorTemp.at(i));
             tempSSN = empVectorTemp.at(i).get_SSN(empVectorTemp.at(i));
-    cout << empVectorTemp.size() << endl;
-    system("PAUSE");
             if(SSN == tempSSN){
                 if(year == tempYear){
                     if( month == tempMonth){
@@ -122,7 +120,7 @@ bool EmployeeSaleryHandler::validate_salery(string salery) {
 bool EmployeeSaleryHandler::validate_month(string month) {
     for(unsigned int i = 0; i < month.length(); i++) {
         if(isdigit(month[i])){
-            if(stoi(month) > 12){
+            if(stoi(month) > 12 || stoi(month) < 1){
                 throw(InvalidMonthException());
             }
         } else {
@@ -135,7 +133,7 @@ bool EmployeeSaleryHandler::validate_month(string month) {
 bool EmployeeSaleryHandler::validate_year(string year) {
     for(unsigned int i = 0; i < year.length(); i++) {
         if(isdigit(year[i])){
-            if(stoi(year) > 2017){
+            if(stoi(year) > 2017 || stoi(year) < 1890){
                 throw(InvalidYearException());
             }
         } else {
