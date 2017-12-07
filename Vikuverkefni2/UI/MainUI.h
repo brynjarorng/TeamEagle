@@ -13,6 +13,7 @@ class MainUI
     public:
         MainUI();
         bool print_menu(bool run, bool& contRun);
+        //Print the main UI
 
 
     private:

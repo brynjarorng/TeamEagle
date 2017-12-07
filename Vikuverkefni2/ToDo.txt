@@ -1,0 +1,21 @@
+skrifa fall sem:
+	Get the name of the employee with the highest total salary for a given year 
+
+Laga:
+					EmployeeRepo
+	Er með 2 read föll, annað skilar vector<Employee> en hitt skilar vector<string>. Væri hægt að skila bara vector<Employee>.
+	Laga return statement í 'read' "control reaches end of non-void function"
+		
+					EmployeeSalaryHandler
+	Hreinsa add_to_vector fallið
+
+					Alemennt
+	Einhversstaðar er for loopa að bera saman unsigned og signed (allavegana á 2 stöðum)
+
+					Filterar á input (exceptions)
+	Bæta við filter: 
+		-neitar user að slá inn mánuð 0
+		-neitar user að slá inn ár sem lætur user vera eldri en t.d. 120 ára
+		-kastar villu ef slegið er inn bil í SSN, salary, month og year
+		-örugglega eh. meira 
+		

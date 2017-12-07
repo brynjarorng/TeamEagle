@@ -66,7 +66,7 @@ vector<Employee> EmployeeRepo::read_all() {
             getline(in, input, ',');
             empl.set_SSN(input);
             getline(in, input, ',');
-            empl.set_salery(input);
+            empl.set_salary(input);
             getline(in, input, ',');
             empl.set_month(input);
             getline(in, input, ',');

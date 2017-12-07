@@ -20,7 +20,7 @@ vector<Employee> EmployeeSaleryHandler::read_to_vector() {
     for(unsigned int i = 0; i < strVector.size() - 1; i += 5){
         emp.set_name(strVector[i]);
         emp.set_SSN(strVector[i+1]);
-        emp.set_salery(strVector[i+2]);
+        emp.set_salary(strVector[i+2]);
         emp.set_month(strVector[i+3]);
         emp.set_year(strVector[i+4]);
 
@@ -35,7 +35,7 @@ void EmployeeSaleryHandler::add_to_vector(string strArr[]) {
 
     emp1.set_name(strArr[0]);
     emp1.set_SSN(strArr[1]);
-    emp1.set_salery(strArr[2]);
+    emp1.set_salary(strArr[2]);
     emp1.set_month(strArr[3]);
     emp1.set_year(strArr[4]);
 
@@ -75,27 +75,11 @@ void EmployeeSaleryHandler::add_to_vector(string strArr[]) {
         temp.clear();
 
         temp = repo.read_all();
-
-        for(int i = 0; i < temp.size(); i++) {
-            cout << temp[i] << endl;
-        }
-        system("PAUSE");
-
-            temp.erase(temp.begin() + (pos));
-
-        for(int i = 0; i < temp.size(); i++) {
-            cout << temp[i] << endl;
-        }
-        system("PAUSE");
-            temp.resize(temp.size()-1);
-            temp.push_back(emp1);
-            repo.overwrite(pos, temp);              //Liklega eh ad her
-
-        for(int i = 0; i < temp.size(); i++) {
-            cout << temp[i] << endl;
-        }
-        system("PAUSE");
-            temp.clear();
+        temp.erase(temp.begin() + (pos));
+        temp.resize(temp.size()-1);
+        temp.push_back(emp1);
+        repo.overwrite(pos, temp);              //Liklega eh ad her
+        temp.clear();
 
     }
 
@@ -189,7 +173,7 @@ int EmployeeSaleryHandler::get_all_records_for_year(string SSN, string year) {
         if(SSN == tempSSN){
             tempYear = empVector.at(i).get_year(empVector.at(i));
             if(year == tempYear){
-                tempSalery += stoi(empVector.at(i).get_salery(empVector.at(i)));
+                tempSalery += stoi(empVector.at(i).get_salary(empVector.at(i)));
             }
         }
     }
