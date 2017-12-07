@@ -21,7 +21,6 @@ class PhoneClerkUI {
 
     private:
         char select;
-       // ToppingsHandler handler;
 };
 
 #endif // PHONECLERKUI_H

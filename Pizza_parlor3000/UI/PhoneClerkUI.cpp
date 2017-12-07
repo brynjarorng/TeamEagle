@@ -56,7 +56,7 @@ bool PhoneClerkUI::phone_menu(bool run, bool& continueRun) {
 
         case 't':
             system("CLS");
-    //        handler.print_toppings();
+            print_topping_list();
             system("PAUSE");
 
             continueRun = 1;

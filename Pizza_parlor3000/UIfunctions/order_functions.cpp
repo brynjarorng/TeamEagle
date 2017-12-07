@@ -286,3 +286,15 @@ void print_lines (int line_count) {
     }
     cout << endl;
 }
+
+void print_topping_list() {
+    ToppingsHandler toppings_handler;
+    vector<Toppings> topping_vector;
+
+    topping_vector = toppings_handler.get_topping_list();
+
+    for(unsigned int i = 0; i < topping_vector.size(); i++) {
+        cout << topping_vector[i];
+    }
+
+}

@@ -19,7 +19,6 @@ class StoreClerkUI {
 
     private:
         char select;
-//        ToppingsHandler handler;
 };
 
 #endif // STORECLERK_H
