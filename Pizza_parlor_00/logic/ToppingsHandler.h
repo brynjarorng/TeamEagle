@@ -24,10 +24,10 @@ class ToppingsHandler
 		//Checks whether price is a positive number,
 		//if positive then price is set to topping and returns TRUE.
 		//Else return false.*/
-		bool validate_name(Toppings& topping);
+		bool validate_name(string name);
 		//Validates new topping that's being added to database.
 		//If a topping already has the same name it return false;
-        bool validate_price(Toppings& topping);
+        bool validate_price(double price);
         //Validates the price of a topping.
         //If price is below zero it will return false.
         void create_topping(Toppings& topping) throw(InvalidName, InvalidPrice);
