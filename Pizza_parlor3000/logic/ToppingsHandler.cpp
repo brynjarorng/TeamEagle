@@ -89,7 +89,7 @@ bool ToppingsHandler::set_price(double price, Toppings& topping) {
 }
 */
 void ToppingsHandler::create_topping(Toppings& topping) throw(InvalidName, InvalidPrice) {
-    if(validate_name(topping.get_name())) {
+    if(!validate_name(topping.get_name())) {
         throw InvalidName();
     }
     if(!validate_price(topping.get_price())) {
