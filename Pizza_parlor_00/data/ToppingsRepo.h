@@ -20,6 +20,12 @@ public:
 	int get_list_count() const;
 	//Returns the size of the above list.
 	vector<Toppings> read_vector();
+	//First version of read to vector, dumps file to a dynamic array, and
+	//then reads to a vector.
+    vector<Toppings> test_read_vector();
+    //Second version of read to vector; Reads each entry straight
+    //into a vector and then returns it.
+
 
 private:
 	Toppings topping;

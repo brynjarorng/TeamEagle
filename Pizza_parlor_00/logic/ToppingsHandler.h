@@ -39,6 +39,10 @@ class ToppingsHandler
 		//Prints the list of Toppings in the same order as the current list.
         vector<Toppings> get_topping_list();
 		//Returns vector of the list of Toppings in the same order as the current list.
+		vector<Toppings> get_toppings_list();
+		//Second version of the function above, corresponding to changes made
+		//in the order-repo, where the list returned was read at once from
+		//the binary file.
         ToppingsHandler& operator =(const ToppingsHandler& right_side);
 		//First delete memory assigned to the private pointer of type Toppings,
 		//and then make it equal to copy.

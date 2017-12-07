@@ -4,16 +4,8 @@ Employee::Employee(){
 
 }
 
-Employee::Employee(string name, string SSN, string salery, string month, string year) {
-    this ->name = name;
-    this ->SSN = SSN;
-    this ->salery = salery;
-    this ->month = month;
-    this ->year = year;
-}
-
 string Employee::to_file() {
-    return name + "," + SSN + "," + salery + "," + month + "," + year + ",";
+    return name + "," + SSN + "," + salary + "," + month + "," + year + ",";
 }
 
 void Employee::set_name(string name) {
@@ -24,8 +16,8 @@ void Employee::set_SSN(string SSN) {
     this ->SSN = SSN;
 }
 
-void Employee::set_salery(string salery) {
-  this ->salery = salery;
+void Employee::set_salary(string salery) {
+  this ->salary = salary;
 }
 
 void Employee::set_month(string month) {
@@ -48,11 +40,11 @@ string Employee::get_month(Employee e) {
     return month;
 }
 
-string Employee::get_salery(Employee e) {
-    return salery;
+string Employee::get_salary(Employee e) {
+    return salary;
 }
 
 ostream& operator << (ostream& out, Employee& emp) {
-    out << emp.name << " " << emp.SSN << " " << emp.salery << " " << emp.month << " " << emp.year << endl;
+    out << emp.name << " " << emp.SSN << " " << emp.salary << " " << emp.month << " " << emp.year << endl;
     return out;
 }

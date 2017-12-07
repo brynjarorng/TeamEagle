@@ -20,7 +20,7 @@ vector<Employee> EmployeeSaleryHandler::read_to_vector() {
     for(unsigned int i = 0; i < strVector.size() - 1; i += 5){
         emp.set_name(strVector[i]);
         emp.set_SSN(strVector[i+1]);
-        emp.set_salery(strVector[i+2]);
+        emp.set_salary(strVector[i+2]);
         emp.set_month(strVector[i+3]);
         emp.set_year(strVector[i+4]);
 
@@ -35,7 +35,7 @@ void EmployeeSaleryHandler::add_to_vector(string strArr[]) {
 
     emp1.set_name(strArr[0]);
     emp1.set_SSN(strArr[1]);
-    emp1.set_salery(strArr[2]);
+    emp1.set_salary(strArr[2]);
     emp1.set_month(strArr[3]);
     emp1.set_year(strArr[4]);
 
@@ -56,8 +56,6 @@ void EmployeeSaleryHandler::add_to_vector(string strArr[]) {
             tempYear = empVectorTemp.at(i).get_year(empVectorTemp.at(i));
             tempMonth = empVectorTemp.at(i).get_month(empVectorTemp.at(i));
             tempSSN = empVectorTemp.at(i).get_SSN(empVectorTemp.at(i));
-    cout << empVectorTemp.size() << endl;
-    system("PAUSE");
             if(SSN == tempSSN){
                 if(year == tempYear){
                     if( month == tempMonth){
@@ -75,27 +73,11 @@ void EmployeeSaleryHandler::add_to_vector(string strArr[]) {
         temp.clear();
 
         temp = repo.read_all();
-
-        for(int i = 0; i < temp.size(); i++) {
-            cout << temp[i] << endl;
-        }
-        system("PAUSE");
-
-            temp.erase(temp.begin() + (pos));
-
-        for(int i = 0; i < temp.size(); i++) {
-            cout << temp[i] << endl;
-        }
-        system("PAUSE");
-            temp.resize(temp.size()-1);
-            temp.push_back(emp1);
-            repo.overwrite(pos, temp);              //Liklega eh ad her
-
-        for(int i = 0; i < temp.size(); i++) {
-            cout << temp[i] << endl;
-        }
-        system("PAUSE");
-            temp.clear();
+        temp.erase(temp.begin() + (pos));
+        temp.resize(temp.size()-1);
+        temp.push_back(emp1);
+        repo.overwrite(pos, temp);              //Liklega eh ad her
+        temp.clear();
 
     }
 
@@ -138,7 +120,7 @@ bool EmployeeSaleryHandler::validate_salery(string salery) {
 bool EmployeeSaleryHandler::validate_month(string month) {
     for(unsigned int i = 0; i < month.length(); i++) {
         if(isdigit(month[i])){
-            if(stoi(month) > 12){
+            if(stoi(month) > 12 || stoi(month) < 1){
                 throw(InvalidMonthException());
             }
         } else {
@@ -151,7 +133,7 @@ bool EmployeeSaleryHandler::validate_month(string month) {
 bool EmployeeSaleryHandler::validate_year(string year) {
     for(unsigned int i = 0; i < year.length(); i++) {
         if(isdigit(year[i])){
-            if(stoi(year) > 2017){
+            if(stoi(year) > 2017 || stoi(year) < 1890){
                 throw(InvalidYearException());
             }
         } else {
@@ -189,7 +171,7 @@ int EmployeeSaleryHandler::get_all_records_for_year(string SSN, string year) {
         if(SSN == tempSSN){
             tempYear = empVector.at(i).get_year(empVector.at(i));
             if(year == tempYear){
-                tempSalery += stoi(empVector.at(i).get_salery(empVector.at(i)));
+                tempSalery += stoi(empVector.at(i).get_salary(empVector.at(i)));
             }
         }
     }

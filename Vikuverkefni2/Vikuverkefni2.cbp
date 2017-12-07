@@ -46,7 +46,7 @@
 		<Unit filename="UI/MainUI.h" />
 		<Unit filename="UI/UIHandler.cpp" />
 		<Unit filename="UI/UIHandler.h" />
-		<Unit filename="exception/InvalidSaleryException.cpp" />
+		<Unit filename="exceptions/InvalidSaleryException.cpp" />
 		<Unit filename="exceptions/InvalidMonthException.cpp" />
 		<Unit filename="exceptions/InvalidMonthException.h" />
 		<Unit filename="exceptions/InvalidNameException.cpp" />
