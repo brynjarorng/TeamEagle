@@ -12,18 +12,6 @@ class ToppingsHandler
         ToppingsHandler();
 		//Initializes a private pointer of type Toppings to
 		//point to an empty array of Toppings.
-		~ToppingsHandler();
-		//Destructor
-		ToppingsHandler(const ToppingsHandler& copy_object);
-		//Copy constructor.
-		/*bool set_name(string name, Toppings& topping);
-		//Checks whether name exists in database, if not
-		//then name is set to topping and returns TRUE.
-		//Else return false.
-		bool set_price(double price, Toppings& topping);
-		//Checks whether price is a positive number,
-		//if positive then price is set to topping and returns TRUE.
-		//Else return false.*/
 		bool validate_name(string name);
 		//Validates new topping that's being added to database.
 		//If a topping already has the same name it return false;
@@ -52,9 +40,9 @@ class ToppingsHandler
 		//TEMPORARY SOLUTION; MAKE INSTANCE OF THE RETURNED TOPPING SOME
 		//STATIC VALUE.
     private:
-        ToppingsRepo repo;
+        ToppingsRepo toppings_repo;
 		//Access to the data layer is through ToppingsRepo.
-		Toppings* toppings_list;
+		vector<Toppings> toppings;
 		//The list of toppings that recevies information from the ToppingsRepo.
 		int toppings_list_count;
 		//Size of the above list.

@@ -1,45 +1,21 @@
 #include "OrderHandler.h"
 
 OrderHandler::OrderHandler() {
-    orders = new Order[0];
-    order_count = order_repo.get_current_count();
+    orders = order_repo.read();
 }
 
 OrderHandler::~OrderHandler() {
-    delete[] orders;
-}
-
-OrderHandler::OrderHandler(const OrderHandler &copy) {
-    this->order_count = copy.order_count;
-    delete this->orders;
-    orders = new Order[order_count];
-
-    for (int i = 0; i < order_count; i++) {
-        orders[i] = copy.orders[i];
-    }
-}
-
-OrderHandler& OrderHandler::operator = (const OrderHandler &right_side) {
-    if(this ->order_count != right_side.order_count) {
-        delete[] this ->orders;
-        orders = new Order[right_side.order_count];
-    }
-    this ->order_count = right_side.order_count;
-
-    for (int i = 0; i < order_count; i++) {
-        orders[i] = right_side.orders[i];
-    }
-
-    return *this;
 }
 
 void OrderHandler::mark_pizza_status(int index, PizzaStatus status) {
-    pizza_list = order.get_order();
-    pizza_list[index].set_status(status);
+    orders;
+
+    //pizza_list = orders[i].get_order();
+   // pizza_list[index].set_status(status);
 }
 
 void OrderHandler::generate_order_no(Order& order) {
-    if(order_repo.get_current_count() != 0) {
+    if(orders.size() != 0) {
         Order last = get_last_order();
         int new_order_number = 1 + last.get_order_number();
         order.set_order_number(new_order_number);
@@ -50,14 +26,10 @@ void OrderHandler::generate_order_no(Order& order) {
 }
 
 Order OrderHandler::get_last_order() {
-    Order last;
-    order_count = order_repo.get_current_count();
-    orders = order_repo.current_read();
-    last = orders[order_count - 1];
 
-    return last;
+    return orders.at(orders.size() - 1);
 }
-
+/*
 void OrderHandler::print_current_list() {
 
     orders = order_repo.current_read();
@@ -68,9 +40,10 @@ void OrderHandler::print_current_list() {
     for(int i = 0; i < order_count; i++) {
         cout << orders[i];
     }
-}
-void OrderHandler::add_order(const Order& order) {
-    order_repo.current_write(order);
+}*/
+void OrderHandler::add_order(Order& order) {
+    order_repo.write(order);
+    orders.push_back(order);
 }
 bool OrderHandler::max_order_count(Order order) {
     if (order.get_order_count() < order.get_max_orders()) {
@@ -81,9 +54,8 @@ bool OrderHandler::max_order_count(Order order) {
 bool OrderHandler::delivered(int order_number) {
 
     bool found;
-    this ->orders = order_repo.current_read();
 
-    for (int i =0; i < order_count; i++) {
+    for (int i =0; i < orders.size(); i++) {
         if (this ->orders[i].get_order_number() == order_number) {
             this ->orders[i].set_delivered();
             found = true;
@@ -91,14 +63,13 @@ bool OrderHandler::delivered(int order_number) {
         else found = false;
     }
     if (found == true) {
-        this ->order_repo.overwrite_list(this ->orders, order_count);
+        this ->order_repo.overwrite(orders);
     }
     return found;
 }
- Order* OrderHandler::get_orders() {
-    this ->orders = order_repo.current_read();
+vector<Order> OrderHandler::get_orders() {
     return this ->orders;
  }
 int OrderHandler::get_order_count() const {
-    return this ->order_count;
+    return this ->orders.size();
 }

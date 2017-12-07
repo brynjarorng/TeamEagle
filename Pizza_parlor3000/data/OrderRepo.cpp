@@ -7,7 +7,7 @@ OrderRepo::OrderRepo() {
 OrderRepo::~OrderRepo() {
 	//delete[] list;
 }
-void OrderRepo::current_write(Order order) {
+/*void OrderRepo::current_write(Order order) {
 
 	ofstream fout("current_orders.dat", ios::binary|ios::app);
 	fout.write((char*)(&order), sizeof(Order));
@@ -43,6 +43,11 @@ void OrderRepo::read() {
 		fin.close();
 	}
 }
+
+int OrderRepo::get_archived_count() const {
+	return this-> archived_list_count;
+}
+*/
 int OrderRepo::get_current_count()  const{
 
     int record_count;
@@ -59,6 +64,37 @@ int OrderRepo::get_current_count()  const{
         return record_count;
 }
 
-int OrderRepo::get_archived_count() const {
-	return this-> archived_list_count;
+void OrderRepo::write(Order& order) {
+
+    ofstream fout("orders.dat", ios::binary|ios::app);
+	fout.write((char*)(&order), sizeof(Order));
+	fout.close();
+}
+
+vector<Order> OrderRepo::read() {
+
+	ifstream fin("orders.dat", ios::binary);
+	vector<Order> return_v;
+
+	if (fin.is_open()) {
+		fin.seekg(0, fin.end);
+		int record_count = fin.tellg() / sizeof(Order);
+		fin.seekg(0, fin.beg);
+
+		list_count = record_count;
+		vector<Order> temp (record_count);
+		fin.read((char*)(&temp[0]), sizeof(Order)*record_count);
+
+		fin.close();
+		return_v = temp;
+	}
+    return return_v;
+}
+
+void OrderRepo::overwrite(vector<Order> orders) {
+
+    ofstream fout("order.dat", ios::binary);
+    fout.write((char*)(&orders[0]), sizeof(Order)*orders.size());
+
+	fout.close();
 }

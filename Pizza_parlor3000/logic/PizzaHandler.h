@@ -57,10 +57,10 @@ public:
 private:
 
    // Pizza pizza;
-    PizzaRepo pizzarepo;
+    PizzaRepo pizza_repo;
     ToppingsHandler toppingshandler;
 	Toppings* toppings;
-    Pizza* pizza_list;
+    vector<Pizza> pizzas;
     int pizza_list_count;
 
 };

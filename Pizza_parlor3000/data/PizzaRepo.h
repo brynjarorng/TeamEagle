@@ -3,6 +3,7 @@
 
 #include "Pizza.h"
 #include <fstream>
+#include <vector>
 
 class PizzaRepo {
 
@@ -11,14 +12,22 @@ public:
 	//Currently empty initializer.
 	~PizzaRepo();
 	//Currently empty destructor.
-	void write(Pizza pizza);
+	/*void write(Pizza pizza);
 	//Appends pizza to a binary file located in the home directory.
 	Pizza* read();
 	//Return value is a dynamic array where each element is an occurrence
 	//of a Pizza currently contained in "pizzas.dat" in the home folder.
-	//The allocated memory must be deleted where the pointer is received.
+	//The allocated memory must be deleted where the pointer is received.*/
 	int get_list_count() const;
 	//Returns the size of the above list.
+    vector<Pizza> read();
+    //Return value is a vector where each element is an occurrence
+	//of a Pizza currently contained in "pizzas.dat" in the home folder.
+	void write(Pizza& pizza);
+	//Appends pizza to a binary file located in the home directory.
+	void overwrite(vector<Pizza> pizzas);
+    //Rewrites a new file the same size as the parameter pizza, and replaces
+    //the file with the content of the parameter.
 
 private:
 	Pizza pizza;

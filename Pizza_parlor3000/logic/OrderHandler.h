@@ -25,7 +25,7 @@ public:
     //Get's list of current orders from repo and prints them out to screen.
     Order get_last_order();
     //Get's the order list from the repo and returns the last order.
-    void add_order(const Order& order);
+    void add_order(Order& order);
     //
     bool max_order_count(Order order);
     //Return value is TRUE if the maximum order has been reached
@@ -33,14 +33,14 @@ public:
     bool delivered(int order_number);
     //The order with the corresponding order_number is marked as delivered
     //in the current order list
-    Order* get_orders();
+    vector<Order> get_orders();
     //Returns the list of orders.
     //Needs to be deleted where it is received.
     int get_order_count() const;
     //Returns the current order count list.
 private:
     OrderRepo order_repo;
-    Order* orders;
+    vector<Order> orders;
     int order_count;
     PizzaHandler pizzahandler;
     Order order;

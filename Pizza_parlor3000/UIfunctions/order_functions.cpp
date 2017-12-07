@@ -3,7 +3,6 @@
 void print_orders(Order_Status status) {
 
     OrderHandler orderhandler;
-    Order* current_orders = orderhandler.get_orders();
     int ordercount = orderhandler.get_order_count();
 
     Order temp_order;
@@ -11,19 +10,19 @@ void print_orders(Order_Status status) {
     for (int i = 0; i < ordercount; i ++) {
        switch (status) {
             case delivered:
-                 if (current_orders[i].delivered()) {
+                 if (orderhandler.get_orders().at(i).delivered()) {
 
-                     print_order(current_orders[i]);
+                     print_order(orderhandler.get_orders().at(i));
                  }
                  break;
             case not_delivered:
-                 if (!current_orders[i].delivered()) {
+                 if (!orderhandler.get_orders().at(i).delivered()) {
 
-                     print_order(current_orders[i]);
+                     print_order(orderhandler.get_orders().at(i));
                  }
                 break;
             case all:
-                print_order(current_orders[i]);
+                print_order(orderhandler.get_orders().at(i));
                 break;
         }
     }
@@ -243,7 +242,6 @@ void print_order(Order order) {
 void print_current_orders(char& refresh) {
 
     OrderHandler orderhandler;
-    Order* current_orders = orderhandler.get_orders();
     int ordercount = orderhandler.get_order_count();
 
     Order temp_order;
@@ -257,7 +255,7 @@ void print_current_orders(char& refresh) {
                 break;
             }
         }
-        print_order(current_orders[i]);
+        print_order(orderhandler.get_orders().at(i));
         counter--;
     }
     cin >> refresh;
@@ -293,8 +291,8 @@ void print_topping_list() {
 
     topping_vector = toppings_handler.get_topping_list();
 
-    for(unsigned int i = 0; i < topping_vector.size(); i++) {
-        cout << topping_vector[i];
+    for(unsigned int i = 0; i < toppings_handler.get_topping_list().size(); i++) {
+        cout << toppings_handler.get_topping_list().at(i);
     }
 
 }
