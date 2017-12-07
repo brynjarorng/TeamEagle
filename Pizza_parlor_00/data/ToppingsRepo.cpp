@@ -63,3 +63,26 @@ vector<Toppings> ToppingsRepo::read_vector() {
     delete[] list;
     return topping_list;
 }
+vector<Toppings> ToppingsRepo::test_read_vector() {
+
+	ifstream fin("toppings.dat", ios::binary);
+
+	if (fin.is_open()) {
+		fin.seekg(0, fin.end);
+		int record_count = fin.tellg() / sizeof(Toppings);
+		fin.seekg(0, fin.beg);
+
+		list_count = record_count;
+		Toppings temp_topping;
+
+        for (int i = 0; i < list_count; i++) {
+            fin.read((char*)(&temp_topping), sizeof(Toppings));
+            topping_list.push_back(temp_topping);
+        }
+
+		fin.close();
+	}
+    return topping_list;
+}
+
+
