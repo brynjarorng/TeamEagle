@@ -148,15 +148,16 @@ void PizzaHandler::print_pizzas() {
     }
  }
 
-<<<<<<< HEAD
+
 
 void PizzaHandler::got_list() {
     if(!has_list) {
         pizzas = pizza_repo.read();
     }
 }
-=======
+
 vector<Pizza> PizzaHandler::PizzaHandler::get_pizza_list(){
+    got_list();
     return pizzas;
  }
->>>>>>> 8c06cad15222308e5c7fb273dc3c0921852d2967
+

@@ -291,13 +291,9 @@ void print_topping_list() {
 
     topping_vector = toppings_handler.get_topping_list();
 
-<<<<<<< HEAD
-    for(unsigned int i = 0; i < toppings_handler.get_topping_list().size(); i++) {
-        cout << toppings_handler.get_topping_list().at(i);
-=======
     for(unsigned int i = 0; i < topping_vector.size(); i++) {
         cout << topping_vector[i];
->>>>>>> 8c06cad15222308e5c7fb273dc3c0921852d2967
+
     }
 
 }
