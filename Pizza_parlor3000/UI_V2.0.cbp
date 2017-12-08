@@ -31,6 +31,10 @@
 					<Add option="-O2" />
 					<Add directory="UI" />
 					<Add directory="exceptions" />
+					<Add directory="datatypes" />
+					<Add directory="objects" />
+					<Add directory="data" />
+					<Add directory="logic" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -64,6 +68,8 @@
 		<Unit filename="data/OrderRepo.h" />
 		<Unit filename="data/PizzaRepo.cpp" />
 		<Unit filename="data/PizzaRepo.h" />
+		<Unit filename="data/PizzaSizeRepo.cpp" />
+		<Unit filename="data/PizzaSizeRepo.h" />
 		<Unit filename="data/ToppingsRepo.cpp" />
 		<Unit filename="data/ToppingsRepo.h" />
 		<Unit filename="datatypes/PizzaStatus.h" />
@@ -74,10 +80,14 @@
 		<Unit filename="exceptions/InvalidName.h" />
 		<Unit filename="exceptions/InvalidPrice.cpp" />
 		<Unit filename="exceptions/InvalidPrice.h" />
+		<Unit filename="exceptions/InvalidSize.cpp" />
+		<Unit filename="exceptions/InvalidSize.h" />
 		<Unit filename="logic/OrderHandler.cpp" />
 		<Unit filename="logic/OrderHandler.h" />
 		<Unit filename="logic/PizzaHandler.cpp" />
 		<Unit filename="logic/PizzaHandler.h" />
+		<Unit filename="logic/PizzaSizeHandler.cpp" />
+		<Unit filename="logic/PizzaSizeHandler.h" />
 		<Unit filename="logic/StdInput.cpp" />
 		<Unit filename="logic/StdInput.h" />
 		<Unit filename="logic/ToppingsHandler.cpp" />
@@ -87,6 +97,8 @@
 		<Unit filename="objects/Order.h" />
 		<Unit filename="objects/Pizza.cpp" />
 		<Unit filename="objects/Pizza.h" />
+		<Unit filename="objects/PizzaSize.cpp" />
+		<Unit filename="objects/PizzaSize.h" />
 		<Unit filename="objects/Toppings.cpp" />
 		<Unit filename="objects/Toppings.h" />
 		<Extensions>

@@ -225,6 +225,7 @@ bool ManagerUI::size_menu(bool run, bool& continueRun) {
 
         cout << "----Size editor portal----" << endl;
         cout << "(A) Add size" << endl;
+        cout << "(S) See all sizes" << endl;
         cout << "(R) Remove size" << endl;
         cout << "(B) Go back" << endl;
         cout << "(q) Quit" << endl;
@@ -236,12 +237,11 @@ bool ManagerUI::size_menu(bool run, bool& continueRun) {
         cin >> select;
         select = lower(select);
 
-        switch (select)
-        {
+        switch (select) {
         case 'a':
             system("CLS");
-            cout << "Add a new size" << endl;
-            system("PAUSE");
+            cout << "Add a new size:" << endl;
+            add_pizza_size();
 
             continueRun = 1;
             return 0;
@@ -256,8 +256,19 @@ bool ManagerUI::size_menu(bool run, bool& continueRun) {
             return 0;
             break;
 
+        case 's':
+            system("CLS");
+            cout << "See all sizes:" << endl;
+            print_sizes();
+            system("PAUSE");
+
+            continueRun = 1;
+            return 0;
+            break;
+
         case 'b':
-    //        manager_menu(0);
+            continueRun = 0;
+            return 0;
             break;
 
         case 'q':
