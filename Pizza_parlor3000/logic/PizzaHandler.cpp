@@ -118,11 +118,11 @@ Pizza PizzaHandler::get_menu_pizza(string pizza_name) {
 
 Pizza PizzaHandler::get_menu_pizza(int index) {
 
-    if(index >= 0 && index < pizzas.size()) {
-        return pizzas.at(index);
-    }
+    return pizzas.at(index);
 
 }
+
+
 /*
 void PizzaHandler::print_pizzas() {
     pizza_list = pizzarepo.read();

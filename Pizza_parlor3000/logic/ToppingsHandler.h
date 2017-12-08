@@ -27,6 +27,8 @@ class ToppingsHandler
 		//Prints the list of Toppings in the same order as the current list.
         vector<Toppings> get_topping_list();
 		//Returns vector of the list of Toppings in the same order as the current list.
+		Toppings get_from_topping_list(int index);
+		//Returns the topping with the corresponding index from the toppings list.
         ToppingsHandler& operator =(const ToppingsHandler& right_side);
 		//First delete memory assigned to the private pointer of type Toppings,
 		//and then make it equal to copy.
@@ -39,6 +41,8 @@ class ToppingsHandler
 		///NOTE:SOLVE LATER PROBLEM WHEN TOPPING DOES NOT EXIST.
 		//TEMPORARY SOLUTION; MAKE INSTANCE OF THE RETURNED TOPPING SOME
 		//STATIC VALUE.
+		int get_topping_list_size();
+		//Returns the length of the toppings list
     private:
         ToppingsRepo toppings_repo;
 		//Access to the data layer is through ToppingsRepo.

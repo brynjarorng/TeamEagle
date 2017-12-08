@@ -35,7 +35,8 @@ public:
     //in the current order list
     vector<Order> get_orders();
     //Returns the list of orders.
-    //Needs to be deleted where it is received.
+    Order get_from_orders(int index);
+    //Returns the order with the corresponding index from the order list.
     int get_order_count() const;
     //Returns the current order count list.
 private:

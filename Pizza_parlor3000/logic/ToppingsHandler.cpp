@@ -19,6 +19,10 @@ vector<Toppings> ToppingsHandler::get_topping_list()
     return toppings;
 }
 
+Toppings ToppingsHandler::get_from_topping_list(int index) {
+    return toppings.at(index);
+}
+
 bool ToppingsHandler::validate(string topping_name)
 {
     string name;
@@ -93,4 +97,8 @@ Toppings ToppingsHandler::get_topping(string topping_name) throw (InvalidName)
         }
     }
     throw InvalidName();
+}
+
+int ToppingsHandler::get_topping_list_size() {
+    return (int)toppings.size();
 }

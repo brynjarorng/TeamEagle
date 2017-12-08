@@ -70,6 +70,10 @@ bool OrderHandler::delivered(int order_number) {
 vector<Order> OrderHandler::get_orders() {
     return this ->orders;
  }
+
+Order OrderHandler::get_from_orders(int index) {
+    return orders.at(index);
+}
 int OrderHandler::get_order_count() const {
     return this ->orders.size();
 }

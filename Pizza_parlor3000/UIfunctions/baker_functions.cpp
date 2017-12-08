@@ -11,9 +11,9 @@ void print_pizza_list() {
     OrderHandler orderhandler;
 
     for (int i = 0; i < orderhandler.get_order_count(); i++) {
-        if (orderhandler.get_orders().at(i).delivered()) {
-            cout << "Order #" << orderhandler.get_orders().at(i).get_order_number() << endl;
-            print_pizzas_in_order(orderhandler.get_orders().at(i));
+        if (orderhandler.get_from_orders(i).delivered()) {
+            cout << "Order #" << orderhandler.get_from_orders(i).get_order_number() << endl;
+            print_pizzas_in_order(orderhandler.get_from_orders(i));
             pprint_lines(10);
         }
     }
