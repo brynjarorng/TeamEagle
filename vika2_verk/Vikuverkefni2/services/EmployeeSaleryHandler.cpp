@@ -140,35 +140,28 @@ string EmployeeSaleryHandler::total_salary_by_year(string year, string SSN) {
 Employee EmployeeSaleryHandler::higest_employee(string year) {
 
     Retr_year_Info info = get_info_on_year(year);
+    Employee first, second;
 
-    Employee highest_empl;
-    highest_empl.set_SSN(info.SSN[0]);
+    first.set_SSN(info.SSN[0]);
 
-
-    string highest_salary = total_salary_by_year(year, highest_empl.get_SSN());
-
-    int empl1, empl2;
-
-    empl1 = stoi(total_salary_by_year(year, info.SSN[0] ) );
-    //empl2 = stoi(highest_salary(year, info.SSN[1]));
+    int tot_pay1, tot_pay2;
 
     for (int i = 0; i < info.nr_of_entries; i++) {
-        if (highest_empl.get_SSN() != info.SSN[i] ) {
-            cout << "her" << endl;
-            empl2 = stoi( total_salary_by_year(year, info.SSN[i]));
-            cout << "empl2 " << empl2 <<endl;
-            if (empl2 > empl1) {
-                highest_empl.set_SSN( info.SSN[i] );
-                empl1 = empl2;
+        second.set_SSN(info.SSN[i]);
+        if (first.get_SSN() != second.get_SSN()) {
+            tot_pay1 = stoi(total_salary_by_year(year, first.get_SSN()));
+            cout << tot_pay1 << "tot1" << endl;
+
+            tot_pay2 = stoi(total_salary_by_year(year, second.get_SSN()));
+            cout << tot_pay2 << "tot2" << endl;
+            if (tot_pay2 > tot_pay1) {
+                first.set_SSN(second.get_SSN());
             }
         }
-
     }
+    cout << first.get_SSN() << "ssn"<<endl;
 
-
-cout << highest_empl.get_SSN() << " ssn " << endl;
-
-  return highest_empl;
+  return first;
 }
 
 int EmployeeSaleryHandler::get_all_records_for_year(string SSN, string year) {
