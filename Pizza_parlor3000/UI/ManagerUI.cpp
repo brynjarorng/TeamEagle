@@ -194,9 +194,7 @@ bool ManagerUI::topping_menu(bool run, bool& continueRun) {
 
         case 'r':
             system("CLS");
-            cout << "No functionality yet!" << endl;
-            system("PAUSE");
-
+            remove_topping();
             continueRun = 1;
             return 0;
             break;

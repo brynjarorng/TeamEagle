@@ -38,13 +38,13 @@ public:
     Toppings get_topping(string topping_name) throw (InvalidName);
     //Takes a name of a topping and iterates through the list of toppings
     //from the repo and returns the topping of a matching name.
-    ///NOTE:SOLVE LATER PROBLEM WHEN TOPPING DOES NOT EXIST.
-    //TEMPORARY SOLUTION; MAKE INSTANCE OF THE RETURNED TOPPING SOME
-    //STATIC VALUE.
     int get_topping_list_size();
     //Returns the length of the toppings list
     void got_list();
     //If handler has yet to fetch list from repo then gets it, if it has list then does nothing
+    void remove_topping_from_list(int index);
+    //Takes index of a topping and deletes it from the database.
+
 private:
     ToppingsRepo toppings_repo;
     //Access to the data layer is through ToppingsRepo.

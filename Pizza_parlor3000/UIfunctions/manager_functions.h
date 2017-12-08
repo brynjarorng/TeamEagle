@@ -160,6 +160,34 @@ void create_topping() {
     }
 }
 
+void print_toppings_with_number() {
+    vector<Toppings> topping_vector;
+    ToppingsHandler toppings_handler;
+    topping_vector = toppings_handler.get_topping_list();
+
+    for(unsigned int i = 0; i < topping_vector.size(); i++) {
+        cout << "[" << i + 1 << "] \t" << topping_vector[i];
+
+    }
+    cout << endl;
+}
+
+void remove_topping() {
+        while(true) {
+        ToppingsHandler handler;
+        print_toppings_with_number();
+        string number;
+        cout << "Input the number of the topping to remove, 0 to quit: ";
+        cin  >> number;
+        if(stoi(number) == 0) {
+            break;
+        }
+        handler.remove_topping_from_list(stoi(number) - 1);
+    }
+}
+
+
+
 void make_new_menu_pizza() {
     Pizza pizza;
     PizzaHandler pizzahandler;

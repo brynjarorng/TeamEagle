@@ -81,7 +81,7 @@ bool ToppingsHandler::set_price(double price, Toppings& topping) {
 */
 void ToppingsHandler::create_topping(Toppings& topping) throw(InvalidName, InvalidPrice) {
     got_list();
-    if(!validate_name(topping.get_name())) {
+    if(validate_name(topping.get_name())) {
         throw InvalidName();
     }
     if(!validate_price(topping.get_price())) {
@@ -89,6 +89,12 @@ void ToppingsHandler::create_topping(Toppings& topping) throw(InvalidName, Inval
     }
     toppings_repo.write(topping);
     toppings.push_back(topping);
+}
+
+void ToppingsHandler::remove_topping_from_list(int index) {
+    got_list();
+    toppings.erase(toppings.begin() + index);
+    toppings_repo.overwrite(toppings);
 }
 
 Toppings ToppingsHandler::get_topping(string topping_name) throw (InvalidName)
