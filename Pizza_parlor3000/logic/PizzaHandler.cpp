@@ -1,19 +1,10 @@
 #include "PizzaHandler.h"
 
 PizzaHandler::PizzaHandler() {
-    pizza_list = new Pizza[0];
+    has_list = false;
 }
 
 PizzaHandler::~PizzaHandler() {
-    delete[] pizza_list;
-}
-PizzaHandler::PizzaHandler (const PizzaHandler& copy) {
-    this ->pizza_list_count = copy.pizza_list_count;
-    delete this->pizza_list;
-    pizza_list = new Pizza [pizza_list_count];
-    for (int i = 0; i < pizza_list_count; i++) {
-        pizza_list[i] = copy.pizza_list[i];
-    }
 }
 
 bool PizzaHandler::set_name(string name, Pizza& pizzaa) {
@@ -40,7 +31,9 @@ void PizzaHandler::create_new_menu_pizza(Pizza& pizza) throw(InvalidName, Invali
         throw InvalidPrice();
     }
 
-    pizzarepo.write(pizza);
+    got_list();
+    pizza_repo.write(pizza);
+    pizzas.push_back(pizza);
 }
 
 void PizzaHandler::reset_pizza(Pizza& pizza) {
@@ -74,12 +67,12 @@ void PizzaHandler::create_special_pizza(Pizza& pizza) {
 }
 
 bool PizzaHandler::validate_name(string pizza_name) {
+
+    got_list();
     string name;
 
-    pizza_list = pizzarepo.read();
-    pizza_list_count = pizzarepo.get_list_count();
-    for(int i = 0; i < pizza_list_count; i++) {
-        name = pizza_list[i].get_name();
+    for(unsigned int i = 0; i < pizzas.size(); i++) {
+        name = pizzas.at(i).get_name();
         if(name == pizza_name) {
             return false;
         }
@@ -115,33 +108,32 @@ bool PizzaHandler::validate_new_pizza(Pizza& pizza) throw(InvalidName, InvalidPr
 }
 */
 Pizza PizzaHandler::get_menu_pizza(string pizza_name) {
+    got_list();
     string name;
 
-    pizza_list = pizzarepo.read();
-    pizza_list_count = pizzarepo.get_list_count();
-    for(int i = 0; i < pizza_list_count; i++) {
-        name = pizza_list[i].get_name();
+    for(unsigned int i = 0; i < pizzas.size(); i++) {
+        name = pizzas.at(i).get_name();
         if(name == pizza_name) {
-            return pizza_list[i];
+            return pizzas.at(i);
         }
     }
     throw InvalidName();
 }
 
 Pizza PizzaHandler::get_menu_pizza(int index) {
+    got_list();
+    return pizzas.at(index);
 
-    Pizza remove_later;
-    pizza_list_count = pizzarepo.get_list_count();
-    pizza_list = pizzarepo.read();
-
-    if(index >= 0 && index < pizza_list_count) {
-        return pizza_list[index];
-    }
-
-    remove_later.set_name("ERRROR! NOT A PIZZA!");
-    return remove_later;
 }
 
+
+void PizzaHandler::remove_pizza_from_list(int index) {
+    got_list();
+    pizzas.erase(pizzas.begin() + index);
+    pizza_repo.overwrite(pizzas);
+}
+
+/*
 void PizzaHandler::print_pizzas() {
     pizza_list = pizzarepo.read();
 
@@ -151,18 +143,8 @@ void PizzaHandler::print_pizzas() {
         cout << pizza_list[i] << endl;
     }
 }
+*/
 
-PizzaHandler& PizzaHandler::operator = (const PizzaHandler& right_side) {
-    if (this-> pizza_list_count != right_side.pizza_list_count) {
-        delete [] this ->pizza_list;
-        pizza_list = new Pizza[right_side.pizza_list_count];
-    }
-    this ->pizza_list_count = right_side.pizza_list_count;
-    for (int i = 0; i < right_side.pizza_list_count; i++) {
-        this ->pizza_list[i] = right_side.pizza_list[i];
-    }
-    return *this;
-}
  bool PizzaHandler::max_toppings(const Pizza& pizza) {
     if (pizza.get_toppingcount() < pizza.get_max_toppings()) {
         return false;
@@ -171,3 +153,17 @@ PizzaHandler& PizzaHandler::operator = (const PizzaHandler& right_side) {
         return true;
     }
  }
+
+
+
+void PizzaHandler::got_list() {
+    if(!has_list) {
+        pizzas = pizza_repo.read();
+    }
+}
+
+vector<Pizza> PizzaHandler::PizzaHandler::get_pizza_list(){
+    got_list();
+    return pizzas;
+ }
+

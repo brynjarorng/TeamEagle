@@ -4,6 +4,7 @@
 #include "Order.h"
 #include <fstream>
 #include <string>
+#include <vector>
 enum ListType{current, archived};
 
 class OrderRepo {
@@ -13,14 +14,13 @@ public:
 	//Currently empty initializer.
 	~OrderRepo();
 	//Currently empty destructor.
-	void current_write(Order orders);
+	/*void current_write(Order orders);
 	//Appends orders to a binary file located in the home directory.
 	Order* current_read();
 	//Return value is a dynamic array where each element is an occurrence
 	//of a current Order currently contained in "current_orders.dat" in the home folder.
 	//The allocated memory must be deleted where the pointer is received.
-	int get_current_count() const;
-	//Returns the size of the above list
+
 	Order* archived_read();
 	//Return value is a dynamic array where each element is an occurrence
 	//of an archived Order currently contained in "archived_orders.dat" in the home folder.
@@ -30,7 +30,18 @@ public:
     //void move_to_archived(int order_number);
 	//Moves an order in the current order to archived order.
 	void overwrite_list(Order* order, int list_count);
-	//Rewrites the "current_orders.dat" with order.
+	//Rewrites the "current_orders.dat" with order.*/
+    vector<Order> read();
+    //Return value is a vector where each element is an occurrence
+	//of a Order currently contained in "order.dat" in the home folder.
+	void write(Order& order);
+	//Appends order to a binary file located in the home directory.
+	void overwrite(vector<Order> orders);
+    //Rewrites a new file the same size as the parameter orders, and replaces
+    //the file with the content of the parameter.
+    int get_current_count() const;
+	//Returns the size of the above list
+
 
 private:
 
@@ -39,8 +50,8 @@ private:
 	//For dumping list.
 	int archived_list_count;
 	int current_list_count;
-	void read();
-	//Dumps the list of type List to the private pointer list.
+	int list_count;
+
 };
 
 #endif // ORDERREPO_H

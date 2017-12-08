@@ -75,3 +75,16 @@ string Pizza::get_name() {
     return temp;
 }
 
+string Pizza::get_status() {
+    switch (status)
+    {
+    case pending:
+        return "pending";
+    case baking:
+        return "baking";
+    case ready:
+        return "ready";
+    default:
+        return "";
+    }
+}

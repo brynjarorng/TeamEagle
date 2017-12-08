@@ -5,7 +5,7 @@ ToppingsRepo::ToppingsRepo() {
 }
 ToppingsRepo::~ToppingsRepo() {
 	//Currently empty.
-}
+}/*
 void ToppingsRepo::write(Toppings topping) {
 
 	ofstream fout("toppings.dat", ios::binary|ios::app);
@@ -32,14 +32,22 @@ Toppings* ToppingsRepo::read() {
 	}
 
 	return list;
-}
+}*/
 int ToppingsRepo::get_list_count() const {
 	return list_count;
 }
 
-vector<Toppings> ToppingsRepo::read_vector() {
+void ToppingsRepo::write(Toppings& toppings) {
+
+    ofstream fout("toppings.dat", ios::binary|ios::app);
+	fout.write((char*)(&toppings), sizeof(Toppings));
+	fout.close();
+}
+
+vector<Toppings> ToppingsRepo::read() {
 
 	ifstream fin("toppings.dat", ios::binary);
+	vector<Toppings> return_v;
 
 	if (fin.is_open()) {
 		fin.seekg(0, fin.end);
@@ -47,19 +55,22 @@ vector<Toppings> ToppingsRepo::read_vector() {
 		fin.seekg(0, fin.beg);
 
 		list_count = record_count;
-
-		list = new Toppings[record_count];
-
-
-		fin.read((char*)(list), sizeof(Toppings)*record_count);
+		vector<Toppings> temp (record_count);
+		fin.read((char*)(&temp[0]), sizeof(Toppings)*record_count);
 
 		fin.close();
+		return_v = temp;
 	}
-
-    for(int i = 0; i < list_count; i++) {
-        topping_list.push_back(list[i]);
-    }
-
-    delete[] list;
-    return topping_list;
+    return return_v;
 }
+
+void ToppingsRepo::overwrite(vector<Toppings> toppings) {
+
+    ofstream fout("toppings.dat", ios::binary);
+    unsigned int file_size = toppings.size();
+	//fout.write((char*)(&file_size), sizeof(unsigned));
+	fout.write((char*)(&toppings[0]), sizeof(Toppings)*toppings.size());
+
+	fout.close();
+}
+

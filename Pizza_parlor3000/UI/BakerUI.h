@@ -4,6 +4,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <iostream>
+#include "baker_functions.h"
 #include "InvalidInputException.h"
 
 using namespace std;

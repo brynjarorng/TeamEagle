@@ -9,6 +9,10 @@
 #include <iomanip>
 
 
+#include "PizzaSize.h"
+#include "PizzaSizeHandler.h"
+
+
 
 enum Order_Status{delivered, all, not_delivered};
 
@@ -34,7 +38,7 @@ void toppings_to_special(Pizza& pizza);
 //false otherwise.
 bool yes();
 //Input is a character, the function prompts the user to input a selection of (y) or (n)
-//if the selectuon is neither, the user is asked again until either answer is recevied.
+//if the selection is neither, the user is asked again until either answer is recevied.
 //if the input is 'y' then the return value is true, else the return value is false.
 void add_pizzas(Order& order);
 //Prompts the user to select the type of pizza (menu or special) and allows
@@ -51,13 +55,20 @@ void print_pizzas_toppings(Pizza pizza);
 void print_pizza(Pizza pizza);
 //Prints the name of the pizza followed by its topping and lastly the price.
 void print_order(Order order);
-//Prints the refrence instance of order to the screen.
+//Prints the reference instance of order to the screen.
 void mark_delivered();
 //Lets the user mark an order delivered.
 void print_orders(Order_Status status);
 //status should be delivered for printing only delivered pizzas, not_delivered
 //for printing all pizzas but those delivered and all for printing all pizzas.
 void print_topping_list();
+//Print the list of all available toppings
+void print_menu_pizza_list();
+//Print the list of all available pizzas
+void add_pizza_size();
+//Add a new size and price of that size to the database
+void print_sizes();
+//Print out all pizza sizes and prices
 
 
 #endif // ORDER_FUNCTIONS_H

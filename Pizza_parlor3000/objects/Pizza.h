@@ -36,6 +36,8 @@ public:
 	//Returns the price of this instance of pizza.
 	string get_name();
 	//Returns the name of this instance of pizza
+	string get_status();
+	//Returns the status of pizza as string.
 private:
 
 	double price;

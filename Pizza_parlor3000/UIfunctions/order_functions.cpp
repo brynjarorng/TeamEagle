@@ -3,7 +3,6 @@
 void print_orders(Order_Status status) {
 
     OrderHandler orderhandler;
-    Order* current_orders = orderhandler.get_orders();
     int ordercount = orderhandler.get_order_count();
 
     Order temp_order;
@@ -11,19 +10,19 @@ void print_orders(Order_Status status) {
     for (int i = 0; i < ordercount; i ++) {
        switch (status) {
             case delivered:
-                 if (current_orders[i].delivered()) {
+                 if (orderhandler.get_orders().at(i).delivered()) {
 
-                     print_order(current_orders[i]);
+                     print_order(orderhandler.get_orders().at(i));
                  }
                  break;
             case not_delivered:
-                 if (!current_orders[i].delivered()) {
+                 if (!orderhandler.get_orders().at(i).delivered()) {
 
-                     print_order(current_orders[i]);
+                     print_order(orderhandler.get_orders().at(i));
                  }
                 break;
             case all:
-                print_order(current_orders[i]);
+                print_order(orderhandler.get_orders().at(i));
                 break;
         }
     }
@@ -143,6 +142,71 @@ void add_menu_pizza(Order& order) {
         cout << "Pizza not on menu!" << endl;
     }
 }
+///?????????????????????????????????????????
+void add_pizza_size() {
+    PizzaSize pizza_size;
+    PizzaSizeHandler size_handler;
+    bool cont = 0;
+    string size;
+    string price;
+
+    do{
+        try{
+            cont = 1;
+            cout << "Enter new size: ";
+            cin >> size;
+
+            size_handler.validate_size(size);
+        }
+        catch(InvalidSize e) {
+            cont = 0;
+            cout << "Invalid size!" << endl;
+        }
+    } while(!cont);
+
+    do{
+        try{
+            cont = 1;
+            cout << "Enter price: ";
+            cin >> price;
+
+            size_handler.validate_price(price);
+        }
+        catch(InvalidPrice e) {
+            cont = 0;
+            cout << "Invalid Price!" << endl;
+        }
+    } while(!cont);
+
+    try{
+        size_handler.add_size(size, price);
+    }
+    catch(InvalidSize e) {
+        cout << "Error while writing size to database!" << endl;
+        out << "Is there already a product with that size in the database?" << endl;
+        system("PAUSE");
+        system("CLS");
+    }
+    catch(InvalidPrice e) {
+        cout << "Error while writing price to database!" << endl;
+        cout << "Is there already a product with that price in the database?" << endl;
+        system("PAUSE");
+        system("CLS");
+    }
+}
+
+void print_sizes() {
+    PizzaSizeHandler size_handler;
+    vector<PizzaSize> size_vector;
+
+    size_vector = size_handler.get_size_list();
+
+    for(unsigned int i = 0; i < size_vector.size(); i++){
+        cout << size_vector[i];
+    }
+}
+
+///?????????????????????????????????????????
 
 void toppings_to_special(Pizza& pizza) {
 
@@ -243,7 +307,6 @@ void print_order(Order order) {
 void print_current_orders(char& refresh) {
 
     OrderHandler orderhandler;
-    Order* current_orders = orderhandler.get_orders();
     int ordercount = orderhandler.get_order_count();
 
     Order temp_order;
@@ -257,7 +320,7 @@ void print_current_orders(char& refresh) {
                 break;
             }
         }
-        print_order(current_orders[i]);
+        print_order(orderhandler.get_orders().at(i));
         counter--;
     }
     cin >> refresh;
@@ -295,6 +358,18 @@ void print_topping_list() {
 
     for(unsigned int i = 0; i < topping_vector.size(); i++) {
         cout << topping_vector[i];
+
     }
 
+}
+
+void print_menu_pizza_list() {
+    PizzaHandler pizza_handler;
+    vector<Pizza> pizza_vector;
+
+    pizza_vector = pizza_handler.get_pizza_list();
+
+    for(unsigned int i = 0; i < pizza_vector.size(); i++) {
+        cout << pizza_vector[i];
+    }
 }

@@ -116,7 +116,8 @@ bool ManagerUI::info_menu(bool run, bool& continueRun) {
 
         case 'p':
             system("CLS");
-            cout << "Print all pizzas: " << endl;
+            cout << "All pizzas on menu: " << endl;
+            print_topping_list();
             system("PAUSE");
 
             continueRun = 1;
@@ -193,9 +194,7 @@ bool ManagerUI::topping_menu(bool run, bool& continueRun) {
 
         case 'r':
             system("CLS");
-            cout << "No functionality yet!" << endl;
-            system("PAUSE");
-
+            remove_topping();
             continueRun = 1;
             return 0;
             break;
@@ -226,6 +225,7 @@ bool ManagerUI::size_menu(bool run, bool& continueRun) {
 
         cout << "----Size editor portal----" << endl;
         cout << "(A) Add size" << endl;
+        cout << "(S) See all sizes" << endl;
         cout << "(R) Remove size" << endl;
         cout << "(B) Go back" << endl;
         cout << "(q) Quit" << endl;
@@ -237,12 +237,11 @@ bool ManagerUI::size_menu(bool run, bool& continueRun) {
         cin >> select;
         select = lower(select);
 
-        switch (select)
-        {
+        switch (select) {
         case 'a':
             system("CLS");
-            cout << "Add a new size" << endl;
-            system("PAUSE");
+            cout << "Add a new size:" << endl;
+            add_pizza_size();
 
             continueRun = 1;
             return 0;
@@ -257,8 +256,19 @@ bool ManagerUI::size_menu(bool run, bool& continueRun) {
             return 0;
             break;
 
+        case 's':
+            system("CLS");
+            cout << "See all sizes:" << endl;
+            print_sizes();
+            system("PAUSE");
+
+            continueRun = 1;
+            return 0;
+            break;
+
         case 'b':
-    //        manager_menu(0);
+            continueRun = 0;
+            return 0;
             break;
 
         case 'q':
@@ -280,8 +290,8 @@ bool ManagerUI::menu_pizza_menu(bool run, bool& continueRun) {
         system("CLS");
 
         cout << "----Pizza menu portal----" << endl;
-        cout << "(A) Add toppings" << endl;
-        cout << "(R) Remove toppings" << endl;
+        cout << "(N) Create a new pizza" << endl;
+        cout << "(R) Remove pizza" << endl;
         cout << "(B) Go back" << endl;
         cout << "(q) Quit" << endl;
         if(run){

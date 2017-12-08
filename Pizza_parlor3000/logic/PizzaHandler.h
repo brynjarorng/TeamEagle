@@ -50,19 +50,26 @@ public:
     //of toppings, then the topping is added to the pizza and
     //the return value is TRUE. Else nothing is done and the return
     //value is FALSE.
+    void remove_pizza_from_list(int index);
+    //Takes index of a pizza and deletes it from the database.
     bool max_toppings(const Pizza& pizza);
     //The return value is FALSE if more toppings can be added.
     //the return value is TRUE if max toppings is reached.
     void reset_pizza(Pizza& pizza);
+    void got_list();
+    //If handler has yet to fetch list from repo then gets it, if it has list then does nothing
+
+    vector<Pizza> get_pizza_list();
+    //Return the current list of pizza
 private:
 
    // Pizza pizza;
-    PizzaRepo pizzarepo;
+    PizzaRepo pizza_repo;
     ToppingsHandler toppingshandler;
 	Toppings* toppings;
-    Pizza* pizza_list;
+    vector<Pizza> pizzas;
     int pizza_list_count;
-
+    bool has_list;
 };
 
 #endif // PIZZAHANDLER_H_INCLUDED

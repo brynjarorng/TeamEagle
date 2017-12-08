@@ -47,7 +47,8 @@ bool PhoneClerkUI::phone_menu(bool run, bool& continueRun) {
 
         case 'm':
             system("CLS");
-            cout <<  "See all pizzas on menu" << endl;
+            cout <<  "All pizzas on menu: " << endl;
+            print_topping_list();
             system("PAUSE");
 
             continueRun = 1;

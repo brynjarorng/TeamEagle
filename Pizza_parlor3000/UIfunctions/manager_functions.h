@@ -160,6 +160,34 @@ void create_topping() {
     }
 }
 
+void print_toppings_with_number() {
+    vector<Toppings> topping_vector;
+    ToppingsHandler toppings_handler;
+    topping_vector = toppings_handler.get_topping_list();
+
+    for(unsigned int i = 0; i < topping_vector.size(); i++) {
+        cout << "[" << i + 1 << "]\t" << topping_vector[i];
+
+    }
+    cout << endl;
+}
+
+void remove_topping() {
+    while(true) {
+        ToppingsHandler handler;
+        print_toppings_with_number();
+        string number;
+        cout << "Input the number of the topping to remove, 0 to quit: ";
+        cin  >> number;
+        if(stoi(number) == 0) {
+            break;
+        }
+        handler.remove_topping_from_list(stoi(number) - 1);
+    }
+}
+
+
+
 void make_new_menu_pizza() {
     Pizza pizza;
     PizzaHandler pizzahandler;
@@ -200,36 +228,61 @@ void make_new_menu_pizza() {
     cout << "Would you like to add this pizza to the menu? (y/n) ";
     cin >> choice;
 
-        if(choice == 'y') {
+    if(choice == 'y') {
+        choice = '\0';
+        while(choice != 'n') {
             choice = '\0';
-            while(choice != 'n') {
-                choice = '\0';
-                try{
-                    pizzahandler.create_new_menu_pizza(pizza);
-                    choice = 'n';
+            try{
+                pizzahandler.create_new_menu_pizza(pizza);
+                choice = 'n';
+            }
+            catch(InvalidName e) {
+                cout << "Pizza name is taken, try again? (y/n) ";
+                cin >> choice;
+                if(choice == 'y') {
+                    cout << "Name: ";
+                    cin >> name;
+                    pizza.set_name(name);
                 }
-                catch(InvalidName e) {
-                    cout << "Pizza name is taken, try again? (y/n) ";
-                    cin >> choice;
-                    if(choice == 'y') {
-                        cout << "Name: ";
-                        cin >> name;
-                        pizza.set_name(name);
-                    }
-                }
-                catch(InvalidPrice e) {
-                    cout << "Price must be a positive number, try again? (y/n) ";
-                    cin >> choice;
+            }
+            catch(InvalidPrice e) {
+                cout << "Price must be a positive number, try again? (y/n) ";
+                cin >> choice;
 
-                    if(choice == 'y') {
-                        cout << "Price: ";
-                        cin >> price;
-                        pizza.set_price(price);
-                    }
+                if(choice == 'y') {
+                    cout << "Price: ";
+                    cin >> price;
+                    pizza.set_price(price);
                 }
+            }
         }
     }
-
 }
+
+void print_menu_pizza_list_with_numbers() {
+    PizzaHandler pizza_handler;
+    vector<Pizza> pizza_vector;
+
+    pizza_vector = pizza_handler.get_pizza_list();
+
+    for(unsigned int i = 0; i < pizza_vector.size(); i++) {
+        cout << "[" << i + 1 << "]\t" << pizza_vector[i];
+    }
+}
+
+void remove_menu_pizza() {
+    PizzaHandler handler;
+    string number;
+    while(true) {
+        print_menu_pizza_list_with_numbers();
+        cout << "Input the number of the pizza to remove, 0 to quit: ";
+        cin  >> number;
+        if(stoi(number) == 0) {
+            break;
+        }
+        handler.remove_pizza_from_list(stoi(number) - 1);
+    }
+}
+
 
 #endif // MANAGER_FUNCTIONS_H
