@@ -65,10 +65,6 @@ void print_topping_list();
 //Print the list of all available toppings
 void print_menu_pizza_list();
 //Print the list of all available pizzas
-void add_pizza_size();
-//Add a new size and price of that size to the database
-void print_sizes();
-//Print out all pizza sizes and prices
 
 
 #endif // ORDER_FUNCTIONS_H

@@ -105,6 +105,11 @@ void PizzaSizeHandler::add_size(string size, string price) {
     create_pizza_size(p_size);
 }
 
+void PizzaSizeHandler::remove_size_from_list(int index) {
+    got_list();
+    pizza_size_vector.erase(pizza_size_vector.begin() + index);
+    pizza_size_repo.overwrite(pizza_size_vector);
+}
 
 
 

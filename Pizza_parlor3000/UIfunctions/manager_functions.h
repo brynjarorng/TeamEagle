@@ -284,5 +284,94 @@ void remove_menu_pizza() {
     }
 }
 
+void add_pizza_size() {
+    PizzaSize pizza_size;
+    PizzaSizeHandler size_handler;
+    bool cont = 0;
+    string size;
+    string price;
+
+    do{
+        try{
+            cont = 1;
+            cout << "Enter new size: ";
+            cin >> size;
+
+            size_handler.validate_size(size);
+        }
+        catch(InvalidSize e) {
+            cont = 0;
+            cout << "Invalid size!" << endl;
+        }
+    } while(!cont);
+
+    do{
+        try{
+            cont = 1;
+            cout << "Enter price: ";
+            cin >> price;
+
+            size_handler.validate_price(price);
+        }
+        catch(InvalidPrice e) {
+            cont = 0;
+            cout << "Invalid Price!" << endl;
+        }
+    } while(!cont);
+
+    try{
+        size_handler.add_size(size, price);
+    }
+    catch(InvalidSize e) {
+        cout << "Error while writing size to database!" << endl;
+        cout << "Is there already a product with that size in the database?" << endl;
+        system("PAUSE");
+        system("CLS");
+    }
+    catch(InvalidPrice e) {
+        cout << "Error while writing price to database!" << endl;
+        cout << "Is there already a product with that price in the database?" << endl;
+        system("PAUSE");
+        system("CLS");
+    }
+}
+
+void print_sizes() {
+    PizzaSizeHandler size_handler;
+    vector<PizzaSize> size_vector;
+
+    size_vector = size_handler.get_size_list();
+
+    for(unsigned int i = 0; i < size_vector.size(); i++){
+        cout << size_vector[i];
+    }
+}
+
+void print_size_with_numbers() {
+    PizzaSizeHandler pizza_handler;
+    vector<PizzaSize> size_vector;
+
+    size_vector = pizza_handler.get_size_list();
+
+    for(unsigned int i = 0; i < size_vector.size(); i++) {
+        cout << "[" << i + 1 << "]\t" << size_vector[i];
+    }
+}
+
+void remove_size() {
+    while(true) {
+        PizzaSizeHandler handler;
+        print_size_with_numbers();
+        string number;
+        cout << "Input the number of the size to remove, 0 to quit: ";
+        cin  >> number;
+        if(stoi(number) == 0) {
+            break;
+        }
+        handler.remove_size_from_list(stoi(number) - 1);
+    }
+}
+
+
 
 #endif // MANAGER_FUNCTIONS_H

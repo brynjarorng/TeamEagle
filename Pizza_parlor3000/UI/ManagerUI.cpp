@@ -240,7 +240,7 @@ bool ManagerUI::size_menu(bool run, bool& continueRun) {
         switch (select) {
         case 'a':
             system("CLS");
-            cout << "Add a new size:" << endl;
+            cout << "Add a new size" << endl;
             add_pizza_size();
 
             continueRun = 1;
@@ -250,6 +250,7 @@ bool ManagerUI::size_menu(bool run, bool& continueRun) {
         case 'r':
             system("CLS");
             cout << "Remove a size" << endl;
+            remove_size();   ///*******
             system("PAUSE");
 
             continueRun = 1;

@@ -30,6 +30,7 @@ class PizzaSizeHandler
         //Checks if input only contains numbers
         void add_size(string size, string price);
         //Converts size to int and price to double, adds sends that to repo.
+        void remove_size_from_list(int index);
 
     private:
         PizzaSizeRepo pizza_size_repo;
