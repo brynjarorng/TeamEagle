@@ -38,15 +38,15 @@ void print_pizzas_in_order(Order& order) {
         cout << "#" << i + 1 << "  ";
         cout << pizzalist[i].get_name() << " -- ";
         print_pizzas_toppings(pizzalist[i]);
+        cout << "Status: " << pizzalist[i].get_status() << endl;
     }
 }
 
 void change_status() {
     string order_number;
     string pizza_number;
-    char status;
+    string status;
     OrderHandler handler;
-    PizzaHandler phandler;
     cout << "Order number: ";
     cin >> order_number;
     cout << "Pizza number: ";
@@ -54,7 +54,14 @@ void change_status() {
     cout << "Status: (b for in oven, r for ready) ";
     cin >> status;
 
-
-
-
+    if(status == "b") {
+        handler.change_status(stoi(order_number), stoi(pizza_number) - 1, baking);
+    }
+    else if(status == "r") {
+        handler.change_status(stoi(order_number), stoi(pizza_number) - 1, ready);
+    }
+    for(unsigned int i = 0; i < handler.get_orders().size();i++){
+        if(handler.get_from_orders(i).get_order_number() == stoi(order_number))
+        cout << handler.get_from_orders(i).get_pizzas_in_order()[stoi(pizza_number) - 1].get_status();
+    }
 }
