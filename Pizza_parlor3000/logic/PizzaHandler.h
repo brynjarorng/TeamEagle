@@ -50,6 +50,8 @@ public:
     //of toppings, then the topping is added to the pizza and
     //the return value is TRUE. Else nothing is done and the return
     //value is FALSE.
+    void remove_pizza_from_list(int index);
+    //Takes index of a pizza and deletes it from the database.
     bool max_toppings(const Pizza& pizza);
     //The return value is FALSE if more toppings can be added.
     //the return value is TRUE if max toppings is reached.

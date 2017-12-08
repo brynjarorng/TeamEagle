@@ -127,6 +127,12 @@ Pizza PizzaHandler::get_menu_pizza(int index) {
 }
 
 
+void PizzaHandler::remove_pizza_from_list(int index) {
+    got_list();
+    pizzas.erase(pizzas.begin() + index);
+    pizza_repo.overwrite(pizzas);
+}
+
 /*
 void PizzaHandler::print_pizzas() {
     pizza_list = pizzarepo.read();
