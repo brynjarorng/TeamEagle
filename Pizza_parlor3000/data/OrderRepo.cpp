@@ -48,6 +48,7 @@ int OrderRepo::get_archived_count() const {
 	return this-> archived_list_count;
 }
 */
+
 int OrderRepo::get_current_count()  const{
 
     int record_count;
@@ -93,8 +94,7 @@ vector<Order> OrderRepo::read() {
 
 void OrderRepo::overwrite(vector<Order> orders) {
 
-    ofstream fout("order.dat", ios::binary);
+    ofstream fout("orders.dat", ios::binary);
     fout.write((char*)(&orders[0]), sizeof(Order)*orders.size());
-
 	fout.close();
 }

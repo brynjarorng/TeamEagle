@@ -9,9 +9,7 @@ class OrderHandler
 {
 public:
     OrderHandler();
-    ~OrderHandler();
-    OrderHandler(const OrderHandler &copy);
-    //Copy constructor.
+
     OrderHandler& operator = (const OrderHandler& right_side);
     //Ensure that this instance will be a distinct copy of right_side.
     void mark_pizza_status(int index, PizzaStatus status);
@@ -41,6 +39,8 @@ public:
     //Returns the current order count list.
     void got_list();
     //If handler has yet to fetch list from repo then gets it, if it has list then does nothing
+    void change_status(int ordernumber, int pizzaindex, PizzaStatus status);
+
 private:
     OrderRepo order_repo;
     vector<Order> orders;

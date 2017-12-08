@@ -4,11 +4,7 @@ OrderHandler::OrderHandler() {
     has_list = false;
 }
 
-OrderHandler::~OrderHandler() {
-}
-
 void OrderHandler::mark_pizza_status(int index, PizzaStatus status) {
-    orders;
 
     //pizza_list = orders[i].get_order();
    // pizza_list[index].set_status(status);
@@ -86,5 +82,19 @@ int OrderHandler::get_order_count() {
 void OrderHandler::got_list() {
     if(!has_list) {
         orders = order_repo.read();
+        has_list = true;
     }
 }
+
+void OrderHandler::change_status(int ordernumber, int pizzaindex, PizzaStatus status)
+{
+    got_list();
+
+    for(unsigned int i = 0; i < orders.size(); i++) {
+        if(orders.at(i).get_order_number() == ordernumber) {
+            orders.at(i).get_pizzas_in_order()[pizzaindex].set_status(status);
+            order_repo.overwrite(orders);
+        }
+    }
+}
+
