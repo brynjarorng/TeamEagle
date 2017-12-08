@@ -116,7 +116,8 @@ bool ManagerUI::info_menu(bool run, bool& continueRun) {
 
         case 'p':
             system("CLS");
-            cout << "Print all pizzas: " << endl;
+            cout << "All pizzas on menu: " << endl;
+            print_topping_list();
             system("PAUSE");
 
             continueRun = 1;
@@ -280,8 +281,8 @@ bool ManagerUI::menu_pizza_menu(bool run, bool& continueRun) {
         system("CLS");
 
         cout << "----Pizza menu portal----" << endl;
-        cout << "(A) Add toppings" << endl;
-        cout << "(R) Remove toppings" << endl;
+        cout << "(N) Create a new pizza" << endl;
+        cout << "(R) Remove pizza" << endl;
         cout << "(B) Go back" << endl;
         cout << "(q) Quit" << endl;
         if(run){

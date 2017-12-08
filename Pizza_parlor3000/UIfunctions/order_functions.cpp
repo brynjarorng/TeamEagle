@@ -287,9 +287,23 @@ void print_lines (int line_count) {
 
 void print_topping_list() {
     ToppingsHandler toppings_handler;
+    vector<Toppings> topping_vector;
 
-    for(unsigned int i = 0; i < toppings_handler.get_topping_list_size(); i++) {
-        cout << toppings_handler.get_from_topping_list(i);
+    topping_vector = toppings_handler.get_topping_list();
+
+    for(unsigned int i = 0; i < topping_vector.size(); i++) {
+        cout << topping_vector[i];
     }
 
+}
+
+void print_menu_pizza_list() {
+    PizzaHandler pizza_handler;
+    vector<Pizza> pizza_vector;
+
+    pizza_vector = pizza_handler.get_pizza_list();
+
+    for(unsigned int i = 0; i < pizza_vector.size(); i++) {
+        cout << pizza_vector[i];
+    }
 }

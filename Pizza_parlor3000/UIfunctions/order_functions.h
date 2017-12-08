@@ -58,6 +58,9 @@ void print_orders(Order_Status status);
 //status should be delivered for printing only delivered pizzas, not_delivered
 //for printing all pizzas but those delivered and all for printing all pizzas.
 void print_topping_list();
+//Print the list of all available toppings
+void print_menu_pizza_list();
+//Print the list of all available pizzas
 
 
 #endif // ORDER_FUNCTIONS_H

@@ -54,6 +54,8 @@ public:
     //The return value is FALSE if more toppings can be added.
     //the return value is TRUE if max toppings is reached.
     void reset_pizza(Pizza& pizza);
+    vector<Pizza> get_pizza_list();
+    //Return the current list of pizzas
 private:
 
    // Pizza pizza;

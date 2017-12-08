@@ -55,7 +55,7 @@ bool OrderHandler::delivered(int order_number) {
 
     bool found;
 
-    for (int i =0; i < orders.size(); i++) {
+    for (unsigned int i =0; i < orders.size(); i++) {
         if (this ->orders[i].get_order_number() == order_number) {
             this ->orders[i].set_delivered();
             found = true;

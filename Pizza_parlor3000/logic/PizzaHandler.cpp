@@ -68,7 +68,7 @@ void PizzaHandler::create_special_pizza(Pizza& pizza) {
 bool PizzaHandler::validate_name(string pizza_name) {
     string name;
 
-    for(int i = 0; i < pizzas.size(); i++) {
+    for(unsigned int i = 0; i < pizzas.size(); i++) {
         name = pizzas.at(i).get_name();
         if(name == pizza_name) {
             return false;
@@ -107,7 +107,7 @@ bool PizzaHandler::validate_new_pizza(Pizza& pizza) throw(InvalidName, InvalidPr
 Pizza PizzaHandler::get_menu_pizza(string pizza_name) {
     string name;
 
-    for(int i = 0; i < pizzas.size(); i++) {
+    for(unsigned int i = 0; i < pizzas.size(); i++) {
         name = pizzas.at(i).get_name();
         if(name == pizza_name) {
             return pizzas.at(i);
@@ -142,4 +142,8 @@ void PizzaHandler::print_pizzas() {
     else {
         return true;
     }
+ }
+
+vector<Pizza> PizzaHandler::PizzaHandler::get_pizza_list(){
+    return pizzas;
  }
