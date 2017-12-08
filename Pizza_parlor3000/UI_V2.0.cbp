@@ -57,8 +57,6 @@
 		<Unit filename="UI/PhoneClerkUI.h" />
 		<Unit filename="UI/StoreClerkUI.cpp" />
 		<Unit filename="UI/StoreClerkUI.h" />
-		<Unit filename="UI/UITemplate.cpp" />
-		<Unit filename="UI/UITemplate.h" />
 		<Unit filename="UIfunctions/baker_functions.cpp" />
 		<Unit filename="UIfunctions/baker_functions.h" />
 		<Unit filename="UIfunctions/manager_functions.h" />
@@ -78,6 +76,8 @@
 		<Unit filename="exceptions/InvalidInputException.h" />
 		<Unit filename="exceptions/InvalidName.cpp" />
 		<Unit filename="exceptions/InvalidName.h" />
+		<Unit filename="exceptions/InvalidNumberException.cpp" />
+		<Unit filename="exceptions/InvalidNumberException.h" />
 		<Unit filename="exceptions/InvalidPrice.cpp" />
 		<Unit filename="exceptions/InvalidPrice.h" />
 		<Unit filename="exceptions/InvalidSize.cpp" />
@@ -92,6 +92,7 @@
 		<Unit filename="logic/StdInput.h" />
 		<Unit filename="logic/ToppingsHandler.cpp" />
 		<Unit filename="logic/ToppingsHandler.h" />
+		<Unit filename="logic/ValidationFunctions.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="objects/Order.cpp" />
 		<Unit filename="objects/Order.h" />
