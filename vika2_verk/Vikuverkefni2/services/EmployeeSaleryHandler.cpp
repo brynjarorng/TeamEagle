@@ -123,20 +123,54 @@ bool EmployeeSaleryHandler::validate_year(string year) {
 }
 
 
-int EmployeeSaleryHandler::total_salary_by_year(string year, string SSN) {
+string EmployeeSaleryHandler::total_salary_by_year(string year, string SSN) {
 
-    EmployeeRepo repo;
     Retr_year_Info temp = get_info_on_year(year);
     int salary = 0;
-    string temp1;
+
     for (int i = 0; i < temp.nr_of_entries; i++) {
         if (SSN == temp.SSN[i])
         salary += stoi(temp.salary[i]);
     }
 
-    return salary;
-
+    string ret  = to_string(salary);
+    return ret;
 }
+
+Employee EmployeeSaleryHandler::higest_employee(string year) {
+
+    Retr_year_Info info = get_info_on_year(year);
+
+    Employee highest_empl;
+    highest_empl.set_SSN(info.SSN[0]);
+
+
+    string highest_salary = total_salary_by_year(year, highest_empl.get_SSN());
+
+    int empl1, empl2;
+
+    empl1 = stoi(total_salary_by_year(year, info.SSN[0] ) );
+    //empl2 = stoi(highest_salary(year, info.SSN[1]));
+
+    for (int i = 0; i < info.nr_of_entries; i++) {
+        if (highest_empl.get_SSN() != info.SSN[i] ) {
+            cout << "her" << endl;
+            empl2 = stoi( total_salary_by_year(year, info.SSN[i]));
+            cout << "empl2 " << empl2 <<endl;
+            if (empl2 > empl1) {
+                highest_empl.set_SSN( info.SSN[i] );
+                empl1 = empl2;
+            }
+        }
+
+    }
+
+
+cout << highest_empl.get_SSN() << " ssn " << endl;
+
+  return highest_empl;
+}
+
 int EmployeeSaleryHandler::get_all_records_for_year(string SSN, string year) {
     empVector.clear();
 //    empVector = read_to_vector();

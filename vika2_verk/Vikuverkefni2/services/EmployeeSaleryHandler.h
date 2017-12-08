@@ -40,7 +40,7 @@ class EmployeeSaleryHandler {
 
     public:
 
-
+        Employee higest_employee(string year);
         Retr_SSN_Info get_info_on_SSN(string SSN);
         //Returns information retrived by SSN.
         Retr_year_Info get_info_on_year(string year);
@@ -71,7 +71,7 @@ class EmployeeSaleryHandler {
         string int_to_month(string month);
         //Converts the integer month to the string month.
 
-        int total_salary_by_year(string year, string SSN);
+        string total_salary_by_year(string year, string SSN);
         //The return value is the total salary of a employee for
         //a given year.
         string convert_month_to_2_digits(string in);

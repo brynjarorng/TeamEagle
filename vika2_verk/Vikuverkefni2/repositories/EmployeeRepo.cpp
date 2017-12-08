@@ -94,11 +94,12 @@ int EmployeeRepo::month_position(Employee emp){
         that_month = "";
         getline(in, trash , '\n');
         }
+
         in.close();
-
         return tell;
-}
-
+    }
+    in.close();
+    return tell;
 }
 void EmployeeRepo::rewrite(Employee e) {
 
@@ -125,9 +126,9 @@ void EmployeeRepo::rewrite_id_data(Employee e, string month) {
         while (getline(in, line)) {
         lines.push_back(line);
     }
-        in.close();
         rewrite_data(emp, folder, (tell-2), lines);
     }
+    in.close();
 }
 
 int EmployeeRepo::find_line_in_id(string month, string SSN) {
@@ -199,6 +200,7 @@ void EmployeeRepo::rewrite_year_data(int tell, Employee e) {
         cout << "Line: " << line << endl;
         lines.push_back(line);
         }
+        line = "";
         in.close();
         rewrite_data(emp, folder, (tell - 1), lines);
     }

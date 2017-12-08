@@ -27,6 +27,7 @@ class UIHandler
         void print_by_SSN(string SSN);
         //Prints all information on SSN.
         void print_total_salary(string SSN, string year);
+        void highest_salary_by_year();
 
 
     private:

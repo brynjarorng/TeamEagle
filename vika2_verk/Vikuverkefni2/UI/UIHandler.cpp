@@ -154,9 +154,31 @@ void UIHandler::print_total_salary(string SSN, string year) {
     cout << "Employees name: " << temp.name << endl;
     cout << "Employees SSN: " << temp.SSN << endl;
 
-    int total_salary = empl_sal_handl.total_salary_by_year(year, SSN);
+    string total_salary = empl_sal_handl.total_salary_by_year(year, SSN);
 
   cout << "Total salary: $" << total_salary << endl;
+}
+void UIHandler::highest_salary_by_year() {
+    year = "";
+    Employee empl;
+        do{
+        cout << "Year: ";
+        try{
+            cin >> year;
+            isValid = empl_sal_handl.validate_year(year);
+        }
+        catch(InvalidYearException e) {
+            isValid = 0;
+            cout << "Invalid year! try again." << endl;
+        }
+    }while(!isValid);
+
+   empl = empl_sal_handl.higest_employee(year);
+
+ /*  cout << "Highest payed employee: "     << endl
+        << "Name: "  << empl.get_name()   << endl
+        << "SSN: "   << empl.get_SSN()    << endl
+        << "Total $" << empl.get_salary() << endl;*/
 }
 
 void UIHandler::print_lines(int i){

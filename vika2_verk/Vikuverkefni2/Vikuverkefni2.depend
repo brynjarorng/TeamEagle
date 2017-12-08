@@ -228,7 +228,7 @@
 	<stdlib.h>
 	<UIHandler.h>
 
-1512764401 /home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/services/EmployeeSaleryHandler.h
+1512767475 /home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/services/EmployeeSaleryHandler.h
 	"Employee.h"
 	"EmployeeRepo.h"
 	"InvalidNameException.h"
@@ -252,7 +252,7 @@
 	<string>
 	<vector>
 
-1512745205 /home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/UI/UIHandler.h
+1512767199 /home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/UI/UIHandler.h
 	<iostream>
 	<string>
 	<vector>
@@ -266,19 +266,19 @@
 1512728281 source:/home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/models/Employee.cpp
 	"Employee.h"
 
-1512764162 source:/home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/repositories/EmployeeRepo.cpp
+1512765916 source:/home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/repositories/EmployeeRepo.cpp
 	"EmployeeRepo.h"
 	<iostream>
 
-1512764413 source:/home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/services/EmployeeSaleryHandler.cpp
+1512771052 source:/home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/services/EmployeeSaleryHandler.cpp
 	"EmployeeSaleryHandler.h"
 	<cstdlib>
 	<iostream>
 
-1512751725 source:/home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/UI/MainUI.cpp
+1512767199 source:/home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/UI/MainUI.cpp
 	"MainUI.h"
 
-1512764066 source:/home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/UI/UIHandler.cpp
+1512771068 source:/home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/UI/UIHandler.cpp
 	"UIHandler.h"
 	<stdlib.h>
 

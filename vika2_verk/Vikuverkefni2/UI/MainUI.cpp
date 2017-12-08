@@ -40,6 +40,7 @@ bool MainUI::print_menu(bool run, bool& contRun) {
         break;
 
     case '4':
+        ui_handler.highest_salary_by_year();
         contRun = 1;
         return 0;
         break;
