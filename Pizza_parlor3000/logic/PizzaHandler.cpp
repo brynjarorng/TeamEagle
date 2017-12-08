@@ -1,7 +1,7 @@
 #include "PizzaHandler.h"
 
 PizzaHandler::PizzaHandler() {
-    pizzas = pizza_repo.read();
+    has_list = false;
 }
 
 PizzaHandler::~PizzaHandler() {
@@ -31,6 +31,7 @@ void PizzaHandler::create_new_menu_pizza(Pizza& pizza) throw(InvalidName, Invali
         throw InvalidPrice();
     }
 
+    got_list();
     pizza_repo.write(pizza);
     pizzas.push_back(pizza);
 }
@@ -66,6 +67,8 @@ void PizzaHandler::create_special_pizza(Pizza& pizza) {
 }
 
 bool PizzaHandler::validate_name(string pizza_name) {
+
+    got_list();
     string name;
 
     for(unsigned int i = 0; i < pizzas.size(); i++) {
@@ -105,6 +108,7 @@ bool PizzaHandler::validate_new_pizza(Pizza& pizza) throw(InvalidName, InvalidPr
 }
 */
 Pizza PizzaHandler::get_menu_pizza(string pizza_name) {
+    got_list();
     string name;
 
     for(unsigned int i = 0; i < pizzas.size(); i++) {
@@ -117,7 +121,7 @@ Pizza PizzaHandler::get_menu_pizza(string pizza_name) {
 }
 
 Pizza PizzaHandler::get_menu_pizza(int index) {
-
+    got_list();
     return pizzas.at(index);
 
 }
@@ -144,6 +148,15 @@ void PizzaHandler::print_pizzas() {
     }
  }
 
+<<<<<<< HEAD
+
+void PizzaHandler::got_list() {
+    if(!has_list) {
+        pizzas = pizza_repo.read();
+    }
+}
+=======
 vector<Pizza> PizzaHandler::PizzaHandler::get_pizza_list(){
     return pizzas;
  }
+>>>>>>> 8c06cad15222308e5c7fb273dc3c0921852d2967

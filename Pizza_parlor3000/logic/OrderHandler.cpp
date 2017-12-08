@@ -1,7 +1,7 @@
 #include "OrderHandler.h"
 
 OrderHandler::OrderHandler() {
-    orders = order_repo.read();
+    has_list = false;
 }
 
 OrderHandler::~OrderHandler() {
@@ -15,6 +15,7 @@ void OrderHandler::mark_pizza_status(int index, PizzaStatus status) {
 }
 
 void OrderHandler::generate_order_no(Order& order) {
+    got_list();
     if(orders.size() != 0) {
         Order last = get_last_order();
         int new_order_number = 1 + last.get_order_number();
@@ -26,7 +27,7 @@ void OrderHandler::generate_order_no(Order& order) {
 }
 
 Order OrderHandler::get_last_order() {
-
+    got_list();
     return orders.at(orders.size() - 1);
 }
 /*
@@ -42,6 +43,7 @@ void OrderHandler::print_current_list() {
     }
 }*/
 void OrderHandler::add_order(Order& order) {
+    got_list();
     order_repo.write(order);
     orders.push_back(order);
 }
@@ -52,7 +54,7 @@ bool OrderHandler::max_order_count(Order order) {
     return false;
 }
 bool OrderHandler::delivered(int order_number) {
-
+    got_list();
     bool found;
 
     for (unsigned int i =0; i < orders.size(); i++) {
@@ -68,12 +70,21 @@ bool OrderHandler::delivered(int order_number) {
     return found;
 }
 vector<Order> OrderHandler::get_orders() {
+    got_list();
     return this ->orders;
- }
+}
 
 Order OrderHandler::get_from_orders(int index) {
+    got_list();
     return orders.at(index);
 }
-int OrderHandler::get_order_count() const {
+int OrderHandler::get_order_count() {
+    got_list();
     return this ->orders.size();
+}
+
+void OrderHandler::got_list() {
+    if(!has_list) {
+        orders = order_repo.read();
+    }
 }

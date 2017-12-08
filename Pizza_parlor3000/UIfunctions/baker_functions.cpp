@@ -7,13 +7,13 @@ void pprint_lines (int line_count) {
     cout << endl;
 }
 
-void print_pizza_list() {
+void print_pizza_baking_list() {
     OrderHandler orderhandler;
-
+    vector<Order> orders = orderhandler.get_orders();
     for (int i = 0; i < orderhandler.get_order_count(); i++) {
-        if (orderhandler.get_from_orders(i).delivered()) {
-            cout << "Order #" << orderhandler.get_from_orders(i).get_order_number() << endl;
-            print_pizzas_in_order(orderhandler.get_from_orders(i));
+        if (!orders.at(i).delivered()) {
+            cout << "Order #" << orders.at(i).get_order_number() << endl;
+            print_pizzas_in_order(orders.at(i));
             pprint_lines(10);
         }
     }
@@ -46,13 +46,15 @@ void change_status() {
     string pizza_number;
     char status;
     OrderHandler handler;
-    //Order* orders = handler.get_orders();
+    PizzaHandler phandler;
     cout << "Order number: ";
     cin >> order_number;
     cout << "Pizza number: ";
     cin >> pizza_number;
     cout << "Status: (b for in oven, r for ready) ";
     cin >> status;
+
+
 
 
 }

@@ -54,8 +54,13 @@ public:
     //The return value is FALSE if more toppings can be added.
     //the return value is TRUE if max toppings is reached.
     void reset_pizza(Pizza& pizza);
+<<<<<<< HEAD
+    void got_list();
+    //If handler has yet to fetch list from repo then gets it, if it has list then does nothing
+=======
     vector<Pizza> get_pizza_list();
     //Return the current list of pizzas
+>>>>>>> 8c06cad15222308e5c7fb273dc3c0921852d2967
 private:
 
    // Pizza pizza;
@@ -64,7 +69,7 @@ private:
 	Toppings* toppings;
     vector<Pizza> pizzas;
     int pizza_list_count;
-
+    bool has_list;
 };
 
 #endif // PIZZAHANDLER_H_INCLUDED

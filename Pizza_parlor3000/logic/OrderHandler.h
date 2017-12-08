@@ -37,8 +37,10 @@ public:
     //Returns the list of orders.
     Order get_from_orders(int index);
     //Returns the order with the corresponding index from the order list.
-    int get_order_count() const;
+    int get_order_count();
     //Returns the current order count list.
+    void got_list();
+    //If handler has yet to fetch list from repo then gets it, if it has list then does nothing
 private:
     OrderRepo order_repo;
     vector<Order> orders;
@@ -47,6 +49,7 @@ private:
     Order order;
     Pizza pizza;
     Pizza* pizza_list;
+    bool has_list;
 };
 
 #endif // ORDERHANDLER_H

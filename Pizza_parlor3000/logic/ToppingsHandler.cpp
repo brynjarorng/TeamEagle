@@ -1,7 +1,7 @@
 #include "ToppingsHandler.h"
 
 ToppingsHandler::ToppingsHandler() {
-    toppings = toppings_repo.read();
+    has_list = false;
 }
 /*
 void ToppingsHandler::print_toppings()
@@ -16,15 +16,18 @@ void ToppingsHandler::print_toppings()
 */
 vector<Toppings> ToppingsHandler::get_topping_list()
 {
+    got_list();
     return toppings;
 }
 
 Toppings ToppingsHandler::get_from_topping_list(int index) {
+    got_list();
     return toppings.at(index);
 }
 
 bool ToppingsHandler::validate(string topping_name)
 {
+    got_list();
     string name;
 
     for(int i = 0; i < toppings.size(); i++) {
@@ -39,6 +42,7 @@ bool ToppingsHandler::validate(string topping_name)
 
 bool ToppingsHandler::validate_name(string name)
 {
+    got_list();
     string name_from_list;
     for(int i = 0; i < (int)toppings.size(); i++) {
         name_from_list = toppings.at(i).get_name();
@@ -76,6 +80,7 @@ bool ToppingsHandler::set_price(double price, Toppings& topping) {
 }
 */
 void ToppingsHandler::create_topping(Toppings& topping) throw(InvalidName, InvalidPrice) {
+    got_list();
     if(!validate_name(topping.get_name())) {
         throw InvalidName();
     }
@@ -88,6 +93,7 @@ void ToppingsHandler::create_topping(Toppings& topping) throw(InvalidName, Inval
 
 Toppings ToppingsHandler::get_topping(string topping_name) throw (InvalidName)
 {
+    got_list();
     string name;
 
     for(int i = 0; i < toppings.size(); i++) {
@@ -100,5 +106,13 @@ Toppings ToppingsHandler::get_topping(string topping_name) throw (InvalidName)
 }
 
 int ToppingsHandler::get_topping_list_size() {
+    got_list();
     return (int)toppings.size();
+}
+
+
+void ToppingsHandler::got_list() {
+    if(!has_list) {
+        toppings = toppings_repo.read();
+    }
 }

@@ -10,19 +10,19 @@ void print_orders(Order_Status status) {
     for (int i = 0; i < ordercount; i ++) {
        switch (status) {
             case delivered:
-                 if (orderhandler.get_from_orders(i).delivered()) {
+                 if (orderhandler.get_orders().at(i).delivered()) {
 
-                     print_order(orderhandler.get_from_orders(i));
+                     print_order(orderhandler.get_orders().at(i));
                  }
                  break;
             case not_delivered:
-                 if (!orderhandler.get_from_orders(i).delivered()) {
+                 if (!orderhandler.get_orders().at(i).delivered()) {
 
-                     print_order(orderhandler.get_from_orders(i));
+                     print_order(orderhandler.get_orders().at(i));
                  }
                 break;
             case all:
-                print_order(orderhandler.get_from_orders(i));
+                print_order(orderhandler.get_orders().at(i));
                 break;
         }
     }
@@ -255,7 +255,7 @@ void print_current_orders(char& refresh) {
                 break;
             }
         }
-        print_order(orderhandler.get_from_orders(i));
+        print_order(orderhandler.get_orders().at(i));
         counter--;
     }
     cin >> refresh;
@@ -291,8 +291,13 @@ void print_topping_list() {
 
     topping_vector = toppings_handler.get_topping_list();
 
+<<<<<<< HEAD
+    for(unsigned int i = 0; i < toppings_handler.get_topping_list().size(); i++) {
+        cout << toppings_handler.get_topping_list().at(i);
+=======
     for(unsigned int i = 0; i < topping_vector.size(); i++) {
         cout << topping_vector[i];
+>>>>>>> 8c06cad15222308e5c7fb273dc3c0921852d2967
     }
 
 }

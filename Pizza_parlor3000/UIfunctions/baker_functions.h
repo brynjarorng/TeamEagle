@@ -4,7 +4,7 @@
 #include "OrderHandler.h"
 #include "Pizza.h"
 
-void print_pizza_list();
+void print_pizza_baking_list();
 void print_pizzas_in_order(Order& order);
 
 void print_lines (int line_count);
