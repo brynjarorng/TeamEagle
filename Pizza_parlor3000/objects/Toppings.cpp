@@ -36,6 +36,10 @@ void Toppings::set_price(double price) {
     this ->price = price;
 }
 
+void Toppings::set_price(string price) {
+    this ->price = stod(price);
+}
+
 ostream& operator << (ostream& outs, const Toppings& topping)
 {
 	outs << topping.name  << " " << topping.price << endl;

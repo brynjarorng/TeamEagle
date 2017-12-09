@@ -2,9 +2,12 @@
 #define MANAGER_FUNCTIONS_H
 
 
-
+#include "InvalidAlphaStringException.h"
+#include "InvalidNumberException.h"
+#include "InvalidBoolException.h"
 #include "PizzaHandler.h"
 #include "ToppingsHandler.h"
+#include "ValidationFunctions.h"
 
 /*
 void make_pizza() {
@@ -108,55 +111,102 @@ void create_topping() {
 }
 */
 void create_topping() {
-    char choice = '\0';
+    system("CLS");
+    string choice;
     int max_tries = 5;
+    bool cont = 0;
 
-    while(choice != 'n') {
+    while(choice != "n") {
         Toppings topping;
         ToppingsHandler handler;
 
         string name;
-        cout << "Name: ";
-        cin >> name;
+        do{
+            try{
+                cout << "Name: ";
+                cin >> name;
+                validate_string_input(name);
+                cont = 0;
+            }
+            catch(InvalidAlphaStringException e) {
+                cont = 1;
+                cout << "Invalid string input!" << endl;
+            }
+        } while(cont);
         topping.set_name(name);
 
-        double price;
-        cout << "Price: ";
-        cin >> price;
+        string price;
+        do{
+            try{
+                cout << "Price: ";
+                cin >> price;
+                validate_int(price);
+                cont = 0;
+            }
+            catch(InvalidNumberException e) {
+                cont = 1;
+                cout << "Invalid input number!" << endl;
+            }
+        } while(cont);
+
         topping.set_price(price);
 
-        cout << endl << topping << endl;
-        cout << "Would you like to add this topping to the database? (y/n) ";
-        cin >> choice;
+        do{
+            try{
+                cout << endl << topping << endl;
+                cout << "Would you like to add this topping to the database? (y/n) ";
+                cin >> choice;
+                validate_bool_question(choice);
+                cont = 0;
+            }
+            catch(InvalidBoolException e) {
+                cont = 1;
 
-        if(choice == 'y') {
-            for(int i = 0; i <= max_tries; i++) {
+                if(e.get_exception() == 1) {
+                    cout << "Invalid opton!" << endl;
+                    cout << "Try again" << endl;
+                } else if(e.get_exception() == 2) {
+                    cout << "Input contains more than one letter!" << endl;
+                    cout << "Try again" << endl;
+                } else{
+                    cout << "Error not defined!" << endl;
+                    cout << "Try again" << endl;
+                }
+            }
+        } while(cont);
+
+        if(choice == "y") {
                 try {
                     handler.create_topping(topping);
-                    i = max_tries;
                 }
                 catch(InvalidName e) {
                     cout << "Topping already exists" << endl;
-                    i = max_tries;
                 }
-                catch(InvalidPrice e) {
-                    if(i >= max_tries) {
-                        cout << "Out of tries!" << endl;
-                        break;
-                    }
-                    cout << "Try again (" << max_tries - i << ") left." << endl;
-                    cout << "Price must be a positive number, try another:  ";
-                    cin >> price;
-                    topping.set_price(price);
-                }
-            }
         }
 
-        choice = '\0';
 
-        cout << endl << "Would you like to add more toppings? (y/n) ";
-        cin >> choice;
-        cout << endl;
+        do{
+            try{
+                cout << endl << "Would you like to add more toppings? (y/n) ";
+                cin >> choice;
+                cout << endl;
+                validate_bool_question(choice);
+            }
+            catch(InvalidBoolException e) {
+                cont = 1;
+
+                if(e.get_exception() == 1) {
+                    cout << "Invalid opton!" << endl;
+                    cout << "Try again" << endl;
+                } else if(e.get_exception() == 2) {
+                    cout << "Input contains more than one letter!" << endl;
+                    cout << "Try again" << endl;
+                } else{
+                    cout << "Error not defined!" << endl;
+                    cout << "Try again" << endl;
+                }
+            }
+        } while(cont);
     }
 }
 

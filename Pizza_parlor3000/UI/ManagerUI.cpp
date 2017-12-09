@@ -179,14 +179,7 @@ bool ManagerUI::topping_menu(bool run, bool& continueRun) {
         switch (select) {
         case 'a':
             system("CLS");
-            do{
                 create_topping();
-                do{
-                    cout << "Do you want to input more Toppings (y/n)? " << endl;
-                    cin >> cont;
-                    cont = lower(cont);
-                } while(cont == 'y' && cont == 'n');
-            } while(cont == 'y');
 
             continueRun = 1;
             return 0;

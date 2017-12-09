@@ -72,6 +72,10 @@
 		<Unit filename="data/ToppingsRepo.h" />
 		<Unit filename="datatypes/PizzaStatus.h" />
 		<Unit filename="datatypes/PizzaType.h" />
+		<Unit filename="exceptions/InvalidAlphaStringException.cpp" />
+		<Unit filename="exceptions/InvalidAlphaStringException.h" />
+		<Unit filename="exceptions/InvalidBoolException.cpp" />
+		<Unit filename="exceptions/InvalidBoolException.h" />
 		<Unit filename="exceptions/InvalidInputException.cpp" />
 		<Unit filename="exceptions/InvalidInputException.h" />
 		<Unit filename="exceptions/InvalidName.cpp" />
@@ -88,8 +92,6 @@
 		<Unit filename="logic/PizzaHandler.h" />
 		<Unit filename="logic/PizzaSizeHandler.cpp" />
 		<Unit filename="logic/PizzaSizeHandler.h" />
-		<Unit filename="logic/StdInput.cpp" />
-		<Unit filename="logic/StdInput.h" />
 		<Unit filename="logic/ToppingsHandler.cpp" />
 		<Unit filename="logic/ToppingsHandler.h" />
 		<Unit filename="logic/ValidationFunctions.h" />

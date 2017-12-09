@@ -27,6 +27,8 @@ public:
 	//Returns the price of the topping
 	void set_name(string name);
 	//Sets the name of the topping
+	void set_price(string price);
+	//Sets the price of the topping
 	void set_price(double price);
 	//Sets the name of the topping
 private:
