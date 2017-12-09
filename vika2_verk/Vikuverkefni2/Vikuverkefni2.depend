@@ -1,0 +1,284 @@
+# depslib dependency file v1.0
+1512557015 source:c:\users\brynjar\desktop\vikuverkefni2\main.cpp
+	<iostream>
+	"MainUI.h"
+
+1512567204 source:c:\users\brynjar\desktop\vikuverkefni2\models\employee.cpp
+	"Employee.h"
+
+1512567168 c:\users\brynjar\desktop\vikuverkefni2\models\employee.h
+	<string>
+	<iostream>
+
+1512582568 source:c:\users\brynjar\desktop\vikuverkefni2\repositories\employeerepo.cpp
+	"EmployeeRepo.h"
+	<iostream>
+
+1512573785 c:\users\brynjar\desktop\vikuverkefni2\repositories\employeerepo.h
+	<fstream>
+	"Employee.h"
+	<string>
+	<vector>
+
+1512582101 source:c:\users\brynjar\desktop\vikuverkefni2\services\employeesaleryhandler.cpp
+	"EmployeeSaleryHandler.h"
+	<iostream>
+
+1512575423 c:\users\brynjar\desktop\vikuverkefni2\services\employeesaleryhandler.h
+	"Employee.h"
+	"EmployeeRepo.h"
+	"InvalidNameException.h"
+	"InvalidSSNException.h"
+	"InvalidSaleryException.h"
+	"InvalidMonthException.h"
+	"InvalidYearException.h"
+	"SaleryAlreadyExistsException.h"
+	<vector>
+	<iostream>
+	<string>
+	<ctype.h>
+
+1512548996 c:\users\brynjar\desktop\vikuverkefni2\ui\mainui.h
+	"EmployeeSaleryHandler.h"
+	<iostream>
+	<stdlib.h>
+	<UIHandler.h>
+
+1512565314 source:c:\users\brynjar\desktop\vikuverkefni2\ui\mainui.cpp
+	"MainUI.h"
+
+1512565327 c:\users\brynjar\desktop\vikuverkefni2\ui\uihandler.h
+	<iostream>
+	<string>
+	<vector>
+	"EmployeeSaleryHandler.h"
+	"InvalidNameException.h"
+	"InvalidSSNException.h"
+	"InvalidSaleryException.h"
+	"InvalidMonthException.h"
+	"InvalidYearException.h"
+
+1512579411 source:c:\users\brynjar\desktop\vikuverkefni2\ui\uihandler.cpp
+	"UIHandler.h"
+	<stdlib.h>
+
+1512552393 c:\users\brynjar\desktop\vikuverkefni2\exceptions\invalidnameexception.h
+
+1512552405 source:c:\users\brynjar\desktop\vikuverkefni2\exceptions\invalidnameexception.cpp
+	"InvalidNameException.h"
+
+1512552632 c:\users\brynjar\desktop\vikuverkefni2\exceptions\invalidssnexception.h
+
+1512552988 source:c:\users\brynjar\desktop\vikuverkefni2\exceptions\invalidssnexception.cpp
+	"InvalidSSNException.h"
+
+1512554037 c:\users\brynjar\desktop\vikuverkefni2\exceptions\invalidsaleryexception.h
+
+1512554039 source:c:\users\brynjar\desktop\vikuverkefni2\exception\invalidsaleryexception.cpp
+	"InvalidSaleryException.h"
+
+1512554386 source:c:\users\brynjar\desktop\vikuverkefni2\exceptions\invalidmonthexception.cpp
+	"InvalidMonthException.h"
+
+1512554381 c:\users\brynjar\desktop\vikuverkefni2\exceptions\invalidmonthexception.h
+
+1512555463 c:\users\brynjar\desktop\vikuverkefni2\exceptions\invalidyearexception.h
+
+1512555467 source:c:\users\brynjar\desktop\vikuverkefni2\exceptions\invalidyearexception.cpp
+	"InvalidYearException.h"
+
+1512567712 c:\users\brynjar\desktop\vikuverkefni2\exceptions\saleryalreadyexistsexception.h
+
+1512567737 source:c:\users\brynjar\desktop\vikuverkefni2\exceptions\saleryalreadyexistsexception.cpp
+	"SaleryAlreadyExistsException.h"
+
+1512554039 source:c:\haskoli\verklegt1\pizzaproj\teameagle\vikuverkefni2\exception\invalidsaleryexception.cpp
+	"InvalidSaleryException.h"
+
+1512554037 c:\haskoli\verklegt1\pizzaproj\teameagle\vikuverkefni2\exceptions\invalidsaleryexception.h
+
+1512554386 source:c:\haskoli\verklegt1\pizzaproj\teameagle\vikuverkefni2\exceptions\invalidmonthexception.cpp
+	"InvalidMonthException.h"
+
+1512554381 c:\haskoli\verklegt1\pizzaproj\teameagle\vikuverkefni2\exceptions\invalidmonthexception.h
+
+1512552405 source:c:\haskoli\verklegt1\pizzaproj\teameagle\vikuverkefni2\exceptions\invalidnameexception.cpp
+	"InvalidNameException.h"
+
+1512552393 c:\haskoli\verklegt1\pizzaproj\teameagle\vikuverkefni2\exceptions\invalidnameexception.h
+
+1512552988 source:c:\haskoli\verklegt1\pizzaproj\teameagle\vikuverkefni2\exceptions\invalidssnexception.cpp
+	"InvalidSSNException.h"
+
+1512552632 c:\haskoli\verklegt1\pizzaproj\teameagle\vikuverkefni2\exceptions\invalidssnexception.h
+
+1512555467 source:c:\haskoli\verklegt1\pizzaproj\teameagle\vikuverkefni2\exceptions\invalidyearexception.cpp
+	"InvalidYearException.h"
+
+1512555463 c:\haskoli\verklegt1\pizzaproj\teameagle\vikuverkefni2\exceptions\invalidyearexception.h
+
+1512567737 source:c:\haskoli\verklegt1\pizzaproj\teameagle\vikuverkefni2\exceptions\saleryalreadyexistsexception.cpp
+	"SaleryAlreadyExistsException.h"
+
+1512567712 c:\haskoli\verklegt1\pizzaproj\teameagle\vikuverkefni2\exceptions\saleryalreadyexistsexception.h
+
+1512557015 source:c:\haskoli\verklegt1\pizzaproj\teameagle\vikuverkefni2\main.cpp
+	<iostream>
+	"MainUI.h"
+
+1512636679 c:\haskoli\verklegt1\pizzaproj\teameagle\vikuverkefni2\ui\mainui.h
+	"EmployeeSaleryHandler.h"
+	<iostream>
+	<stdlib.h>
+	<UIHandler.h>
+
+1512636660 c:\haskoli\verklegt1\pizzaproj\teameagle\vikuverkefni2\services\employeesaleryhandler.h
+	"Employee.h"
+	"EmployeeRepo.h"
+	"InvalidNameException.h"
+	"InvalidSSNException.h"
+	"InvalidSaleryException.h"
+	"InvalidMonthException.h"
+	"InvalidYearException.h"
+	"SaleryAlreadyExistsException.h"
+	<vector>
+	<iostream>
+	<string>
+	<ctype.h>
+
+1512635508 c:\haskoli\verklegt1\pizzaproj\teameagle\vikuverkefni2\models\employee.h
+	<string>
+	<iostream>
+
+1512635773 c:\haskoli\verklegt1\pizzaproj\teameagle\vikuverkefni2\repositories\employeerepo.h
+	<fstream>
+	"Employee.h"
+	<string>
+	<vector>
+
+1512636779 c:\haskoli\verklegt1\pizzaproj\teameagle\vikuverkefni2\ui\uihandler.h
+	<iostream>
+	<string>
+	<vector>
+	"EmployeeSaleryHandler.h"
+	"InvalidNameException.h"
+	"InvalidSSNException.h"
+	"InvalidSaleryException.h"
+	"InvalidMonthException.h"
+	"InvalidYearException.h"
+
+1512635412 source:c:\haskoli\verklegt1\pizzaproj\teameagle\vikuverkefni2\models\employee.cpp
+	"Employee.h"
+
+1512635128 source:c:\haskoli\verklegt1\pizzaproj\teameagle\vikuverkefni2\repositories\employeerepo.cpp
+	"EmployeeRepo.h"
+	<iostream>
+
+1512649978 source:c:\haskoli\verklegt1\pizzaproj\teameagle\vikuverkefni2\services\employeesaleryhandler.cpp
+	"EmployeeSaleryHandler.h"
+	<iostream>
+
+1512565314 source:c:\haskoli\verklegt1\pizzaproj\teameagle\vikuverkefni2\ui\mainui.cpp
+	"MainUI.h"
+
+1512579411 source:c:\haskoli\verklegt1\pizzaproj\teameagle\vikuverkefni2\ui\uihandler.cpp
+	"UIHandler.h"
+	<stdlib.h>
+
+1512554039 source:c:\haskoli\verklegt1\pizzaproj\teameagle\vikuverkefni2\exceptions\invalidsaleryexception.cpp
+	"InvalidSaleryException.h"
+
+1512670049 source:/home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/exceptions/InvalidMonthException.cpp
+	"InvalidMonthException.h"
+
+1512670049 /home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/exceptions/InvalidMonthException.h
+
+1512670049 source:/home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/exceptions/InvalidNameException.cpp
+	"InvalidNameException.h"
+
+1512670049 /home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/exceptions/InvalidNameException.h
+
+1512670049 source:/home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/exceptions/InvalidSaleryException.cpp
+	"InvalidSaleryException.h"
+
+1512670049 /home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/exceptions/InvalidSaleryException.h
+
+1512670049 source:/home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/exceptions/InvalidSSNException.cpp
+	"InvalidSSNException.h"
+
+1512670049 /home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/exceptions/InvalidSSNException.h
+
+1512670049 source:/home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/exceptions/InvalidYearException.cpp
+	"InvalidYearException.h"
+
+1512670049 /home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/exceptions/InvalidYearException.h
+
+1512670049 source:/home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/exceptions/SaleryAlreadyExistsException.cpp
+	"SaleryAlreadyExistsException.h"
+
+1512670049 /home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/exceptions/SaleryAlreadyExistsException.h
+
+1512755588 source:/home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/main.cpp
+	<iostream>
+	"MainUI.h"
+
+1512670049 /home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/UI/MainUI.h
+	"EmployeeSaleryHandler.h"
+	<iostream>
+	<stdlib.h>
+	<UIHandler.h>
+
+1512767475 /home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/services/EmployeeSaleryHandler.h
+	"Employee.h"
+	"EmployeeRepo.h"
+	"InvalidNameException.h"
+	"InvalidSSNException.h"
+	"InvalidSaleryException.h"
+	"InvalidMonthException.h"
+	"InvalidYearException.h"
+	"SaleryAlreadyExistsException.h"
+	<vector>
+	<iostream>
+	<string>
+	<ctype.h>
+
+1512728466 /home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/models/Employee.h
+	<string>
+	<iostream>
+
+1512764513 /home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/repositories/EmployeeRepo.h
+	<fstream>
+	"Employee.h"
+	<string>
+	<vector>
+
+1512767199 /home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/UI/UIHandler.h
+	<iostream>
+	<string>
+	<vector>
+	"EmployeeSaleryHandler.h"
+	"InvalidNameException.h"
+	"InvalidSSNException.h"
+	"InvalidSaleryException.h"
+	"InvalidMonthException.h"
+	"InvalidYearException.h"
+
+1512728281 source:/home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/models/Employee.cpp
+	"Employee.h"
+
+1512765916 source:/home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/repositories/EmployeeRepo.cpp
+	"EmployeeRepo.h"
+	<iostream>
+
+1512772332 source:/home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/services/EmployeeSaleryHandler.cpp
+	"EmployeeSaleryHandler.h"
+	<cstdlib>
+	<iostream>
+
+1512767199 source:/home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/UI/MainUI.cpp
+	"MainUI.h"
+
+1512771068 source:/home/IvarMarrow/TeamEagle/TeamEagle/TeamEagle/Vikuverkefni2/UI/UIHandler.cpp
+	"UIHandler.h"
+	<stdlib.h>
+
