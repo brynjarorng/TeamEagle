@@ -1,5 +1,6 @@
 #include "CustomerUI.h"
 
+
 CustomerUI::CustomerUI()
 {
 
@@ -27,7 +28,7 @@ bool CustomerUI::customer_menu(bool run, bool& continueRun) {
         case 'n':
             system("CLS");
             cout << "New order" << endl;
-            system("PAUSE");
+            pause_screen();
 
             continueRun = 1;
             return 0;
@@ -36,7 +37,7 @@ bool CustomerUI::customer_menu(bool run, bool& continueRun) {
         case 'm':
             system("CLS");
             cout << "New order" << endl;
-            system("PAUSE");
+            pause_screen();
 
             continueRun = 1;
             return 0;
@@ -45,7 +46,7 @@ bool CustomerUI::customer_menu(bool run, bool& continueRun) {
         case 'a':
             system("CLS");
             cout << "See all available pizzas" << endl;
-            system("PAUSE");
+            pause_screen();
 
             continueRun = 1;
             return 0;
@@ -54,7 +55,7 @@ bool CustomerUI::customer_menu(bool run, bool& continueRun) {
         case 't':
             system("CLS");
             cout << "See all available toppings" << endl;
-            system("PAUSE");
+            pause_screen();
 
             continueRun = 1;
             return 0;
@@ -63,7 +64,7 @@ bool CustomerUI::customer_menu(bool run, bool& continueRun) {
         case 'o':
             system("CLS");
             cout << "See all your order status" << endl;
-            system("PAUSE");
+            pause_screen();
 
             continueRun = 1;
             return 0;

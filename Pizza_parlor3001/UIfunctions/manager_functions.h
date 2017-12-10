@@ -206,7 +206,7 @@ void make_new_menu_pizza() {
         catch(InvalidName e) {
             //Special error
             cout << "Not a valid topping!" << endl;
-            system("PAUSE");
+            pause_screen();
             i--;
         }
     }
@@ -363,7 +363,7 @@ bool add_pizza_size() {
     catch(InvalidSize e) {
         cout << "Error while writing size to database!" << endl;
         cout << "Is there already a product with that size in the database?" << endl;
-        system("PAUSE");
+        pause_screen();
         system("CLS");
     }
     return 0;
@@ -395,7 +395,7 @@ void remove_size() {
         }
         handler.remove_size_from_list(stoi(number) - 1);
     }
-    system("PAUSE");
+    pause_screen();
 }
 
 

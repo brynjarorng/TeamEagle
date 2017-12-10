@@ -1,5 +1,6 @@
 #include "ManagerUI.h"
 #include "manager_functions.h"
+
 ManagerUI::ManagerUI() {
 
 }
@@ -107,7 +108,7 @@ bool ManagerUI::info_menu(bool run, bool& continueRun) {
         switch (select) {
         case 't':
             print_topping_list();
-            system("PAUSE");
+            pause_screen();
             continueRun = 1;
             return 0;
             break;
@@ -179,7 +180,7 @@ bool ManagerUI::topping_menu(bool run, bool& continueRun) {
 
         case 's':
             print_topping_list();
-            system("PAUSE");
+            pause_screen();
             continueRun = 1;
             return 0;
             break;

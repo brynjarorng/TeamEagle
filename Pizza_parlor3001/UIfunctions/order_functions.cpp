@@ -318,7 +318,7 @@ void print_menu_pizza_list() {
         cout << pizza_vector[i].get_toppings_print(pizza_vector[i]) << endl;
     }
     cout << endl;
-    system("PAUSE");
+    pause_screen();
 }
 
 void print_sizes() {
@@ -337,7 +337,7 @@ void print_sizes() {
         cout << size_vector[i].get_size() << "\"" << endl;
     }
     cout << endl;
-     system("PAUSE");
+     pause_screen();
 }
 
 void print_size_with_numbers() {

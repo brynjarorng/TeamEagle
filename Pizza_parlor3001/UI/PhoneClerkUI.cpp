@@ -1,4 +1,5 @@
 #include "PhoneClerkUI.h"
+
 PhoneClerkUI::PhoneClerkUI() {
 
 }
@@ -39,7 +40,7 @@ bool PhoneClerkUI::phone_menu(bool run, bool& continueRun) {
             system("CLS");
             cout << "See all orders" << endl;
             print_orders(not_delivered);
-            system("PAUSE");
+            pause_screen();
 
             continueRun = 1;
             return 0;
@@ -49,7 +50,7 @@ bool PhoneClerkUI::phone_menu(bool run, bool& continueRun) {
             system("CLS");
             cout <<  "All pizzas on menu: " << endl;
             print_topping_list();
-            system("PAUSE");
+            pause_screen();
 
             continueRun = 1;
             return 0;
@@ -58,7 +59,7 @@ bool PhoneClerkUI::phone_menu(bool run, bool& continueRun) {
         case 't':
             system("CLS");
             print_topping_list();
-            system("PAUSE");
+            pause_screen();
 
             continueRun = 1;
             return 0;
@@ -67,7 +68,7 @@ bool PhoneClerkUI::phone_menu(bool run, bool& continueRun) {
         case 'o':
             system("CLS");
             cout <<  "See everything ordered today" << endl;
-            system("PAUSE");
+            pause_screen();
 
             continueRun = 1;
             return 0;
