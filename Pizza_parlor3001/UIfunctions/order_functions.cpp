@@ -1,5 +1,7 @@
 #include "order_functions.h"
 
+#include "ValidationFunctions.h"
+
 void print_orders(Order_Status status) {
 
     OrderHandler orderhandler;
@@ -30,6 +32,8 @@ void print_orders(Order_Status status) {
 bool new_order() {
 
     Order order;
+    string select;
+    bool cont = 1;
 
     OrderHandler orderhandler;
     orderhandler.generate_order_no(order);
@@ -40,107 +44,151 @@ bool new_order() {
 
     print_order(order);
     if (order.get_order_count() > 0) {
-        cout << "Is this the correct order? (y/n) ";
-        if (yes()) {
+        do{
+            try{
+                cout << "Is this the correct order? (y/n) ";
+                cin >> select;
+                select = tolower(select[0]);
+                validate_bool_question(select);
+                cont = 0;
+            }
+            catch(InvalidBoolException e) {
+                cont = 1;
+                cout << e.get_err() << endl;
+            }
+        } while(cont);
+
+        if (select == "y") {
             orderhandler.add_order(order);
             return false;
-        }
-        else {
+        } else {
             cout << "Order was not added" << endl;
-            cout << "Retry? (y/n) ";
-            if (yes()) {
                 return true;
-            }
+
         }
-    }
-        cout << "The order is empty, retry?" << endl;
-        if (yes()) {
-            return true;
+
     }
     return false;
 }
+
 void add_pizzas(Order& order) {
 
     OrderHandler orderhandler;
     PizzaType pizzatype;
+    char run = '\0';
 
 
-    pizzatype = menu_or_special();
+    pizzatype = menu_or_special(run);
 
+    string run_menu;
+    bool cont_menu = 1;
+    bool cont = 1;
+    if(run != 'b'){
+        run = '\b';
+        do {
+            if (pizzatype == menu_pizza) {
+                add_menu_pizza(order);
 
-    bool user_choice;
-    do
-    {
-        /*if (orderhandler.max_order_count(order)) {
-            cout << "Maximum order has been reached!" << endl;
-            break;
-        }*/
-        if (pizzatype == menu_pizza) {
-            add_menu_pizza(order);
+            }
+            if (pizzatype == special_pizza) {
+                add_special_pizza(order);
+            }
 
-        }
-        if (pizzatype == special_pizza) {
-            add_special_pizza(order);
-        }
-        cout << "Do you wish to add more pizzas to the order?";
-        user_choice = yes();
-        if (user_choice) {
-            pizzatype = menu_or_special();
-        }
+            do{
+                try{
+                    cout << "Do you wish to add more pizzas to the order (y/n)? ";
+                    cin >> run_menu;
+                    run_menu = tolower(run_menu[0]);
+                    validate_bool_question(run_menu);
+                    cont = 0;
+                    if(run_menu == "y") {
+                        cont_menu = 1;
+                    } else {
+                        cont_menu = 0;
+                    }
+                }
+                catch(InvalidBoolException e) {
+                    cont = 1;
+                    cout << e.get_err() << endl;
+                }
+            } while(cont);
 
-    }while(user_choice);
+        } while(cont_menu);
+    }
 }
 
 
-PizzaType menu_or_special() {
+PizzaType menu_or_special(char& run) {
 
     PizzaType pizzatype;
 
     bool quit = false;
-            char type;
+    string type;
+    bool cont;
 
-    while (!quit) {
-         cout << "Press m for menu pizza, s for special pizza: ";
-        cin >> type;
-        if (type == 'm') {
+    do {
+        do{
+            try{
+                cout << "Input 'M' for menu pizza or 'C' for a custom pizza (B to go back): ";
+                cin >> type;
+                validate_char(type);
+                cont = 0;
+            }
+            catch(InvalidCharException e) {
+                cont = 1;
+                cout << e.get_err() << endl;
+            }
+        } while(cont);
+
+        type = tolower(type[0]);
+
+        if (type == "m") {
             pizzatype = menu_pizza;
             quit = true;
-        }
-        else if (type == 's') {
-
+        } else if (type == "c") {
             pizzatype = special_pizza;
             quit = true;
+        } else if (type == "b") {
+            run = 'b';
+            quit = true;
         }
-        else {
-            cout << "Wrong choice, insert any key to try again or r to return to menu.";
-            char in;
-            cin >> in;
-            if (in == 'r') {//Temporary until it is known where to return.
-                exit(0);
-            }
-        }
-    }
+
+    } while (!quit && type != "b");
     return pizzatype;
 }
+
+
 void add_menu_pizza(Order& order) {
     Pizza pizza;
     PizzaHandler pizzahandler;
 
+    bool cont = 0;
     string pizza_name;
-    cout << "Enter name of pizza: ";
-    cin >> pizza_name;
-
-    try {
-        pizza = pizzahandler.get_menu_pizza(pizza_name);
-        print_pizza(pizza);
-        cout << "Do you want to add this pizza? (y/n) ";
-        if (yes()) {
+    do{
+        try{
+            system("CLS");
+            print_menu_pizza_list();
+            cout << "Enter name of pizza: ";
+            cin >> pizza_name;
+            validate_string_input(pizza_name);
+            cont = 0;
+            pizza = pizzahandler.get_menu_pizza(pizza_name);
+            pause_screen();
             order.add_pizza(pizza);
         }
-    }
-    catch(InvalidName e) {
-        cout << "Pizza not on menu!" << endl;
-    }
+        catch(InvalidName) {
+            cont = 1;
+            cout << "Pizza not on menu!" << endl;
+            pause_screen();
+        }
+        catch(InvalidAlphaStringException e) {
+            cont = 1;
+            cout << e.get_err() << endl;
+            pause_screen();
+        }
+
+    }while(cont);
+
 }
 
 void toppings_to_special(Pizza& pizza) {
@@ -318,7 +366,6 @@ void print_menu_pizza_list() {
         cout << pizza_vector[i].get_toppings_print(pizza_vector[i]) << endl;
     }
     cout << endl;
-    pause_screen();
 }
 
 void print_sizes() {

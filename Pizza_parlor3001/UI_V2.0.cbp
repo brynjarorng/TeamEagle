@@ -35,6 +35,7 @@
 					<Add directory="objects" />
 					<Add directory="data" />
 					<Add directory="logic" />
+					<Add directory="UIfunctions" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -62,6 +63,7 @@
 		<Unit filename="UIfunctions/manager_functions.h" />
 		<Unit filename="UIfunctions/order_functions.cpp" />
 		<Unit filename="UIfunctions/order_functions.h" />
+		<Unit filename="UIfunctions/print_functions.h" />
 		<Unit filename="data/OrderRepo.cpp" />
 		<Unit filename="data/OrderRepo.h" />
 		<Unit filename="data/PizzaRepo.cpp" />
@@ -72,10 +74,14 @@
 		<Unit filename="data/ToppingsRepo.h" />
 		<Unit filename="datatypes/PizzaStatus.h" />
 		<Unit filename="datatypes/PizzaType.h" />
+		<Unit filename="exceptions/InvalidAlphaNumException.cpp" />
+		<Unit filename="exceptions/InvalidAlphaNumException.h" />
 		<Unit filename="exceptions/InvalidAlphaStringException.cpp" />
 		<Unit filename="exceptions/InvalidAlphaStringException.h" />
 		<Unit filename="exceptions/InvalidBoolException.cpp" />
 		<Unit filename="exceptions/InvalidBoolException.h" />
+		<Unit filename="exceptions/InvalidDoubleException.cpp" />
+		<Unit filename="exceptions/InvalidDoubleException.h" />
 		<Unit filename="exceptions/InvalidInputException.cpp" />
 		<Unit filename="exceptions/InvalidInputException.h" />
 		<Unit filename="exceptions/InvalidName.cpp" />

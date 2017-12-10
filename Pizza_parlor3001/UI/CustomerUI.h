@@ -5,6 +5,8 @@
 #include <stdlib.h>
 #include <iostream>
 #include "InvalidInputException.h"
+#include "print_functions.h"
+
 using namespace std;
 
 class CustomerUI {

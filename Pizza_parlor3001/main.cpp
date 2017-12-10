@@ -6,12 +6,6 @@ using namespace std;
 
 int main()
 {
-/*
-
-    #include <conio.h>
-    cout << "---Press any key to continue---" << endl;
-    getch();
-*/
 
 
     bool run = 1;

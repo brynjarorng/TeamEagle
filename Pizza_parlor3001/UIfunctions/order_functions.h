@@ -2,11 +2,14 @@
 #define ORDER_FUNCTIONS_H
 
 
-
+#include "print_functions.h"
 #include <stdlib.h>
 #include "OrderHandler.h"
 #include "Pizza.h"
 #include <iomanip>
+#include "InvalidCharException.h"
+//#include "validationFunctions.h"
+#include "InvalidAlphaStringException.h"
 
 
 #include "PizzaSize.h"
@@ -22,7 +25,7 @@ bool new_order();
 //Precondition: The user is ready to enter a new order.
 //Postcondition: The user gets a menu where he can create a new order.
 //The return value is true if the function should be called again.
-PizzaType menu_or_special();
+PizzaType menu_or_special(char& run);
 //Precondition: The user is ready to choose if he wishes to add
 //menu pizza or special pizza to order.
 //Postcondition: If the user has entered the correct input, then the return

@@ -6,6 +6,7 @@
 #include <iostream>
 #include "baker_functions.h"
 #include "InvalidInputException.h"
+#include "print_functions.h"
 
 using namespace std;
 

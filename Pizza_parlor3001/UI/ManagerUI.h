@@ -5,8 +5,9 @@
 #include <iostream>
 #include "InvalidInputException.h"
 #include "order_functions.h"
+#include "print_functions.h"
 
-//using namespace std;
+using namespace std;
 
 class ManagerUI {
     public:

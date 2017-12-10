@@ -12,9 +12,9 @@ bool PhoneClerkUI::phone_menu(bool run, bool& continueRun) {
         cout << "----Phone portal----" << endl;
         cout << "(N) New order" << endl;
         cout << "(A) See all orders in progress" << endl;
+        cout << "(O) See all old orders today" << endl;
         cout << "(M) See all pizzas on menu" << endl;
         cout << "(T) See all toppings" << endl;
-        cout << "(O) See all old orders today" << endl;
         cout << "(B) Go back to login portal" << endl;
         cout << "(q) Quit" << endl;
         if(run){
@@ -25,8 +25,7 @@ bool PhoneClerkUI::phone_menu(bool run, bool& continueRun) {
         cin >> select;
         select = lower(select);
 
-        switch (select)
-        {
+        switch (select) {
         case 'n':
             system("CLS");
             cout << "New order" << endl;

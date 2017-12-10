@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <iostream>
 #include "order_functions.h"
+#include "print_functions.h"
 
 #include "InvalidInputException.h"
 using namespace std;

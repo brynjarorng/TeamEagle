@@ -8,10 +8,11 @@
 #include "InvalidDoubleException.h"
 #include "InvalidAlphaStringException.h"
 #include "InvalidBoolException.h"
+#include "InvalidCharException.h"
 
 using namespace std;
 
-void validate_int(string number) {
+inline void validate_int(string number) {
     for(unsigned int i = 0; i < number.size(); i++) {
         if(!isdigit(number[i])){
             throw(InvalidNumberException());
@@ -20,7 +21,7 @@ void validate_int(string number) {
 }
 //This function needs a try - catch for InvalidNumberException
 
-void validate_string_input(string input) {
+inline void validate_string_input(string input) {
     for(unsigned int i = 0; i < input.size(); i++) {
         if(!isalpha(input[i]) && !isspace(input[i])) {
             throw(InvalidAlphaStringException());
@@ -30,7 +31,7 @@ void validate_string_input(string input) {
 }
 //This function needs a try - catch for InvalidStringException
 
-void validate_bool_question(string input) {
+inline void validate_bool_question(string input) {
     input = tolower(input[0]);
 
     if(input.size() > 1) {
@@ -40,7 +41,7 @@ void validate_bool_question(string input) {
     }
 }
 
-void validate_double(string input) {
+inline void validate_double(string input) {
     int dot_count = 0;
 
     if(isdigit(input[0])) {
@@ -60,13 +61,22 @@ void validate_double(string input) {
 
 }
 
-void validate_int_string(string input) {
+inline void validate_int_string(string input) {
     for(unsigned int i = 0; i < input.size(); i++) {
         if(!isalnum(input[i]) && !isspace(input[i])) {
             throw(InvalidAlphaNumException());
         }
     }
 
+}
+
+inline void validate_char(string input) {
+    if(input.size() > 1) {
+        throw(InvalidCharException());
+    }
+    if(!isalpha(input[0])) {
+        throw(InvalidCharException());
+    }
 }
 
 #endif // VALIDATIONFUNCTIONS_H
