@@ -8,112 +8,11 @@
 #include "PizzaHandler.h"
 #include "ToppingsHandler.h"
 #include "ValidationFunctions.h"
+#include "order_functions.h"
 
-/*
-void make_pizza() {
-    Pizza pizza;
-    PizzaHandler pizzahandler;
-    Toppings topping;
-
-    bool valid_name = false;
-    char choice = ' ';
-    string name;
-    while(!valid_name && choice != 'n') {
-        cout << "Name: ";
-        cin >> name;
-
-        if(!pizzahandler.set_name(name, pizza)) {
-            cout << "Pizza already exists, do you want to try again? (y/n)";
-            cin >> choice; ///temp
-        }
-        else {
-            valid_name = true;
-        }
-    }
-
-    double price;
-
-    cout << "Price: ";
-    cin >> price;
-
-    pizza.set_price(price);
-
-    string topping_name;
-    choice = '\0';
-    for(int i = 0; (choice != 'n') && i < pizza.get_max_toppings(); i++) {
-        cout << "Add a topping: ";
-        cin >> topping_name;
-
-        if(!pizzahandler.add_topping(topping_name, pizza)) {
-            cout << "Topping does not exist" << endl;
-            i--;
-        }
-
-        cout << "Would you like to add another topping? (y/n) ";
-        cin >> choice;
-    }
-
-    choice = '\0';
-    cout << pizza << endl;
-    cout << "Would you like to add this pizza to the menu? (y/n) ";
-    cin >> choice;
-
-    if(choice == 'y'){
-        pizzahandler.create_new_pizza(pizza);
-    }
-}
-
-void create_topping() {
-    char choice = '\0';
-
-    while(choice != 'n') {
-        Toppings topping;
-        ToppingsHandler handler;
-        string name;
-        bool valid_name = false;
-
-        while(!valid_name){
-            cout << "Name: ";
-            cin >> name;
-            valid_name = handler.set_name(name, topping);
-
-            if(!valid_name) {
-                cout << "Topping already exists" << endl;
-            }
-        }
-
-        double price;
-        bool valid_price = false;
-
-        while(!valid_price) {
-            cout << "Price: ";
-            cin >> price;
-            valid_price = handler.set_price(price, topping);
-            if(!valid_price) {
-                cout << "Invalid input, please try again." << endl;
-            }
-        }
-
-
-        cout << endl << topping << endl;
-        cout << "Would you like to add this topping to the database? (y/n) ";
-        cin >> choice;
-
-        if(choice == 'y') {
-            handler.create_topping(topping);
-        }
-
-        choice = '\0';
-
-        cout << endl << "Would you like to add more toppings? (y/n) ";
-        cin >> choice;
-    }
-}
-*/
 void create_topping() {
     system("CLS");
     string choice;
-    int max_tries = 5;
     bool cont = 0;
 
     while(choice != "n") {
@@ -130,7 +29,7 @@ void create_topping() {
             }
             catch(InvalidAlphaStringException e) {
                 cont = 1;
-                cout << "Invalid string input!" << endl;
+                cout << e.get_err() << endl;
             }
         } while(cont);
         topping.set_name(name);
@@ -145,7 +44,7 @@ void create_topping() {
             }
             catch(InvalidNumberException e) {
                 cont = 1;
-                cout << "Invalid input number!" << endl;
+                cout << e.get_err() << endl;
             }
         } while(cont);
 
@@ -161,17 +60,8 @@ void create_topping() {
             }
             catch(InvalidBoolException e) {
                 cont = 1;
+                cout << e.get_err() << endl;
 
-                if(e.get_exception() == 1) {
-                    cout << "Invalid opton!" << endl;
-                    cout << "Try again" << endl;
-                } else if(e.get_exception() == 2) {
-                    cout << "Input contains more than one letter!" << endl;
-                    cout << "Try again" << endl;
-                } else{
-                    cout << "Error not defined!" << endl;
-                    cout << "Try again" << endl;
-                }
             }
         } while(cont);
 
@@ -189,22 +79,12 @@ void create_topping() {
             try{
                 cout << endl << "Would you like to add more toppings? (y/n) ";
                 cin >> choice;
-                cout << endl;
                 validate_bool_question(choice);
+                cont = 0;
             }
             catch(InvalidBoolException e) {
                 cont = 1;
-
-                if(e.get_exception() == 1) {
-                    cout << "Invalid opton!" << endl;
-                    cout << "Try again" << endl;
-                } else if(e.get_exception() == 2) {
-                    cout << "Input contains more than one letter!" << endl;
-                    cout << "Try again" << endl;
-                } else{
-                    cout << "Error not defined!" << endl;
-                    cout << "Try again" << endl;
-                }
+                cout << e.get_err() << endl;
             }
         } while(cont);
     }
@@ -223,12 +103,30 @@ void print_toppings_with_number() {
 }
 
 void remove_topping() {
+    ToppingsHandler handler;
+    string number;
+    bool cont = 0;
+    system("CLS");
+
     while(true) {
-        ToppingsHandler handler;
-        print_toppings_with_number();
-        string number;
-        cout << "Input the number of the topping to remove, 0 to quit: ";
-        cin  >> number;
+        do{
+            print_toppings_with_number();
+
+            try{
+                cout << "Input the number of the topping to remove, 0 to quit: ";
+                cin  >> number;
+                validate_int(number);
+                cont = 0;
+            }
+            catch(InvalidNumberException e) {
+                system("CLS");
+                cont = 1;
+                cout << e.get_err() << endl;
+            }
+            system("CLS");
+        } while(cont);
+
+
         if(stoi(number) == 0) {
             break;
         }
@@ -243,63 +141,144 @@ void make_new_menu_pizza() {
     PizzaHandler pizzahandler;
     ToppingsHandler toppingshandler;
     Toppings topping;
-    char choice = '\0';
+    string choice;
+    bool cont = 0;
 
     string name;
-    cout << "Name: ";
-    cin >> name;
+    do{
+        try{
+            cout << "Name: ";
+            cin.ignore();
+            getline(cin, name);
+            validate_int_string(name);
+            cont = 0;
+        }
+        catch(InvalidAlphaNumException e) {
+            cout << e.get_err() << endl;
+            cont = 1;
+        }
+    } while(cont);
+
     pizza.set_name(name);
 
-    double price;
-    cout << "Price: ";
-    cin >> price;
+
+
+    string price;
+    do{
+        try{
+            cout << "Price: ";
+            cin >> price;
+            validate_double(price);
+            cont = 0;
+        }
+        catch(InvalidDoubleException e) {
+            cont = 1;
+            cout << e.get_err() << endl;
+        }
+    } while(cont);
+
     pizza.set_price(price);
 
     string topping_name;
-    for(int i = 0; (choice != 'n') && i < pizza.get_max_toppings(); i++) {
+    for(int i = 0; (choice != "n") && i < pizza.get_max_toppings(); i++) {
+        system("CLS");
+        print_topping_list();
         cout << "Add a topping: ";
         cin >> topping_name;
         try{
             Toppings topptopp;
             topptopp = toppingshandler.get_topping(topping_name);
             pizza.add_topping(topptopp);
-            cout << "Would you like to add another topping? (y/n) ";
-            cin >> choice;
+            do{
+                try{
+                    cout << "Would you like to add another topping? (y/n) ";
+                    cin >> choice;
+                    validate_bool_question(choice);
+                    cont = 0;
+                }
+                catch(InvalidBoolException e) {
+                    cont = 1;
+                    cout << e.get_err() << endl;
+                }
+            } while (cont);
+
         }
         catch(InvalidName e) {
-            cout << "Topping does not exist, try again." << endl;
+            //Special error
+            cout << "Not a valid topping!" << endl;
+            pause_screen();
             i--;
         }
     }
 
-    choice = '\0';
+    choice = " ";
 
     cout << endl << pizza << endl;
     cout << "Would you like to add this pizza to the menu? (y/n) ";
-    cin >> choice;
+    do{
+        try{
+            cin >> choice;
+            validate_bool_question(choice);
+            cont = 0;
+        }
+        catch(InvalidBoolException e) {
+            cont = 1;
+            cout << e.get_err() << endl;
+        }
+    } while(cont);
 
-    if(choice == 'y') {
-        choice = '\0';
-        while(choice != 'n') {
-            choice = '\0';
+
+    if(choice == "y") {
+        choice = " ";
+        while(choice != " ") {
+            choice = " ";
             try{
                 pizzahandler.create_new_menu_pizza(pizza);
-                choice = 'n';
+                choice = " ";
             }
             catch(InvalidName e) {
                 cout << "Pizza name is taken, try again? (y/n) ";
-                cin >> choice;
-                if(choice == 'y') {
+                do{
+                    try{
+                        cin >> choice;
+                        validate_bool_question(choice);
+                        cont = 0;
+                    }
+                    catch(InvalidBoolException e) {
+                        cont = 1;
+                        cout << e.get_err() << endl;
+                    }
+                } while(cont);
+
+                if(choice == "y") {
                     cout << "Name: ";
-                    cin >> name;
+                    do{
+                        try{
+                            cin >> name;
+                            validate_int_string(name);
+                            cont = 0;
+                        }
+                        catch(InvalidAlphaNumException e) {
+                            cont = 1;
+                            cout << e.get_err();
+                        }
+                    } while(cont);
+
                     pizza.set_name(name);
                 }
             }
             catch(InvalidPrice e) {
                 cout << "Price must be a positive number, try again? (y/n) ";
-                cin >> choice;
-
-                if(choice == 'y') {
+                do{
+                    try{
+                        cin >> choice;
+                    }
+                    catch(InvalidBoolException e) {
+                        cont = 1;
+                        cout << e.get_err() << endl;
+                    }
+                } while(cont);
+                if(choice == "y") {
                     cout << "Price: ";
                     cin >> price;
                     pizza.set_price(price);
@@ -334,19 +313,25 @@ void remove_menu_pizza() {
     }
 }
 
-void add_pizza_size() {
+bool add_pizza_size() {
     PizzaSize pizza_size;
     PizzaSizeHandler size_handler;
     bool cont = 0;
     string size;
     string price;
 
+    system("CLS");
+
+    cout << "---Add a new size---" << endl;
+
     do{
         try{
             cont = 1;
-            cout << "Enter new size: ";
+            cout << "Enter new size (q to quit): ";
             cin >> size;
-
+            if(size == "q") {
+                return 0;
+            }
             size_handler.validate_size(size);
         }
         catch(InvalidSize e) {
@@ -358,8 +343,11 @@ void add_pizza_size() {
     do{
         try{
             cont = 1;
-            cout << "Enter price: ";
+            cout << "Enter price (q to quit): ";
             cin >> price;
+            if(size == "q") {
+                return 0;
+            }
 
             size_handler.validate_price(price);
         }
@@ -375,51 +363,39 @@ void add_pizza_size() {
     catch(InvalidSize e) {
         cout << "Error while writing size to database!" << endl;
         cout << "Is there already a product with that size in the database?" << endl;
-        system("PAUSE");
+        pause_screen();
         system("CLS");
     }
-    catch(InvalidPrice e) {
-        cout << "Error while writing price to database!" << endl;
-        cout << "Is there already a product with that price in the database?" << endl;
-        system("PAUSE");
-        system("CLS");
-    }
-}
-
-void print_sizes() {
-    PizzaSizeHandler size_handler;
-    vector<PizzaSize> size_vector;
-
-    size_vector = size_handler.get_size_list();
-
-    for(unsigned int i = 0; i < size_vector.size(); i++){
-        cout << size_vector[i];
-    }
-}
-
-void print_size_with_numbers() {
-    PizzaSizeHandler pizza_handler;
-    vector<PizzaSize> size_vector;
-
-    size_vector = pizza_handler.get_size_list();
-
-    for(unsigned int i = 0; i < size_vector.size(); i++) {
-        cout << "[" << i + 1 << "]\t" << size_vector[i];
-    }
+    return 0;
 }
 
 void remove_size() {
+    bool cont = 0;
+    system("CLS");
+    cout << "--Remove a size---" << endl;
     while(true) {
         PizzaSizeHandler handler;
         print_size_with_numbers();
         string number;
-        cout << "Input the number of the size to remove, 0 to quit: ";
-        cin  >> number;
+        do{
+            try{
+                cout << "Input the number of the size to remove, 0 to quit: ";
+                cin  >> number;
+                validate_int(number);
+                cont = 0;
+            }
+            catch(InvalidNumberException e) {
+                cont = 1;
+                cout << e.get_err() << endl;
+            }
+        } while(cont);
+
         if(stoi(number) == 0) {
             break;
         }
         handler.remove_size_from_list(stoi(number) - 1);
     }
+    pause_screen();
 }
 
 

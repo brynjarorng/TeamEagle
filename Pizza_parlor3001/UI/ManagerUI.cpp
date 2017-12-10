@@ -1,5 +1,6 @@
 #include "ManagerUI.h"
 #include "manager_functions.h"
+
 ManagerUI::ManagerUI() {
 
 }
@@ -12,7 +13,7 @@ bool ManagerUI::manager_menu(bool run, bool& continueRun) {
 
             cout << "----Manager Portal----" << endl;
             cout << "(I) Pizza information" << endl;
-            cout << "(T) Toppings information" << endl;
+            cout << "(T) Manage Toppings" << endl;
             cout << "(S) Change available pizza sizes" << endl;
             cout << "(N) Make a new Pizza" << endl;
             cout << "(B) Go back to Login portal" << endl;
@@ -106,28 +107,21 @@ bool ManagerUI::info_menu(bool run, bool& continueRun) {
 
         switch (select) {
         case 't':
-            system("CLS");
             print_topping_list();
-            system("PAUSE");
-
+            pause_screen();
             continueRun = 1;
             return 0;
             break;
 
         case 'p':
-            system("CLS");
-            cout << "All pizzas on menu: " << endl;
-            print_topping_list();
-            system("PAUSE");
-
+            print_menu_pizza_list();
+            pause_screen();
             continueRun = 1;
             return 0;
             break;
 
         case 's':
-            system("CLS");
-            cout << "Print all pizza sizes: " << endl;
-            system("PAUSE");
+            print_sizes();
 
             continueRun = 1;
             return 0;
@@ -160,11 +154,11 @@ bool ManagerUI::info_menu(bool run, bool& continueRun) {
 
 bool ManagerUI::topping_menu(bool run, bool& continueRun) {
     try{
-        char cont;
         system("CLS");
 
         cout << "----Topping portal----" << endl;
         cout << "(A) Add toppings" << endl;
+        cout << "(S) See all available toppings" << endl;
         cout << "(R) Remove toppings" << endl;
         cout << "(B) Go back" << endl;
         cout << "(q) Quit" << endl;
@@ -178,15 +172,20 @@ bool ManagerUI::topping_menu(bool run, bool& continueRun) {
 
         switch (select) {
         case 'a':
-            system("CLS");
-                create_topping();
+            create_topping();
 
             continueRun = 1;
             return 0;
             break;
 
+        case 's':
+            print_topping_list();
+            pause_screen();
+            continueRun = 1;
+            return 0;
+            break;
+
         case 'r':
-            system("CLS");
             remove_topping();
             continueRun = 1;
             return 0;
@@ -232,8 +231,6 @@ bool ManagerUI::size_menu(bool run, bool& continueRun) {
 
         switch (select) {
         case 'a':
-            system("CLS");
-            cout << "Add a new size" << endl;
             add_pizza_size();
 
             continueRun = 1;
@@ -241,20 +238,14 @@ bool ManagerUI::size_menu(bool run, bool& continueRun) {
             break;
 
         case 'r':
-            system("CLS");
-            cout << "Remove a size" << endl;
-            remove_size();   ///*******
-            system("PAUSE");
+            remove_size();
 
             continueRun = 1;
             return 0;
             break;
 
         case 's':
-            system("CLS");
-            cout << "See all sizes:" << endl;
             print_sizes();
-            system("PAUSE");
 
             continueRun = 1;
             return 0;
@@ -297,7 +288,7 @@ bool ManagerUI::menu_pizza_menu(bool run, bool& continueRun) {
         select = lower(select);
 
         switch (select) {
-        case 'a':
+        case 'n':
             system("CLS");
             cout << "Create a new pizza" << endl;
             make_new_menu_pizza();

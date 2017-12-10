@@ -1,0 +1,56 @@
+ManagerUI.cpp
+	Cleaned up system() calls in all functions
+
+manger_functions.h
+	Put all system() calls here
+	changed make_new_menu_pizza()
+	changed error handling with bool functions
+
+InvalidAlphaStringException.h/cpp
+	added get_err() function
+
+ValidatorFunctions
+	Added:
+	-validate_bool_question()
+		throws: InvalidBoolException
+	-validate_int()
+		throws: InvalidNumberException
+	-validate_string_input()
+		throws: InvalidDoubleException
+	-validate_int_string()
+		throws: InvalidAlphaNumException
+
+order_functions.h/cpp
+	added:
+	-print_size_with_numbers()
+	-print_sizes()
+	moved error messages to error classes
+	moved system() calls to functions in this file
+
+PizzaSizeHandler.cpp
+	Removed check for duplicate price
+
+InvalidNumberException.h/cpp
+	Moved error message into class
+	added get_err() to get the corresponding error
+
+InvalidNameException.h/cpp
+	Moved error message into class
+	added get_err() to get the corresponding error
+
+InvalidDoubleException.h/cpp
+	Moved error message into class
+	added get_err() to get the corresponding error
+
+InvalidAlphaNumException.h/cpp
+	Moved error message into class
+	added get_err() to get the corresponding error
+
+InvalidBoolException.h/cpp
+	Added:
+	-get_err(int)
+		returns what kind of error was thrown
+
+Pizza.h/cpp
+	Added:
+	-overloaded method to set price as a string(stod())
