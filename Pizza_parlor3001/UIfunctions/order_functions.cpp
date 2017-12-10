@@ -169,11 +169,11 @@ void add_menu_pizza(Order& order) {
             system("CLS");
             print_menu_pizza_list();
             cout << "Enter name of pizza: ";
-            cin >> pizza_name;
-            validate_string_input(pizza_name);
+            cin.ignore();
+            getline(cin, pizza_name, '\n');
+            validate_int_string(pizza_name);
             cont = 0;
             pizza = pizzahandler.get_menu_pizza(pizza_name);
-            pause_screen();
             order.add_pizza(pizza);
         }
         catch(InvalidName) {
@@ -181,7 +181,7 @@ void add_menu_pizza(Order& order) {
             cout << "Pizza not on menu!" << endl;
             pause_screen();
         }
-        catch(InvalidAlphaStringException e) {
+        catch(InvalidAlphaNumException e) {
             cont = 1;
             cout << e.get_err() << endl;
             pause_screen();
@@ -227,11 +227,24 @@ void add_special_pizza(Order& order) {
 
     pizza.set_price(pizzahandler.calc_price(pizza));
 
-    print_pizza(pizza);
-    cout << "Do you want to add this pizza to the order? (y/n) ";
-    if(yes()) {
+    bool cont = 1;
+    string input;
+
+    do{
+        try{
+            print_pizza(pizza);
+            cout << "Do you want to add this pizza to the order? (y/n) ";
+            getline(cin, input, '\n');
+            validate_bool_question(input);
+            cont = 0;
+        }
+        catch(InvalidBoolException e) {
+            cont = 1;
+            cout << e.get_err() << endl;
+        }
+    } while(cont);
         order.add_pizza(pizza);
-    }
+
 }
 
 bool yes() {
