@@ -14,7 +14,7 @@ InvalidBoolException::InvalidBoolException(string input){
 
 string InvalidBoolException::get_err() {
     if(exception_type == 1) {
-        return "Invalid opton! \nTry again";
+        return "Invalid option! \nTry again";
     } else if(exception_type == 2) {
         return "Input contains more than one letter! \nTry again" ;
     } else{
