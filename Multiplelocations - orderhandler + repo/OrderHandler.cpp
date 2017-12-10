@@ -103,3 +103,8 @@ void OrderHandler::change_status(int ordernumber, int pizzaindex, PizzaStatus st
     }
 }
 
+void OrderHandler::set_location(string location) {
+    this ->location = location;
+    orders.clear();
+    has_list = false;
+}

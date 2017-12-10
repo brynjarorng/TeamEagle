@@ -38,12 +38,14 @@ public:
     void got_list();
     //If handler has yet to fetch list from repo then gets it, if it has list then does nothing
     void change_status(int ordernumber, int pizzaindex, PizzaStatus status);
+    //Change status of a pizza in an order. (pending, baking, ready).
+    void set_location(string location);
+    //Change the location of the order.
 
 private:
     OrderRepo order_repo;
     vector<Order> orders;
     int order_count;
-    PizzaHandler pizzahandler;
     Order order;
     Pizza pizza;
     Pizza* pizza_list;
