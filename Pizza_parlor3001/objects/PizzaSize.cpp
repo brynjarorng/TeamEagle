@@ -23,4 +23,5 @@ int PizzaSize::get_size() {
 
 ostream& operator << (ostream& out, const PizzaSize& pizza_size) {
     out << pizza_size.size << " " << pizza_size.price << endl;
+    return out;
 }

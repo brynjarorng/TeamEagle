@@ -8,7 +8,7 @@ CustomerUI::CustomerUI()
 
 bool CustomerUI::customer_menu(bool run, bool& continueRun) {
     try{
-        system("CLS");
+        clear();
         cout << "----Store portal----" << endl;
         cout << "(N) New order" << endl;
         cout << "(M) See all pizzas on menu" << endl;
@@ -26,7 +26,7 @@ bool CustomerUI::customer_menu(bool run, bool& continueRun) {
 
         switch (select) {
         case 'n':
-            system("CLS");
+            clear();
             cout << "New order" << endl;
             pause_screen();
 
@@ -35,7 +35,7 @@ bool CustomerUI::customer_menu(bool run, bool& continueRun) {
             break;
 
         case 'm':
-            system("CLS");
+            clear();
             cout << "New order" << endl;
             pause_screen();
 
@@ -44,7 +44,7 @@ bool CustomerUI::customer_menu(bool run, bool& continueRun) {
             break;
 
         case 'a':
-            system("CLS");
+            clear();
             cout << "See all available pizzas" << endl;
             pause_screen();
 
@@ -53,7 +53,7 @@ bool CustomerUI::customer_menu(bool run, bool& continueRun) {
             break;
 
         case 't':
-            system("CLS");
+            clear();
             cout << "See all available toppings" << endl;
             pause_screen();
 
@@ -62,7 +62,7 @@ bool CustomerUI::customer_menu(bool run, bool& continueRun) {
             break;
 
         case 'o':
-            system("CLS");
+            clear();
             cout << "See all your order status" << endl;
             pause_screen();
 
@@ -95,7 +95,7 @@ bool CustomerUI::customer_menu(bool run, bool& continueRun) {
 }
 
 void CustomerUI::terminate() {
-    system("CLS");
+    clear();
     char cont;
 
     cout << "Are you sure you want to quit (y/n)? ";

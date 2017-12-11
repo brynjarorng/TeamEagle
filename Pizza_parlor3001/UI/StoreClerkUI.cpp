@@ -8,7 +8,7 @@ StoreClerkUI::StoreClerkUI() {
 
 bool StoreClerkUI::store_menu(bool run, bool& continueRun) {
     try{
-        system("CLS");
+        clear();
 
         cout << "----Store portal----" << endl;
         cout << "(N) New order" << endl;
@@ -29,7 +29,7 @@ bool StoreClerkUI::store_menu(bool run, bool& continueRun) {
 
         switch (select) {
         case 'n':
-            system("CLS");
+            clear();
             cout << "New order" << endl;
             new_order();
 
@@ -39,7 +39,7 @@ bool StoreClerkUI::store_menu(bool run, bool& continueRun) {
             break;
 
         case 'a':
-            system("CLS");
+            clear();
             cout << "See all orders" << endl;
             print_orders(not_delivered);
             pause_screen();
@@ -48,7 +48,7 @@ bool StoreClerkUI::store_menu(bool run, bool& continueRun) {
             break;
 
         case 'm':
-            system("CLS");
+            clear();
             cout <<  "All pizzas on menu" << endl;
             print_menu_pizza_list();
             pause_screen();
@@ -58,7 +58,7 @@ bool StoreClerkUI::store_menu(bool run, bool& continueRun) {
             break;
 
         case 't':
-            system("CLS");
+            clear();
             print_topping_list();
             pause_screen();
 
@@ -67,7 +67,7 @@ bool StoreClerkUI::store_menu(bool run, bool& continueRun) {
             break;
 
         case 'l':
-            system("CLS");
+            clear();
             cout <<  "See everything ordered today" << endl;
             pause_screen();
 
@@ -76,7 +76,7 @@ bool StoreClerkUI::store_menu(bool run, bool& continueRun) {
             break;
 
         case 'p':
-            system("CLS");
+            clear();
             cout <<  "Mark orders paid or picked up" << endl;
             mark_delivered();
 
@@ -108,7 +108,7 @@ bool StoreClerkUI::store_menu(bool run, bool& continueRun) {
 }
 
 void StoreClerkUI::terminate() {
-    system("CLS");
+    clear();
     char cont;
 
     cout << "Are you sure you want to quit (y/n)? ";

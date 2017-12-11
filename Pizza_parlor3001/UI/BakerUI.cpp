@@ -6,7 +6,7 @@ BakerUI::BakerUI() {
 }
 
 bool BakerUI::baker_menu(bool run, bool& continueRun) {
-    system("CLS");
+    clear();
     cout << "----Baker menu----" << endl;
 //    print_pizza_list();
 

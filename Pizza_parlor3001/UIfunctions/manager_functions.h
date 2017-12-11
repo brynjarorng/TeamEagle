@@ -11,7 +11,7 @@
 #include "order_functions.h"
 
 void create_topping() {
-    system("CLS");
+    clear();
     string choice;
     bool cont = 0;
 
@@ -106,7 +106,7 @@ void remove_topping() {
     ToppingsHandler handler;
     string number;
     bool cont = 0;
-    system("CLS");
+    clear();
 
     while(true) {
         do{
@@ -119,11 +119,11 @@ void remove_topping() {
                 cont = 0;
             }
             catch(InvalidNumberException e) {
-                system("CLS");
+                clear();
                 cont = 1;
                 cout << e.get_err() << endl;
             }
-            system("CLS");
+            clear();
         } while(cont);
 
 
@@ -181,7 +181,7 @@ void make_new_menu_pizza() {
 
     string topping_name;
     for(int i = 0; (choice != "n") && i < pizza.get_max_toppings(); i++) {
-        system("CLS");
+        clear();
         print_topping_list();
         cout << "Add a topping: ";
         cin >> topping_name;
@@ -320,7 +320,7 @@ bool add_pizza_size() {
     string size;
     string price;
 
-    system("CLS");
+    clear();
 
     cout << "---Add a new size---" << endl;
 
@@ -364,14 +364,14 @@ bool add_pizza_size() {
         cout << "Error while writing size to database!" << endl;
         cout << "Is there already a product with that size in the database?" << endl;
         pause_screen();
-        system("CLS");
+        clear();
     }
     return 0;
 }
 
 void remove_size() {
     bool cont = 0;
-    system("CLS");
+    clear();
     cout << "--Remove a size---" << endl;
     while(true) {
         PizzaSizeHandler handler;

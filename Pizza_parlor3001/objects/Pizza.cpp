@@ -69,7 +69,7 @@ Toppings* Pizza::get_toppings() {
 string Pizza::get_toppings_print(Pizza& pizza) {
     string ret;
 
-    for(unsigned int i = 0; i < pizza.toppingcount; i++) {
+    for(int i = 0; i < pizza.toppingcount; i++) {
         ret += topping[i].get_name();
         if(i > pizza.toppingcount){
             ret += "-";

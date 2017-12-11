@@ -80,6 +80,8 @@
 		<Unit filename="exceptions/InvalidAlphaStringException.h" />
 		<Unit filename="exceptions/InvalidBoolException.cpp" />
 		<Unit filename="exceptions/InvalidBoolException.h" />
+		<Unit filename="exceptions/InvalidCharException.cpp" />
+		<Unit filename="exceptions/InvalidCharException.h" />
 		<Unit filename="exceptions/InvalidDoubleException.cpp" />
 		<Unit filename="exceptions/InvalidDoubleException.h" />
 		<Unit filename="exceptions/InvalidInputException.cpp" />

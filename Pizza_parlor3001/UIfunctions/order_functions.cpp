@@ -29,6 +29,7 @@ void print_orders(Order_Status status) {
         }
     }
 }
+
 bool new_order() {
 
     Order order;
@@ -40,14 +41,14 @@ bool new_order() {
     cout << "Order #" << order.get_order_number() << endl;
 
     add_pizzas(order);
-    system("CLS");
+    clear();
 
     print_order(order);
     if (order.get_order_count() > 0) {
         do{
             try{
                 cout << "Is this the correct order? (y/n) ";
-                cin >> select;
+                getline(cin, select, '\n');
                 select = tolower(select[0]);
                 validate_bool_question(select);
                 cont = 0;
@@ -97,7 +98,7 @@ void add_pizzas(Order& order) {
             do{
                 try{
                     cout << "Do you wish to add more pizzas to the order (y/n)? ";
-                    cin >> run_menu;
+                    getline(cin, run_menu, '\n');
                     run_menu = tolower(run_menu[0]);
                     validate_bool_question(run_menu);
                     cont = 0;
@@ -117,7 +118,6 @@ void add_pizzas(Order& order) {
     }
 }
 
-
 PizzaType menu_or_special(char& run) {
 
     PizzaType pizzatype;
@@ -130,11 +130,20 @@ PizzaType menu_or_special(char& run) {
         do{
             try{
                 cout << "Input 'M' for menu pizza or 'C' for a custom pizza (B to go back): ";
-                cin >> type;
+                getline(cin, type, '\n');
                 validate_char(type);
                 cont = 0;
+                type = tolower(type[0]);
+
+                if(type != "m" && type != "c" && type != "b") {
+                    clear();
+                    cont = 1;
+                    cout << "Input is not a valid option!" << endl;
+                }
+                //Special case
             }
             catch(InvalidCharException e) {
+                clear();
                 cont = 1;
                 cout << e.get_err() << endl;
             }
@@ -157,7 +166,6 @@ PizzaType menu_or_special(char& run) {
     return pizzatype;
 }
 
-
 void add_menu_pizza(Order& order) {
     Pizza pizza;
     PizzaHandler pizzahandler;
@@ -166,13 +174,14 @@ void add_menu_pizza(Order& order) {
     string pizza_name;
     do{
         try{
-            system("CLS");
+            clear();
             print_menu_pizza_list();
             cout << "Enter name of pizza: ";
-            cin.ignore();
+            cin >> ws;
             getline(cin, pizza_name, '\n');
             validate_int_string(pizza_name);
             cont = 0;
+            pause_screen();
             pizza = pizzahandler.get_menu_pizza(pizza_name);
             order.add_pizza(pizza);
         }
@@ -196,9 +205,12 @@ void toppings_to_special(Pizza& pizza) {
     PizzaHandler pizzahandler;
     ToppingsHandler toppingshandler;
 
+    clear();
+    print_topping_list();
+
     string topping_name = " ";
-    cout << "Enter toppings, insert q when finished: ";
-    cin >> topping_name;
+    cout << "Input topping name, input q when finished: ";
+    getline(cin, topping_name, '\n');
 
     while (topping_name != "q") {
         try {
@@ -209,7 +221,7 @@ void toppings_to_special(Pizza& pizza) {
         }
 
         cout << "Enter next topping: ";
-        cin >> topping_name;
+        getline(cin, topping_name, '\n');
 
         if (pizzahandler.max_toppings(pizza)) {
             cout << "Maximum topping has been reached." << endl;
@@ -218,6 +230,7 @@ void toppings_to_special(Pizza& pizza) {
     }
 
 }
+
 void add_special_pizza(Order& order) {
     Pizza pizza;
     PizzaHandler pizzahandler;
@@ -247,19 +260,6 @@ void add_special_pizza(Order& order) {
 
 }
 
-bool yes() {
-    char input;
-    cin >> input;
-    if (input == 'y') {
-        return true;
-    }
-    else if (input == 'n') {
-        return false;
-    }
-        cout << "Please select either (y) or (n) " << endl;
-        return yes();
-}
-
 void print_pizzas_toppings(Pizza pizza) {
 
 
@@ -282,7 +282,8 @@ void print_pizza(Pizza pizza) {
 }
 
 void print_order(Order order) {
-    cout << "Order #" << order.get_order_number() << endl;
+    cout << "\033[1;31m Order # \033[0m\ " << order.get_order_number() << endl;
+
     print_lines(10);
     Pizza* pizzas_in_order = order.get_pizzas_in_order();
     Pizza temp_pizza;
@@ -296,7 +297,7 @@ void print_order(Order order) {
         endl_count--;
     }
    print_lines(10);
-   cout << "Total price: " << order.get_total() << endl;
+   cout << "Total price: " << order.get_total() << endl << endl;
    print_lines(10);
 }
 
@@ -321,14 +322,32 @@ void print_current_orders(char& refresh) {
     }
     cin >> refresh;
 }
+
 void mark_delivered() {
 
     int remove_order_nr;
-
-    cout << "Press (p) to print current orders, or insert the number of order to mark ready: ";
     string remove_order;
-    cin >> remove_order;
     char first_digit;
+    bool cont = 1;
+
+    do{
+        try{
+            cout << "Input the number of the order to mark ready for pickup\(n for next page\): ";
+            cin.ignore();
+            cin.clear();
+            getline(cin, remove_order, '\n');
+            validate_int_p(remove_order);
+            cont = 0;
+            remove_order = tolower(remove_order[0]);
+        }
+        catch(InvalidAlphaNumException e) {
+            clear();
+            cont = 1;
+            remove_order = " ";
+            cout << "Input was not a number nor \'p\'" << endl;
+        }
+    } while(cont);
+
     if (remove_order == "p") {
         print_current_orders(first_digit);
     }
@@ -350,7 +369,7 @@ void print_topping_list() {
     ToppingsHandler toppings_handler;
     vector<Toppings> topping_vector;
 
-    system("CLS");
+    clear();
 
     cout << "---All toppings on menu---" << endl;
 
@@ -368,7 +387,7 @@ void print_menu_pizza_list() {
     PizzaHandler pizza_handler;
     vector<Pizza> pizza_vector;
 
-    system("CLS");
+    clear();
 
     pizza_vector = pizza_handler.get_pizza_list();
     cout << "---All pizzas on menu---" << endl;
@@ -387,7 +406,7 @@ void print_sizes() {
 
     size_vector = size_handler.get_size_list();
 
-    system("CLS");
+    clear();
 
     cout << "---Print all pizza sizes---" << endl;
 

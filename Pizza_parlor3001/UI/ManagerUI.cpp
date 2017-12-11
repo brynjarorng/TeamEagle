@@ -9,7 +9,7 @@ ManagerUI::ManagerUI() {
 bool ManagerUI::manager_menu(bool run, bool& continueRun) {
     try{
         do{
-            system("CLS");
+            clear();
 
             cout << "----Manager Portal----" << endl;
             cout << "(I) Pizza information" << endl;
@@ -89,7 +89,7 @@ bool ManagerUI::manager_menu(bool run, bool& continueRun) {
 
 bool ManagerUI::info_menu(bool run, bool& continueRun) {
     try{
-        system("CLS");
+        clear();
 
         cout << "----Information portal----" << endl;
         cout << "(T) Print toppings" << endl;
@@ -154,7 +154,7 @@ bool ManagerUI::info_menu(bool run, bool& continueRun) {
 
 bool ManagerUI::topping_menu(bool run, bool& continueRun) {
     try{
-        system("CLS");
+        clear();
 
         cout << "----Topping portal----" << endl;
         cout << "(A) Add toppings" << endl;
@@ -213,7 +213,7 @@ bool ManagerUI::topping_menu(bool run, bool& continueRun) {
 
 bool ManagerUI::size_menu(bool run, bool& continueRun) {
     try{
-        system("CLS");
+        clear();
 
         cout << "----Size editor portal----" << endl;
         cout << "(A) Add size" << endl;
@@ -272,7 +272,7 @@ bool ManagerUI::size_menu(bool run, bool& continueRun) {
 
 bool ManagerUI::menu_pizza_menu(bool run, bool& continueRun) {
     try {
-        system("CLS");
+        clear();
 
         cout << "----Pizza menu portal----" << endl;
         cout << "(N) Create a new pizza" << endl;
@@ -289,7 +289,7 @@ bool ManagerUI::menu_pizza_menu(bool run, bool& continueRun) {
 
         switch (select) {
         case 'n':
-            system("CLS");
+            clear();
             cout << "Create a new pizza" << endl;
             make_new_menu_pizza();
 
@@ -298,7 +298,7 @@ bool ManagerUI::menu_pizza_menu(bool run, bool& continueRun) {
             break;
 
         case 'r':
-            system("CLS");
+            clear();
             cout << "Remove a pizza from menu" << endl;
 
             continueRun = 1;
@@ -325,7 +325,7 @@ bool ManagerUI::menu_pizza_menu(bool run, bool& continueRun) {
 }
 
 void ManagerUI::terminate() {
-    system("CLS");
+    clear();
     char cont;
 
     cout << "Are you sure you want to quit (y/n)? ";

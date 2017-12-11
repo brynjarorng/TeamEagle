@@ -7,7 +7,7 @@ PhoneClerkUI::PhoneClerkUI() {
 bool PhoneClerkUI::phone_menu(bool run, bool& continueRun) {
     try{
 
-        system("CLS");
+        clear();
 
         cout << "----Phone portal----" << endl;
         cout << "(N) New order" << endl;
@@ -27,7 +27,7 @@ bool PhoneClerkUI::phone_menu(bool run, bool& continueRun) {
 
         switch (select) {
         case 'n':
-            system("CLS");
+            clear();
             cout << "New order" << endl;
             new_order();
 
@@ -36,7 +36,7 @@ bool PhoneClerkUI::phone_menu(bool run, bool& continueRun) {
             break;
 
         case 'a':
-            system("CLS");
+            clear();
             cout << "See all orders" << endl;
             print_orders(not_delivered);
             pause_screen();
@@ -46,7 +46,7 @@ bool PhoneClerkUI::phone_menu(bool run, bool& continueRun) {
             break;
 
         case 'm':
-            system("CLS");
+            clear();
             cout <<  "All pizzas on menu: " << endl;
             print_topping_list();
             pause_screen();
@@ -56,7 +56,7 @@ bool PhoneClerkUI::phone_menu(bool run, bool& continueRun) {
             break;
 
         case 't':
-            system("CLS");
+            clear();
             print_topping_list();
             pause_screen();
 
@@ -65,7 +65,7 @@ bool PhoneClerkUI::phone_menu(bool run, bool& continueRun) {
             break;
 
         case 'o':
-            system("CLS");
+            clear();
             cout <<  "See everything ordered today" << endl;
             pause_screen();
 
@@ -96,7 +96,7 @@ bool PhoneClerkUI::phone_menu(bool run, bool& continueRun) {
 }
 
 void PhoneClerkUI::terminate() {
-    system("CLS");
+    clear();
     char cont;
 
     cout << "Are you sure you want to quit (y/n)? ";
