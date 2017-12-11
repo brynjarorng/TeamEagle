@@ -13,12 +13,12 @@ bool LoginUI::login_portal(bool run) {
         cout << "Welcome to pizza & co." << endl << endl;
 
         cout << "----LOGIN SELECTOR----" << endl;
-        cout << "(m) Manager" << endl;
-        cout << "(b) Baker" << endl;
-        cout << "(t) Telephone operator" << endl;
-        cout << "(s) Sales clerk" << endl;
-        cout << "(c) Customer portal" << endl;
-        cout << "(q) Quit" << endl;
+        cout << "(M) Manager" << endl;
+        cout << "(B) Baker" << endl;
+        cout << "(T) Telephone operator" << endl;
+        cout << "(S) Sales clerk" << endl;
+        cout << "(C) Customer portal" << endl;
+        cout << "(Q) Quit" << endl;
         if(run){
             cout << "Incorrect input!" << endl;
         }

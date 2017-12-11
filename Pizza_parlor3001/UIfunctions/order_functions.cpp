@@ -301,63 +301,76 @@ void print_order(Order order) {
    print_lines(10);
 }
 
-void print_current_orders(char& refresh) {
-
+void print_current_orders(int& refresh, string next) {
+    int temp = refresh;
     OrderHandler orderhandler;
     int ordercount = orderhandler.get_order_count();
+    int next_num = 0;
 
     Order temp_order;
     int counter = 2;
 
-    for (int i = 0; i < ordercount; i ++) {
-        if (counter == 0) {
-            cout << "Press n to get the next screen or enter number of order\n";
-            cin >> refresh;
-            if (isdigit(refresh)) {
-                break;
-            }
-        }
-        print_order(orderhandler.get_orders().at(i));
-        counter--;
+    if(next == "n" && refresh < ordercount) {
+        next_num = 2;
+    } else if(next == "n") {
+        refresh = 0;
+        temp = 0;
+        next_num = 2;
     }
-    cin >> refresh;
+
+    for (refresh; refresh < temp + next_num; refresh++) {
+        if(refresh == ordercount) {
+            break;
+        }
+        print_order(orderhandler.get_orders().at(refresh));
+    }
+
 }
 
 void mark_delivered() {
 
     int remove_order_nr;
     string remove_order;
-    char first_digit;
+    int first_digit = 0;
     bool cont = 1;
+    OrderHandler orderhandler;
+    string next = "n";
 
     do{
         try{
-            cout << "Input the number of the order to mark ready for pickup\(n for next page\): ";
-            cin.ignore();
+            clear();
+            cont = 1;
+            print_current_orders(first_digit, next);
+            cout << "Input number order to mark ready for pickup (n for next page, q to quit): ";
             cin.clear();
+            cin >> ws;
             getline(cin, remove_order, '\n');
-            validate_int_p(remove_order);
-            cont = 0;
             remove_order = tolower(remove_order[0]);
+            validate_int_p(remove_order);
+
+            if(isdigit(remove_order[0])) {
+                remove_order_nr = stoi(remove_order);
+                if (!orderhandler.delivered(remove_order_nr)) {
+                    cout << "Order nr not on list!" << endl;
+                }
+            } else if(remove_order == "q") {
+                cont = 0;
+            } else if(remove_order == "n") {
+                next = "n";
+            } else {
+                next = " ";
+            }
         }
         catch(InvalidAlphaNumException e) {
             clear();
             cont = 1;
-            remove_order = " ";
-            cout << "Input was not a number nor \'p\'" << endl;
+            cout << "Input was not valid" << endl;
+            system("PAUSE");
         }
     } while(cont);
 
-    if (remove_order == "p") {
-        print_current_orders(first_digit);
-    }
-    remove_order_nr = atoi(remove_order.c_str());
-
-    OrderHandler orderhandler;
-    if (!orderhandler.delivered(remove_order_nr)) {
-        cout << "Order nr not on list!" << endl;
-    }
 }
+
 void print_lines (int line_count) {
     for (int i = 0; i <line_count; i++) {
         cout << "-";
