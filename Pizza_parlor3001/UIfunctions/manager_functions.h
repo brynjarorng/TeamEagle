@@ -69,7 +69,7 @@ void create_topping() {
                 try {
                     handler.create_topping(topping);
                 }
-                catch(InvalidName e) {
+                catch(InvalidNameException e) {
                     cout << "Topping already exists" << endl;
                 }
         }
@@ -203,7 +203,7 @@ void make_new_menu_pizza() {
             } while (cont);
 
         }
-        catch(InvalidName e) {
+        catch(InvalidNameException e) {
             //Special error
             cout << "Not a valid topping!" << endl;
             pause_screen();
@@ -236,7 +236,7 @@ void make_new_menu_pizza() {
                 pizzahandler.create_new_menu_pizza(pizza);
                 choice = " ";
             }
-            catch(InvalidName e) {
+            catch(InvalidNameException e) {
                 cout << "Pizza name is taken, try again? (y/n) ";
                 do{
                     try{

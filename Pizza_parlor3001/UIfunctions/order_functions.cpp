@@ -185,7 +185,7 @@ void add_menu_pizza(Order& order) {
             pizza = pizzahandler.get_menu_pizza(pizza_name);
             order.add_pizza(pizza);
         }
-        catch(InvalidName) {
+        catch(InvalidNameException) {
             cont = 1;
             cout << "Pizza not on menu!" << endl;
             pause_screen();
@@ -216,7 +216,7 @@ void toppings_to_special(Pizza& pizza) {
         try {
             pizza.add_topping(toppingshandler.get_topping(topping_name));
         }
-        catch(InvalidName e) {
+        catch(InvalidNameException e) {
             cout << "Topping not on list!" << endl;
         }
 

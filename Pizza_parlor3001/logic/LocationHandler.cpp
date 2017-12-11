@@ -2,52 +2,51 @@
 
 LocationHandler::LocationHandler()
 {
-    //ctor
+    has_list = false;
 }
 
-LocationHandler::~LocationHandler()
-{
-    //dtor
-}
 
-void LocationHandler::add_location(string location) {
-    if(!validate_location_name(location)) {
+void LocationHandler::add_location(Location location) {
+    if(!validate_location_name(location.get_name())) {
         throw InvalidAlphaNumException();
     }
-    if(!validate_location_name_length(location)) {
-        throw InvalidSize();
-    }
-    if(!validate_duplicate(location)) {
+
+    if(!validate_duplicate(location.get_name())) {
         throw InvalidNameException();
     }
 
-    locrepo.write();
+    loc_repo.write(location);
 }
 
-vector<string> LocationHandler::get_locations() {
-    return locrepo.read();
+vector<Location> LocationHandler::get_locations() {
+    got_list();
+    return locations;
 }
 
 bool LocationHandler::validate_location_name(string location) {
-
-}
-
-bool LocationHandler::validate_location_name_length(string location) {
-    if(location_name_length < location) {
-        return false;
+    for(unsigned int i = 0; i < location.size(); i++) {
+        if(!isalnum(location[i]) && !isspace(location[0])) {
+            return false;
+        }
     }
-
     return true;
 }
 
 bool LocationHandler::validate_duplicate(string location) {
-    vector<string> locations = locrepo.read();
+    vector<Location> locations = loc_repo.read();
 
     for(int i = 0; i < locations.size(); i++) {
-        if(locations == location) {
+        if(locations.at(i).get_name() == location) {
             return false;
         }
     }
 
     return true;
+}
+
+void LocationHandler::got_list() {
+    if(!has_list) {
+        locations = loc_repo.read();
+        has_list = true;
+    }
 }
