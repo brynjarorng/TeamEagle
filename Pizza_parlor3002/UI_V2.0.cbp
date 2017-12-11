@@ -78,6 +78,8 @@
 		<Unit filename="data/ToppingsRepo.h" />
 		<Unit filename="datatypes/PizzaStatus.h" />
 		<Unit filename="datatypes/PizzaType.h" />
+		<Unit filename="exceptions/InvalidAddresseException.cpp" />
+		<Unit filename="exceptions/InvalidAddresseException.h" />
 		<Unit filename="exceptions/InvalidAlphaNumException.cpp" />
 		<Unit filename="exceptions/InvalidAlphaNumException.h" />
 		<Unit filename="exceptions/InvalidAlphaStringException.cpp" />
@@ -92,7 +94,6 @@
 		<Unit filename="exceptions/InvalidInputException.h" />
 		<Unit filename="exceptions/InvalidName.cpp" />
 		<Unit filename="exceptions/InvalidName.h" />
-		<Unit filename="exceptions/InvalidNameException.cpp" />
 		<Unit filename="exceptions/InvalidNameException.h" />
 		<Unit filename="exceptions/InvalidNumberException.cpp" />
 		<Unit filename="exceptions/InvalidNumberException.h" />
@@ -112,7 +113,6 @@
 		<Unit filename="logic/ToppingsHandler.h" />
 		<Unit filename="logic/ValidationFunctions.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="objects/Location.cpp" />
 		<Unit filename="objects/Location.h" />
 		<Unit filename="objects/Order.cpp" />
 		<Unit filename="objects/Order.h" />

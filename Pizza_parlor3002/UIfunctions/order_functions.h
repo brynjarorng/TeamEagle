@@ -78,6 +78,13 @@ void set_delivery_addresse(Order& order);
 //Sets the delivery addresse for the customer (I know this is not how to write address...)
 string is_sent(Order& order);
 //Gets the delivery addresse or pickup location
+void add_a_comment(Order& order);
+//Add a comment to the order
+void comment(Order& order);
+//ask if user wants to input any special requests
+string is_comment(Order& order);
+//Returns the users comment
+
 
 
 #endif // ORDER_FUNCTIONS_H

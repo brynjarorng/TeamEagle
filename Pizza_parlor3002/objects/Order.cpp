@@ -157,4 +157,18 @@ string Order::get_addresse() {
     return temp;
 }
 
+void Order::set_comment(string input) {
+    for(unsigned int i = 0; i < input.length(); i++) {
+        this ->comment[i] = input [i];
+    }
+}
+
+string Order::get_comment() {
+    string temp;
+    for(unsigned int i = 0; i < sizeof(comment); i++) {
+        temp += comment[i];
+    }
+    return temp;
+}
+
 #endif

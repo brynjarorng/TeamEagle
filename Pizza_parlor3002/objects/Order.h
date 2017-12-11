@@ -56,6 +56,10 @@ public:
 	//Returns string of the addresse
     void set_addresse(string input);
 	//set the addresse
+	string get_comment();
+	//Returns string of the comment
+    void set_comment(string input);
+	//set the comment
 private:
 	static const int MAX_ORDER_SIZE = 100;
     //
@@ -78,6 +82,9 @@ private:
     void calulate_total();
     //Calculates the order total and sets this->total_price equal to the total.
     char delivery_addresse[26];
+    //Addresse to deliver to
+    char comment[150];
+    //Any special request regarding the order go here
 
 };
 #endif //ORDER

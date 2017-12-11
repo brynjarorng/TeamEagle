@@ -45,6 +45,8 @@ bool new_order() {
 
     sent_or_picked_up(order);
 
+    comment(order);
+
     print_order(order);
     if (order.get_order_count() > 0) {
         do{
@@ -350,7 +352,7 @@ void print_order(Order order) {
     cout << is_paid(order) << endl;
     cout << is_ready(order) << endl;
     cout << is_sent(order) << endl;
-
+    cout << is_comment(order) << endl;
 
     print_lines(10);
     cout << endl;
@@ -532,5 +534,48 @@ string is_sent(Order& order) {
         temp = "Picked up at: local"; ///+ future pickup location
     }
 
+    return temp;
+}
+
+void comment(Order& order) {
+    clear();
+    bool cont = 1;
+    string input;
+    do{
+        try{
+            cout << "Do you have any special requests (y/n)? ";
+            cin >> ws;
+            getline(cin, input, '\n');
+            validate_bool_question(input);
+            cont = 0;
+        }
+        catch(InvalidBoolException e) {
+            clear();
+            cont = 1;
+            cout << e.get_err() << endl;
+        }
+    } while(cont);
+
+    if(input == "y") {
+        add_a_comment(order);
+    }
+
+}
+
+void add_a_comment(Order& order) {
+    string temp;
+    cout << "comment: ";
+    cin >> ws;
+    getline(cin, temp, '\n');
+    order.set_comment(temp);
+}
+
+string is_comment(Order& order) {
+    string temp;
+    if(order.get_comment().length() != 0) {
+        temp = "Comment: " + order.get_comment();
+    } else {
+        temp = "No comment";
+    }
     return temp;
 }
