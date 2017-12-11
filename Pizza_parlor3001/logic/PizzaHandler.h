@@ -17,7 +17,7 @@ public:
     //Takes name from UI and checks if valid,
     //If valid, then name is assigned and returns TRUE.
     //Else return false.
-    void create_new_menu_pizza(Pizza& pizza) throw(InvalidName, InvalidPrice);
+    void create_new_menu_pizza(Pizza& pizza) throw(InvalidNameException, InvalidPrice);
     //Calls validate_name, if it returns false, then pizza already exists
     //and it will throw InvalidName exception.
     //Calls validate_price, if it returns false, then price is negative

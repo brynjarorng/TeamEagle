@@ -19,13 +19,13 @@ void PizzaHandler::add_topping(string topping_name, Pizza& pizza) {
     if (toppingshandler.validate(topping_name)) {
         pizza.add_topping(toppingshandler.get_topping(topping_name));
     }
-    throw InvalidName();
+    throw InvalidNameException();
 }
 
 
-void PizzaHandler::create_new_menu_pizza(Pizza& pizza) throw(InvalidName, InvalidPrice) {
+void PizzaHandler::create_new_menu_pizza(Pizza& pizza) throw(InvalidNameException, InvalidPrice) {
     if(!validate_name(pizza.get_name())) {
-        throw InvalidName();
+        throw InvalidNameException();
     }
     if(!validate_price(pizza.get_price())) {
         throw InvalidPrice();
@@ -117,7 +117,7 @@ Pizza PizzaHandler::get_menu_pizza(string pizza_name) {
             return pizzas.at(i);
         }
     }
-    throw InvalidName();
+    throw InvalidNameException();
 }
 
 Pizza PizzaHandler::get_menu_pizza(int index) {
