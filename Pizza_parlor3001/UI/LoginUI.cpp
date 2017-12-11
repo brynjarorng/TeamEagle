@@ -8,7 +8,7 @@ LoginUI::LoginUI() {
 bool LoginUI::login_portal(bool run) {
     try {
 
-        system("CLS");
+        clear();
 
         cout << "Welcome to pizza & co." << endl << endl;
 
@@ -90,7 +90,7 @@ bool LoginUI::login_portal(bool run) {
 
 
 void LoginUI::terminate() {
-    system("CLS");
+    clear();
     char cont;
 
     cout << "Are you sure you want to quit (y/n)? ";

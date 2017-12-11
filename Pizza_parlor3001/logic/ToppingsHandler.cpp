@@ -30,7 +30,7 @@ bool ToppingsHandler::validate(string topping_name)
     got_list();
     string name;
 
-    for(int i = 0; i < toppings.size(); i++) {
+    for(unsigned int i = 0; i < toppings.size(); i++) {
         name = toppings.at(i).get_name();
         if(name == topping_name) {
             return true;
@@ -102,7 +102,7 @@ Toppings ToppingsHandler::get_topping(string topping_name) throw (InvalidName)
     got_list();
     string name;
 
-    for(int i = 0; i < toppings.size(); i++) {
+    for(unsigned int i = 0; i < toppings.size(); i++) {
         name = toppings.at(i).get_name();
         if(name == topping_name) {
             return toppings.at(i);

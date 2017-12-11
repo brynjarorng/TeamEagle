@@ -10,6 +10,7 @@
 #include "StoreClerkUI.h"
 #include "CustomerUI.h"
 #include "InvalidInputException.h"
+#include "print_functions.h"
 
 
 using namespace std;
