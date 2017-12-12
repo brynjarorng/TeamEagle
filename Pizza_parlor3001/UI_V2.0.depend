@@ -928,10 +928,10 @@
 	"InvalidSize.h"
 	"InvalidPrice.h"
 
-1512752040 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\logic\toppingshandler.cpp
+1512985253 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\logic\toppingshandler.cpp
 	"ToppingsHandler.h"
 
-1512918784 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\main.cpp
+1512985398 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\main.cpp
 	<iostream>
 	"LoginUI.h"
 
@@ -954,12 +954,14 @@
 	"order_functions.h"
 	"print_functions.h"
 
-1512919685 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\uifunctions\order_functions.h
+1512996711 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\uifunctions\order_functions.h
 	"print_functions.h"
 	<stdlib.h>
 	"OrderHandler.h"
 	"Pizza.h"
 	<iomanip>
+	"InvalidCharException.h"
+	"InvalidAlphaStringException.h"
 	"PizzaSize.h"
 	"PizzaSizeHandler.h"
 
@@ -997,36 +999,37 @@
 1512725159 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\objects\order.cpp
 	"Order.h"
 
-1512905105 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\objects\pizza.cpp
+1512985253 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\objects\pizza.cpp
 	"Pizza.h"
 
-1512749761 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\objects\pizzasize.cpp
+1512985252 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\objects\pizzasize.cpp
 	"PizzaSize.h"
 
 1512825162 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\objects\toppings.cpp
 	"Toppings.h"
 
-1512919366 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\ui\bakerui.cpp
+1512985422 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\ui\bakerui.cpp
 	"BakerUI.h"
 
-1512919651 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\ui\customerui.cpp
+1512985165 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\ui\customerui.cpp
 	"CustomerUI.h"
 
-1512919107 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\ui\loginui.cpp
+1512989628 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\ui\loginui.cpp
 	"LoginUI.h"
 
-1512919650 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\ui\phoneclerkui.cpp
+1512985165 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\ui\phoneclerkui.cpp
 	"PhoneClerkUI.h"
 
-1512919650 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\ui\storeclerkui.cpp
+1512985165 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\ui\storeclerkui.cpp
 	"StoreClerkUI.h"
 	"order_functions.h"
 
 1512752040 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\uifunctions\baker_functions.cpp
 	"baker_functions.h"
 
-1512919651 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\uifunctions\order_functions.cpp
+1512998258 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\uifunctions\order_functions.cpp
 	"order_functions.h"
+	"ValidationFunctions.h"
 
 1512908968 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\exceptions\invalidalphanumexception.cpp
 	"InvalidAlphaNumException.h"
@@ -1047,11 +1050,11 @@
 1512904890 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\exceptions\invaliddoubleexception.h
 	<string>
 
-1512919650 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\ui\managerui.cpp
+1512985165 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\ui\managerui.cpp
 	"ManagerUI.h"
 	"manager_functions.h"
 
-1512919650 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\uifunctions\manager_functions.h
+1512985165 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\uifunctions\manager_functions.h
 	"InvalidAlphaStringException.h"
 	"InvalidNumberException.h"
 	"InvalidBoolException.h"
@@ -1060,7 +1063,7 @@
 	"ValidationFunctions.h"
 	"order_functions.h"
 
-1512908818 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\logic\validationfunctions.h
+1512994839 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\logic\validationfunctions.h
 	<strings.h>
 	<iostream>
 	"InvalidNumberException.h"
@@ -1068,8 +1071,9 @@
 	"InvalidDoubleException.h"
 	"InvalidAlphaStringException.h"
 	"InvalidBoolException.h"
+	"InvalidCharException.h"
 
-1512919435 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\uifunctions\print_functions.h
+1512986120 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\uifunctions\print_functions.h
 	<iostream>
 
 1512752040 source:c:\users\brynjar\desktop\pizza_parlor3001\data\orderrepo.cpp
@@ -1345,5 +1349,11 @@
 	<string>
 
 1512926848 source:c:\users\brynjar\desktop\pizza_parlor3001\exceptions\invalidcharexception.cpp
+	"InvalidCharException.h"
+
+1512926780 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\exceptions\invalidcharexception.h
+	<string>
+
+1512926848 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\exceptions\invalidcharexception.cpp
 	"InvalidCharException.h"
 

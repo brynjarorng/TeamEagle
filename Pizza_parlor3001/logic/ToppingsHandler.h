@@ -2,7 +2,7 @@
 #define TOPPINGSHANDLER_H
 #include "ToppingsRepo.h"
 #include <string.h>
-#include "InvalidName.h"
+#include "InvalidNameException.h"
 #include "InvalidPrice.h"
 using namespace std;
 
@@ -10,15 +10,13 @@ class ToppingsHandler
 {
 public:
     ToppingsHandler();
-    //Initializes a private pointer of type Toppings to
-    //point to an empty array of Toppings.
     bool validate_name(string name);
     //Validates new topping that's being added to database.
     //If a topping already has the same name it return false;
     bool validate_price(double price);
     //Validates the price of a topping.
     //If price is below zero it will return false.
-    void create_topping(Toppings& topping) throw(InvalidName, InvalidPrice);
+    void create_topping(Toppings& topping) throw(InvalidNameException, InvalidPrice);
     //Precondition: topping contains information that was input from the UI.
     //Postcondition: if the validate_name and validate_price functions return TRUE then
     //the topping will be sent to the repository.
@@ -35,7 +33,7 @@ public:
     bool validate(string topping_name);
     //Takes a name of a topping and iterates through the list of toppings
     //from the repo and returns true if it matches a valid topping name.
-    Toppings get_topping(string topping_name) throw (InvalidName);
+    Toppings get_topping(string topping_name) throw (InvalidNameException);
     //Takes a name of a topping and iterates through the list of toppings
     //from the repo and returns the topping of a matching name.
     int get_topping_list_size();

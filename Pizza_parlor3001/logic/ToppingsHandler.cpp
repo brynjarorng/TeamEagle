@@ -30,7 +30,7 @@ bool ToppingsHandler::validate(string topping_name)
     got_list();
     string name;
 
-    for(int i = 0; i < toppings.size(); i++) {
+    for(unsigned int i = 0; i < toppings.size(); i++) {
         name = toppings.at(i).get_name();
         if(name == topping_name) {
             return true;
@@ -79,10 +79,10 @@ bool ToppingsHandler::set_price(double price, Toppings& topping) {
     }
 }
 */
-void ToppingsHandler::create_topping(Toppings& topping) throw(InvalidName, InvalidPrice) {
+void ToppingsHandler::create_topping(Toppings& topping) throw(InvalidNameException, InvalidPrice) {
     got_list();
     if(validate_name(topping.get_name())) {
-        throw InvalidName();
+        throw InvalidNameException();
     }
     if(!validate_price(topping.get_price())) {
         throw InvalidPrice();
@@ -97,18 +97,18 @@ void ToppingsHandler::remove_topping_from_list(int index) {
     toppings_repo.overwrite(toppings);
 }
 
-Toppings ToppingsHandler::get_topping(string topping_name) throw (InvalidName)
+Toppings ToppingsHandler::get_topping(string topping_name) throw (InvalidNameException)
 {
     got_list();
     string name;
 
-    for(int i = 0; i < toppings.size(); i++) {
+    for(unsigned int i = 0; i < toppings.size(); i++) {
         name = toppings.at(i).get_name();
         if(name == topping_name) {
             return toppings.at(i);
         }
     }
-    throw InvalidName();
+    throw InvalidNameException();
 }
 
 int ToppingsHandler::get_topping_list_size() {

@@ -79,4 +79,19 @@ inline void validate_char(string input) {
     }
 }
 
+inline void validate_int_p(string input) {
+    if(input.length() > 1) {
+        for(unsigned int i = 0; i < input.length(); i++) {
+            if(!isdigit(input[i])) {
+                throw(InvalidAlphaNumException());
+            }
+        }
+    } else {
+        if(input != "n" && input != "q") {
+            throw(InvalidAlphaNumException());
+        }
+    }
+}
+
+
 #endif // VALIDATIONFUNCTIONS_H
