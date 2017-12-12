@@ -3,17 +3,7 @@
 ToppingsHandler::ToppingsHandler() {
     has_list = false;
 }
-/*
-void ToppingsHandler::print_toppings()
-{
-	toppings_list = repo.read();
-	//Retreive current toppings list from repository.
-	toppings_list_count = repo.get_list_count();
-	for (int i = 0; i < toppings_list_count; i++) {
-		cout << toppings_list[i] << endl;
-	}
-}
-*/
+
 vector<Toppings> ToppingsHandler::get_topping_list()
 {
     got_list();
@@ -60,25 +50,7 @@ bool ToppingsHandler::validate_price(double price) {
     return true;
 }
 
-/*
-bool ToppingsHandler::set_name(string name, Toppings& topping) {
-    if(!validate(name)) {
-        topping.set_name(name);
-        return true;
-    }
 
-    return false;
-}
-bool ToppingsHandler::set_price(double price, Toppings& topping) {
-    if(price >= 0) {
-        topping.set_price(price);
-        return true;
-    }
-    else {
-        return false;
-    }
-}
-*/
 void ToppingsHandler::create_topping(Toppings& topping) throw(InvalidName, InvalidPrice) {
     got_list();
     if(validate_name(topping.get_name())) {

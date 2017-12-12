@@ -20,6 +20,7 @@
 					<Add directory="logic" />
 					<Add directory="objects" />
 					<Add directory="UIfunctions" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -36,6 +37,7 @@
 					<Add directory="data" />
 					<Add directory="logic" />
 					<Add directory="UIfunctions" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -58,8 +60,6 @@
 		<Unit filename="UI/PhoneClerkUI.h" />
 		<Unit filename="UI/StoreClerkUI.cpp" />
 		<Unit filename="UI/StoreClerkUI.h" />
-		<Unit filename="UI/UITemplate.cpp" />
-		<Unit filename="UI/UITemplate.h" />
 		<Unit filename="UIfunctions/baker_functions.cpp" />
 		<Unit filename="UIfunctions/baker_functions.h" />
 		<Unit filename="UIfunctions/manager_functions.h" />
@@ -70,10 +70,12 @@
 		<Unit filename="data/LocationRepo.h" />
 		<Unit filename="data/OrderRepo.cpp" />
 		<Unit filename="data/OrderRepo.h" />
-		<Unit filename="data/PizzaRepo.cpp" />
-		<Unit filename="data/PizzaRepo.h" />
 		<Unit filename="data/PizzaBottomRepo.cpp" />
 		<Unit filename="data/PizzaBottomRepo.h" />
+		<Unit filename="data/PizzaRepo.cpp" />
+		<Unit filename="data/PizzaRepo.h" />
+		<Unit filename="data/SideOrderRepo.cpp" />
+		<Unit filename="data/SideOrderRepo.h" />
 		<Unit filename="data/ToppingsRepo.cpp" />
 		<Unit filename="data/ToppingsRepo.h" />
 		<Unit filename="datatypes/PizzaStatus.h" />
@@ -103,10 +105,12 @@
 		<Unit filename="exceptions/InvalidSize.h" />
 		<Unit filename="logic/OrderHandler.cpp" />
 		<Unit filename="logic/OrderHandler.h" />
-		<Unit filename="logic/PizzaHandler.cpp" />
-		<Unit filename="logic/PizzaHandler.h" />
 		<Unit filename="logic/PizzaBottomHandler.cpp" />
 		<Unit filename="logic/PizzaBottomHandler.h" />
+		<Unit filename="logic/PizzaHandler.cpp" />
+		<Unit filename="logic/PizzaHandler.h" />
+		<Unit filename="logic/SideOrdersHandler.cpp" />
+		<Unit filename="logic/SideOrdersHandler.h" />
 		<Unit filename="logic/StdInput.cpp" />
 		<Unit filename="logic/StdInput.h" />
 		<Unit filename="logic/ToppingsHandler.cpp" />
@@ -120,6 +124,8 @@
 		<Unit filename="objects/Pizza.h" />
 		<Unit filename="objects/PizzaBottom.cpp" />
 		<Unit filename="objects/PizzaBottom.h" />
+		<Unit filename="objects/SideOrders.cpp" />
+		<Unit filename="objects/SideOrders.h" />
 		<Unit filename="objects/Toppings.cpp" />
 		<Unit filename="objects/Toppings.h" />
 		<Extensions>

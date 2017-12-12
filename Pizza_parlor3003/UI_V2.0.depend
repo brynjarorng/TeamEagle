@@ -305,9 +305,10 @@
 	<string>
 	<vector>
 
-1513085188 c:\users\brynjar\desktop\pizza_parlor3001\objects\order.h
+1513102486 c:\users\brynjar\desktop\pizza_parlor3001\objects\order.h
 	"Pizza.h"
 	"PizzaType.h"
+	"SideOrders.h"
 
 1513079261 c:\users\brynjar\desktop\pizza_parlor3001\objects\pizza.h
 	"PizzaStatus.h"
@@ -424,7 +425,7 @@
 	"PizzaRepo.h"
 	"PizzaBottomHandler.h"
 
-1512752040 c:\users\brynjar\desktop\pizza_parlor3001\logic\toppingshandler.h
+1513103741 c:\users\brynjar\desktop\pizza_parlor3001\logic\toppingshandler.h
 	"ToppingsRepo.h"
 	<string.h>
 	"InvalidName.h"
@@ -449,7 +450,7 @@
 1512725159 c:\users\brynjar\desktop\pizza_parlor3001\logic\stdinput.h
 	<iostream>
 
-1512985253 source:c:\users\brynjar\desktop\pizza_parlor3001\logic\toppingshandler.cpp
+1513103798 source:c:\users\brynjar\desktop\pizza_parlor3001\logic\toppingshandler.cpp
 	"ToppingsHandler.h"
 
 1512985398 source:c:\users\brynjar\desktop\pizza_parlor3001\main.cpp
@@ -520,7 +521,7 @@
 	"InvalidInputException.h"
 	"print_functions.h"
 
-1513085216 source:c:\users\brynjar\desktop\pizza_parlor3001\objects\order.cpp
+1513102491 source:c:\users\brynjar\desktop\pizza_parlor3001\objects\order.cpp
 	"Order.h"
 
 1513081103 source:c:\users\brynjar\desktop\pizza_parlor3001\objects\pizza.cpp
@@ -580,7 +581,7 @@
 1513014800 source:c:\users\brynjar\desktop\pizza_parlor3001\uifunctions\baker_functions.cpp
 	"baker_functions.h"
 
-1513086219 source:c:\users\brynjar\desktop\pizza_parlor3001\uifunctions\order_functions.cpp
+1513086750 source:c:\users\brynjar\desktop\pizza_parlor3001\uifunctions\order_functions.cpp
 	"order_functions.h"
 	"ValidationFunctions.h"
 
@@ -615,4 +616,21 @@
 
 1513085971 source:c:\users\brynjar\desktop\pizza_parlor3001\objects\pizzabottom.cpp
 	"PizzaBottom.h"
+
+1513105819 c:\users\brynjar\desktop\pizza_parlor3001\objects\sideorders.h
+	<cstring>
+	<string>
+	<iostream>
+
+1513105827 source:c:\users\brynjar\desktop\pizza_parlor3001\objects\sideorders.cpp
+	"SideOrders.h"
+
+1513097177 source:c:\users\brynjar\desktop\pizza_parlor3001\data\sideorderrepo.cpp
+	"SideOrderRepo.h"
+
+1513097128 c:\users\brynjar\desktop\pizza_parlor3001\data\sideorderrepo.h
+	"SideOrders.h"
+	<vector>
+	<string>
+	<fstream>
 

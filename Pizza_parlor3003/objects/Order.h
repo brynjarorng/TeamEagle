@@ -2,6 +2,7 @@
 #define ORDER_H
 #include "Pizza.h"
 #include "PizzaType.h"
+#include "SideOrders.h"
 class Order {
 
 public:
@@ -60,8 +61,9 @@ public:
 	//Returns string of the comment
     void set_comment(string input);
 	//set the comment
+	void add_side_order(SideOrders sideorder);
 private:
-	static const int MAX_ORDER_SIZE = 100;
+	static const int MAX_ORDER_SIZE = 20;
     //
 	bool order_ready;
     //True if all pizzas are ready in order.
@@ -83,8 +85,10 @@ private:
     //Calculates the order total and sets this->total_price equal to the total.
     char delivery_addresse[26];
     //Addresse to deliver to
-    char comment[150];
+    char comment[120];
     //Any special request regarding the order go here
+    SideOrders side_orders[20];
+    int side_orders_in_order;
 
 };
 #endif //ORDER

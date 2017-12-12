@@ -23,8 +23,6 @@ public:
     //Postcondition: if the validate_name and validate_price functions return TRUE then
     //the topping will be sent to the repository.
     //Else it will throw an exception
-    void print_toppings();
-    //Prints the list of Toppings in the same order as the current list.
     vector<Toppings> get_topping_list();
     //Returns vector of the list of Toppings in the same order as the current list.
     Toppings get_from_topping_list(int index);

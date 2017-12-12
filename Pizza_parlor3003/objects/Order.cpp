@@ -89,9 +89,22 @@ void Order::add_pizza(Pizza pizza) {
 	}
 
 	else {
-		cout << "Order has reached maximum size!" << endl;
+		cout << "Order has reached maximum size for pizzas!" << endl;
 	}
 }
+
+void Order::add_side_order(SideOrders sideorder) {
+	if(side_orders_in_order <= MAX_ORDER_SIZE) {
+
+		this ->side_orders[this ->side_orders_in_order] = sideorder;
+        this ->side_orders_in_order++;
+	}
+
+	else {
+		cout << "Maximum number of side orders reached!" << endl;
+	}
+}
+
 int Order::get_max_orders() {
     return this ->MAX_ORDER_SIZE;
 }
