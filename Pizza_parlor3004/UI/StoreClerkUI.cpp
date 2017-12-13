@@ -51,8 +51,6 @@ bool StoreClerkUI::store_menu(bool run, bool& continueRun) {
             clear();
             cout <<  "All pizzas on menu" << endl;
             print_menu_pizza_list(pizzahandler);
-            pause_screen();
-
             continueRun = 1;
             return 0;
             break;

@@ -115,7 +115,6 @@ bool ManagerUI::info_menu(bool run, bool& continueRun) {
 
         case 'p':
             print_menu_pizza_list(pizzahandler);
-            pause_screen();
             continueRun = 1;
             return 0;
             break;

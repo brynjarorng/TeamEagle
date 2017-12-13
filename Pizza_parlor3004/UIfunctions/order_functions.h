@@ -1,7 +1,6 @@
 #ifndef ORDER_FUNCTIONS_H
 #define ORDER_FUNCTIONS_H
 
-
 #include "print_functions.h"
 #include <stdlib.h>
 #include "OrderHandler.h"
@@ -10,6 +9,7 @@
 #include "InvalidCharException.h"
 //#include "validationFunctions.h"
 #include "InvalidAlphaStringException.h"
+#include "Print.h"
 
 
 #include "PizzaBottom.h"
@@ -86,6 +86,10 @@ void comment(Order& order);
 //ask if user wants to input any special requests
 string is_comment(Order& order);
 //Returns the users comment
+void print_navigation (Print& print, print_item type);
+//Navigate through the print list, n for next screen, p for previous.
+//Depending on the print_type more options are available, namely lexiographical print order
+//and price print order.
 
 
 

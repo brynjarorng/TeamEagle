@@ -478,20 +478,62 @@ void print_topping_list(ToppingsHandler& toppingshandler) {
     cout << endl;
 }
 
+void print_navigation (Print& print, print_item type) {
+
+    string input;
+    int k = 0;
+    while(input[0] != 'b') {
+
+        clear();
+        print.get(current_screen);
+
+        cin >> input;
+        if (input[0] == 'n') {
+            print.get(next_screen);
+        }
+        if (input[0] == 'p') {
+            print.get(previous_screen);
+        }
+        if (type == top || type == pizz) {
+            if (input[0] == 'd') {
+                print.get(z_to_a);
+            }
+            if (input[0] == 'a') {
+                print.get(a_to_z);
+            }
+            if (input[0] == 'h') {
+                print.get(price_from_high);
+            }
+            if (input[0] == 'l') {
+                print.get(price_from_low);
+            }
+            if (input[0] == 'k')  {
+
+                if (k % 2 == 0)
+                    print.set_price(price);
+                else
+                    print.set_price(no_price);
+
+                print.get(current_screen);
+                k++;
+            }
+        }
+    }
+}
 void print_menu_pizza_list(PizzaHandler& pizza_handler) {
-    vector<Pizza> pizza_vector;
 
     clear();
+    Print print;
 
-    pizza_vector = pizza_handler.get_pizza_list();
-    cout << "---All pizzas on menu---" << endl;
+    print.set(4, alph_asc,price,header, pizz);
 
-    for(unsigned int i = 0; i < pizza_vector.size(); i++) {
-        cout << pizza_vector[i].get_price() << " ISK, ";
-        cout << pizza_vector[i].get_name() << ", ";
-        cout << pizza_vector[i].get_toppings_print(pizza_vector[i]) << endl;
-    }
-    cout << endl;
+    print.pizza_settings(true, false);
+
+    print.prompt_user(true);
+
+    print_navigation(print, pizz);
+
+    clear();
 }
 
 void print_sizes(PizzaBottomHandler& bottomhandler) {
@@ -509,7 +551,7 @@ void print_sizes(PizzaBottomHandler& bottomhandler) {
         cout << size_vector[i].get_size() << "\"" << endl;
     }
     cout << endl;
-     pause_screen();
+     //pause_screen();
 }
 
 void print_sizes_numbers(PizzaBottomHandler& bottomhandler) {
