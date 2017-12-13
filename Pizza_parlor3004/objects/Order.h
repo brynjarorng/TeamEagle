@@ -60,9 +60,11 @@ public:
 	//Returns string of the comment
     void set_comment(string input);
 	//set the comment
+	int get_comment_length();
 private:
 	static const int MAX_ORDER_SIZE = 100;
     //
+    static const int MAX_COMMENT_LENGTH = 150;
 	bool order_ready;
     //True if all pizzas are ready in order.
 	bool order_delivered;
@@ -79,12 +81,14 @@ private:
 	void all_pizzas_ready();
     //Returns true if all pizzas are marked ready.
     double total_price;
+    //
     void calulate_total();
     //Calculates the order total and sets this->total_price equal to the total.
     char delivery_addresse[26];
     //Addresse to deliver to
-    char comment[150];
+    char comment[MAX_COMMENT_LENGTH];
     //Any special request regarding the order go here
+    int comment_length;
 
 };
 #endif //ORDER

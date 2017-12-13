@@ -606,11 +606,12 @@ void add_a_comment(Order& order) {
 }
 
 string is_comment(Order& order) {
-    string temp;
-    if(order.get_comment().length() != 0) {
-        temp = "Comment: " + order.get_comment();
-    } else {
-        temp = "No comment";
+
+    string temp = order.get_comment();
+
+    if(order.get_comment_length() <= 1) { //Since comment[0] is the null term.
+        return "No comment.";
     }
-    return temp;
+
+    return "Comment: " + order.get_comment();
 }

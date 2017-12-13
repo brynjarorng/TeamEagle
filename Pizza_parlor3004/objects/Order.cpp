@@ -11,6 +11,7 @@ Order::Order() {
 	this ->pizzas_in_order_count = 0;
 	this ->comment[0] = '\0';
 	this ->delivery_addresse[0] = '\0';
+	this ->comment_length = 0;
 }
 Pizza* Order::get_order() {
 
@@ -160,16 +161,29 @@ string Order::get_addresse() {
 }
 
 void Order::set_comment(string input) {
-    for(unsigned int i = 0; i < input.length(); i++) {
+
+    for(unsigned int i = 0; i < input.size(); i++) {
         this ->comment[i] = input [i];
+
+        if (input.length() < MAX_COMMENT_LENGTH) {
+        comment[input.size()] = '\0';
+        }
+        else {
+            comment[MAX_COMMENT_LENGTH - 1] = '\0';
+        }
+
+        comment_length++;
     }
+}
+int Order::get_comment_length() {
+    return this ->comment_length;
 }
 
 string Order::get_comment() {
+
     string temp;
-    for(unsigned int i = 0; i < sizeof(comment); i++) {
-        temp += comment[i];
-    }
+    temp = comment;
+
     return temp;
 }
 
