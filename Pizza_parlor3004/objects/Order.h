@@ -46,7 +46,7 @@ public:
 	//Returns true if the order is paid
 	bool get_ready();
 	//Returns true if order is ready
-	bool set_ready();
+	void set_ready();
 	//set order status to ready
     bool get_sent();
 	//Returns true if order should be sent

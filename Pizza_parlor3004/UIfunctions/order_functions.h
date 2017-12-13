@@ -39,7 +39,7 @@ void toppings_to_special(Pizza& pizza, PizzaHandler& pizzahandler, ToppingsHandl
 //to indicate that he does not wish to enter more toppings.
 //Returns true if the the pizza with the toppings added should be added to the order
 //false otherwise.
-void add_pizzas(Order& order, OrderHandler& orderhandler, PizzaHandler& pizzahandler, ToppingsHandler& toppingshandler, PizzaBottomHandler& bottomhandler);
+bool add_pizzas(Order& order, OrderHandler& orderhandler, PizzaHandler& pizzahandler, ToppingsHandler& toppingshandler, PizzaBottomHandler& bottomhandler);
 //Prompts the user to select the type of pizza (menu or special) and allows
 //the user to repeat the action provided the maximum order count has not been reached.
 void add_menu_pizza(Order& order, PizzaHandler& pizzahandler, PizzaBottomHandler& bottomhandler);

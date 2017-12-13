@@ -9,6 +9,7 @@
 #include "OrderHandler.h"
 #include "PizzaHandler.h"
 #include "ToppingsHandler.h"
+#include "SideOrdersHandler.h"
 
 using namespace std;
 
@@ -25,6 +26,8 @@ class ManagerUI {
         //Displays the menu for adding and removing pizza sizes
         bool menu_pizza_menu(bool run, bool& continueRun);
         //Displays the menu for adding and removing pizzas from the menu
+        bool side_order_menu(bool run, bool& continueRun);
+        //menu for side orders
         char lower(char instr);
         //takes in a character and makes it
         //lower case (A -> a)
@@ -36,6 +39,7 @@ class ManagerUI {
         PizzaHandler pizzahandler;
         ToppingsHandler toppingshandler;
         PizzaBottomHandler bottomhandler;
+        SideOrdersHandler sideorderhandler;
 
 };
 

@@ -34,6 +34,7 @@ bool new_order(OrderHandler& orderhandler, PizzaHandler& pizzahandler, ToppingsH
     Order order;
     string select;
     bool cont = 1;
+    bool skip = 1;
 
     orderhandler.generate_order_no(order);
     cout << "Order #" << order.get_order_number() << endl;
@@ -41,33 +42,35 @@ bool new_order(OrderHandler& orderhandler, PizzaHandler& pizzahandler, ToppingsH
     add_pizzas(order, orderhandler, pizzahandler, toppingshandler, bottomhandler);
     clear();
 
-    sent_or_picked_up(order);
+    if(!skip) {
+        sent_or_picked_up(order);
 
-    comment(order);
+        comment(order);
 
-    print_order(order);
-    if (order.get_order_count() > 0) {
-        do{
-            try{
-                cout << "Is this the correct order? (y/n) ";
-                getline(cin, select, '\n');
-                select = tolower(select[0]);
-                validate_bool_question(select);
-                cont = 0;
+        print_order(order);
+        if (order.get_order_count() > 0) {
+            do{
+                try{
+                    cout << "Is this the correct order? (y/n) ";
+                    getline(cin, select, '\n');
+                    select = tolower(select[0]);
+                    validate_bool_question(select);
+                    cont = 0;
+                }
+                catch(InvalidBoolException e) {
+                    cont = 1;
+                    cout << e.get_err() << endl;
+                }
+            } while(cont);
+
+            if (select == "y") {
+                orderhandler.add_order(order);
+                return false;
+            } else {
+                cout << "Order was not added" << endl;
+                    return true;
+
             }
-            catch(InvalidBoolException e) {
-                cont = 1;
-                cout << e.get_err() << endl;
-            }
-        } while(cont);
-
-        if (select == "y") {
-            orderhandler.add_order(order);
-            return false;
-        } else {
-            cout << "Order was not added" << endl;
-                return true;
-
         }
 
     }
@@ -120,7 +123,7 @@ void set_delivery_addresse(Order& order) {
     order.set_addresse(input);
 }
 
-void add_pizzas(Order& order, OrderHandler& orderhandler, PizzaHandler& pizzahandler, ToppingsHandler& toppingshandler, PizzaBottomHandler& bottomhandler) {
+bool add_pizzas(Order& order, OrderHandler& orderhandler, PizzaHandler& pizzahandler, ToppingsHandler& toppingshandler, PizzaBottomHandler& bottomhandler) {
 
     PizzaType pizzatype;
     char run = '\0';
@@ -162,7 +165,10 @@ void add_pizzas(Order& order, OrderHandler& orderhandler, PizzaHandler& pizzahan
             } while(cont);
 
         } while(cont_menu);
+    } else {
+        return 0;
     }
+    return 1;
 }
 
 PizzaType menu_or_special(char& run) {

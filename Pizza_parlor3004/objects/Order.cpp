@@ -117,7 +117,7 @@ void Order::set_paid() {
     this -> order_paid = true;
 }
 
-bool Order::set_ready() {
+void Order::set_ready() {
     this -> order_ready = true;
 }
 

@@ -14,7 +14,8 @@ bool ManagerUI::manager_menu(bool run, bool& continueRun) {
             cout << "----Manager Portal----" << endl;
             cout << "(I) Pizza information" << endl;
             cout << "(T) Manage Toppings" << endl;
-            cout << "(S) Manage pizza bottom" << endl;
+            cout << "(P) Manage pizza bottom" << endl;
+            cout << "(S) Manage side orders" << endl;
             cout << "(N) Make a new Pizza" << endl;
             cout << "(B) Go back to Login portal" << endl;
             cout << "(q) Quit" << endl;
@@ -45,10 +46,19 @@ bool ManagerUI::manager_menu(bool run, bool& continueRun) {
                 ///To topping menu
                 break;
 
-            case 's':
+            case 'p':
                 run = 0;
                 do{
                     run = size_menu(run, continueRun);
+                } while(continueRun);
+                continueRun = 1;
+                ///To size menu
+                break;
+
+            case 's':
+                run = 0;
+                do{
+                    run = side_order_menu(run, continueRun);
                 } while(continueRun);
                 continueRun = 1;
                 ///To size menu
@@ -275,6 +285,7 @@ bool ManagerUI::menu_pizza_menu(bool run, bool& continueRun) {
 
         cout << "----Pizza menu portal----" << endl;
         cout << "(N) Create a new pizza" << endl;
+        cout << "(S) See all pizzas on menu" << endl;
         cout << "(R) Remove pizza" << endl;
         cout << "(B) Go back" << endl;
         cout << "(q) Quit" << endl;
@@ -291,6 +302,61 @@ bool ManagerUI::menu_pizza_menu(bool run, bool& continueRun) {
             clear();
             cout << "Create a new pizza" << endl;
             make_new_menu_pizza(pizzahandler, toppingshandler);
+
+            continueRun = 1;
+            return 0;
+            break;
+
+        case 'r':
+            clear();
+            cout << "Remove a pizza from menu" << endl;
+
+            continueRun = 1;
+            return 0;
+            break;
+
+        case 'b':
+            continueRun = 0;
+            return 0;
+            break;
+
+        case 'q':
+            terminate();
+            continueRun = 1;
+            return 0;
+            break;
+        }
+        throw(InvalidInputException());
+    }
+    catch(InvalidInputException e) {
+        continueRun = 1;
+        return 1;
+    }
+}
+
+bool ManagerUI::side_order_menu(bool run, bool& continueRun) {
+try {
+        clear();
+
+        cout << "----Pizza menu portal----" << endl;
+        cout << "(N) Create a new side order" << endl;
+        cout << "(S) Dee all side orders" << endl;
+        cout << "(R) Remove side order" << endl;
+        cout << "(B) Go back" << endl;
+        cout << "(q) Quit" << endl;
+        if(run){
+            cout << "Incorrect input!" << endl;
+        }
+        cout << ": ";
+
+        cin >> select;
+        select = lower(select);
+
+        switch (select) {
+        case 'n':
+            clear();
+            cout << "Create a new side order" << endl;
+            make_new_side_order(sideorderhandler);
 
             continueRun = 1;
             return 0;
