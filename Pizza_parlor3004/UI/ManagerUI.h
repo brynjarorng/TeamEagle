@@ -3,17 +3,12 @@
 
 #include <stdlib.h>
 #include <iostream>
-#include "InvalidInputException.h"
-#include "order_functions.h"
-#include "print_functions.h"
-#include "OrderHandler.h"
-#include "PizzaHandler.h"
-#include "ToppingsHandler.h"
-#include "SideOrdersHandler.h"
+#include "UITemplate.h"
+
 
 using namespace std;
 
-class ManagerUI {
+class ManagerUI: public UITemplate {
     public:
         ManagerUI();
         bool manager_menu(bool run, bool& continueRun);
@@ -28,18 +23,17 @@ class ManagerUI {
         //Displays the menu for adding and removing pizzas from the menu
         bool side_order_menu(bool run, bool& continueRun);
         //menu for side orders
+
         char lower(char instr);
         //takes in a character and makes it
         //lower case (A -> a)
         void terminate();
         //stop the program
 
+
     private:
         char select;
-        PizzaHandler pizzahandler;
-        ToppingsHandler toppingshandler;
-        PizzaBottomHandler bottomhandler;
-        SideOrdersHandler sideorderhandler;
+
 
 };
 

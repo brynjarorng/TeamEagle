@@ -28,7 +28,9 @@ bool PhoneClerkUI::phone_menu(bool run, bool& continueRun) {
         switch (select) {
         case 'n':
             clear();
+
             cout << "New order" << endl;
+
             new_order(orderhandler, pizzahandler, toppingshandler, bottomhandler);
 
             continueRun = 1;

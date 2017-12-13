@@ -39,6 +39,7 @@ bool LoginUI::login_portal(bool run) {
 
         case 'b':
             run = 0;
+            choose_location();
             do{
                 run = bUI.baker_menu(run, continueRun);
             } while(continueRun);
@@ -56,6 +57,7 @@ bool LoginUI::login_portal(bool run) {
             break;
 
         case 's':
+            choose_location();
             run = 0;
             do{
                 run = sUI.store_menu(run, continueRun);
@@ -66,6 +68,7 @@ bool LoginUI::login_portal(bool run) {
 
         case 'c':
             run = 0;
+            choose_location();
             do{
                 run = cUI.customer_menu(run, continueRun);
             } while(continueRun);
@@ -110,3 +113,5 @@ char LoginUI::lower(char instring) {
     instring = tolower(instring);
     return instring;
 }
+
+

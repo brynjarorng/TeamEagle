@@ -1,36 +1,30 @@
 #include "LocationRepo.h"
 
+
 LocationRepo::LocationRepo()
 {
     //ctor
 }
 
-LocationRepo::~LocationRepo()
-{
-    //dtor
-}
-/*
-
-void LocationRepo::write() {
+void LocationRepo::write(Location location) {
 
     ofstream fout("locations.dat", ios::binary|ios::app);
-	fout.write((char*)(&name), sizeof(char)*);
+	fout.write((char*)(&location), sizeof(Location));
 	fout.close();
 }
 
-vector<string> LocationRepo::read() {
+vector<Location> LocationRepo::read() {
 
-	ifstream fin("location.dat", ios::binary);
-	vector<To> return_v;
+	ifstream fin("locations.dat", ios::binary);
+	vector<Location> return_v;
 
 	if (fin.is_open()) {
 		fin.seekg(0, fin.end);
-		int record_count = fin.tellg() / sizeof(Toppings);
+		int record_count = fin.tellg() / sizeof(Location);
 		fin.seekg(0, fin.beg);
 
-		list_count = record_count;
-		vector<Toppings> temp (record_count);
-		fin.read((char*)(&temp[0]), sizeof(Toppings)*record_count);
+		vector<Location> temp (record_count);
+		fin.read((char*)(&temp[0]), sizeof(Location)*record_count);
 
 		fin.close();
 		return_v = temp;
@@ -38,14 +32,10 @@ vector<string> LocationRepo::read() {
     return return_v;
 }
 
-void ToppingsRepo::overwrite(vector<Toppings> toppings) {
+void LocationRepo::overwrite(vector<Location> locations) {
 
-    ofstream fout("toppings.dat", ios::binary);
-    unsigned int file_size = toppings.size();
-	//fout.write((char*)(&file_size), sizeof(unsigned));
-	fout.write((char*)(&toppings[0]), sizeof(Toppings)*toppings.size());
+    ofstream fout("locations.dat", ios::binary);
+	fout.write((char*)(&locations[0]), sizeof(Location)*locations.size());
 
 	fout.close();
 }
-
-*/

@@ -4,12 +4,12 @@
 
 #include <stdlib.h>
 #include <iostream>
-#include "InvalidInputException.h"
-#include "print_functions.h"
+
+#include "UITemplate.h"
 
 using namespace std;
 
-class CustomerUI {
+class CustomerUI: public UITemplate {
     public:
         CustomerUI();
         bool customer_menu(bool run, bool& continueRun);

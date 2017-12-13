@@ -3,16 +3,11 @@
 
 #include <stdlib.h>
 #include <iostream>
-#include "order_functions.h"
-#include "print_functions.h"
-#include "OrderHandler.h"
-#include "PizzaHandler.h"
-#include "ToppingsHandler.h"
-#include "PizzaBottomHandler.h"
-#include "InvalidInputException.h"
+#include "UITemplate.h"
+
 using namespace std;
 
-class PhoneClerkUI {
+class PhoneClerkUI : public UITemplate{
     public:
         PhoneClerkUI();
         bool phone_menu(bool run, bool& continueRun);
@@ -23,13 +18,9 @@ class PhoneClerkUI {
         void terminate();
         //stop the program
 
+
     private:
         char select;
-
-        OrderHandler orderhandler;
-        PizzaHandler pizzahandler;
-        ToppingsHandler toppingshandler;
-        PizzaBottomHandler bottomhandler;
 };
 
 #endif // PHONECLERKUI_H

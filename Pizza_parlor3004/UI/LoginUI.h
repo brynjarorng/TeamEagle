@@ -9,13 +9,10 @@
 #include "PhoneClerkUI.h"
 #include "StoreClerkUI.h"
 #include "CustomerUI.h"
-#include "InvalidInputException.h"
-#include "print_functions.h"
-
 
 using namespace std;
 
-class LoginUI {
+class LoginUI: public UITemplate {
     public:
         LoginUI();
         bool login_portal(bool run);
@@ -23,7 +20,10 @@ class LoginUI {
         ///Implement an SSN based login system?
 
 
+
+
     private:
+
         char select;
         bool continueRun;
         ManagerUI mUI;
@@ -36,6 +36,9 @@ class LoginUI {
         //lower case (A -> a)
         void terminate();
         //stop the program
+
+
+
 };
 
 #endif // LOGINUI_H

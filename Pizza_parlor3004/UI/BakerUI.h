@@ -4,13 +4,12 @@
 #include <iostream>
 #include <stdlib.h>
 #include <iostream>
-#include "baker_functions.h"
-#include "InvalidInputException.h"
-#include "print_functions.h"
+#include "UITemplate.h"
+
 
 using namespace std;
 
-class BakerUI {
+class BakerUI: public UITemplate {
     public:
         BakerUI();
         bool baker_menu(bool run, bool& continueRun);
@@ -21,7 +20,6 @@ class BakerUI {
         //lower case (A -> a)
         void terminate();
         //stop the program
-
 
     private:
 

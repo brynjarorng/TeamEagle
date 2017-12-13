@@ -422,6 +422,23 @@ void make_new_side_order(SideOrdersHandler& sideorderhandler) {
 
     sideorderhandler.make_side_order(name, price);
 }
+void add_location(LocationHandler& lochandler) {
+    string name;
+    cout << "Name: " << endl;
+    cin.ignore();
+    getline(cin, name);
+    Location location;
+    location.set_name(name);
+    lochandler.add_location(location);
+}
+
+void print_locations(LocationHandler& lochandler) {
+    vector<Location> locations = lochandler.get_locations();
+    for(unsigned int i = 0; i < locations.size(); i++) {
+
+        cout << locations.at(i).get_name() << endl;
+    }
+}
 
 
 

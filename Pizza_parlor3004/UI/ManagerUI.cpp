@@ -16,7 +16,9 @@ bool ManagerUI::manager_menu(bool run, bool& continueRun) {
             cout << "(T) Manage Toppings" << endl;
             cout << "(P) Manage pizza bottom" << endl;
             cout << "(S) Manage side orders" << endl;
+            cout << "(L) Add new location" << endl;
             cout << "(N) Make a new Pizza" << endl;
+
             cout << "(B) Go back to Login portal" << endl;
             cout << "(q) Quit" << endl;
             if(run){
@@ -71,6 +73,14 @@ bool ManagerUI::manager_menu(bool run, bool& continueRun) {
                 } while(continueRun);
                 continueRun = 1;
                 ///To create a new pizza menu
+                break;
+
+            case 'l':
+                run = 0;
+                print_locations(locationhandler);
+                add_location(locationhandler);
+
+                continueRun = 1;
                 break;
 
             case 'b':
