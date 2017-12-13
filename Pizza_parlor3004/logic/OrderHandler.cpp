@@ -41,20 +41,32 @@ bool OrderHandler::max_order_count(Order order) {
     return false;
 }
 
-bool OrderHandler::paid(int order_number) {
+void OrderHandler::paid(int order_number) {
     got_list();
-    bool found = false;
+
+    if(!isdigit(order_number)) {
+        throw InvalidAlphaNumException();
+    }
 
     for (unsigned int i = 0; i < orders.size(); i++) {
-                    ///Makes it here once
         if (this ->orders[i].get_order_number() == order_number) {
             this ->orders[i].set_paid();
             order_repo.overwrite(orders, location);
-            found = true;
         }
-
     }
-    return found;
+    throw InvalidNumberException();
+}
+
+void OrderHandler::delivered(int order_number) {
+    got_list();
+
+    for (unsigned int i = 0; i < orders.size(); i++) {
+        if (this ->orders[i].get_order_number() == order_number) {
+            this ->orders[i].set_delivered();
+            order_repo.overwrite(orders, location);
+        }
+    }
+    throw InvalidNumberException();
 }
 
 vector<Order> OrderHandler::get_orders() {

@@ -15,7 +15,7 @@ public:
 	//Marks the order as delivered.
 	void set_paid();
 	//Marks order paid
-	bool delivered();
+	bool get_delivered();
 	//The return value is TRUE if the pizza is marked delivered
 	//FALSE otherwise.
 	friend ostream& operator <<(ostream& outs, Order& order);
@@ -62,9 +62,9 @@ public:
 	//set the comment
 	int get_comment_length();
 private:
-	static const int MAX_ORDER_SIZE = 100;
+	static const int MAX_ORDER_SIZE = 20;
     //
-    static const int MAX_COMMENT_LENGTH = 150;
+    static const int MAX_COMMENT_LENGTH = 50;
 	bool order_ready;
     //True if all pizzas are ready in order.
 	bool order_delivered;

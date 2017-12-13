@@ -51,11 +51,11 @@ private:
 	double price;
 	PizzaBottom bottom;
 
-	static const int MAX_NAME_SIZE = 50;
+	static const int MAX_NAME_SIZE = 20;
 	char name[MAX_NAME_SIZE];
 	int name_count;
 
-	static const int MAX_TOPPINGS = 80;
+	static const int MAX_TOPPINGS = 20;
 	Toppings topping[MAX_TOPPINGS];
     int toppingcount;
     PizzaStatus status;

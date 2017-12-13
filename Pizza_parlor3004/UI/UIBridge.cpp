@@ -17,16 +17,22 @@ void UIBridge::choose_location() {
             cout << "[" << i + 1  << "]\t" << locations.at(i).get_name() << endl;
         }
         string inp;
-        cout << endl << "Choose a location from the list by typing ";
+        cout << endl << "Choose a location from the list (number): ";
         cin >> inp;
-        validate_int(inp);
-        if(stoi(inp) > 0 && stoi(inp) <= locations.size()) {
+        try{
+            validate_int(inp);
+            if((unsigned)stoi(inp) > 0 && (unsigned)stoi(inp) <= locations.size()) {
             loc = locations.at(stoi(inp) - 1).get_name();
             valid = true;
         }
         else {
             cout << "Input does not correspond a location" << endl;
         }
+        }
+        catch(InvalidNumberException) {
+            cout << "Not a number" << endl;
+        }
+
     }
     orderhandler.set_location(loc);
 }

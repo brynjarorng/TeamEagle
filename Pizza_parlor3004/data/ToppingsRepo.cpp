@@ -67,8 +67,6 @@ vector<Toppings> ToppingsRepo::read() {
 void ToppingsRepo::overwrite(vector<Toppings> toppings) {
 
     ofstream fout("toppings.dat", ios::binary);
-    unsigned int file_size = toppings.size();
-	//fout.write((char*)(&file_size), sizeof(unsigned));
 	fout.write((char*)(&toppings[0]), sizeof(Toppings)*toppings.size());
 
 	fout.close();

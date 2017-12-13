@@ -23,7 +23,7 @@ void Order::set_delivered() {
 	this ->order_delivered = true;
 }
 
-bool Order::delivered() {
+bool Order::get_delivered() {
 
 	return this ->order_delivered;
 }

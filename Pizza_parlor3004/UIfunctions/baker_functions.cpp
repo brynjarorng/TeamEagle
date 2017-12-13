@@ -11,7 +11,7 @@ void print_pizza_baking_list() {
     OrderHandler orderhandler;
     vector<Order> orders = orderhandler.get_orders();
     for (int i = 0; i < orderhandler.get_order_count(); i++) {
-        if (!orders.at(i).delivered()) {
+        if (!orders.at(i).get_delivered()) {
             cout << "Order #" << orders.at(i).get_order_number() << endl;
             print_pizzas_in_order(orders.at(i));
             pprint_lines(10);

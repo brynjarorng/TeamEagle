@@ -15,7 +15,8 @@ bool StoreClerkUI::store_menu(bool run, bool& continueRun) {
         cout << "(A) See all orders in progress" << endl;
         cout << "(M) See all pizzas on menu" << endl;
         cout << "(T) See all toppings" << endl;
-        cout << "(P) Mark orders paid/picked up" << endl;
+        cout << "(P) Mark orders paid" << endl;
+        cout << "(D) Mark orders delivered" << endl;
         cout << "(L) See all old orders today" << endl;
         cout << "(B) Go back to login portal" << endl;
         cout << "(q) Quit" << endl;
@@ -75,7 +76,16 @@ bool StoreClerkUI::store_menu(bool run, bool& continueRun) {
 
         case 'p':
             clear();
-            cout <<  "Mark orders paid or picked up" << endl;
+            cout <<  "Mark orders paid"<< endl;
+            mark_paid(orderhandler);
+
+            continueRun = 1;
+            return 0;
+            break;
+
+        case 'd':
+            clear();
+            cout <<  "Mark orders paid"<< endl;
             mark_delivered(orderhandler);
 
             continueRun = 1;

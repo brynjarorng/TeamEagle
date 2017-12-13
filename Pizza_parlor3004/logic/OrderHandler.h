@@ -29,7 +29,10 @@ public:
     bool max_order_count(Order order);
     //Return value is TRUE if the maximum order has been reached
     //False otherwise.
-    bool paid(int order_number);
+    void paid(int order_number);
+    //The order with the corresponding order_number is marked as paid
+    //in the current order list
+    void delivered(int order_number);
     //The order with the corresponding order_number is marked as delivered
     //in the current order list
     vector<Order> get_orders();

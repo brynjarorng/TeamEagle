@@ -9,12 +9,14 @@ InvalidAddresseException::InvalidAddresseException(int err){
 }
 
 string InvalidAddresseException::get_err() {
-    string message;
+    string message = "";
     if(error == 1) {
         message = "Input was too long!";
-        return message;
     } else if(error == 2) {
         message = "Invalid input!";
-        return message;
     }
+    else {
+        message = "Error not defined";
+    }
+    return message;
 }

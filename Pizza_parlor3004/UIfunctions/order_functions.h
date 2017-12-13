@@ -57,6 +57,8 @@ void print_order(Order order);
 //Prints the reference instance of order to the screen.
 void mark_delivered(OrderHandler& orderhandler);
 //Lets the user mark an order delivered.
+void mark_paid(OrderHandler& orderhandler);
+//Lets the user mark an order paid.
 void print_orders(Order_Status status, OrderHandler& orderhandler);
 //status should be delivered for printing only delivered pizzas, not_delivered
 //for printing all pizzas but those delivered and all for printing all pizzas.

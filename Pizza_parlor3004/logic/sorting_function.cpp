@@ -34,8 +34,8 @@ vector <Toppings> toppings_price_sort_desc() {
     int max;
     Toppings temp;
     max = 0;
-    for (int i = 0; i < sort.size() - 1; i++) {
-        for (int j = i + 1; j < sort.size() + 1; j++) {
+    for (unsigned int i = 0; i < sort.size() - 1; i++) {
+        for (unsigned int j = i + 1; j < sort.size() + 1; j++) {
             if (sort[j].get_price() > sort[max].get_price()) {
                 max = j;
             }
@@ -51,7 +51,7 @@ vector <Toppings> toppings_price_sort_desc() {
 string to_lower(string in) {
 
 
-    for (int i = 0; i < in.size(); i++) {
+    for (unsigned int i = 0; i < in.size(); i++) {
         if ( isupper(in[i])) {
             in[i] = tolower(in[i]);
         }
@@ -93,9 +93,9 @@ vector <Toppings> toppings_price_sort_asc() {
     int min;
     Toppings temp;
 
-    for (int i = 0; i < sort.size() - 1; i++) {
+    for (unsigned int i = 0; i < sort.size() - 1; i++) {
         min = i;
-        for (int j = i + 1; j < sort.size(); j++) {
+        for (unsigned int j = i + 1; j < sort.size(); j++) {
             if (sort[j].get_price() < sort[min].get_price()) {
                 min = j;
             }
@@ -117,14 +117,13 @@ bool one_is_greater(string one, string two) {
 
 vector <Toppings> toppings_alph_sort_asc() {
 
-    char letter_one, letter_two;
 
     ToppingsRepo repo;
     vector<Toppings> sort = repo.read();
     Toppings temp;
 
-    for (int i = 1; i < sort.size(); i++) {
-        for (int j = 0; j < sort.size() - i; j++) {
+    for (unsigned int i = 1; i < sort.size(); i++) {
+        for (unsigned int j = 0; j < sort.size() - i; j++) {
             if ( !one_is_greater(sort[j].get_name(), sort[j + 1].get_name())) {
                 temp = sort[j];
                 sort[j] = sort[j + 1];
@@ -137,13 +136,12 @@ vector <Toppings> toppings_alph_sort_asc() {
 
 vector <Toppings> toppings_alph_sort_desc() {
 
-    char letter_one, letter_two;
     ToppingsRepo repo;
     vector<Toppings> sort = repo.read();
     Toppings temp;
 
-    for (int i = 1; i < sort.size(); i++) {
-        for (int j = 0; j < sort.size() - i; j++) {
+    for (unsigned int i = 1; i < sort.size(); i++) {
+        for (unsigned int j = 0; j < sort.size() - i; j++) {
             if ( one_is_greater(sort[j].get_name(), sort[j + 1].get_name())) {
                 temp = sort[j];
                 sort[j] = sort[j + 1];
@@ -185,9 +183,9 @@ vector <Pizza> pizza_price_sort_desc() {
     int min;
     Pizza temp;
 
-    for (int i = 0; i < sort.size() - 1; i++) {
+    for (unsigned int i = 0; i < sort.size() - 1; i++) {
         min = i;
-        for (int j = i + 1; j < sort.size(); j++) {
+        for (unsigned int j = i + 1; j < sort.size(); j++) {
             if (sort[j].get_price() < sort[min].get_price()) {
                 min = j;
             }
@@ -205,8 +203,8 @@ vector <Pizza> pizza_price_sort_asc() {
     int max;
     Pizza temp;
     max = 0;
-    for (int i = 0; i < sort.size() - 1; i++) {
-        for (int j = i + 1; j < sort.size(); j++) {
+    for (unsigned int i = 0; i < sort.size() - 1; i++) {
+        for (unsigned int j = i + 1; j < sort.size(); j++) {
             if (sort[j].get_price() > sort[max].get_price()) {
                 max = j;
             }
@@ -221,13 +219,12 @@ vector <Pizza> pizza_price_sort_asc() {
 
 vector <Pizza> pizza_alph_sort_desc() {
 
-    char letter_one, letter_two;
     PizzaRepo repo;
     vector<Pizza> sort = repo.read();
     Pizza temp;
 
-    for (int i = 1; i < sort.size(); i++) {
-        for (int j = 0; j < sort.size() - i; j++) {
+    for (unsigned int i = 1; i < sort.size(); i++) {
+        for (unsigned int j = 0; j < sort.size() - i; j++) {
             if ( one_is_greater(sort[j].get_name(), sort[j + 1].get_name())) {
                 temp = sort[j];
                 sort[j] = sort[j + 1];
@@ -239,14 +236,12 @@ vector <Pizza> pizza_alph_sort_desc() {
 }
 vector <Pizza> pizza_alph_sort_asc() {
 
-    char letter_one, letter_two;
-
     PizzaRepo repo;
     vector<Pizza> sort = repo.read();
     Pizza temp;
 
-    for (int i = 1; i < sort.size(); i++) {
-        for (int j = 0; j < sort.size() - i; j++) {
+    for (unsigned int i = 1; i < sort.size(); i++) {
+        for (unsigned int j = 0; j < sort.size() - i; j++) {
             if ( !one_is_greater(sort[j].get_name(), sort[j + 1].get_name())) {
                 temp = sort[j];
                 sort[j] = sort[j + 1];

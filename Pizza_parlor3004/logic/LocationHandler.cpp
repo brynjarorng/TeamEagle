@@ -36,7 +36,7 @@ bool LocationHandler::validate_location_name(string location) {
 
 bool LocationHandler::validate_duplicate(string location) {
     got_list();
-    for(int i = 0; i < locations.size(); i++) {
+    for(unsigned int i = 0; i < locations.size(); i++) {
         if(locations.at(i).get_name() == location) {
             return false;
         }

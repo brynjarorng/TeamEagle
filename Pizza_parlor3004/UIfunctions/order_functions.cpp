@@ -11,13 +11,13 @@ void print_orders(Order_Status status, OrderHandler& orderhandler) {
     for (int i = 0; i < ordercount; i ++) {
        switch (status) {
             case delivered:
-                 if (orderhandler.get_orders().at(i).delivered()) {
+                 if (orderhandler.get_orders().at(i).get_delivered()) {
 
                      print_order(orderhandler.get_orders().at(i));
                  }
                  break;
             case not_delivered:
-                 if (!orderhandler.get_orders().at(i).delivered()) {
+                 if (!orderhandler.get_orders().at(i).get_delivered()) {
 
                      print_order(orderhandler.get_orders().at(i));
                  }
@@ -376,19 +376,19 @@ void print_order(Order order) {
     cout << endl;
 }
 
-void print_current_orders(int& refresh, string next, OrderHandler& orderhandler) {
+void print_current_orders(int& refresh, string next, OrderHandler& orderhandler, bool skipdelivered, bool skippaid) {
     int temp = refresh;
-    int ordercount = orderhandler.get_order_count();
     int next_num = 0;
     Order temp_order;
+    vector<Order> orders = orderhandler.get_orders();
 
-    if(ordercount == 1) {
+    if(orders.size() == 1) {
         next_num = 1;
         temp = 0;
         refresh = 0;
 
     } else {
-        if(next == "n" && refresh < ordercount) {
+        if(next == "n" && refresh < (int)orders.size()) {
             next_num = 2;
         } else if(next == "n") {
             refresh = 0;
@@ -402,17 +402,30 @@ void print_current_orders(int& refresh, string next, OrderHandler& orderhandler)
     }
 
 
-
-    for (refresh; refresh < temp + next_num; refresh++) {
-        if(refresh == ordercount) {
-            break;
+    if(skippaid) {
+        for (; refresh < temp + next_num; refresh++) {
+            if(refresh == orders.size()) {
+                break;
+            }
+                if(!orders.at(refresh).get_paid()) {
+                    print_order(orders.at(refresh));
+                }
         }
-            print_order(orderhandler.get_orders().at(refresh));
     }
 
+    else if(skipdelivered) {
+        for (refresh; refresh < temp + next_num; refresh++) {
+            if(refresh == orders.size()) {
+                break;
+            }
+                if(!orders.at(refresh).get_delivered()) {
+                    print_order(orders.at(refresh));
+                }
+        }
+    }
 }
 
-void mark_delivered(OrderHandler& orderhandler) {
+void mark_paid(OrderHandler& orderhandler) {
 
     int remove_order_nr;
     string remove_order;
@@ -424,8 +437,8 @@ void mark_delivered(OrderHandler& orderhandler) {
         try{
             clear();
             cont = 1;
-            print_current_orders(first_digit, next, orderhandler);
-            cout << "Input number order to mark ready for pickup (n for next page, q to quit): ";
+            print_current_orders(first_digit, next, orderhandler, true, true);
+            cout << "Input number order to mark delivered (n for next page, q to quit): ";
             cin >> ws;
             getline(cin, remove_order, '\n');
 
@@ -437,10 +450,9 @@ void mark_delivered(OrderHandler& orderhandler) {
             if(isdigit(remove_order[0])) {
                 next = "p";
                 remove_order_nr = stoi(remove_order);
-                if (!orderhandler.paid(remove_order_nr)) {
-                    cout << "Order number not on list!" << endl;
-                }
-            } else if(remove_order == "q") {
+                orderhandler.paid(remove_order_nr);
+            }
+            else if(remove_order == "q") {
                 cont = 0;
             } else if(remove_order == "n") {
                 next = "n";
@@ -456,9 +468,63 @@ void mark_delivered(OrderHandler& orderhandler) {
             cout << "Input was not valid" << endl;
             pause_screen();
         }
+        catch(InvalidNumberException e) {
+            cout << "Order number not on list!" << endl;
+        }
+    } while(cont);
+}
+
+void mark_delivered(OrderHandler& orderhandler) {
+
+    int remove_order_nr;
+    string remove_order;
+    int first_digit = 0;
+    bool cont = 1;
+    string next = "n";
+
+    do{
+        try{
+            clear();
+            cont = 1;
+            print_current_orders(first_digit, next, orderhandler, false, true);
+            cout << "Input number order to mark delivered (n for next page, q to quit): ";
+            cin >> ws;
+            getline(cin, remove_order, '\n');
+
+            for(unsigned int i = 0; i < remove_order.length(); i++) {
+                remove_order[i] = tolower(remove_order[i]);
+            }
+            validate_int_p(remove_order);
+
+            if(isdigit(remove_order[0])) {
+                next = "p";
+                remove_order_nr = stoi(remove_order);
+                orderhandler.delivered(remove_order_nr);
+            }
+            else if(remove_order == "q") {
+                cont = 0;
+            } else if(remove_order == "n") {
+                next = "n";
+            } else {
+                next = "p";
+                system("PAUSE");
+            }
+        }
+        catch(InvalidAlphaNumException e) {
+            clear();
+            cont = 1;
+            next = "p";
+            cout << "Input was not valid" << endl;
+            pause_screen();
+        }
+        catch(InvalidNumberException e) {
+            cout << "Order number not on list!" << endl;
+        }
     } while(cont);
 
 }
+
+
 
 void print_lines (int line_count) {
     for (int i = 0; i <line_count; i++) {
