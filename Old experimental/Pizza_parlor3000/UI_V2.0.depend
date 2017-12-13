@@ -1,0 +1,302 @@
+# depslib dependency file v1.0
+1512482834 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\main.cpp
+	<iostream>
+	"LoginUI.h"
+
+1512484232 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\loginui.h
+	<iostream>
+	<stdlib.h>
+	<vector>
+	"ManagerUI.h"
+	"BakerUI.h"
+	"PhoneClerkUI.h"
+	"StoreClerkUI.h"
+	"CustomerUI.h"
+	"InvalidInputException.h"
+
+1512486731 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\managerui.h
+	<stdlib.h>
+	<iostream>
+	"InvalidInputException.h"
+
+1512484501 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\bakerui.h
+	<iostream>
+	<stdlib.h>
+	<iostream>
+	"InvalidInputException.h"
+
+1512484505 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\phoneclerkui.h
+	<stdlib.h>
+	<iostream>
+	"InvalidInputException.h"
+
+1512484511 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\storeclerkui.h
+	<stdlib.h>
+	<iostream>
+	"InvalidInputException.h"
+
+1512484514 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\customerui.h
+	<stdlib.h>
+	<iostream>
+	"InvalidInputException.h"
+
+1512488229 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\managerui.cpp
+	"ManagerUI.h"
+
+1512393964 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\uitemplate.cpp
+	"UITemplate.h"
+
+1512393964 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\uitemplate.h
+
+1512410764 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\loginui.cpp
+	"LoginUI.h"
+
+1512049069 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\/..\main.cpp
+	<iostream>
+	"ManagerUI.h"
+
+1512407585 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\main.cpp
+	<iostream>
+	"LoginUI.h"
+
+1512407585 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\/.\main.cpp
+	<iostream>
+	"LoginUI.h"
+
+1512410747 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\/ui\loginui.h
+	<iostream>
+	<stdlib.h>
+	<vector>
+	"ManagerUI.h"
+	"BakerUI.h"
+	"PhoneClerkUI.h"
+	"StoreClerkUI.h"
+	"CustomerUI.h"
+
+1512412124 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\\ui\managerui.h
+	"/UI/LoginUI.h"
+
+1512410919 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\\ui\bakerui.h
+	"LoginUI.h"
+	<iostream>
+
+1512410747 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\\ui\loginui.h
+	<iostream>
+	<stdlib.h>
+	<vector>
+	"ManagerUI.h"
+	"BakerUI.h"
+	"PhoneClerkUI.h"
+	"StoreClerkUI.h"
+	"CustomerUI.h"
+
+1512408525 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\\ui\phoneclerkui.h
+	"LoginUI.h"
+
+1512407495 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\\ui\storeclerkui.h
+	"LoginUI.h"
+
+1512407953 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\\ui\customerui.h
+	"LoginUI.h"
+
+1512484486 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\bakerui.cpp
+	"BakerUI.h"
+
+1512485724 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\customerui.cpp
+	"CustomerUI.h"
+
+1512488191 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\loginui.cpp
+	"LoginUI.h"
+
+1512486636 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\phoneclerkui.cpp
+	"PhoneClerkUI.h"
+
+1512485789 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\ui\storeclerkui.cpp
+	"StoreClerkUI.h"
+
+1512482649 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\exceptions\invalidinputexceptionlogin.cpp
+	"InvalidInputExceptionLogin.h"
+
+1512482658 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\exceptions\invalidinputexceptionlogin.h
+	<string>
+
+1512483240 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\exceptions\invalidinputexception.cpp
+	"InvalidInputException.h"
+
+1512483134 c:\haskoli\verklegt1\pizzaproj\teameagle\pizzaorderingsystem\ui_v2.0\exceptions\invalidinputexception.h
+	<string>
+
+1512554086 source:c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\data\orderrepo.cpp
+	"OrderRepo.h"
+	<cstdlib>
+
+1512554086 c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\data\orderrepo.h
+	"Order.h"
+	<fstream>
+	<string>
+
+1512565178 c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\objects\order.h
+	"Pizza.h"
+	"PizzaType.h"
+
+1512554086 c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\objects\pizza.h
+	"PizzaStatus.h"
+	"Toppings.h"
+	<string.h>
+
+1512554086 c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\datatypes\pizzastatus.h
+
+1512554086 c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\objects\toppings.h
+	<string>
+	<iostream>
+	<cstring>
+
+1512554086 c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\datatypes\pizzatype.h
+
+1512654018 source:c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\data\pizzarepo.cpp
+	"PizzaRepo.h"
+
+1512554086 c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\data\pizzarepo.h
+	"Pizza.h"
+	<fstream>
+
+1512554086 source:c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\data\toppingsrepo.cpp
+	"ToppingsRepo.h"
+
+1512554086 c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\data\toppingsrepo.h
+	"Toppings.h"
+	<fstream>
+	<vector>
+
+1512554086 source:c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\exceptions\invalidinputexception.cpp
+	"InvalidInputException.h"
+
+1512554086 c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\exceptions\invalidinputexception.h
+	<string>
+
+1512554086 source:c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\exceptions\invalidname.cpp
+	"InvalidName.h"
+
+1512554086 c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\exceptions\invalidname.h
+
+1512554086 source:c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\exceptions\invalidprice.cpp
+	"InvalidPrice.h"
+
+1512554086 c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\exceptions\invalidprice.h
+
+1512584903 source:c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\logic\orderhandler.cpp
+	"OrderHandler.h"
+
+1512554086 c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\logic\orderhandler.h
+	"OrderRepo.h"
+	"PizzaHandler.h"
+	"PizzaStatus.h"
+
+1512572979 c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\logic\pizzahandler.h
+	"ToppingsHandler.h"
+	"PizzaRepo.h"
+
+1512557850 c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\logic\toppingshandler.h
+	"ToppingsRepo.h"
+	<string.h>
+	"InvalidName.h"
+	"InvalidPrice.h"
+
+1512572979 source:c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\logic\pizzahandler.cpp
+	"PizzaHandler.h"
+
+1512554086 source:c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\logic\stdinput.cpp
+	"StdInput.h"
+
+1512554086 c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\logic\stdinput.h
+	<iostream>
+
+1512653268 source:c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\logic\toppingshandler.cpp
+	"ToppingsHandler.h"
+
+1512554086 source:c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\main.cpp
+	<iostream>
+	"LoginUI.h"
+
+1512554086 c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\ui\loginui.h
+	<iostream>
+	<stdlib.h>
+	<vector>
+	"ManagerUI.h"
+	"BakerUI.h"
+	"PhoneClerkUI.h"
+	"StoreClerkUI.h"
+	"CustomerUI.h"
+	"InvalidInputException.h"
+
+1512554086 c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\ui\managerui.h
+	<stdlib.h>
+	<iostream>
+	"InvalidInputException.h"
+
+1512554086 c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\ui\bakerui.h
+	<iostream>
+	<stdlib.h>
+	<iostream>
+	"InvalidInputException.h"
+
+1512663447 c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\ui\phoneclerkui.h
+	<stdlib.h>
+	<iostream>
+	"order_functions.h"
+	"InvalidInputException.h"
+
+1512554086 c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\ui\storeclerkui.h
+	<stdlib.h>
+	<iostream>
+	"InvalidInputException.h"
+
+1512554086 c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\ui\customerui.h
+	<stdlib.h>
+	<iostream>
+	"InvalidInputException.h"
+
+1512565178 source:c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\objects\order.cpp
+	"Order.h"
+
+1512558511 source:c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\objects\pizza.cpp
+	"Pizza.h"
+
+1512554086 source:c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\objects\toppings.cpp
+	"Toppings.h"
+
+1512554086 source:c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\ui\bakerui.cpp
+	"BakerUI.h"
+
+1512554086 source:c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\ui\customerui.cpp
+	"CustomerUI.h"
+
+1512554086 source:c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\ui\loginui.cpp
+	"LoginUI.h"
+
+1512653472 source:c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\ui\managerui.cpp
+	"ManagerUI.h"
+	"manager_functions.h"
+
+1512663412 source:c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\ui\phoneclerkui.cpp
+	"PhoneClerkUI.h"
+
+1512663350 source:c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\ui\storeclerkui.cpp
+	"StoreClerkUI.h"
+	"order_functions.h"
+
+1512554086 source:c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\ui\uitemplate.cpp
+	"UITemplate.h"
+
+1512554086 c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\ui\uitemplate.h
+
+1512652912 c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\uifunctions\manager_functions.h
+	"PizzaHandler.h"
+	"ToppingsHandler.h"
+
+1512663834 c:\users\vikto\desktop\pizzaorderingsystem\ui_v2.0\uifunctions\order_functions.h
+	<stdlib.h>
+	"OrderHandler.h"
+	"Pizza.h"
+	<iomanip>
+
