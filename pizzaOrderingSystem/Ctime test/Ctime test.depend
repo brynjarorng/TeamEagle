@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1512216478 source:c:\users\brynjar\desktop\ctime test\main.cpp
-	<stdio.h>
-	<time.h>
-	<iostream>
-	<fstream>
-
