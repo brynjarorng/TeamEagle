@@ -60,8 +60,8 @@
 		<Unit filename="UI/Print.h" />
 		<Unit filename="UI/StoreClerkUI.cpp" />
 		<Unit filename="UI/StoreClerkUI.h" />
-		<Unit filename="UI/UITemplate.cpp" />
-		<Unit filename="UI/UITemplate.h" />
+		<Unit filename="UI/UIBridge.cpp" />
+		<Unit filename="UI/UIBridge.h" />
 		<Unit filename="UI/print_types.h" />
 		<Unit filename="UIfunctions/baker_functions.cpp" />
 		<Unit filename="UIfunctions/baker_functions.h" />

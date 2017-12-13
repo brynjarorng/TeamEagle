@@ -3,6 +3,7 @@
 #include "OrderRepo.h"
 #include "PizzaHandler.h"
 #include "PizzaStatus.h"
+#include "LocationHandler.h"
 
 
 class OrderHandler

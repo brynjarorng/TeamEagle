@@ -3,12 +3,12 @@
 
 #include <stdlib.h>
 #include <iostream>
-#include "UITemplate.h"
+#include "UIBridge.h"
 
 
 using namespace std;
 
-class ManagerUI: public UITemplate {
+class ManagerUI: public UIBridge {
     public:
         ManagerUI();
         bool manager_menu(bool run, bool& continueRun);

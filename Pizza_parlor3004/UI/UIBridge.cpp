@@ -1,11 +1,11 @@
-#include "UITemplate.h"
+#include "UIBridge.h"
 
-UITemplate::UITemplate()
+UIBridge::UIBridge()
 {
     //ctor
 }
 
-void UITemplate::choose_location() {
+void UIBridge::choose_location() {
     vector<Location> locations = locationhandler.get_locations();
     bool valid = false;
     string loc = "";

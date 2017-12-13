@@ -79,7 +79,15 @@ void OrderHandler::got_list() {
 }
 
 void OrderHandler::set_location(string location) {
+    LocationHandler loc_handler;
+
+    if(loc_handler.validate_duplicate(location)) {
+        throw InvalidName();
+    }
+
     this ->location = location;
+
+
     orders.clear();
     has_list = false;
 }

@@ -5,11 +5,11 @@
 #include <stdlib.h>
 #include <iostream>
 
-#include "UITemplate.h"
+#include "UIBridge.h"
 
 using namespace std;
 
-class CustomerUI: public UITemplate {
+class CustomerUI: public UIBridge {
     public:
         CustomerUI();
         bool customer_menu(bool run, bool& continueRun);

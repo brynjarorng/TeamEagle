@@ -41,7 +41,6 @@ bool LocationHandler::validate_duplicate(string location) {
             return false;
         }
     }
-
     return true;
 }
 

@@ -3,11 +3,11 @@
 
 #include <stdlib.h>
 #include <iostream>
-#include "UITemplate.h"
+#include "UIBridge.h"
 
 using namespace std;
 
-class PhoneClerkUI : public UITemplate{
+class PhoneClerkUI : public UIBridge{
     public:
         PhoneClerkUI();
         bool phone_menu(bool run, bool& continueRun);

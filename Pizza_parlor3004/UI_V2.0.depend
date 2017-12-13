@@ -1421,13 +1421,14 @@
 
 1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\exceptions\invalidsize.h
 
-1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\logic\orderhandler.cpp
+1513177592 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\logic\orderhandler.cpp
 	"OrderHandler.h"
 
-1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\logic\orderhandler.h
+1513177617 c:\users\vikto\desktop\teameagle\pizza_parlor3004\logic\orderhandler.h
 	"OrderRepo.h"
 	"PizzaHandler.h"
 	"PizzaStatus.h"
+	"LocationHandler.h"
 
 1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\logic\pizzahandler.h
 	"ToppingsHandler.h"
@@ -1493,7 +1494,7 @@
 	<iostream>
 	"ValidationFunctions.h"
 
-1513174946 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\logic\locationhandler.cpp
+1513177592 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\logic\locationhandler.cpp
 	"LocationHandler.h"
 	<iostream>
 
@@ -1525,7 +1526,7 @@
 	<iostream>
 	"LoginUI.h"
 
-1513175764 c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\loginui.h
+1513178297 c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\loginui.h
 	<iostream>
 	<stdlib.h>
 	<vector>
@@ -1535,10 +1536,10 @@
 	"StoreClerkUI.h"
 	"CustomerUI.h"
 
-1513174525 c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\managerui.h
+1513178297 c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\managerui.h
 	<stdlib.h>
 	<iostream>
-	"UITemplate.h"
+	"UIBridge.h"
 
 1513175788 c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\uitemplate.h
 	"OrderHandler.h"
@@ -1579,26 +1580,26 @@
 	"OrderHandler.h"
 	"Pizza.h"
 
-1513170250 c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\bakerui.h
+1513178297 c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\bakerui.h
 	<iostream>
 	<stdlib.h>
 	<iostream>
-	"UITemplate.h"
+	"UIBridge.h"
 
-1513175764 c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\phoneclerkui.h
+1513178297 c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\phoneclerkui.h
 	<stdlib.h>
 	<iostream>
-	"UITemplate.h"
+	"UIBridge.h"
 
-1513170250 c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\storeclerkui.h
+1513178297 c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\storeclerkui.h
 	<stdlib.h>
 	<iostream>
-	"UITemplate.h"
+	"UIBridge.h"
 
-1513170250 c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\customerui.h
+1513178297 c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\customerui.h
 	<stdlib.h>
 	<iostream>
-	"UITemplate.h"
+	"UIBridge.h"
 
 1513009407 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\objects\location.cpp
 	"Location.h"
@@ -1624,21 +1625,21 @@
 1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\customerui.cpp
 	"CustomerUI.h"
 
-1513175764 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\loginui.cpp
+1513177844 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\loginui.cpp
 	"LoginUI.h"
 
 1513175921 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\managerui.cpp
 	"ManagerUI.h"
 	"manager_functions.h"
 
-1513175990 c:\users\vikto\desktop\teameagle\pizza_parlor3004\uifunctions\manager_functions.h
+1513177592 c:\users\vikto\desktop\teameagle\pizza_parlor3004\uifunctions\manager_functions.h
 	"InvalidAlphaStringException.h"
 	"InvalidNumberException.h"
 	"InvalidBoolException.h"
 	"ValidationFunctions.h"
 	"order_functions.h"
 
-1513175764 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\phoneclerkui.cpp
+1513177961 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\phoneclerkui.cpp
 	"PhoneClerkUI.h"
 
 1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\print.cpp
@@ -1657,4 +1658,19 @@
 1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\uifunctions\order_functions.cpp
 	"order_functions.h"
 	"ValidationFunctions.h"
+
+1513178297 c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\uibridge.h
+	"OrderHandler.h"
+	"PizzaHandler.h"
+	"ToppingsHandler.h"
+	"PizzaBottomHandler.h"
+	"LocationHandler.h"
+	"SideOrdersHandler.h"
+	"print_functions.h"
+	"InvalidInputException.h"
+	"order_functions.h"
+	"baker_functions.h"
+
+1513178297 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\uibridge.cpp
+	"UIBridge.h"
 

@@ -4,11 +4,11 @@
 #include <stdlib.h>
 #include <iostream>
 
-#include "UITemplate.h"
+#include "UIBridge.h"
 
 using namespace std;
 
-class StoreClerkUI: public UITemplate {
+class StoreClerkUI: public UIBridge {
     public:
         StoreClerkUI();
         bool store_menu(bool run, bool& continueRun);

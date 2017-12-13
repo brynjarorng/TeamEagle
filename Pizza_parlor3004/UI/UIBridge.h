@@ -1,5 +1,5 @@
-#ifndef UITEMPLATE_H
-#define UITEMPLATE_H
+#ifndef UIBridge_H
+#define UIBridge_H
 
 #include "OrderHandler.h"
 #include "PizzaHandler.h"
@@ -15,10 +15,10 @@
 
 
 
-class UITemplate
+class UIBridge
 {
     public:
-        UITemplate();
+        UIBridge();
 
         OrderHandler orderhandler;
         PizzaHandler pizzahandler;
@@ -33,4 +33,4 @@ class UITemplate
     private:
 };
 
-#endif // UITEMPLATE_H
+#endif // UIBridge_H

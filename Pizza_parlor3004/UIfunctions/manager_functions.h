@@ -422,6 +422,7 @@ void make_new_side_order(SideOrdersHandler& sideorderhandler) {
 
     sideorderhandler.make_side_order(name, price);
 }
+
 void add_location(LocationHandler& lochandler) {
     string name;
     cout << "Name: " << endl;

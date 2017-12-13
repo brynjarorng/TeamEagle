@@ -30,7 +30,7 @@ bool PhoneClerkUI::phone_menu(bool run, bool& continueRun) {
             clear();
 
             cout << "New order" << endl;
-
+            choose_location();
             new_order(orderhandler, pizzahandler, toppingshandler, bottomhandler);
 
             continueRun = 1;
@@ -40,6 +40,7 @@ bool PhoneClerkUI::phone_menu(bool run, bool& continueRun) {
         case 'a':
             clear();
             cout << "See all orders" << endl;
+            choose_location();
             print_orders(not_delivered, orderhandler);
             pause_screen();
 

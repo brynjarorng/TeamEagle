@@ -4,12 +4,12 @@
 #include <iostream>
 #include <stdlib.h>
 #include <iostream>
-#include "UITemplate.h"
+#include "UIBridge.h"
 
 
 using namespace std;
 
-class BakerUI: public UITemplate {
+class BakerUI: public UIBridge {
     public:
         BakerUI();
         bool baker_menu(bool run, bool& continueRun);

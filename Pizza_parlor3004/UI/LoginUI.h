@@ -12,7 +12,7 @@
 
 using namespace std;
 
-class LoginUI: public UITemplate {
+class LoginUI: public UIBridge {
     public:
         LoginUI();
         bool login_portal(bool run);
