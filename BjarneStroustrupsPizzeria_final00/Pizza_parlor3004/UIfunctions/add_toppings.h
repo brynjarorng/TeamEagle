@@ -33,6 +33,9 @@ int char_to_int(char in);
 //Postcondition: the return value is the integer correspindonding
 //to in.
 void t_print_lines(int n);
+bool longer_than_eigth(string in);
+//Returns true if there is a substring without whitespace longer than 8 of length.
+//Use is to check if the size is correct before turning the substring to stoi.
 vector<char> string_to_char(string in);
 //Postcondition: The return value is a vector of size
 //in.size(), where each element is a character from in, with the same

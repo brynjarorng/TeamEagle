@@ -10,7 +10,6 @@ vector<int> input_to_int(string in) {
 
     bool exit = false;
 
-
     while (!exit) {
 
         exit = first_without_whitespace(in, first);
@@ -21,6 +20,18 @@ vector<int> input_to_int(string in) {
     }
 
     return in_to_int;
+}
+
+bool longer_than_eigth(string in) {
+
+    string first = "";
+    bool exit = false;
+    while (!exit) {
+        if(first_without_whitespace(in, first)) {
+            return true;
+        }
+    }
+    return false;
 }
 
 bool first_without_whitespace(string& rest_of_string, string& first) {
@@ -382,9 +393,13 @@ vector<char> string_to_char(string in) {
 
 bool validate_number(string digits, int range) {
 
-    if (digits.size() > 8) {
-        return false;
-    }
+    //if (digits.size() > 8) {
+      //  return false;
+    //}
+   // if(longer_than_eigth(digits)) {
+     //   return false;
+    //}
+
     for (int i = 0; i < digits.size(); i++) {
 
 
