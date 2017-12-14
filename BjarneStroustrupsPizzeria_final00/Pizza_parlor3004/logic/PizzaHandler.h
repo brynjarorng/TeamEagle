@@ -59,7 +59,7 @@ public:
     void reset_pizza(Pizza& pizza);
     void got_list();
     //If handler has yet to fetch list from repo then gets it, if it has list then does nothing
-    void add_bottom_to_pizza(Pizza& pizza, string input);
+    void add_bottom_to_pizza(Pizza& pizza, int input);
     //Adds a bottom and size to the pizza
     vector<Pizza> get_pizza_list();
     //Return the current list of pizza

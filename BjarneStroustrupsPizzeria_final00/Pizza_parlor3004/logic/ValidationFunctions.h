@@ -10,10 +10,14 @@
 #include "InvalidAddresseException.h"
 #include "InvalidBoolException.h"
 #include "InvalidCharException.h"
+#include "InvalidSize.h"
 
 using namespace std;
 
 inline void validate_int(string number) {
+    if(number.size() > 9) {
+        throw(InvalidSize());
+    }
     for(unsigned int i = 0; i < number.size(); i++) {
         if(!isdigit(number[i])){
             throw(InvalidNumberException());
