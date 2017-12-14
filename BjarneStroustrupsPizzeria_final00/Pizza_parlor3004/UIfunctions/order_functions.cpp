@@ -87,8 +87,7 @@ bool new_order(OrderHandler& orderhandler, PizzaHandler& pizzahandler, ToppingsH
     orderhandler.generate_order_no(order);
     cout << "Order #" << order.get_order_number() << endl;
 
-    bool in_order =
-    add_pizzas(order, orderhandler, pizzahandler, toppingshandler, bottomhandler);
+    bool in_order = add_pizzas(order, orderhandler, pizzahandler, toppingshandler, bottomhandler);
     clear();
     if (order.get_order_count()) {
         sent_or_picked_up(order);
@@ -130,7 +129,7 @@ void sent_or_picked_up(Order& order) {
 
     do{
         try{
-            cout << "Sent or delivered (y/n)? ";
+            cout << "Should the order be delivered (y/n)? ";
             cin >> ws;
             getline(cin, input, '\n');
             validate_bool_question(input);
