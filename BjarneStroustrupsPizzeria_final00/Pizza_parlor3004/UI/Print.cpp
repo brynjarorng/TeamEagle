@@ -4,6 +4,7 @@
 
 Print::Print() : user_prompt(false){
 
+    reset_b();
     this ->next = 'n';
     this ->previous = 'p';
     this ->alph_d = 'a';
@@ -21,6 +22,7 @@ Print::Print() : user_prompt(false){
 }
 void Print::set(int n, print_item what) {
 
+    reset_b();
     this ->style = none_;
     this ->print = none;
     this ->sort = alph_asc;
@@ -35,6 +37,7 @@ void Print::set(int n, print_item what) {
 }
 void Print::set(int n, print_style style, print_item what) {
 
+    reset_b();
     this ->sort = alph_asc;
     this ->style = style;
 
@@ -48,6 +51,7 @@ void Print::set(int n, print_style style, print_item what) {
 }
 void Print::set(int n, Price price, print_item what) {
 
+    reset_b();
     this ->style = none_;
     this ->sort = alph_asc;
     print_what(what);
@@ -60,6 +64,7 @@ void Print::set(int n, Price price, print_item what) {
 }
 void Print::set(int n, sort_by print_sort, Price price, print_item what) {
 
+    reset_b();
     this ->print = none;
     this ->sort = print_sort;
     this ->a = 0;
@@ -72,6 +77,7 @@ void Print::set(int n, sort_by print_sort, Price price, print_item what) {
 }
 void Print::set(int n, Price price, print_style style, print_item what) {
 
+    reset_b();
     this ->sort = alph_asc;
     print_what(what);
     this ->a = 0;
@@ -85,6 +91,7 @@ void Print::set(int n, Price price, print_style style, print_item what) {
 
 void Print::set(int n, sort_by print_sort, Price price, print_style style, print_item what) {
 
+    reset_b();
     this ->sort = print_sort;
     print_what(what);
     this ->a = 0;
@@ -98,6 +105,7 @@ void Print::set(int n, sort_by print_sort, Price price, print_style style, print
 
 void Print::set(int n, sort_by print_sort, print_item what) {
 
+    reset_b();
     this ->style = none_;
     this ->sort = print_sort;
     this ->a = 0;
@@ -136,7 +144,7 @@ void Print::perform_action(print_action action) {
             p_screen();
         break;
         case current_screen:
-        reset_b();
+        //reset_b();
         break;
         case a_to_z:
             sort = alph_asc;
@@ -169,7 +177,7 @@ void Print::print_what(print_item what) {
         this ->toppings_list = toppings_sorted(sort);
         list_type = sort;
         this ->list_count = toppings_list.size();
-       // reset_b();
+        //reset_b();
         print = top;
     }
     else if (what == pizz) {
@@ -264,6 +272,7 @@ void Print::print_selection() {
         if (print == top) {
                 print_index(i);
                 print_toppings(i);
+                //reset_b();
         }
         if (print == pizz) {
                 print_lines(50);

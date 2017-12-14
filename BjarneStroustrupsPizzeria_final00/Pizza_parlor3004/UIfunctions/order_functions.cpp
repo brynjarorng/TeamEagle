@@ -130,7 +130,7 @@ void sent_or_picked_up(Order& order) {
 
     do{
         try{
-            cout << "Should the order be delivered to you (y/n)? ";
+            cout << "Sent or delivered (y/n)? ";
             cin >> ws;
             getline(cin, input, '\n');
             validate_bool_question(input);
@@ -602,7 +602,7 @@ void comment(Order& order) {
     string input;
     do{
         try{
-            cout << "Do you have any special requests (y/n)? ";
+            cout << "Special requests (y/n)? ";
             cin >> ws;
             getline(cin, input, '\n');
             validate_bool_question(input);
