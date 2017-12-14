@@ -95,31 +95,33 @@ void remove_topping(ToppingsHandler& toppingshandler) {
     bool cont = 0;
     clear();
 
-    while(true) {
-        do{
-            print_toppings_with_number(toppingshandler);
+    do{
+        print_toppings_with_number(toppingshandler);
 
-            try{
-                cout << "Input the number of the topping to remove, 0 to quit: ";
-                cin  >> number;
-                validate_int(number);
-                cont = 0;
+        try{
+            cout << "Input the number of the topping to remove, 0 to quit: ";
+            cin  >> number;
+            validate_int(number);
+            cont = 0;
+            if(stoi(number) == 0) {
+                cont = false;
             }
-            catch(InvalidNumberException e) {
-                clear();
-                cont = 1;
-                cout << e.get_err() << endl;
-            }
-            clear();
-        } while(cont);
+            toppingshandler.remove_topping_from_list(stoi(number) - 1);
 
-
-        if(stoi(number) == 0) {
-            break;
         }
-        toppingshandler.remove_topping_from_list(stoi(number) - 1);
-    }
+        catch(InvalidNumberException e) {
+            clear();
+            cont = 1;
+            cout << e.get_err() << endl;
+        }
+        catch(InvalidSize e) {
+            cout << "Number not on list"  << endl;
+            pause_screen();
+        }
+        clear();
+    } while(cont);
 }
+
 
 
 

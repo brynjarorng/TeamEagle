@@ -126,11 +126,16 @@ Pizza PizzaHandler::get_menu_pizza(int index) {
 
 }
 
-
 void PizzaHandler::remove_pizza_from_list(int index) {
     got_list();
-    pizzas.erase(pizzas.begin() + index);
-    pizza_repo.overwrite(pizzas);
+
+    if(index >= 0  && index < pizzas.size()) {
+        pizzas.erase(pizzas.begin() + index);
+        pizza_repo.overwrite(pizzas);
+    }
+    else {
+        throw InvalidSize();
+    }
 }
 
 /*

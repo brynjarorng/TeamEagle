@@ -93,8 +93,14 @@ void ToppingsHandler::create_topping(Toppings& topping) throw(InvalidName, Inval
 
 void ToppingsHandler::remove_topping_from_list(int index) {
     got_list();
-    toppings.erase(toppings.begin() + index);
-    toppings_repo.overwrite(toppings);
+
+    if(index >= 0 && index < toppings.size()) {
+        toppings.erase(toppings.begin() + index);
+        toppings_repo.overwrite(toppings);
+    }
+    else {
+        throw InvalidSize();
+    }
 }
 
 Toppings ToppingsHandler::get_topping(string topping_name) throw (InvalidName)
