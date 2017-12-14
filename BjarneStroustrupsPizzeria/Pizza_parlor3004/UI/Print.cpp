@@ -183,7 +183,7 @@ void Print::print_what(print_item what) {
             OrderHandler handler;
             this ->orders_list = handler.get_orders();
             this ->list_count = orders_list.size();
-          //  reset_b();
+            reset_b();
             print = ord;
     }
     else {
@@ -504,7 +504,8 @@ void Print::prompt_print() {
 void Print::prompt_order_print() {
 
     cout  << "(n)" << " for next screen";
-    cout <<  "\t(p)" << " for previous screen\n";
+    cout  <<  "\t(p)" << " for previous screen\n";
+    cout  << "(b) for back" << endl;
 }
 void Print::set_price(Price price) {
     this ->price = price;
