@@ -214,7 +214,7 @@ void print_while_not_digits(vector<int>& digits, sort_by& sort_order) {
     bool exit = false;
     while (exit == false) {
 
-        system("clear");
+        clear();
 
         print_toppings_selection(a, b, sort_order);
         //Print the range from a to b.
@@ -284,7 +284,7 @@ void remove_topping(vector <Toppings>& toppings) {
     int range = toppings.size();
 
     string input;
-    system("clear");
+    clear();
     print(toppings, true);
     cout << "Which toppings do you wish to remove? ";
     cin >> ws;
