@@ -270,13 +270,18 @@ PizzaType menu_or_special(char& run) {
 bool add_menu_pizza(Order& order, PizzaHandler& pizzahandler, PizzaBottomHandler& bottomhandler) {
 
     Pizza pizza;
+    bool cont = true;
     char s;
-    try{
-        p_print_while_not_digits(pizza, s);
-    }
-    catch(InvalidSize e) {
-        cout << "Pizza not on list!" << endl;
-    }
+    do{
+        try{
+            p_print_while_not_digits(pizza, s);
+            cont = false;
+        }
+        catch(InvalidSize e) {
+            cout << "Pizza not on list!" << endl;
+        }
+    }while(cont);
+
     if (s == 'b') {
         return false;
     }

@@ -31,7 +31,7 @@ void p_print_while_not_digits(Pizza& selection, char& s) {
         clear();
         print.get(current_screen);
 
-        cout << "\nEnter the number of pizza to be selected: (b to go back)";
+        cout << "\nEnter the number of pizza to be selected (b to go back): ";
         getline(cin, input, '\n');
 
         if(input[0] == 'b') {
