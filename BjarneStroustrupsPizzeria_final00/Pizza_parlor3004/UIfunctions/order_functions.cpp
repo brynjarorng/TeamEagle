@@ -37,7 +37,7 @@ void print_order(Order& order) {
 
     Print print;
 
-   cout << "\033[1;31m Order # \033[0m\ " << order.get_order_number() << endl;
+   cout << "\033[1;31m" << "Order #"  << order.get_order_number() << "\033[0m\ " << endl;
 
 
     print.print_lines(30);
@@ -451,7 +451,7 @@ void mark_paid(OrderHandler& orderhandler) {
 
     vector<Order> order_list = orderhandler.get_orders();
     int next = 0;
-    char in;
+    string in;
     int order_nr;
     int counter = 0;
     if (order_list.size() > 0) {
@@ -463,7 +463,7 @@ void mark_paid(OrderHandler& orderhandler) {
                 cout << "(m) to mark paid (n) for next order";
                 cin >> in;
                 counter++;
-                if (in == 'm') {
+                if (in[0] == 'm') {
                     break;
                 }
             }
@@ -474,9 +474,8 @@ void mark_paid(OrderHandler& orderhandler) {
     }
 
     if (counter == 0) {
-        cout << "No orders!, press b to go back";
+        cout << "No orders!, input any character to go back ";
         cin >> in;
-
     }
 }
 
@@ -484,7 +483,7 @@ void mark_delivered(OrderHandler& orderhandler) {
 
     vector<Order> order_list = orderhandler.get_orders();
     int next = 0;
-    char in;
+    char in = '\0';
     int order_nr;
     int counter = 0;
     if (order_list.size() > 0) {

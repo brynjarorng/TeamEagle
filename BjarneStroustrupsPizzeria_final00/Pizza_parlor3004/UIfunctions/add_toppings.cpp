@@ -263,8 +263,8 @@ void print_toppings_selection(int from, int to, sort_by& sorting_order) {
     string name;
     for (int i = from; i < to; i++) {
 
-        cout << "(" << i + 1 << ") " << toppings[i].get_name()
-            << " " << endl;
+        cout  << "(" << i + 1 << ") " << toppings[i].get_name()
+              << "  $"  << toppings[i].get_price() << endl;
     }
 }
 

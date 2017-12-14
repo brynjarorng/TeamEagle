@@ -3,6 +3,7 @@
 #include "ToppingsRepo.h"
 #include <string.h>
 #include "InvalidName.h"
+#include "InvalidSize.h"
 #include "InvalidPrice.h"
 using namespace std;
 

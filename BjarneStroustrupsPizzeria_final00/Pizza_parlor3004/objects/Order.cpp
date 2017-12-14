@@ -56,18 +56,13 @@ istream& operator >>(istream& ins, Order& order) {
 }
 void Order::all_pizzas_ready() {
 
-	bool temp = true; //Temporary until pizzahandler is ready.
-	int ready_count = 0;
 	for (int i = 0; i < pizzas_in_order_count; i++) {
-		if (temp) {
-			//Remember ->pizzas_in_order[i].get_status() == read
-			ready_count++;
+		if (this ->pizzas_in_order[i].get_status() != "ready") {
+			order_ready = false;
 		}
 	}
-	if (ready_count == pizzas_in_order_count) {
+	order_ready == true;
 
-		this ->order_ready = true;
-	}
 }
 bool Order::ready() {
 

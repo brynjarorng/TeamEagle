@@ -42,7 +42,7 @@ void PizzaHandler::reset_pizza(Pizza& pizza) {
 }
 
 double PizzaHandler::calc_price(Pizza& pizza) {
-    double price;
+    double price = 0;
 
     Toppings* topp = pizza.get_toppings();
 

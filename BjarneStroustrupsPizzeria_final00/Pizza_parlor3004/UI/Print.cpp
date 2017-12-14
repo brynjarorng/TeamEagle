@@ -33,7 +33,7 @@ void Print::set(int n, print_item what) {
     this ->b = n;
     this ->add_topping = false;
 }
- void Print::set(int n, print_style style, print_item what) {
+void Print::set(int n, print_style style, print_item what) {
 
     this ->sort = alph_asc;
     this ->style = style;

@@ -113,4 +113,5 @@ PizzaBottom Pizza::get_bottom(){
 
 void Pizza::set_bottom(PizzaBottom& bottom) {
     this -> bottom = bottom;
+    this ->price += this ->bottom.get_price();
 }
