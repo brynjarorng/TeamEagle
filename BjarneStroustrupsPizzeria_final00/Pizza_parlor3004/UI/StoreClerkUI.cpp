@@ -16,7 +16,7 @@ bool StoreClerkUI::store_menu(bool run, bool& continueRun) {
         cout << "(T) See all toppings" << endl;
         cout << "(P) Mark orders paid" << endl;
         cout << "(D) Mark orders delivered" << endl;
-        cout << "(L) See all old orders" << endl;
+        cout << "(L) See all orders" << endl;
         cout << "(B) Go back to login portal" << endl;
         cout << "(q) Quit" << endl;
         if(run){
