@@ -446,8 +446,8 @@ void archive_orders(OrderHandler& orderhandler) {
 }
 
 void print_archived_orders(OrderHandler& orderhandler) {
+    clear();
     vector<Order> arc = orderhandler.get_archived_orders();
-    cout << arc.size();
     for(int i = 0; i < arc.size(); i++) {
         print_order(arc.at(i));
     }

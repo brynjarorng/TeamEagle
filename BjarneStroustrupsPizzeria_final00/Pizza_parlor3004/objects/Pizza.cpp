@@ -61,7 +61,7 @@ int Pizza::get_toppingcount() const {
     return this->toppingcount;
 }
 
-Toppings* Pizza::get_toppings() {
+Toppings* Pizza::get_toppings(){
 
 	return this ->topping;
 }
