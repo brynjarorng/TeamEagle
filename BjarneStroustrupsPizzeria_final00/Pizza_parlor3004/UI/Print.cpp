@@ -118,7 +118,7 @@ void Print::get(print_action action) {
 
     perform_action(action);
     print_what(print);
-    //reset_b();
+   // reset_b();
 
     print_selection();
 
@@ -176,7 +176,7 @@ void Print::print_what(print_item what) {
             print = pizz;
             this ->pizzas_list = pizza_sorted(sort);
             this ->list_count = pizzas_list.size();
-            reset_b();
+           // reset_b();
     }
     else if (what == ord) {
 
