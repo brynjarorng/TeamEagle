@@ -27,6 +27,16 @@ vector <Toppings> toppings_sorted(sort_by a) {
     }
 }
 
+ Pizza get_sorted_pizza_at(int index, sort_by a) {
+
+    if ( index > pizza_sorted(a).size() || index <= 0 ) {
+        throw InvalidSize();
+    }
+    return pizza_sorted(a)[index];
+ }
+
+
+
 vector <Toppings> toppings_price_sort_desc() {
 
     ToppingsRepo repo;
