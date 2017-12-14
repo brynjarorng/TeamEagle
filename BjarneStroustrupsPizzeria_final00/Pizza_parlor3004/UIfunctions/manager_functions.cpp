@@ -8,6 +8,7 @@ void create_topping(ToppingsHandler& toppingshandler) {
 
     while(choice != "n") {
         Toppings topping;
+        clear();
 
         string name;
         do{
