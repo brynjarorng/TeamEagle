@@ -269,10 +269,20 @@ void remove_menu_pizza(PizzaHandler& pizzahandler) {
         print_menu_pizza_list_with_numbers(pizzahandler);
         cout << "Input the number of the pizza to remove, 0 to quit: ";
         cin  >> number;
-        if(stoi(number) == 0) {
-            break;
+        try{
+            validate_int(number);
+            if(stoi(number) == 0) {
+                break;
+            }
+            pizzahandler.remove_pizza_from_list(stoi(number) - 1);
         }
-        pizzahandler.remove_pizza_from_list(stoi(number) - 1);
+        catch(InvalidNumberException e) {
+            cout << "Not a number" << endl;
+        }
+        catch(InvalidSize e) {
+            cout << "Number not on list"  << endl;
+            pause_screen();
+        }
     }
 }
 
