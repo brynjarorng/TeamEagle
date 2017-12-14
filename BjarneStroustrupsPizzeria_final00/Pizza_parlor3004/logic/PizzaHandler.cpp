@@ -167,14 +167,19 @@ void PizzaHandler::got_list() {
     }
 }
 
-vector<Pizza> PizzaHandler::PizzaHandler::get_pizza_list(){
+vector<Pizza> PizzaHandler::get_pizza_list(){
     got_list();
     return pizzas;
  }
 
-void PizzaHandler::add_bottom_to_pizza(Pizza& pizza, string input) {
+void PizzaHandler::add_bottom_to_pizza(Pizza& pizza, int input) {
     vector<PizzaBottom> bottom_vector;
     PizzaBottomHandler bottom_handler;
-    bottom_vector = bottom_handler.get_size_list();
-    pizza.set_bottom(bottom_vector.at(stoi(input)-1));
+    if(input >= 0 && input < bottom_vector.size()) {
+        bottom_vector = bottom_handler.get_size_list();
+        pizza.set_bottom(bottom_vector.at(input-1));
+    }
+    else {
+        throw InvalidSize();
+    }
 }

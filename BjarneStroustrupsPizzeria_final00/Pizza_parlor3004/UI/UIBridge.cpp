@@ -29,10 +29,12 @@ void UIBridge::choose_location() {
             cout << "Input does not correspond a location" << endl;
         }
         }
-        catch(InvalidNumberException) {
+        catch(InvalidNumberException e) {
             cout << "Not a number" << endl;
         }
-
+        catch(InvalidSize e) {
+            cout << "Number to large!" << endl;
+        }
     }
     orderhandler.set_location(loc);
 }
