@@ -42,8 +42,7 @@ bool StoreClerkUI::store_menu(bool run, bool& continueRun) {
         case 'a':
             clear();
             cout << "See all orders" << endl;
-            print_orders(not_delivered, orderhandler);
-            pause_screen();
+            print_current_orders();
             continueRun = 1;
             return 0;
             break;

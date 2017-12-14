@@ -59,13 +59,60 @@ void print_order(Order& order) {
     cout << endl;
 
 }
+void print_order_list(int& refresh, string next, OrderHandler& orderhandler, bool skipdelivered, bool skippaid) {
+    int temp = refresh;
+    int next_num = 0;
+    Order temp_order;
+    vector<Order> orders = orderhandler.get_orders();
+
+    if(orders.size() == 1) {
+        next_num = 1;
+        temp = 0;
+        refresh = 0;
+
+    } else {
+        if(next == "n" && refresh < (int)orders.size()) {
+            next_num = 2;
+        } else if(next == "n") {
+            refresh = 0;
+            temp = 0;
+            next_num = 2;
+        } else {
+            refresh -= 2;
+            temp -=2;
+            next_num = 2;
+        }
+    }
+
+
+    if(skippaid) {
+        for (; refresh < temp + next_num; refresh++) {
+            if(refresh == orders.size()) {
+                break;
+            }
+                if(!orders.at(refresh).get_paid()) {
+                    print_order(orders.at(refresh));
+                }
+        }
+    }
+
+    else if(skipdelivered) {
+        for (refresh; refresh < temp + next_num; refresh++) {
+            if(refresh == orders.size()) {
+                break;
+            }
+                if(!orders.at(refresh).get_delivered()) {
+                    print_order(orders.at(refresh));
+                }
+        }
+    }
+}
 
 void print_current_orders() {
 
     Print print;
-    print.set(1, header, ord);
+    print.set(1, alph_asc, price,  header, ord);
     print_navigation (print, ord, ' ', true);
-
 }
 
 bool new_order(OrderHandler& orderhandler, PizzaHandler& pizzahandler, ToppingsHandler& toppingshandler, PizzaBottomHandler& bottomhandler) {
@@ -386,6 +433,7 @@ void print_navigation (Print& print, print_item type, char in,  bool loop) {
     }
     if (!max_topping) {
 
+        clear();
         for (int i = 0; i < selection.size(); i++) {
             pizza.add_topping(selection.at(i));
         }
@@ -449,7 +497,7 @@ void mark_paid(OrderHandler& orderhandler) {
         try{
             clear();
             cont = 1;
-            print_current_orders();
+            print_order_list(remove_order_nr, next, orderhandler, true, true );
             cout << "Input number order to mark delivered (n for next page, q to quit): ";
             cin >> ws;
             getline(cin, remove_order, '\n');
@@ -498,7 +546,7 @@ void mark_delivered(OrderHandler& orderhandler) {
         try{
             clear();
             cont = 1;
-            print_current_orders();
+            print_order_list(remove_order_nr, next, orderhandler, true, true );
             cout << "Input number order to mark delivered (n for next page, q to quit): ";
             cin >> ws;
             getline(cin, remove_order, '\n');
@@ -536,13 +584,10 @@ void mark_delivered(OrderHandler& orderhandler) {
 
 }
 
-
-
-
 void print_topping_list() {
 
     Print print;
-    print.set(14, header, top);
+    print.set(14, price, header, top);
     print.prompt_user(true);
     print.pizza_settings(true, false);
     print_navigation(print, top, ' ', true);
@@ -599,8 +644,8 @@ void print_sizes_numbers(PizzaBottomHandler& bottomhandler) {
     cout << "See all sizes:" << endl;
     for(unsigned int i = 0; i < size_vector.size(); i++){
         cout << "[" << i + 1 << "]" << " ";
-        cout << size_vector[i + 1].get_price() << " ISK, ";
-        cout << size_vector[i + 1].get_size() << "\"" << endl;
+        cout << size_vector[i ].get_price() << " ISK, ";
+        cout << size_vector[i].get_size() << "\"" << endl;
     }
     cout << endl;
 }

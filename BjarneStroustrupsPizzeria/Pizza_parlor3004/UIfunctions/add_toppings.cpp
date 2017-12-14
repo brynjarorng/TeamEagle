@@ -54,7 +54,6 @@ vector<Toppings> add_topping_to_order() {
 
         add_selected_toppings(toppings_sel, digits, sort_order);
         //add the toppings selected
-        clear();
         Pizza pizza;
 
         //bool max_toppings = false;
@@ -66,6 +65,7 @@ vector<Toppings> add_topping_to_order() {
               //   << "or check out with the current selection" << endl;
        // }
         if (toppings_sel.size() != 0) {
+            clear();
             cout << "These are the selected toppings: " << endl;
         }
         else {
@@ -76,8 +76,8 @@ vector<Toppings> add_topping_to_order() {
 
         bool change;
         do {
-            cout << "Press (c) to change, (m) to add more,"
-                 <<"(r) to return, (p) to print or (q) to quit:"
+            cout << "Press: \(c) to change, (m) to add more,"
+                 <<" or (q) if finished:"
                  << endl;
 
             input = "";
@@ -120,7 +120,7 @@ void add_selected_toppings(vector<Toppings>& add, vector<int> digits, sort_by so
 
     for (int i = 0; i < digits.size(); i++) {
         temp = toppings[ digits[i]];
-        if ( !topping_on_list(temp, add)) {
+        if ( !topping_on_list(temp, add) && !temp.get_name().empty() ) {
             add.push_back(temp);
         }
     }
@@ -172,6 +172,7 @@ void t_previous_screen(int& a, int& b, int nr_elements) {
         }
     }
 }
+
 string which_order(sort_by& sort) {
 
     if (sort == alph_desc) {
@@ -187,7 +188,6 @@ string which_order(sort_by& sort) {
         return "(l) lowest price";
     }
 }
-
 
 void print_while_not_digits(vector<int>& digits, sort_by& sort_order) {
 
@@ -382,20 +382,25 @@ vector<char> string_to_char(string in) {
 
 bool validate_number(string digits, int range) {
 
+    if (digits.size() > 8) {
+        return false;
+    }
     for (int i = 0; i < digits.size(); i++) {
+
 
         if ( !isdigit(digits[i]) && digits[i] != ' ') {
              return false;
         }
     }
+
     vector <int> num = input_to_int(digits);
 
     for (int i = 0; i < num.size(); i++) {
          if (num[i] < 1 || num[i] > range) {
-            cout << num[i] << endl;
 
             return false;
-        }
+    }
+
     Pizza pizza;
     if (num.size() > pizza.get_max_toppings()) {
         return false;
@@ -410,8 +415,9 @@ bool number_selected (string in, vector<int>& digits) {
     int range = handler.get_topping_list_size();
     if ( !validate_number(in, range) ) {
 
-        cout << "\nWrong input!, either wrong number was input, to many toppings selected"
+        cout << "\nWrong input!, either wrong number was input,\n too many toppings selected"
              << " or the input was not a number.\n" << endl;
+        pause_screen();
 
         return false;
     }

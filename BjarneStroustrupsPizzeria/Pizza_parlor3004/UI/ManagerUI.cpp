@@ -320,6 +320,7 @@ bool ManagerUI::menu_pizza_menu(bool run, bool& continueRun) {
         case 'r':
             clear();
             cout << "Remove a pizza from menu" << endl;
+            remove_menu_pizza(pizzahandler);
 
             continueRun = 1;
             return 0;

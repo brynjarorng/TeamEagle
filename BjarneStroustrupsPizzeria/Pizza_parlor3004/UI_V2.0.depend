@@ -1902,7 +1902,7 @@
 	<iostream>
 	"ValidationFunctions.h"
 
-1513196061 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UIfunctions/print_functions.h
+1513204833 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UIfunctions/print_functions.h
 	<iostream>
 
 1513198000 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UIfunctions/order_functions.h
@@ -2012,7 +2012,7 @@
 1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UI/LoginUI.cpp
 	"LoginUI.h"
 
-1513199637 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UI/ManagerUI.cpp
+1513202460 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UI/ManagerUI.cpp
 	"ManagerUI.h"
 	"manager_functions.h"
 
@@ -2028,10 +2028,10 @@
 1513197752 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UI/PhoneClerkUI.cpp
 	"PhoneClerkUI.h"
 
-1513200870 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UI/Print.cpp
+1513205647 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UI/Print.cpp
 	"Print.h"
 
-1513197763 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UI/StoreClerkUI.cpp
+1513206111 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UI/StoreClerkUI.cpp
 	"StoreClerkUI.h"
 	"order_functions.h"
 
@@ -2041,11 +2041,11 @@
 1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UIfunctions/baker_functions.cpp
 	"baker_functions.h"
 
-1513198046 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UIfunctions/order_functions.cpp
+1513206111 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UIfunctions/order_functions.cpp
 	"order_functions.h"
 	"ValidationFunctions.h"
 
-1513146113 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UIfunctions/add_toppings.cpp
+1513205257 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UIfunctions/add_toppings.cpp
 	"add_toppings.h"
 
 1513179235 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UIfunctions/add_toppings.h
@@ -2068,4 +2068,399 @@
 
 1513199464 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UIfunctions/manager_functions.cpp
 	"manager_functions.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/data/LocationRepo.cpp
+	"LocationRepo.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/data/LocationRepo.h
+	"Location.h"
+	<vector>
+	<fstream>
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/objects/Location.h
+	<string.h>
+	<string>
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/data/OrderRepo.cpp
+	"OrderRepo.h"
+	<cstdlib>
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/data/OrderRepo.h
+	"Order.h"
+	<fstream>
+	<string>
+	<vector>
+
+1513210207 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/objects/Order.h
+	"Pizza.h"
+	"PizzaType.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/objects/Pizza.h
+	"PizzaStatus.h"
+	"PizzaBottom.h"
+	"Toppings.h"
+	<string.h>
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/datatypes/PizzaStatus.h
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/objects/PizzaBottom.h
+	"string.h"
+	<iostream>
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/objects/Toppings.h
+	<string>
+	<iostream>
+	<cstring>
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/datatypes/PizzaType.h
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/data/PizzaBottomRepo.cpp
+	"PizzaBottomRepo.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/data/PizzaBottomRepo.h
+	"PizzaBottom.h"
+	<fstream>
+	<vector>
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/data/PizzaRepo.cpp
+	"PizzaRepo.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/data/PizzaRepo.h
+	"Pizza.h"
+	<fstream>
+	<vector>
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/data/SideOrderRepo.cpp
+	"SideOrderRepo.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/data/SideOrderRepo.h
+	"SideOrders.h"
+	<vector>
+	<string>
+	<fstream>
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/objects/SideOrders.h
+	<cstring>
+	<string>
+	<iostream>
+	"ValidationFunctions.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/ValidationFunctions.h
+	<strings.h>
+	<iostream>
+	"InvalidNumberException.h"
+	"InvalidAlphaNumException.h"
+	"InvalidDoubleException.h"
+	"InvalidAlphaStringException.h"
+	"InvalidAddresseException.h"
+	"InvalidBoolException.h"
+	"InvalidCharException.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidNumberException.h
+	<string>
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidAlphaNumException.h
+	<string>
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidDoubleException.h
+	<string>
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidAlphaStringException.h
+	<string>
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidAddresseException.h
+	<string>
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidBoolException.h
+	<string>
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidCharException.h
+	<string>
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/data/ToppingsRepo.cpp
+	"ToppingsRepo.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/data/ToppingsRepo.h
+	"Toppings.h"
+	<fstream>
+	<vector>
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidAddresseException.cpp
+	"InvalidAddresseException.h"
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidAlphaNumException.cpp
+	"InvalidAlphaNumException.h"
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidAlphaStringException.cpp
+	"InvalidAlphaStringException.h"
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidBoolException.cpp
+	"InvalidBoolException.h"
+	<iostream>
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidCharException.cpp
+	"InvalidCharException.h"
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidDoubleException.cpp
+	"InvalidDoubleException.h"
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidInputException.cpp
+	"InvalidInputException.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidInputException.h
+	<string>
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidName.cpp
+	"InvalidName.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidName.h
+	<string>
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidNumberException.cpp
+	"InvalidNumberException.h"
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidPrice.cpp
+	"InvalidPrice.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidPrice.h
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidSize.cpp
+	"InvalidSize.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidSize.h
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/LocationHandler.cpp
+	"LocationHandler.h"
+	<iostream>
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/LocationHandler.h
+	"LocationRepo.h"
+	"InvalidName.h"
+	"InvalidAlphaNumException.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/OrderHandler.cpp
+	"OrderHandler.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/OrderHandler.h
+	"OrderRepo.h"
+	"PizzaHandler.h"
+	"PizzaStatus.h"
+	"LocationHandler.h"
+
+1513174270 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/PizzaHandler.h
+	"ToppingsHandler.h"
+	"PizzaRepo.h"
+	"PizzaBottomHandler.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/ToppingsHandler.h
+	"ToppingsRepo.h"
+	<string.h>
+	"InvalidName.h"
+	"InvalidPrice.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/PizzaBottomHandler.h
+	"PizzaBottomRepo.h"
+	<string.h>
+	"PizzaBottom.h"
+	"InvalidSize.h"
+	"InvalidPrice.h"
+	"ValidationFunctions.h"
+
+1513196061 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/PizzaBottomHandler.cpp
+	"PizzaBottomHandler.h"
+
+1513147100 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/PizzaHandler.cpp
+	"PizzaHandler.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/SideOrdersHandler.cpp
+	"SideOrdersHandler.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/SideOrdersHandler.h
+	"SideOrderRepo.h"
+	"SideOrders.h"
+	"InvalidName.h"
+	"InvalidPrice.h"
+	"ValidationFunctions.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/sorting_function.cpp
+	"sorting_function.h"
+
+1513117318 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/sorting_function.h
+	"ToppingsRepo.h"
+	"PizzaRepo.h"
+	"OrderRepo.h"
+	<string.h>
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/StdInput.cpp
+	"StdInput.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/StdInput.h
+	<iostream>
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/ToppingsHandler.cpp
+	"ToppingsHandler.h"
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/main.cpp
+	<iostream>
+	"LoginUI.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/LoginUI.h
+	<iostream>
+	<stdlib.h>
+	<vector>
+	"ManagerUI.h"
+	"BakerUI.h"
+	"PhoneClerkUI.h"
+	"StoreClerkUI.h"
+	"CustomerUI.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/ManagerUI.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/UIBridge.h
+	"OrderHandler.h"
+	"PizzaHandler.h"
+	"ToppingsHandler.h"
+	"PizzaBottomHandler.h"
+	"LocationHandler.h"
+	"SideOrdersHandler.h"
+	"print_functions.h"
+	"InvalidInputException.h"
+	"order_functions.h"
+	"baker_functions.h"
+
+1513204833 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UIfunctions/print_functions.h
+	<iostream>
+
+1513207593 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UIfunctions/order_functions.h
+	"print_functions.h"
+	<stdlib.h>
+	"OrderHandler.h"
+	"Pizza.h"
+	<iomanip>
+	"InvalidCharException.h"
+	"InvalidAlphaStringException.h"
+	"Print.h"
+	"PizzaBottom.h"
+	"PizzaBottomHandler.h"
+	"get_menu_pizza.h"
+
+1513198129 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/Print.h
+	"sorting_function.h"
+	<iomanip>
+	"print_types.h"
+	"OrderHandler.h"
+
+1513117372 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/print_types.h
+
+1513189242 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UIfunctions/get_menu_pizza.h
+	"Print.h"
+	"PizzaHandler.h"
+	"get_menu_pizza.h"
+	"add_toppings.h"
+	"OrderHandler.h"
+
+1513179235 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UIfunctions/add_toppings.h
+	"sorting_function.h"
+	<string.h>
+	"ToppingsHandler.h"
+	<vector>
+	"print_functions.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UIfunctions/baker_functions.h
+	"OrderHandler.h"
+	"Pizza.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/BakerUI.h
+	<iostream>
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/PhoneClerkUI.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/StoreClerkUI.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/CustomerUI.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/objects/Location.cpp
+	"Location.h"
+
+1513210207 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/objects/Order.cpp
+	"Order.h"
+
+1513147017 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/objects/Pizza.cpp
+	"Pizza.h"
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/objects/PizzaBottom.cpp
+	"PizzaBottom.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/objects/SideOrders.cpp
+	"SideOrders.h"
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/objects/Toppings.cpp
+	"Toppings.h"
+
+1513196061 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/BakerUI.cpp
+	"BakerUI.h"
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/CustomerUI.cpp
+	"CustomerUI.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/LoginUI.cpp
+	"LoginUI.h"
+
+1513202460 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/ManagerUI.cpp
+	"ManagerUI.h"
+	"manager_functions.h"
+
+1513199249 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UIfunctions/manager_functions.h
+	"InvalidAlphaStringException.h"
+	"InvalidNumberException.h"
+	"InvalidBoolException.h"
+	"ValidationFunctions.h"
+	"order_functions.h"
+	"add_toppings.h"
+	"SideOrdersHandler.h"
+
+1513197752 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/PhoneClerkUI.cpp
+	"PhoneClerkUI.h"
+
+1513206210 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/Print.cpp
+	"Print.h"
+
+1513206111 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/StoreClerkUI.cpp
+	"StoreClerkUI.h"
+	"order_functions.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/UIBridge.cpp
+	"UIBridge.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UIfunctions/baker_functions.cpp
+	"baker_functions.h"
+
+1513210615 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UIfunctions/order_functions.cpp
+	"order_functions.h"
+	"ValidationFunctions.h"
+
+1513199464 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UIfunctions/manager_functions.cpp
+	"manager_functions.h"
+
+1513209932 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UIfunctions/add_toppings.cpp
+	"add_toppings.h"
+
+1513192789 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UIfunctions/get_menu_pizza.cpp
+	"get_menu_pizza.h"
+	"add_toppings.h"
 

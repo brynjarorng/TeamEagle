@@ -87,6 +87,7 @@ vector <Toppings> get_toppings_selection();
 //toppings.
 void add_bottom(Pizza& pizzaPizza, PizzaBottomHandler& bottomhandler, PizzaHandler& pizzahandler);
 Pizza get_menu_p(PizzaHandler& pizzahandler, char& s);
+void print_order_list(int& refresh, string next, OrderHandler& orderhandler, bool skipdelivered, bool skippaid);
 //For selection bottom size.
 
 #endif // ORDER_FUNCTIONS_H

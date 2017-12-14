@@ -24,8 +24,6 @@ inline void pause_screen() {
     cout << endl << "---Press Enter to continue---" << endl;
     //cin >> ws;
     //getline(cin, dump, '\n');
-    cin.clear();
-    cin.ignore();
     cin.get();
     //getchar();
     /*do{
