@@ -4,6 +4,7 @@
 #include "PizzaRepo.h"
 #include "OrderRepo.h"
 #include <string.h>
+#include "InvalidSize.h"
 
 enum sort_by {alph_asc, alph_desc, price_asc, price_desc};
 
@@ -13,6 +14,7 @@ int string_comp (string one, string two);
 //if they are l.equal then the return value is 0.
 bool one_is_greater(string one, string two);
 //The return value is true if one is lexiographically greater than
+Pizza get_sorted_pizza_at(int index, sort_by a);
 //two, false otherwise.
 /**********TOPPINGS**********/
 vector <Toppings> toppings_sorted(sort_by a);

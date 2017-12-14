@@ -8,6 +8,7 @@ void create_topping(ToppingsHandler& toppingshandler) {
 
     while(choice != "n") {
         Toppings topping;
+        clear();
 
         string name;
         do{
@@ -303,7 +304,8 @@ bool add_pizza_size(PizzaBottomHandler& bottomhandler) {
         try{
             cont = 1;
             cout << "Enter new size (q to quit): ";
-            cin >> size;
+            cin >> ws;
+            getline(cin, size);
             if(size == "q") {
                 return 0;
             }

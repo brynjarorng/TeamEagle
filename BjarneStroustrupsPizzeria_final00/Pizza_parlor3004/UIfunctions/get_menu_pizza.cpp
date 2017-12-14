@@ -38,6 +38,7 @@ void p_print_while_not_digits(Pizza& selection, char& s) {
             break;
         }
         if (isdigit(input[0])) {
+
             sort = print.get_sort_order();
             selection = get_selected_pizza(char_to_int(input[0]), sort);
             break;
@@ -70,7 +71,7 @@ void print_pizza_selection(vector<Pizza>& selection) {
 }
 Pizza get_selected_pizza(int index, sort_by order) {
 
-    Pizza pizza = pizza_sorted(order)[index - 1];
+    Pizza pizza = get_sorted_pizza_at( (index - 1), order );
     return pizza;
 }
 
