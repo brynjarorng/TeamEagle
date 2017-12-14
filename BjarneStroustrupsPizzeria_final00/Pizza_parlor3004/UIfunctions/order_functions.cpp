@@ -272,7 +272,12 @@ bool add_menu_pizza(Order& order, PizzaHandler& pizzahandler, PizzaBottomHandler
 
     Pizza pizza;
     char s;
-    p_print_while_not_digits(pizza, s);
+    try{
+        p_print_while_not_digits(pizza, s);
+    }
+    catch(InvalidSize e) {
+        cout << "Pizza not on list!" << endl;
+    }
     if (s == 'b') {
         return false;
     }
@@ -390,8 +395,8 @@ void print_navigation (Print& print, print_item type, char in,  bool loop) {
         cout << "Too many toppings selected!" << endl;
     }
     if (!max_topping) {
-
         clear();
+
         for (int i = 0; i < selection.size(); i++) {
             pizza.add_topping(selection.at(i));
         }
@@ -404,17 +409,18 @@ void print_navigation (Print& print, print_item type, char in,  bool loop) {
             try{
                 print_pizza(pizza);
                 cout << "Do you want to add this pizza to the order? (y/n) ";
-                cin.ignore();
                 getline(cin, input, '\n');
                 validate_bool_question(input);
                 cont = 0;
+                if(input == "y") {
+                    order.add_pizza(pizza);
+                }
             }
             catch(InvalidBoolException e) {
                 cont = 1;
                 cout << e.get_err() << endl;
             }
         } while(cont);
-            order.add_pizza(pizza);
     }
 }
 
@@ -456,7 +462,7 @@ void mark_paid(OrderHandler& orderhandler) {
             if (!order_list[next].get_paid() && !order_list[next].get_delivered()) {
                 clear();
                 print_order(order_list[next]);
-                cout << "(m) to mark paid (n) for next order";
+                cout << "(m) to mark paid (n) for next order: ";
                 cin >> in;
                 counter++;
                 if (in[0] == 'm') {
@@ -488,7 +494,7 @@ void mark_delivered(OrderHandler& orderhandler) {
             if (!order_list[next].get_delivered()) {
                 clear();
                 print_order(order_list[next]);
-                cout << "(m) to mark delivered (n) for next order";
+                cout << "(m) to mark delivered (n) for next order: ";
                 cin >> in;
                 counter++;
                 if (in == 'm') {
