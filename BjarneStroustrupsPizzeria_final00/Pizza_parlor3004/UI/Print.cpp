@@ -144,7 +144,9 @@ void Print::perform_action(print_action action) {
             p_screen();
         break;
         case current_screen:
-        //reset_b();
+        if (list_count <= 0) {
+                reset_b();
+            }
         break;
         case a_to_z:
             sort = alph_asc;
@@ -185,7 +187,7 @@ void Print::print_what(print_item what) {
             print = pizz;
             this ->pizzas_list = pizza_sorted(sort);
             this ->list_count = pizzas_list.size();
-           // reset_b();
+            //reset_b();
     }
     else if (what == ord) {
 
