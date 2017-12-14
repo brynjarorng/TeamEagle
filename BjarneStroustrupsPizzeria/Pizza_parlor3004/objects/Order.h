@@ -65,6 +65,7 @@ private:
 	static const int MAX_ORDER_SIZE = 20;
     //
     static const int MAX_COMMENT_LENGTH = 50;
+    static const int MAX_ADDRESS_LENGTH = 26;
 	bool order_ready;
     //True if all pizzas are ready in order.
 	bool order_delivered;
@@ -84,11 +85,12 @@ private:
     //
     void calulate_total();
     //Calculates the order total and sets this->total_price equal to the total.
-    char delivery_addresse[26];
+    char delivery_addresse[MAX_ADDRESS_LENGTH];
     //Addresse to deliver to
     char comment[MAX_COMMENT_LENGTH];
     //Any special request regarding the order go here
     int comment_length;
+    int address_length;
 
 };
 #endif //ORDER

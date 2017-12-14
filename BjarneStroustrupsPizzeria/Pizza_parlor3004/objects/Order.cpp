@@ -147,16 +147,22 @@ void Order::set_sent() {
 }
 
 void Order::set_addresse(string input) {
-    for(unsigned int i = 0; i < input.length(); i++) {
+      for(unsigned int i = 0; i < input.size(); i++) {
         this ->delivery_addresse[i] = input [i];
+
+        if (input.length() < MAX_ADDRESS_LENGTH) {
+        delivery_addresse[input.size()] = '\0';
+        }
+        else {
+            delivery_addresse[MAX_ADDRESS_LENGTH - 1] = '\0';
+        }
+
+        address_length++;
     }
 }
 
 string Order::get_addresse() {
-    string temp;
-    for(unsigned int i = 0; i < sizeof(delivery_addresse); i++) {
-        temp += delivery_addresse[i];
-    }
+    string temp = this ->delivery_addresse;
     return temp;
 }
 
