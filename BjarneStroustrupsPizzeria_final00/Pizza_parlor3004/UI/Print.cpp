@@ -136,6 +136,7 @@ void Print::perform_action(print_action action) {
             p_screen();
         break;
         case current_screen:
+        reset_b();
         break;
         case a_to_z:
             sort = alph_asc;
