@@ -6,10 +6,13 @@ BakerUI::BakerUI() {
 }
 
 bool BakerUI::baker_menu(bool run, bool& continueRun) {
-    clear();
-    cout << "----Baker menu----" << endl;
-//    print_pizza_list();
-
+    bool cont = true;
+    while(cont) {
+        clear();
+        cout << "----Baker menu----" << endl;
+        print_pizza_baking_list(orderhandler);
+        cont = change_status(orderhandler);
+    }
     pause_screen();
     return 0;
 }

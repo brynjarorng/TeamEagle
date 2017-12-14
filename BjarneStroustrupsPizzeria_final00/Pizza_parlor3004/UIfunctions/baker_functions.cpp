@@ -7,11 +7,10 @@ void pprint_lines (int line_count) {
     cout << endl;
 }
 
-void print_pizza_baking_list() {
-    OrderHandler orderhandler;
+void print_pizza_baking_list(OrderHandler& orderhandler) {
     vector<Order> orders = orderhandler.get_orders();
     for (int i = 0; i < orderhandler.get_order_count(); i++) {
-        if (!orders.at(i).get_delivered()) {
+        if (!orders.at(i).ready()) {
             cout << "Order #" << orders.at(i).get_order_number() << endl;
             print_pizzas_in_order(orders.at(i));
             pprint_lines(10);
@@ -42,27 +41,39 @@ void print_pizzas_in_order(Order& order) {
     }
 }
 
-void change_status() {
+bool change_status(OrderHandler& orderhandler) {
     string order_number;
     string pizza_number;
     string status;
-    OrderHandler handler;
-    cout << "Order number: ";
-    cin >> order_number;
-    cout << "Pizza number: ";
-    cin >> pizza_number;
-    cout << "Status: (b for in oven, r for ready) ";
-    cin >> status;
+    try {
+        cout << "Order number (0 to quit): ";
+        cin >> order_number;
+        validate_int(order_number);
+        if(stoi(order_number) == 0) {
+            return false;
+        }
+        cout << "Pizza number: ";
+        cin >> pizza_number;
+        validate_int(pizza_number);
+        cout << "Status: (b for in oven, r for ready) ";
+        cin >> status;
+        if(status == "b") {
+            orderhandler.change_status(stoi(order_number), stoi(pizza_number) - 1, baking);
+        }
+        else if(status == "r") {
+            orderhandler.change_status(stoi(order_number), stoi(pizza_number) - 1, ready);
+        }
+        else {
+            cout << "Not a valid status" << endl;
+            pause_screen();
+        }
 
-    if(status == "b") {
-        handler.change_status(stoi(order_number), stoi(pizza_number) - 1, baking);
     }
-    else if(status == "r") {
-        handler.change_status(stoi(order_number), stoi(pizza_number) - 1, ready);
+    catch(InvalidNumberException e) {
+        cout << "Not a number" << endl;
+        pause_screen();
     }
-    for(unsigned int i = 0; i < handler.get_orders().size();i++){
-        if(handler.get_from_orders(i).get_order_number() == stoi(order_number))
-        cout << handler.get_from_orders(i).get_pizzas_in_order()[stoi(pizza_number) - 1].get_status();
-    }
+
+    return true;
 
 }
