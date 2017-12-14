@@ -21,9 +21,7 @@ void print_menu_pizza_list_with_numbers(PizzaHandler& pizzahandler);
 
 void remove_menu_pizza(PizzaHandler& pizzahandler);
 
-
 bool add_pizza_size(PizzaBottomHandler& bottomhandler);
-
 
 void remove_size(PizzaBottomHandler& bottomhandler);
 
@@ -32,6 +30,10 @@ void add_location(LocationHandler& lochandler);
 void print_locations(LocationHandler& lochandler);
 
 void make_new_side_order(SideOrdersHandler& sideorderhandler);
+
+void archive_orders(OrderHandler& orderhandler);
+
+void print_archived_orders(OrderHandler& orderhandler);
 
 
 

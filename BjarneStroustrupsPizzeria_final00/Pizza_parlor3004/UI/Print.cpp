@@ -144,7 +144,7 @@ void Print::perform_action(print_action action) {
             p_screen();
         break;
         case current_screen:
-        if (list_count <= 0) {
+        if (list_count <= n) {
                 reset_b();
             }
         break;

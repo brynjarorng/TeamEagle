@@ -23,7 +23,8 @@ class ManagerUI: public UIBridge {
         //Displays the menu for adding and removing pizzas from the menu
         bool side_order_menu(bool run, bool& continueRun);
         //menu for side orders
-
+        bool archive_menu(bool run, bool& continueRun);
+        //menu for archive functions
         char lower(char instr);
         //takes in a character and makes it
         //lower case (A -> a)

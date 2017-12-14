@@ -137,3 +137,18 @@ void OrderHandler::change_status(int ordernumber, int pizzaindex, PizzaStatus st
     }
 }
 
+string OrderHandler::get_location() {
+    return this -> location;
+}
+
+void OrderHandler::archive_orders() {
+    got_list();
+    order_repo.write_archive(orders, location);
+    orders.clear();
+    order_repo.overwrite(orders, location);
+}
+
+
+vector<Order> OrderHandler::get_archived_orders() {
+    return order_repo.read_archive(this ->location);
+}

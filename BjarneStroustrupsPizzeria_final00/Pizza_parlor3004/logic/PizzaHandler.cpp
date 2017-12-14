@@ -175,8 +175,8 @@ vector<Pizza> PizzaHandler::get_pizza_list(){
 void PizzaHandler::add_bottom_to_pizza(Pizza& pizza, int index) {
     vector<PizzaBottom> bottom_vector;
     PizzaBottomHandler bottom_handler;
+    bottom_vector = bottom_handler.get_size_list();
     if(index >= 0 && index < bottom_vector.size()) {
-        bottom_vector = bottom_handler.get_size_list();
         pizza.set_bottom(bottom_vector.at(index));
     }
     else {

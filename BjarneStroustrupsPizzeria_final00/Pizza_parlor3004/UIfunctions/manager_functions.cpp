@@ -1,5 +1,6 @@
 #include "manager_functions.h"
 
+
 void create_topping(ToppingsHandler& toppingshandler) {
     clear();
     string choice;
@@ -428,4 +429,25 @@ void print_locations(LocationHandler& lochandler) {
     }
 }
 
+void archive_orders(OrderHandler& orderhandler) {
+    cout << "Do you wish to archive the orders for " << orderhandler.get_location() << " ? ";
+    string ans;
+    cin >> ws;
+    getline(cin, ans);
+    try{
+        validate_bool_question(ans);
+        orderhandler.archive_orders();
+    }
+    catch(InvalidBoolException e) {
+        cout << "Invalid answer" << endl;
+        pause_screen();
+    }
+}
 
+void print_archived_orders(OrderHandler& orderhandler) {
+    vector<Order> arc = orderhandler.get_archived_orders();
+    cout << arc.size();
+    for(int i = 0; i < arc.size(); i++) {
+        print_order(arc.at(i));
+    }
+}

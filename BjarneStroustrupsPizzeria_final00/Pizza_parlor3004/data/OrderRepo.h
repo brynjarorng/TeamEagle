@@ -31,6 +31,10 @@ public:
 	//Moves an order in the current order to archived order.
 	void overwrite_list(Order* order, int list_count);
 	//Rewrites the "current_orders.dat" with order.*/
+	void write_archive(vector<Order> orders, string location);
+
+	vector<Order> read_archive(string location);
+
     vector<Order> read(string location);
     //Return value is a vector where each element is an occurrence
 	//of a Order currently contained in "order.dat" in the home folder.
