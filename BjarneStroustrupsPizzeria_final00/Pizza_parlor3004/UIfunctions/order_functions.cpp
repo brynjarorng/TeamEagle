@@ -305,7 +305,7 @@ Pizza get_menu_p(PizzaHandler& pizzahandler, char& s) {
 
 void add_bottom(Pizza& pizza, PizzaBottomHandler& bottomhandler, PizzaHandler& pizzahandler) {
 
-    bool cont = false;
+    bool cont = true;
     string input;
     do{
         try{
@@ -314,8 +314,8 @@ void add_bottom(Pizza& pizza, PizzaBottomHandler& bottomhandler, PizzaHandler& p
             cin >> ws;
             getline(cin, input, '\n');
             validate_int(input);
-            pizzahandler.add_bottom_to_pizza(pizza, stoi(input));
-            cont = true;
+            pizzahandler.add_bottom_to_pizza(pizza, stoi(input) - 1);
+            cont = false;
         }
         catch(InvalidNumberException e) {
             cout << "Not a number" << endl;
@@ -326,11 +326,7 @@ void add_bottom(Pizza& pizza, PizzaBottomHandler& bottomhandler, PizzaHandler& p
             pause_screen();
         }
     } while(cont);
-
-
 }
-
-
 
 vector <Toppings> toppings_to_special(ToppingsHandler& toppingshandler) {
 
