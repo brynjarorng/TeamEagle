@@ -18,9 +18,8 @@ bool ManagerUI::manager_menu(bool run, bool& continueRun) {
             cout << "(S) Manage side orders" << endl;
             cout << "(L) Add new location" << endl;
             cout << "(N) Make a new Pizza" << endl;
-
             cout << "(B) Go back to Login portal" << endl;
-            cout << "(q) Quit" << endl;
+            cout << "(Q) Quit" << endl;
             if(run){
                 cout << "Incorrect input!" << endl;
             }
@@ -116,7 +115,7 @@ bool ManagerUI::info_menu(bool run, bool& continueRun) {
         cout << "(P) Print all pizzas on menu" << endl;
         cout << "(S) Print all available pizza sizes" << endl;
         cout << "(B) Go back" << endl;
-        cout << "(q) Quit" << endl;
+        cout << "(Q) Quit" << endl;
         if(run){
             cout << "Incorrect input!" << endl;
         }
@@ -180,7 +179,7 @@ bool ManagerUI::topping_menu(bool run, bool& continueRun) {
         cout << "(S) See all available toppings" << endl;
         cout << "(R) Remove toppings" << endl;
         cout << "(B) Go back" << endl;
-        cout << "(q) Quit" << endl;
+        cout << "(Q) Quit" << endl;
         if(run){
             cout << "Incorrect input!" << endl;
         }
@@ -239,7 +238,7 @@ bool ManagerUI::size_menu(bool run, bool& continueRun) {
         cout << "(S) See all sizes and prices" << endl;
         cout << "(R) Remove a size and price" << endl;
         cout << "(B) Go back" << endl;
-        cout << "(q) Quit" << endl;
+        cout << "(Q) Quit" << endl;
         if(run){
             cout << "Incorrect input!" << endl;
         }
@@ -298,7 +297,7 @@ bool ManagerUI::menu_pizza_menu(bool run, bool& continueRun) {
         cout << "(S) See all pizzas on menu" << endl;
         cout << "(R) Remove pizza" << endl;
         cout << "(B) Go back" << endl;
-        cout << "(q) Quit" << endl;
+        cout << "(Q) Quit" << endl;
         if(run){
             cout << "Incorrect input!" << endl;
         }
@@ -361,7 +360,7 @@ try {
         cout << "(S) See all side orders" << endl;
         cout << "(R) Remove side order" << endl;
         cout << "(B) Go back" << endl;
-        cout << "(q) Quit" << endl;
+        cout << "(Q) Quit" << endl;
         if(run){
             cout << "Incorrect input!" << endl;
         }
