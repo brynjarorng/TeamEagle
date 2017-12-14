@@ -15,7 +15,7 @@ bool CustomerUI::customer_menu(bool run, bool& continueRun) {
         cout << "(T) See all available toppings" << endl;
         cout << "(O) See your order status" << endl;
         cout << "(B) Go back to login portal" << endl;
-        cout << "(q) Quit" << endl;
+        cout << "(Q) Quit" << endl;
         if(run){
             cout << "Incorrect input!" << endl;
         }
@@ -28,7 +28,7 @@ bool CustomerUI::customer_menu(bool run, bool& continueRun) {
         case 'n':
             clear();
             cout << "New order" << endl;
-            pause_screen();
+            new_order(orderhandler, pizzahandler, toppingshandler, bottomhandler);
 
             continueRun = 1;
             return 0;
@@ -36,17 +36,8 @@ bool CustomerUI::customer_menu(bool run, bool& continueRun) {
 
         case 'm':
             clear();
-            cout << "New order" << endl;
-            pause_screen();
-
-            continueRun = 1;
-            return 0;
-            break;
-
-        case 'a':
-            clear();
-            cout << "See all available pizzas" << endl;
-            pause_screen();
+            cout <<  "All pizzas on menu" << endl;
+            print_menu_pizza_list();
 
             continueRun = 1;
             return 0;
@@ -55,7 +46,7 @@ bool CustomerUI::customer_menu(bool run, bool& continueRun) {
         case 't':
             clear();
             cout << "See all available toppings" << endl;
-            pause_screen();
+            print_topping_list();
 
             continueRun = 1;
             return 0;

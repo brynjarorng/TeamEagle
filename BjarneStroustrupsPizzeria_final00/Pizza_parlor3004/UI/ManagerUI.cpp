@@ -18,9 +18,10 @@ bool ManagerUI::manager_menu(bool run, bool& continueRun) {
             cout << "(S) Manage side orders" << endl;
             cout << "(L) Add new location" << endl;
             cout << "(N) Make a new Pizza" << endl;
+            cout << "(A) Archive orders" << endl;
 
             cout << "(B) Go back to Login portal" << endl;
-            cout << "(q) Quit" << endl;
+            cout << "(Q) Quit" << endl;
             if(run){
                 cout << "Incorrect input!" << endl;
             }
@@ -83,6 +84,15 @@ bool ManagerUI::manager_menu(bool run, bool& continueRun) {
                 continueRun = 1;
                 break;
 
+            case 'a':
+                run = 0;
+                do{
+                    run = archive_menu(run, continueRun);
+                } while(continueRun);
+                continueRun = 1;
+                ///To create a new pizza menu
+                break;
+
             case 'b':
                 continueRun = 0;
                 return 0;
@@ -116,7 +126,7 @@ bool ManagerUI::info_menu(bool run, bool& continueRun) {
         cout << "(P) Print all pizzas on menu" << endl;
         cout << "(S) Print all available pizza sizes" << endl;
         cout << "(B) Go back" << endl;
-        cout << "(q) Quit" << endl;
+        cout << "(Q) Quit" << endl;
         if(run){
             cout << "Incorrect input!" << endl;
         }
@@ -180,7 +190,7 @@ bool ManagerUI::topping_menu(bool run, bool& continueRun) {
         cout << "(S) See all available toppings" << endl;
         cout << "(R) Remove toppings" << endl;
         cout << "(B) Go back" << endl;
-        cout << "(q) Quit" << endl;
+        cout << "(Q) Quit" << endl;
         if(run){
             cout << "Incorrect input!" << endl;
         }
@@ -239,7 +249,7 @@ bool ManagerUI::size_menu(bool run, bool& continueRun) {
         cout << "(S) See all sizes and prices" << endl;
         cout << "(R) Remove a size and price" << endl;
         cout << "(B) Go back" << endl;
-        cout << "(q) Quit" << endl;
+        cout << "(Q) Quit" << endl;
         if(run){
             cout << "Incorrect input!" << endl;
         }
@@ -298,7 +308,7 @@ bool ManagerUI::menu_pizza_menu(bool run, bool& continueRun) {
         cout << "(S) See all pizzas on menu" << endl;
         cout << "(R) Remove pizza" << endl;
         cout << "(B) Go back" << endl;
-        cout << "(q) Quit" << endl;
+        cout << "(Q) Quit" << endl;
         if(run){
             cout << "Incorrect input!" << endl;
         }
@@ -361,7 +371,7 @@ try {
         cout << "(S) See all side orders" << endl;
         cout << "(R) Remove side order" << endl;
         cout << "(B) Go back" << endl;
-        cout << "(q) Quit" << endl;
+        cout << "(Q) Quit" << endl;
         if(run){
             cout << "Incorrect input!" << endl;
         }
@@ -406,6 +416,63 @@ try {
         return 1;
     }
 }
+
+bool ManagerUI::archive_menu(bool run, bool& continueRun) {
+try {
+        clear();
+
+        cout << "----Archive menu portal----" << endl;
+        cout << "(A) Archive orders" << endl;
+        cout << "(S) Print archived orders" << endl;
+        cout << "(B) Go back" << endl;
+        cout << "(Q) Quit" << endl;
+        if(run){
+            cout << "Incorrect input!" << endl;
+        }
+        cout << ": ";
+
+        cin >> select;
+        select = lower(select);
+
+        switch (select) {
+        case 'a':
+            clear();
+            cout << "Archive orders" << endl;
+            choose_location();
+            archive_orders(orderhandler);
+            continueRun = 1;
+            return 0;
+            break;
+
+        case 's':
+            clear();
+            cout << "Get archived orders" << endl;
+            choose_location();
+            print_archived_orders(orderhandler);
+            pause_screen();
+            continueRun = 1;
+            return 0;
+            break;
+
+        case 'b':
+            continueRun = 0;
+            return 0;
+            break;
+
+        case 'q':
+            terminate();
+            continueRun = 1;
+            return 0;
+            break;
+        }
+        throw(InvalidInputException());
+    }
+    catch(InvalidInputException e) {
+        continueRun = 1;
+        return 1;
+    }
+}
+
 
 void ManagerUI::terminate() {
     clear();

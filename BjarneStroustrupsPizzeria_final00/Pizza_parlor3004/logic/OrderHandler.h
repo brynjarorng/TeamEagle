@@ -46,7 +46,9 @@ public:
     void set_location(string location);
     void change_status(int ordernumber, int pizzaindex, PizzaStatus status);
     bool valid_order_nr(int nr);
-
+    string get_location();
+    void archive_orders();
+    vector<Order> get_archived_orders();
 private:
     OrderRepo order_repo;
     vector<Order> orders;

@@ -16,7 +16,7 @@ bool PhoneClerkUI::phone_menu(bool run, bool& continueRun) {
         cout << "(T) See all toppings" << endl;
         cout << "(O) See orders list" << endl;
         cout << "(B) Go back to login portal" << endl;
-        cout << "(q) Quit" << endl;
+        cout << "(Q) Quit" << endl;
         if(run){
             cout << "Incorrect input!" << endl;
         }

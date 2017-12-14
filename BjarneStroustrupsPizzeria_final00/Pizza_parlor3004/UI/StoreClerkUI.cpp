@@ -18,7 +18,7 @@ bool StoreClerkUI::store_menu(bool run, bool& continueRun) {
         cout << "(D) Mark orders delivered" << endl;
         cout << "(L) See all orders" << endl;
         cout << "(B) Go back to login portal" << endl;
-        cout << "(q) Quit" << endl;
+        cout << "(Q) Quit" << endl;
         if(run){
             cout << "Incorrect input!" << endl;
         }
@@ -59,6 +59,7 @@ bool StoreClerkUI::store_menu(bool run, bool& continueRun) {
 
         case 't':
             clear();
+            cout <<  "All toppings on menu" << endl;
             print_topping_list();
             pause_screen();
 
