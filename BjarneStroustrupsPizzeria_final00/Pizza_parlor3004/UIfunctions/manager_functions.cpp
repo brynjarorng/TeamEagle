@@ -62,6 +62,7 @@ void create_topping(ToppingsHandler& toppingshandler) {
                 }
                 catch(InvalidName e) {
                     cout << "Topping already exists" << endl;
+                    pause_screen();
                 }
         }
 
@@ -197,6 +198,7 @@ void make_new_menu_pizza(PizzaHandler& pizzahandler, ToppingsHandler& toppingsha
             }
             catch(InvalidName e) {
                 cout << "Pizza name is taken, try again? (y/n) ";
+                pause_screen();
                 do{
                     try{
                         cin >> choice;
@@ -228,6 +230,7 @@ void make_new_menu_pizza(PizzaHandler& pizzahandler, ToppingsHandler& toppingsha
             }
             catch(InvalidPrice e) {
                 cout << "Price must be a positive number, try again? (y/n) ";
+                pause_screen();
                 do{
                     try{
                         cin >> choice;
@@ -264,6 +267,7 @@ void remove_menu_pizza(PizzaHandler& pizzahandler) {
         }
         catch(InvalidNumberException e) {
             cout << "Not a number" << endl;
+            pause_screen();
         }
         catch(InvalidSize e) {
             cout << "Number not on list"  << endl;
@@ -296,6 +300,7 @@ bool add_pizza_size(PizzaBottomHandler& bottomhandler) {
         catch(InvalidSize e) {
             cont = 0;
             cout << "Invalid size!" << endl;
+            pause_screen();
         }
     } while(!cont);
 
@@ -313,6 +318,7 @@ bool add_pizza_size(PizzaBottomHandler& bottomhandler) {
         catch(InvalidPrice e) {
             cont = 0;
             cout << "Invalid Price!" << endl;
+            pause_screen();
         }
     } while(!cont);
 
@@ -348,9 +354,11 @@ void remove_size(PizzaBottomHandler& bottomhandler) {
             }
             catch(InvalidNumberException e) {
                 cout << "Not a number" << endl;
+                pause_screen();
             }
             catch(InvalidSize e) {
                 cout << "Size not found" << endl;
+                pause_screen();
             }
         } while(cont);
 
@@ -429,9 +437,11 @@ void remove_locations(LocationHandler& lochandler) {
         }
         catch(InvalidNumberException e) {
             cout << "Not a number" << endl;
+            pause_screen();
         }
         catch(InvalidSize e) {
             cout << "Location not on list" << endl;
+            pause_screen();
         }
     }while(cont);
 }
