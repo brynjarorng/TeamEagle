@@ -148,18 +148,19 @@ string Order::get_addresse() {
 
 void Order::set_comment(string input) {
 
-    for(unsigned int i = 0; i < input.size(); i++) {
+    int index = 0;
+    if (input.size() > MAX_COMMENT_LENGTH) {
+        index = MAX_COMMENT_LENGTH;
+    }
+    else {
+        index = input.size();
+    }
+
+    for(int i = 0; i < index; i++) {
         this ->comment[i] = input [i];
-
-        if (input.length() < MAX_COMMENT_LENGTH) {
-        comment[input.size()] = '\0';
-        }
-        else {
-            comment[MAX_COMMENT_LENGTH - 1] = '\0';
-        }
-
         comment_length++;
     }
+    comment[index + 1] = '\0';
 }
 int Order::get_comment_length() {
     return this ->comment_length;
