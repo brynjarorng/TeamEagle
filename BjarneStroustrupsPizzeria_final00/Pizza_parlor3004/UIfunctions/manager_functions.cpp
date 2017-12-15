@@ -62,6 +62,7 @@ void create_topping(ToppingsHandler& toppingshandler) {
                 }
                 catch(InvalidName e) {
                     cout << "Topping already exists" << endl;
+                    pause_screen();
                 }
         }
 
@@ -429,9 +430,11 @@ void remove_locations(LocationHandler& lochandler) {
         }
         catch(InvalidNumberException e) {
             cout << "Not a number" << endl;
+            pause_screen();
         }
         catch(InvalidSize e) {
             cout << "Location not on list" << endl;
+            pause_screen();
         }
     }while(cont);
 }
