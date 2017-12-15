@@ -144,23 +144,36 @@ void Print::perform_action(print_action action) {
             p_screen();
         break;
         case current_screen:
-        if (list_count <= n) {
+            if (list_count <= n) {
                 reset_b();
             }
         break;
         case a_to_z:
             sort = alph_asc;
+            if (list_count <= n) {
+                reset_b();
+            }
         break;
         case z_to_a:
+            if (list_count <= n) {
+                reset_b();
+            }
              sort = alph_desc;
         break;
         case price_from_high:
+            if (list_count <= n) {
+                reset_b();
+            }
              sort = price_desc;
         break;
         case price_from_low:
+            if (list_count <= n) {
+                reset_b();
+            }
              sort = price_asc;
     }
 }
+
 void Print::print_input(vector<Pizza> input) {
     this ->pizzas_list = input;
     this ->list_count = input.size();
