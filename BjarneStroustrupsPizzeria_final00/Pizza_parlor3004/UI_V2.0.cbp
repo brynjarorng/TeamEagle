@@ -5,6 +5,7 @@
 		<Option title="UI_V2.0" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
+		<Option virtualFolders="UI\;" />
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/UI_V2" prefix_auto="1" extension_auto="1" />
@@ -112,6 +113,8 @@
 		<Unit filename="exceptions/InvalidPrice.h" />
 		<Unit filename="exceptions/InvalidSize.cpp" />
 		<Unit filename="exceptions/InvalidSize.h" />
+		<Unit filename="exceptions/InvalidTopping.cpp" />
+		<Unit filename="exceptions/InvalidTopping.h" />
 		<Unit filename="logic/LocationHandler.cpp" />
 		<Unit filename="logic/LocationHandler.h" />
 		<Unit filename="logic/OrderHandler.cpp" />
@@ -125,7 +128,9 @@
 		<Unit filename="logic/StdInput.cpp" />
 		<Unit filename="logic/StdInput.h" />
 		<Unit filename="logic/ToppingsHandler.cpp" />
-		<Unit filename="logic/ToppingsHandler.h" />
+		<Unit filename="logic/ToppingsHandler.h">
+			<Option virtualFolder="UI/" />
+		</Unit>
 		<Unit filename="logic/ValidationFunctions.h" />
 		<Unit filename="logic/sorting_function.cpp" />
 		<Unit filename="logic/sorting_function.h" />

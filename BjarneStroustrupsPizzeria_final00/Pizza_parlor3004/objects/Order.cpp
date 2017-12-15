@@ -54,22 +54,15 @@ istream& operator >>(istream& ins, Order& order) {
 
 	return ins;
 }
-void Order::all_pizzas_ready() {
+bool Order::get_ready() {
 
 	for (int i = 0; i < pizzas_in_order_count; i++) {
 		if (this ->pizzas_in_order[i].get_status() != "ready") {
-			order_ready = false;
+			return false;
 		}
 	}
-	order_ready == true;
+	return true;
 }
-
-bool Order::get_ready() {
-
-	all_pizzas_ready();
-	return this ->order_ready;
-}
-
 
 void Order::set_order_number(int number) {
 

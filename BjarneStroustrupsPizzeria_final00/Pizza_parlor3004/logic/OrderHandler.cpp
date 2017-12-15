@@ -30,9 +30,43 @@ Order OrderHandler::get_last_order() {
 
 void OrderHandler::add_order(Order& order) {
     got_list();
+    validate_order(order);
     order_repo.write(order, location);
     orders.push_back(order);
 }
+
+void OrderHandler::validate_order(Order& order) {
+    PizzaHandler pizhandler;
+    PizzaBottomHandler bothandler;
+    ToppingsHandler tophandler;
+    got_list();
+
+    if(valid_order_nr(order.get_order_number())) {
+        throw InvalidNumberException();
+    }
+
+    bool onmenu = false;
+    Pizza* pizzas = order.get_pizzas_in_order();
+
+    for(int i = 0; i < order.get_order_count(); i++) {
+
+        if(!pizzahandler.validate_price(pizzas[i].get_price())) {
+            throw InvalidPrice();
+        }
+        if(!bothandler.validate_dupl(pizzas[i].get_bottom().get_size())) {
+            throw InvalidSize();
+        }
+        for(int k = 0; k < pizzas[i].get_toppingcount(); k++) {
+            Toppings* toppings = pizzas[i].get_toppings();
+            if(!tophandler.validate_name(toppings[k].get_name())) {
+                throw InvalidTopping();
+            }
+
+        }
+    }
+}
+
+
 
 bool OrderHandler::max_order_count(Order order) {
     if (order.get_order_count() < order.get_max_orders()) {

@@ -44,10 +44,6 @@ public:
 	//Returns the total price of order.
 	bool get_paid();
 	//Returns true if the order is paid
-	bool get_ready();
-	//Returns true if order is ready
-	void set_ready();
-	//set order status to ready
     bool get_sent();
 	//Returns true if order should be sent
 	void set_sent();
@@ -61,6 +57,8 @@ public:
     void set_comment(string input);
 	//set the comment
 	int get_comment_length();
+    bool get_ready();
+    //Returns true if all pizzas are marked ready.
 private:
 	static const int MAX_ORDER_SIZE = 20;
     //
@@ -79,8 +77,6 @@ private:
 	//Size of above array.
 	int order_number;
     //Number of this instance of order.
-	void all_pizzas_ready();
-    //Returns true if all pizzas are marked ready.
     double total_price;
     //
     void calulate_total();

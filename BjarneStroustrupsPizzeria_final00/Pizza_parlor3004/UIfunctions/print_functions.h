@@ -53,7 +53,7 @@ void print_pizza_list();
 
 void print_pizzas_toppings(Pizza& pizza);
 
-void print_pizzas_in_order(Order& order);
+void print_pizzas_in_order_for_baker(Order& order);
 
 void print_toppings_with_number(ToppingsHandler& toppingshandler);
 

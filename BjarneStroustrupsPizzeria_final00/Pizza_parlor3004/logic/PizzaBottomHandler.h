@@ -23,6 +23,8 @@ class PizzaBottomHandler
         //Check if input price is a valid number
         void validate_price(string price) throw(InvalidPrice);
         //Check if input price is a valid number
+        bool validate_dupl(int size);
+        //Checks if size is already in database.
         void create_pizza_size(PizzaBottom& pizza_size)  throw(InvalidSize, InvalidPrice);
         PizzaBottom get_pizza_size(int pizza_size) throw (InvalidSize);
         int get_pizza_size_list_size();
@@ -32,6 +34,7 @@ class PizzaBottomHandler
         void add_size(string size, string price);
         //Converts size to int and price to double, adds sends that to repo.
         void remove_size_from_list(int index);
+
 
     private:
         PizzaBottomRepo pizza_size_repo;

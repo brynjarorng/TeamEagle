@@ -94,6 +94,9 @@ void PizzaBottomHandler::validate_size(string size) throw (InvalidSize){
             throw(InvalidSize());
         }
     }
+    if(!validate_dupl(stoi(size))) {
+        throw(InvalidSize());
+    }
 }
 
 void PizzaBottomHandler::add_size(string size, string price) {
@@ -104,6 +107,15 @@ void PizzaBottomHandler::add_size(string size, string price) {
     bottom.set_price(stod(price));
 
     create_pizza_size(bottom);
+}
+
+bool PizzaBottomHandler::validate_dupl(int size) {
+    for(int i = 0; i < pizza_size_vector.size(); i++) {
+        if(size == pizza_size_vector.at(i).get_size()) {
+            return false;
+        }
+    }
+    return true;
 }
 
 void PizzaBottomHandler::remove_size_from_list(int index) {

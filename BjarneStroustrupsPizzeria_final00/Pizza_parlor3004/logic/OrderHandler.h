@@ -4,6 +4,7 @@
 #include "PizzaHandler.h"
 #include "PizzaStatus.h"
 #include "LocationHandler.h"
+#include "InvalidTopping.h"
 
 
 class OrderHandler
@@ -35,6 +36,8 @@ public:
     void delivered(int order_number);
     //The order with the corresponding order_number is marked as delivered
     //in the current order list
+    void validate_order(Order& order);
+    //Checks if menu pizzas in order are in database, and for all pizzas check if bottom size is in database and if toppings are in the database.
     vector<Order> get_orders();
     //Returns the list of orders.
     Order get_from_orders(int index);
