@@ -11,13 +11,9 @@
 
 void create_topping(ToppingsHandler& toppingshandler);
 
-void print_toppings_with_number(ToppingsHandler& toppingshandler);
-
 void remove_topping(ToppingsHandler& toppingshandler);
 
 void make_new_menu_pizza(PizzaHandler& pizzahandler, ToppingsHandler& toppingshandler);
-
-void print_menu_pizza_list_with_numbers(PizzaHandler& pizzahandler);
 
 void remove_menu_pizza(PizzaHandler& pizzahandler);
 
@@ -27,15 +23,12 @@ void remove_size(PizzaBottomHandler& bottomhandler);
 
 void add_location(LocationHandler& lochandler);
 
-void print_locations(LocationHandler& lochandler, bool numbered);
-
 void remove_locations(LocationHandler& lochandler);
 
 void make_new_side_order(SideOrdersHandler& sideorderhandler);
 
 void archive_orders(OrderHandler& orderhandler);
 
-void print_archived_orders(OrderHandler& orderhandler);
 
 
 

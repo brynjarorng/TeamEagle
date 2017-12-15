@@ -1,82 +1,7 @@
 #include "order_functions.h"
 
 #include "ValidationFunctions.h"
-void print_orders(Order_Status status, OrderHandler& orderhandler) {
 
-    int ordercount = orderhandler.get_order_count();
-
-    Order temp_order;
-
-    int counter = 0;
-    for (int i = 0; i < ordercount; i ++) {
-        switch (status) {
-            case delivered:
-                    if (orderhandler.get_orders().at(i).get_delivered()) {
-                        print_order(orderhandler.get_orders().at(i));
-                        counter++;
-                    }
-                    break;
-            case not_delivered:
-                    if (!orderhandler.get_orders().at(i).get_delivered()) {
-                        counter++;
-                        print_order(orderhandler.get_orders().at(i));
-                    }
-                break;
-            case all:
-                print_order(orderhandler.get_orders().at(i));
-                counter++;
-                break;
-        }
-    }
-    if (counter == 0) {
-        cout << "No orders" << endl;
-    }
-}
-
-void print_order(Order& order) {
-
-    Print print;
-
-   cout << "\033[1;31m" << "Order #"  << order.get_order_number() << "\033[0m\ " << endl;
-
-
-    print.print_lines(30);
-    Pizza* pizzas_in_order = order.get_pizzas_in_order();
-    Pizza temp_pizza;
-
-    int endl_count = order.get_order_count() - 1;
-
-    for (int i = 0; i < order.get_order_count(); i++) {
-        print_pizza(pizzas_in_order[i]);
-        if (endl_count > 0)
-            cout << endl;
-        endl_count--;
-    }
-    print.print_lines(30);
-    cout << "Total price: " << order.get_total() << endl;
-    print.print_lines(30);
-    cout << print.is_paid(order) << endl;
-    cout << print.is_ready(order) << endl;
-    cout << print.is_sent(order) << endl;
-    cout << print.is_comment(order) << endl;
-
-    if (order.get_delivered()) {
-        cout << "This order has already been delivered."
-             << endl;
-    }
-
-    print.print_lines(30);
-    cout << endl;
-
-}
-
-
-void print_current_orders() {
-
-    Print print;
-    print.set(1, alph_asc, price,  header, ord);
-    print_navigation (print, ord, ' ', true);
-}
 
 bool new_order(OrderHandler& orderhandler, PizzaHandler& pizzahandler, ToppingsHandler& toppingshandler, PizzaBottomHandler& bottomhandler) {
 
@@ -429,31 +354,6 @@ void print_navigation (Print& print, print_item type, char in,  bool loop) {
     }
 }
 
-void print_pizzas_toppings(Pizza pizza) {
-
-    Toppings* top = pizza.get_toppings();
-    int toppingcount = pizza.get_toppingcount();
-    int comma_count = toppingcount - 1;
-    for (int i = 0; i < toppingcount; i++) {
-        cout << top[i].get_name();
-        if (comma_count > 0) {
-            cout << ", ";
-        }
-        comma_count--;
-    }
-    cout << "."  << endl;
-
-}
-void print_pizza(Pizza pizza) {
-
-    cout << "*" << pizza.get_name() <<endl;
-    print_pizzas_toppings(pizza);
-    cout << "Price: $" << pizza.get_price() << endl;
-    cout << "Size : $" << pizza.get_bottom().get_size() << "\"" << endl;
-
-}
-
-
 void mark_paid(OrderHandler& orderhandler) {
 
     vector<Order> order_list = orderhandler.get_orders();
@@ -519,85 +419,6 @@ void mark_delivered(OrderHandler& orderhandler) {
     }
 }
 
-void print_topping_list() {
-
-    Print print;
-    print.set(14, price, header, top);
-    print.prompt_user(true);
-    print.pizza_settings(true, false);
-    print_navigation(print, top, ' ', true);
-    clear();
-}
-
-
-void print_menu_pizza_list() {
-
-    clear();
-    Print print;
-
-    print.set(4, alph_asc,price,header, pizz);
-
-    print.pizza_settings(true, false);
-
-    print.prompt_user(true);
-
-    print_navigation(print, pizz, ' ', true);
-
-    clear();
-}
-
-
-void print_sizes(PizzaBottomHandler& bottomhandler) {
-
-    vector<PizzaBottom> size_vector;
-
-    size_vector = bottomhandler.get_size_list();
-
-    clear();
-
-    cout << "---Print all pizza sizes---" << endl;
-
-    cout << "See all sizes:" << endl;
-    for(unsigned int i = 0; i < size_vector.size(); i++){
-        cout << "$" << size_vector[i].get_price() << ", ";
-        cout << size_vector[i].get_size() << "\"" << endl;
-    }
-    cout << endl;
-     //pause_screen();
-}
-
-void print_sizes_numbers(PizzaBottomHandler& bottomhandler) {
-
-    vector<PizzaBottom> size_vector;
-
-    size_vector = bottomhandler.get_size_list();
-
-    clear();
-
-    cout << "---Print all pizza sizes---" << endl;
-
-    cout << "See all sizes:" << endl;
-    for(unsigned int i = 0; i < size_vector.size(); i++){
-        cout << "[" << i + 1 << "]" << " ";
-        cout << "$" << size_vector[i ].get_price() << ", ";
-        cout << size_vector[i].get_size() << "\"" << endl;
-    }
-    cout << endl;
-}
-
-void print_size_with_numbers(PizzaBottomHandler& bottomhandler) {
-    vector<PizzaBottom> size_vector;
-
-    size_vector = bottomhandler.get_size_list();
-
-    for(unsigned int i = 0; i < size_vector.size(); i++) {
-        cout << "[" << i + 1 << "]\t";
-        cout << "$" << size_vector[i].get_price() << ", ";
-        cout << size_vector[i].get_size() << "\"" << endl;
-    }
-}
-
-
 void comment(Order& order) {
     clear();
     bool cont = 1;
@@ -630,5 +451,47 @@ void add_a_comment(Order& order) {
     cin >> ws;
     getline(cin, temp, '\n');
     order.set_comment(temp);
+}
+
+bool change_status(OrderHandler& orderhandler) {
+    string order_number;
+    string pizza_number;
+    string status;
+    try {
+        cout << "Order number (0 to quit): ";
+        cin >> order_number;
+        validate_int(order_number);
+        if(stoi(order_number) == 0) {
+            return false;
+        }
+        cout << "Pizza number: ";
+        cin >> pizza_number;
+        validate_int(pizza_number);
+        cout << "Status: (b for in oven, r for ready) ";
+        cin >> status;
+        try{
+            if(status == "b") {
+                orderhandler.change_status(stoi(order_number), stoi(pizza_number) - 1, baking);
+            }
+            else if(status == "r") {
+                orderhandler.change_status(stoi(order_number), stoi(pizza_number) - 1, ready);
+            }
+            else {
+                cout << "Not a valid status" << endl;
+                pause_screen();
+            }
+        }
+        catch(InvalidSize e) {
+            cout << "Pizza not found, try again" << endl;
+            pause_screen();
+        }
+    }
+    catch(InvalidNumberException e) {
+        cout << "Not a number" << endl;
+        pause_screen();
+    }
+
+    return true;
+
 }
 

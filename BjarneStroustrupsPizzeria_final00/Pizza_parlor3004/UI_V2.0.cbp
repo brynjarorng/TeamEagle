@@ -73,6 +73,7 @@
 		<Unit filename="UIfunctions/manager_functions.h" />
 		<Unit filename="UIfunctions/order_functions.cpp" />
 		<Unit filename="UIfunctions/order_functions.h" />
+		<Unit filename="UIfunctions/print_functions.cpp" />
 		<Unit filename="UIfunctions/print_functions.h" />
 		<Unit filename="data/LocationRepo.cpp" />
 		<Unit filename="data/LocationRepo.h" />

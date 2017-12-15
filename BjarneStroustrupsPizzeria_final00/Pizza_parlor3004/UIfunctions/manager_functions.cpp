@@ -81,16 +81,7 @@ void create_topping(ToppingsHandler& toppingshandler) {
     }
 }
 
-void print_toppings_with_number(ToppingsHandler& toppingshandler) {
-    vector<Toppings> topping_vector;
-    topping_vector = toppingshandler.get_topping_list();
 
-    for(unsigned int i = 0; i < topping_vector.size(); i++) {
-        cout << "[" << i + 1 << "]\t" << topping_vector[i];
-
-    }
-    cout << endl;
-}
 
 void remove_topping(ToppingsHandler& toppingshandler) {
     string number;
@@ -257,15 +248,6 @@ void make_new_menu_pizza(PizzaHandler& pizzahandler, ToppingsHandler& toppingsha
 }
 
 
-void print_menu_pizza_list_with_numbers(PizzaHandler& pizzahandler) {
-    vector<Pizza> pizza_vector;
-
-    pizza_vector = pizzahandler.get_pizza_list();
-
-    for(unsigned int i = 0; i < pizza_vector.size(); i++) {
-        cout << "[" << i + 1 << "]\t" << pizza_vector[i];
-    }
-}
 
 void remove_menu_pizza(PizzaHandler& pizzahandler) {
     string number;
@@ -427,16 +409,6 @@ void add_location(LocationHandler& lochandler) {
     lochandler.add_location(location);
 }
 
-void print_locations(LocationHandler& lochandler, bool numbered) {
-    vector<Location> locations = lochandler.get_locations();
-    for(unsigned int i = 0; i < locations.size(); i++) {
-        if(numbered){
-            cout << "[" << i + 1 << "]\t";
-        }
-        cout <<  locations.at(i).get_name() << endl;
-    }
-}
-
 void remove_locations(LocationHandler& lochandler) {
     print_locations(lochandler, true);
 
@@ -479,10 +451,4 @@ void archive_orders(OrderHandler& orderhandler) {
     }
 }
 
-void print_archived_orders(OrderHandler& orderhandler) {
-    clear();
-    vector<Order> arc = orderhandler.get_archived_orders();
-    for(int i = 0; i < arc.size(); i++) {
-        print_order(arc.at(i));
-    }
-}
+

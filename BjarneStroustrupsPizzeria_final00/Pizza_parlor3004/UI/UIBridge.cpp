@@ -1,5 +1,6 @@
 #include "UIBridge.h"
 #include "manager_functions.h"
+#include "print_functions.h"
 UIBridge::UIBridge()
 {
     //ctor
