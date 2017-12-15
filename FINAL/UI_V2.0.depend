@@ -1,0 +1,4118 @@
+# depslib dependency file v1.0
+1513001030 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\data\locationrepo.cpp
+	"LocationRepo.h"
+
+1513001030 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\data\locationrepo.h
+
+1512752040 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\data\orderrepo.cpp
+	"OrderRepo.h"
+	<cstdlib>
+
+1512725159 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\data\orderrepo.h
+	"Order.h"
+	<fstream>
+	<string>
+	<vector>
+
+1512725159 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\objects\order.h
+	"Pizza.h"
+	"PizzaType.h"
+
+1512905069 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\objects\pizza.h
+	"PizzaStatus.h"
+	"Toppings.h"
+	<string.h>
+
+1512725159 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\datatypes\pizzastatus.h
+
+1512825214 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\objects\toppings.h
+	<string>
+	<iostream>
+	<cstring>
+
+1512725159 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\datatypes\pizzatype.h
+
+1512725159 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\data\pizzarepo.cpp
+	"PizzaRepo.h"
+
+1512725159 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\data\pizzarepo.h
+	"Pizza.h"
+	<fstream>
+	<vector>
+
+1512735813 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\data\pizzasizerepo.cpp
+	"PizzaSizeRepo.h"
+
+1512735721 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\data\pizzasizerepo.h
+	"PizzaSize.h"
+	<fstream>
+	<vector>
+
+1512749202 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\objects\pizzasize.h
+	"string.h"
+	<iostream>
+
+1512725159 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\data\toppingsrepo.cpp
+	"ToppingsRepo.h"
+
+1512725159 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\data\toppingsrepo.h
+	"Toppings.h"
+	<fstream>
+	<vector>
+
+1512908968 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\exceptions\invalidalphanumexception.cpp
+	"InvalidAlphaNumException.h"
+
+1512909104 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\exceptions\invalidalphanumexception.h
+	<string>
+
+1512847234 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\exceptions\invalidalphastringexception.cpp
+	"InvalidAlphaStringException.h"
+
+1512847184 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\exceptions\invalidalphastringexception.h
+	<string>
+
+1512917526 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\exceptions\invalidboolexception.cpp
+	"InvalidBoolException.h"
+	<iostream>
+
+1512911873 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\exceptions\invalidboolexception.h
+	<string>
+
+1512926848 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\exceptions\invalidcharexception.cpp
+	"InvalidCharException.h"
+
+1512926780 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\exceptions\invalidcharexception.h
+	<string>
+
+1512904897 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\exceptions\invaliddoubleexception.cpp
+	"InvalidDoubleException.h"
+
+1512904890 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\exceptions\invaliddoubleexception.h
+	<string>
+
+1512725159 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\exceptions\invalidinputexception.cpp
+	"InvalidInputException.h"
+
+1512725159 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\exceptions\invalidinputexception.h
+	<string>
+
+1512847501 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\exceptions\invalidname.cpp
+	"InvalidName.h"
+
+1512847493 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\exceptions\invalidname.h
+	<string>
+
+1512847552 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\exceptions\invalidnumberexception.cpp
+	"InvalidNumberException.h"
+
+1512847518 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\exceptions\invalidnumberexception.h
+	<string>
+
+1512725159 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\exceptions\invalidprice.cpp
+	"InvalidPrice.h"
+
+1512725159 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\exceptions\invalidprice.h
+
+1512742720 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\exceptions\invalidsize.cpp
+	"InvalidSize.h"
+
+1512742766 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\exceptions\invalidsize.h
+
+1512752040 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\logic\orderhandler.cpp
+	"OrderHandler.h"
+
+1512752040 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\logic\orderhandler.h
+	"OrderRepo.h"
+	"PizzaHandler.h"
+	"PizzaStatus.h"
+
+1512752872 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\logic\pizzahandler.h
+	"ToppingsHandler.h"
+	"PizzaRepo.h"
+
+1512752040 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\logic\toppingshandler.h
+	"ToppingsRepo.h"
+	<string.h>
+	"InvalidName.h"
+	"InvalidPrice.h"
+
+1512752872 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\logic\pizzahandler.cpp
+	"PizzaHandler.h"
+
+1512841668 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\logic\pizzasizehandler.cpp
+	"PizzaSizeHandler.h"
+
+1512763509 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\logic\pizzasizehandler.h
+	"PizzaSizeRepo.h"
+	<string.h>
+	"PizzaSize.h"
+	"InvalidSize.h"
+	"InvalidPrice.h"
+
+1512823951 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\logic\stdinput.cpp
+	"StdInput.h"
+
+1512725159 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\logic\stdinput.h
+	<iostream>
+
+1512985253 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\logic\toppingshandler.cpp
+	"ToppingsHandler.h"
+
+1512985398 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\main.cpp
+	<iostream>
+	"LoginUI.h"
+
+1512919531 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\ui\loginui.h
+	<iostream>
+	<stdlib.h>
+	<vector>
+	"ManagerUI.h"
+	"BakerUI.h"
+	"PhoneClerkUI.h"
+	"StoreClerkUI.h"
+	"CustomerUI.h"
+	"InvalidInputException.h"
+	"print_functions.h"
+
+1512919553 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\ui\managerui.h
+	<stdlib.h>
+	<iostream>
+	"InvalidInputException.h"
+	"order_functions.h"
+	"print_functions.h"
+
+1512996711 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\uifunctions\order_functions.h
+	"print_functions.h"
+	<stdlib.h>
+	"OrderHandler.h"
+	"Pizza.h"
+	<iomanip>
+	"InvalidCharException.h"
+	"InvalidAlphaStringException.h"
+	"PizzaSize.h"
+	"PizzaSizeHandler.h"
+
+1512986120 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\uifunctions\print_functions.h
+	<iostream>
+
+1512919366 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\ui\bakerui.h
+	<iostream>
+	<stdlib.h>
+	<iostream>
+	"baker_functions.h"
+	"InvalidInputException.h"
+	"print_functions.h"
+
+1512728807 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\uifunctions\baker_functions.h
+	"OrderHandler.h"
+	"Pizza.h"
+
+1512919567 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\ui\phoneclerkui.h
+	<stdlib.h>
+	<iostream>
+	"order_functions.h"
+	"print_functions.h"
+	"InvalidInputException.h"
+
+1512919577 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\ui\storeclerkui.h
+	<stdlib.h>
+	<iostream>
+	"InvalidInputException.h"
+	"print_functions.h"
+
+1512919512 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\ui\customerui.h
+	<stdlib.h>
+	<iostream>
+	"InvalidInputException.h"
+	"print_functions.h"
+
+1512725159 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\objects\order.cpp
+	"Order.h"
+
+1512985253 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\objects\pizza.cpp
+	"Pizza.h"
+
+1512985252 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\objects\pizzasize.cpp
+	"PizzaSize.h"
+
+1512825162 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\objects\toppings.cpp
+	"Toppings.h"
+
+1512985422 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\ui\bakerui.cpp
+	"BakerUI.h"
+
+1512985165 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\ui\customerui.cpp
+	"CustomerUI.h"
+
+1512989628 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\ui\loginui.cpp
+	"LoginUI.h"
+
+1512985165 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\ui\managerui.cpp
+	"ManagerUI.h"
+	"manager_functions.h"
+
+1512985165 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\uifunctions\manager_functions.h
+	"InvalidAlphaStringException.h"
+	"InvalidNumberException.h"
+	"InvalidBoolException.h"
+	"PizzaHandler.h"
+	"ToppingsHandler.h"
+	"ValidationFunctions.h"
+	"order_functions.h"
+
+1512994839 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\logic\validationfunctions.h
+	<strings.h>
+	<iostream>
+	"InvalidNumberException.h"
+	"InvalidAlphaNumException.h"
+	"InvalidDoubleException.h"
+	"InvalidAlphaStringException.h"
+	"InvalidBoolException.h"
+	"InvalidCharException.h"
+
+1512985165 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\ui\phoneclerkui.cpp
+	"PhoneClerkUI.h"
+
+1512985165 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\ui\storeclerkui.cpp
+	"StoreClerkUI.h"
+	"order_functions.h"
+
+1512725159 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\ui\uitemplate.cpp
+	"UITemplate.h"
+
+1512725159 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\ui\uitemplate.h
+
+1512752040 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\uifunctions\baker_functions.cpp
+	"baker_functions.h"
+
+1513000737 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3001\uifunctions\order_functions.cpp
+	"order_functions.h"
+	"ValidationFunctions.h"
+
+1513001030 source:c:\users\brynjar\desktop\pizza_parlor3001\data\locationrepo.cpp
+	"LocationRepo.h"
+
+1513001030 c:\users\brynjar\desktop\pizza_parlor3001\data\locationrepo.h
+
+1512752040 source:c:\users\brynjar\desktop\pizza_parlor3001\data\orderrepo.cpp
+	"OrderRepo.h"
+	<cstdlib>
+
+1512725159 c:\users\brynjar\desktop\pizza_parlor3001\data\orderrepo.h
+	"Order.h"
+	<fstream>
+	<string>
+	<vector>
+
+1513085188 c:\users\brynjar\desktop\pizza_parlor3001\objects\order.h
+	"Pizza.h"
+	"PizzaType.h"
+
+1513079261 c:\users\brynjar\desktop\pizza_parlor3001\objects\pizza.h
+	"PizzaStatus.h"
+	"PizzaBottom.h"
+	"Toppings.h"
+	<string.h>
+
+1512725159 c:\users\brynjar\desktop\pizza_parlor3001\datatypes\pizzastatus.h
+
+1512825214 c:\users\brynjar\desktop\pizza_parlor3001\objects\toppings.h
+	<string>
+	<iostream>
+	<cstring>
+
+1512725159 c:\users\brynjar\desktop\pizza_parlor3001\datatypes\pizzatype.h
+
+1513076902 source:c:\users\brynjar\desktop\pizza_parlor3001\data\pizzarepo.cpp
+	"PizzaRepo.h"
+
+1512725159 c:\users\brynjar\desktop\pizza_parlor3001\data\pizzarepo.h
+	"Pizza.h"
+	<fstream>
+	<vector>
+
+1512735813 source:c:\users\brynjar\desktop\pizza_parlor3001\data\pizzasizerepo.cpp
+	"PizzaSizeRepo.h"
+
+1512735721 c:\users\brynjar\desktop\pizza_parlor3001\data\pizzasizerepo.h
+	"PizzaSize.h"
+	<fstream>
+	<vector>
+
+1512749202 c:\users\brynjar\desktop\pizza_parlor3001\objects\pizzasize.h
+	"string.h"
+	<iostream>
+
+1512725159 source:c:\users\brynjar\desktop\pizza_parlor3001\data\toppingsrepo.cpp
+	"ToppingsRepo.h"
+
+1512725159 c:\users\brynjar\desktop\pizza_parlor3001\data\toppingsrepo.h
+	"Toppings.h"
+	<fstream>
+	<vector>
+
+1512908968 source:c:\users\brynjar\desktop\pizza_parlor3001\exceptions\invalidalphanumexception.cpp
+	"InvalidAlphaNumException.h"
+
+1512909104 c:\users\brynjar\desktop\pizza_parlor3001\exceptions\invalidalphanumexception.h
+	<string>
+
+1512847234 source:c:\users\brynjar\desktop\pizza_parlor3001\exceptions\invalidalphastringexception.cpp
+	"InvalidAlphaStringException.h"
+
+1512847184 c:\users\brynjar\desktop\pizza_parlor3001\exceptions\invalidalphastringexception.h
+	<string>
+
+1512917526 source:c:\users\brynjar\desktop\pizza_parlor3001\exceptions\invalidboolexception.cpp
+	"InvalidBoolException.h"
+	<iostream>
+
+1512911873 c:\users\brynjar\desktop\pizza_parlor3001\exceptions\invalidboolexception.h
+	<string>
+
+1512926848 source:c:\users\brynjar\desktop\pizza_parlor3001\exceptions\invalidcharexception.cpp
+	"InvalidCharException.h"
+
+1512926780 c:\users\brynjar\desktop\pizza_parlor3001\exceptions\invalidcharexception.h
+	<string>
+
+1512904897 source:c:\users\brynjar\desktop\pizza_parlor3001\exceptions\invaliddoubleexception.cpp
+	"InvalidDoubleException.h"
+
+1512904890 c:\users\brynjar\desktop\pizza_parlor3001\exceptions\invaliddoubleexception.h
+	<string>
+
+1512725159 source:c:\users\brynjar\desktop\pizza_parlor3001\exceptions\invalidinputexception.cpp
+	"InvalidInputException.h"
+
+1512725159 c:\users\brynjar\desktop\pizza_parlor3001\exceptions\invalidinputexception.h
+	<string>
+
+1512847501 source:c:\users\brynjar\desktop\pizza_parlor3001\exceptions\invalidname.cpp
+	"InvalidName.h"
+
+1512847493 c:\users\brynjar\desktop\pizza_parlor3001\exceptions\invalidname.h
+	<string>
+
+1512847552 source:c:\users\brynjar\desktop\pizza_parlor3001\exceptions\invalidnumberexception.cpp
+	"InvalidNumberException.h"
+
+1512847518 c:\users\brynjar\desktop\pizza_parlor3001\exceptions\invalidnumberexception.h
+	<string>
+
+1512725159 source:c:\users\brynjar\desktop\pizza_parlor3001\exceptions\invalidprice.cpp
+	"InvalidPrice.h"
+
+1512725159 c:\users\brynjar\desktop\pizza_parlor3001\exceptions\invalidprice.h
+
+1512742720 source:c:\users\brynjar\desktop\pizza_parlor3001\exceptions\invalidsize.cpp
+	"InvalidSize.h"
+
+1512742766 c:\users\brynjar\desktop\pizza_parlor3001\exceptions\invalidsize.h
+
+1513085413 source:c:\users\brynjar\desktop\pizza_parlor3001\logic\orderhandler.cpp
+	"OrderHandler.h"
+
+1513008820 c:\users\brynjar\desktop\pizza_parlor3001\logic\orderhandler.h
+	"OrderRepo.h"
+	"PizzaHandler.h"
+	"PizzaStatus.h"
+
+1513086168 c:\users\brynjar\desktop\pizza_parlor3001\logic\pizzahandler.h
+	"ToppingsHandler.h"
+	"PizzaRepo.h"
+	"PizzaBottomHandler.h"
+
+1512752040 c:\users\brynjar\desktop\pizza_parlor3001\logic\toppingshandler.h
+	"ToppingsRepo.h"
+	<string.h>
+	"InvalidName.h"
+	"InvalidPrice.h"
+
+1513086194 source:c:\users\brynjar\desktop\pizza_parlor3001\logic\pizzahandler.cpp
+	"PizzaHandler.h"
+
+1512841668 source:c:\users\brynjar\desktop\pizza_parlor3001\logic\pizzasizehandler.cpp
+	"PizzaSizeHandler.h"
+
+1512763509 c:\users\brynjar\desktop\pizza_parlor3001\logic\pizzasizehandler.h
+	"PizzaSizeRepo.h"
+	<string.h>
+	"PizzaSize.h"
+	"InvalidSize.h"
+	"InvalidPrice.h"
+
+1512823951 source:c:\users\brynjar\desktop\pizza_parlor3001\logic\stdinput.cpp
+	"StdInput.h"
+
+1512725159 c:\users\brynjar\desktop\pizza_parlor3001\logic\stdinput.h
+	<iostream>
+
+1512985253 source:c:\users\brynjar\desktop\pizza_parlor3001\logic\toppingshandler.cpp
+	"ToppingsHandler.h"
+
+1512985398 source:c:\users\brynjar\desktop\pizza_parlor3001\main.cpp
+	<iostream>
+	"LoginUI.h"
+
+1513022861 c:\users\brynjar\desktop\pizza_parlor3001\ui\loginui.h
+	<iostream>
+	<stdlib.h>
+	<vector>
+	"ManagerUI.h"
+	"BakerUI.h"
+	"PhoneClerkUI.h"
+	"StoreClerkUI.h"
+	"CustomerUI.h"
+	"InvalidInputException.h"
+	"print_functions.h"
+
+1512919553 c:\users\brynjar\desktop\pizza_parlor3001\ui\managerui.h
+	<stdlib.h>
+	<iostream>
+	"InvalidInputException.h"
+	"order_functions.h"
+	"print_functions.h"
+
+1513074951 c:\users\brynjar\desktop\pizza_parlor3001\uifunctions\order_functions.h
+	"print_functions.h"
+	<stdlib.h>
+	"OrderHandler.h"
+	"Pizza.h"
+	<iomanip>
+	"InvalidCharException.h"
+	"InvalidAlphaStringException.h"
+	"PizzaBottom.h"
+	"PizzaBottomHandler.h"
+
+1512986120 c:\users\brynjar\desktop\pizza_parlor3001\uifunctions\print_functions.h
+	<iostream>
+
+1512919366 c:\users\brynjar\desktop\pizza_parlor3001\ui\bakerui.h
+	<iostream>
+	<stdlib.h>
+	<iostream>
+	"baker_functions.h"
+	"InvalidInputException.h"
+	"print_functions.h"
+
+1512728807 c:\users\brynjar\desktop\pizza_parlor3001\uifunctions\baker_functions.h
+	"OrderHandler.h"
+	"Pizza.h"
+
+1512919567 c:\users\brynjar\desktop\pizza_parlor3001\ui\phoneclerkui.h
+	<stdlib.h>
+	<iostream>
+	"order_functions.h"
+	"print_functions.h"
+	"InvalidInputException.h"
+
+1512919577 c:\users\brynjar\desktop\pizza_parlor3001\ui\storeclerkui.h
+	<stdlib.h>
+	<iostream>
+	"InvalidInputException.h"
+	"print_functions.h"
+
+1512919512 c:\users\brynjar\desktop\pizza_parlor3001\ui\customerui.h
+	<stdlib.h>
+	<iostream>
+	"InvalidInputException.h"
+	"print_functions.h"
+
+1513085216 source:c:\users\brynjar\desktop\pizza_parlor3001\objects\order.cpp
+	"Order.h"
+
+1513081103 source:c:\users\brynjar\desktop\pizza_parlor3001\objects\pizza.cpp
+	"Pizza.h"
+
+1512985252 source:c:\users\brynjar\desktop\pizza_parlor3001\objects\pizzasize.cpp
+	"PizzaSize.h"
+
+1512825162 source:c:\users\brynjar\desktop\pizza_parlor3001\objects\toppings.cpp
+	"Toppings.h"
+
+1512985422 source:c:\users\brynjar\desktop\pizza_parlor3001\ui\bakerui.cpp
+	"BakerUI.h"
+
+1512985165 source:c:\users\brynjar\desktop\pizza_parlor3001\ui\customerui.cpp
+	"CustomerUI.h"
+
+1513022842 source:c:\users\brynjar\desktop\pizza_parlor3001\ui\loginui.cpp
+	"LoginUI.h"
+
+1513073575 source:c:\users\brynjar\desktop\pizza_parlor3001\ui\managerui.cpp
+	"ManagerUI.h"
+	"manager_functions.h"
+
+1513077244 c:\users\brynjar\desktop\pizza_parlor3001\uifunctions\manager_functions.h
+	"InvalidAlphaStringException.h"
+	"InvalidNumberException.h"
+	"InvalidBoolException.h"
+	"PizzaHandler.h"
+	"ToppingsHandler.h"
+	"ValidationFunctions.h"
+	"order_functions.h"
+
+1513071378 c:\users\brynjar\desktop\pizza_parlor3001\logic\validationfunctions.h
+	<strings.h>
+	<iostream>
+	"InvalidNumberException.h"
+	"InvalidAlphaNumException.h"
+	"InvalidDoubleException.h"
+	"InvalidAlphaStringException.h"
+	"InvalidAddresseException.h"
+	"InvalidBoolException.h"
+	"InvalidCharException.h"
+
+1512985165 source:c:\users\brynjar\desktop\pizza_parlor3001\ui\phoneclerkui.cpp
+	"PhoneClerkUI.h"
+
+1512985165 source:c:\users\brynjar\desktop\pizza_parlor3001\ui\storeclerkui.cpp
+	"StoreClerkUI.h"
+	"order_functions.h"
+
+1512725159 source:c:\users\brynjar\desktop\pizza_parlor3001\ui\uitemplate.cpp
+	"UITemplate.h"
+
+1512725159 c:\users\brynjar\desktop\pizza_parlor3001\ui\uitemplate.h
+
+1513014800 source:c:\users\brynjar\desktop\pizza_parlor3001\uifunctions\baker_functions.cpp
+	"baker_functions.h"
+
+1513086219 source:c:\users\brynjar\desktop\pizza_parlor3001\uifunctions\order_functions.cpp
+	"order_functions.h"
+	"ValidationFunctions.h"
+
+1513016512 source:c:\users\brynjar\desktop\pizza_parlor3001\exceptions\invalidaddresseexception.cpp
+	"InvalidAddresseException.h"
+
+1513016516 c:\users\brynjar\desktop\pizza_parlor3001\exceptions\invalidaddresseexception.h
+	<string>
+
+1513085864 c:\users\brynjar\desktop\pizza_parlor3001\objects\pizzabottom.h
+	"string.h"
+	<iostream>
+
+1513067858 source:c:\users\brynjar\desktop\pizza_parlor3001\data\pizzabottomrepo.cpp
+	"PizzaBottomRepo.h"
+
+1513067858 c:\users\brynjar\desktop\pizza_parlor3001\data\pizzabottomrepo.h
+	"PizzaBottom.h"
+	<fstream>
+	<vector>
+
+1513073933 c:\users\brynjar\desktop\pizza_parlor3001\logic\pizzabottomhandler.h
+	"PizzaBottomRepo.h"
+	<string.h>
+	"PizzaBottom.h"
+	"InvalidSize.h"
+	"InvalidPrice.h"
+	"ValidationFunctions.h"
+
+1513073927 source:c:\users\brynjar\desktop\pizza_parlor3001\logic\pizzabottomhandler.cpp
+	"PizzaBottomHandler.h"
+
+1513085971 source:c:\users\brynjar\desktop\pizza_parlor3001\objects\pizzabottom.cpp
+	"PizzaBottom.h"
+
+1513094738 source:c:\users\vikto\desktop\pizza_parlor3003\data\locationrepo.cpp
+	"LocationRepo.h"
+
+1513094738 c:\users\vikto\desktop\pizza_parlor3003\data\locationrepo.h
+
+1512920653 source:c:\users\vikto\desktop\pizza_parlor3003\data\orderrepo.cpp
+	"OrderRepo.h"
+	<cstdlib>
+
+1512920676 c:\users\vikto\desktop\pizza_parlor3003\data\orderrepo.h
+	"Order.h"
+	<fstream>
+	<string>
+	<vector>
+
+1513094738 c:\users\vikto\desktop\pizza_parlor3003\objects\order.h
+	"Pizza.h"
+	"PizzaType.h"
+
+1513094738 c:\users\vikto\desktop\pizza_parlor3003\objects\pizza.h
+	"PizzaStatus.h"
+	"PizzaBottom.h"
+	"Toppings.h"
+	<string.h>
+
+1513094738 c:\users\vikto\desktop\pizza_parlor3003\datatypes\pizzastatus.h
+
+1513094738 c:\users\vikto\desktop\pizza_parlor3003\objects\pizzabottom.h
+	"string.h"
+	<iostream>
+
+1513094738 c:\users\vikto\desktop\pizza_parlor3003\objects\toppings.h
+	<string>
+	<iostream>
+	<cstring>
+
+1513094738 c:\users\vikto\desktop\pizza_parlor3003\datatypes\pizzatype.h
+
+1513094738 source:c:\users\vikto\desktop\pizza_parlor3003\data\pizzabottomrepo.cpp
+	"PizzaBottomRepo.h"
+
+1513094738 c:\users\vikto\desktop\pizza_parlor3003\data\pizzabottomrepo.h
+	"PizzaBottom.h"
+	<fstream>
+	<vector>
+
+1513097929 source:c:\users\vikto\desktop\pizza_parlor3003\data\pizzarepo.cpp
+	"PizzaRepo.h"
+
+1513094738 c:\users\vikto\desktop\pizza_parlor3003\data\pizzarepo.h
+	"Pizza.h"
+	<fstream>
+	<vector>
+
+1513094738 source:c:\users\vikto\desktop\pizza_parlor3003\data\toppingsrepo.cpp
+	"ToppingsRepo.h"
+
+1513094738 c:\users\vikto\desktop\pizza_parlor3003\data\toppingsrepo.h
+	"Toppings.h"
+	<fstream>
+	<vector>
+
+1513094738 source:c:\users\vikto\desktop\pizza_parlor3003\exceptions\invalidaddresseexception.cpp
+	"InvalidAddresseException.h"
+
+1513094738 c:\users\vikto\desktop\pizza_parlor3003\exceptions\invalidaddresseexception.h
+	<string>
+
+1513094738 source:c:\users\vikto\desktop\pizza_parlor3003\exceptions\invalidalphanumexception.cpp
+	"InvalidAlphaNumException.h"
+
+1513094738 c:\users\vikto\desktop\pizza_parlor3003\exceptions\invalidalphanumexception.h
+	<string>
+
+1513094738 source:c:\users\vikto\desktop\pizza_parlor3003\exceptions\invalidalphastringexception.cpp
+	"InvalidAlphaStringException.h"
+
+1513094738 c:\users\vikto\desktop\pizza_parlor3003\exceptions\invalidalphastringexception.h
+	<string>
+
+1513094738 source:c:\users\vikto\desktop\pizza_parlor3003\exceptions\invalidboolexception.cpp
+	"InvalidBoolException.h"
+	<iostream>
+
+1513094738 c:\users\vikto\desktop\pizza_parlor3003\exceptions\invalidboolexception.h
+	<string>
+
+1513094738 source:c:\users\vikto\desktop\pizza_parlor3003\exceptions\invalidcharexception.cpp
+	"InvalidCharException.h"
+
+1513094738 c:\users\vikto\desktop\pizza_parlor3003\exceptions\invalidcharexception.h
+	<string>
+
+1513094738 source:c:\users\vikto\desktop\pizza_parlor3003\exceptions\invaliddoubleexception.cpp
+	"InvalidDoubleException.h"
+
+1513094738 c:\users\vikto\desktop\pizza_parlor3003\exceptions\invaliddoubleexception.h
+	<string>
+
+1513094738 source:c:\users\vikto\desktop\pizza_parlor3003\exceptions\invalidinputexception.cpp
+	"InvalidInputException.h"
+
+1513094738 c:\users\vikto\desktop\pizza_parlor3003\exceptions\invalidinputexception.h
+	<string>
+
+1513094738 source:c:\users\vikto\desktop\pizza_parlor3003\exceptions\invalidname.cpp
+	"InvalidName.h"
+
+1513094738 c:\users\vikto\desktop\pizza_parlor3003\exceptions\invalidname.h
+	<string>
+
+1513094738 source:c:\users\vikto\desktop\pizza_parlor3003\exceptions\invalidnumberexception.cpp
+	"InvalidNumberException.h"
+
+1513094738 c:\users\vikto\desktop\pizza_parlor3003\exceptions\invalidnumberexception.h
+	<string>
+
+1513094738 source:c:\users\vikto\desktop\pizza_parlor3003\exceptions\invalidprice.cpp
+	"InvalidPrice.h"
+
+1513094738 c:\users\vikto\desktop\pizza_parlor3003\exceptions\invalidprice.h
+
+1513094738 source:c:\users\vikto\desktop\pizza_parlor3003\exceptions\invalidsize.cpp
+	"InvalidSize.h"
+
+1513094738 c:\users\vikto\desktop\pizza_parlor3003\exceptions\invalidsize.h
+
+1513096173 source:c:\users\vikto\desktop\pizza_parlor3003\logic\orderhandler.cpp
+	"OrderHandler.h"
+
+1513096174 c:\users\vikto\desktop\pizza_parlor3003\logic\orderhandler.h
+	"OrderRepo.h"
+	"PizzaHandler.h"
+	"PizzaStatus.h"
+
+1513094738 c:\users\vikto\desktop\pizza_parlor3003\logic\pizzahandler.h
+	"ToppingsHandler.h"
+	"PizzaRepo.h"
+	"PizzaBottomHandler.h"
+
+1513094738 c:\users\vikto\desktop\pizza_parlor3003\logic\toppingshandler.h
+	"ToppingsRepo.h"
+	<string.h>
+	"InvalidName.h"
+	"InvalidPrice.h"
+
+1513094738 c:\users\vikto\desktop\pizza_parlor3003\logic\pizzabottomhandler.h
+	"PizzaBottomRepo.h"
+	<string.h>
+	"PizzaBottom.h"
+	"InvalidSize.h"
+	"InvalidPrice.h"
+	"ValidationFunctions.h"
+
+1513094738 c:\users\vikto\desktop\pizza_parlor3003\logic\validationfunctions.h
+	<strings.h>
+	<iostream>
+	"InvalidNumberException.h"
+	"InvalidAlphaNumException.h"
+	"InvalidDoubleException.h"
+	"InvalidAlphaStringException.h"
+	"InvalidAddresseException.h"
+	"InvalidBoolException.h"
+	"InvalidCharException.h"
+
+1513094738 source:c:\users\vikto\desktop\pizza_parlor3003\logic\pizzabottomhandler.cpp
+	"PizzaBottomHandler.h"
+
+1513094738 source:c:\users\vikto\desktop\pizza_parlor3003\logic\pizzahandler.cpp
+	"PizzaHandler.h"
+
+1513094738 source:c:\users\vikto\desktop\pizza_parlor3003\logic\stdinput.cpp
+	"StdInput.h"
+
+1513094738 c:\users\vikto\desktop\pizza_parlor3003\logic\stdinput.h
+	<iostream>
+
+1513094738 source:c:\users\vikto\desktop\pizza_parlor3003\logic\toppingshandler.cpp
+	"ToppingsHandler.h"
+
+1513094738 source:c:\users\vikto\desktop\pizza_parlor3003\main.cpp
+	<iostream>
+	"LoginUI.h"
+
+1513102800 c:\users\vikto\desktop\pizza_parlor3003\ui\loginui.h
+	<iostream>
+	<stdlib.h>
+	<vector>
+	"ManagerUI.h"
+	"BakerUI.h"
+	"PhoneClerkUI.h"
+	"StoreClerkUI.h"
+	"CustomerUI.h"
+	"InvalidInputException.h"
+	"print_functions.h"
+
+1513104241 c:\users\vikto\desktop\pizza_parlor3003\ui\managerui.h
+	<stdlib.h>
+	<iostream>
+	"InvalidInputException.h"
+	"order_functions.h"
+	"print_functions.h"
+	"OrderHandler.h"
+	"PizzaHandler.h"
+	"ToppingsHandler.h"
+
+1513104757 c:\users\vikto\desktop\pizza_parlor3003\uifunctions\order_functions.h
+	"print_functions.h"
+	<stdlib.h>
+	"OrderHandler.h"
+	"Pizza.h"
+	<iomanip>
+	"InvalidCharException.h"
+	"InvalidAlphaStringException.h"
+	"PizzaBottom.h"
+	"PizzaBottomHandler.h"
+
+1513094738 c:\users\vikto\desktop\pizza_parlor3003\uifunctions\print_functions.h
+	<iostream>
+
+1513096876 c:\users\vikto\desktop\pizza_parlor3003\ui\bakerui.h
+	<iostream>
+	<stdlib.h>
+	<iostream>
+	"baker_functions.h"
+	"InvalidInputException.h"
+	"print_functions.h"
+
+1513094738 c:\users\vikto\desktop\pizza_parlor3003\uifunctions\baker_functions.h
+	"OrderHandler.h"
+	"Pizza.h"
+
+1513104709 c:\users\vikto\desktop\pizza_parlor3003\ui\phoneclerkui.h
+	<stdlib.h>
+	<iostream>
+	"order_functions.h"
+	"print_functions.h"
+	"OrderHandler.h"
+	"PizzaHandler.h"
+	"ToppingsHandler.h"
+	"PizzaBottomHandler.h"
+	"InvalidInputException.h"
+
+1513104709 c:\users\vikto\desktop\pizza_parlor3003\ui\storeclerkui.h
+	<stdlib.h>
+	<iostream>
+	"InvalidInputException.h"
+	"print_functions.h"
+	"OrderHandler.h"
+	"PizzaHandler.h"
+	"ToppingsHandler.h"
+	"PizzaBottomHandler.h"
+
+1513096876 c:\users\vikto\desktop\pizza_parlor3003\ui\customerui.h
+	<stdlib.h>
+	<iostream>
+	"InvalidInputException.h"
+	"print_functions.h"
+
+1513094738 source:c:\users\vikto\desktop\pizza_parlor3003\objects\order.cpp
+	"Order.h"
+
+1513094738 source:c:\users\vikto\desktop\pizza_parlor3003\objects\pizza.cpp
+	"Pizza.h"
+
+1513094738 source:c:\users\vikto\desktop\pizza_parlor3003\objects\pizzabottom.cpp
+	"PizzaBottom.h"
+
+1513094738 source:c:\users\vikto\desktop\pizza_parlor3003\objects\toppings.cpp
+	"Toppings.h"
+
+1513094738 source:c:\users\vikto\desktop\pizza_parlor3003\ui\bakerui.cpp
+	"BakerUI.h"
+
+1513094738 source:c:\users\vikto\desktop\pizza_parlor3003\ui\customerui.cpp
+	"CustomerUI.h"
+
+1513103074 source:c:\users\vikto\desktop\pizza_parlor3003\ui\loginui.cpp
+	"LoginUI.h"
+
+1513104350 source:c:\users\vikto\desktop\pizza_parlor3003\ui\managerui.cpp
+	"ManagerUI.h"
+	"manager_functions.h"
+
+1513104426 c:\users\vikto\desktop\pizza_parlor3003\uifunctions\manager_functions.h
+	"InvalidAlphaStringException.h"
+	"InvalidNumberException.h"
+	"InvalidBoolException.h"
+	"ValidationFunctions.h"
+	"order_functions.h"
+
+1513104653 source:c:\users\vikto\desktop\pizza_parlor3003\ui\phoneclerkui.cpp
+	"PhoneClerkUI.h"
+
+1513104766 source:c:\users\vikto\desktop\pizza_parlor3003\ui\storeclerkui.cpp
+	"StoreClerkUI.h"
+	"order_functions.h"
+
+1513094738 source:c:\users\vikto\desktop\pizza_parlor3003\ui\uitemplate.cpp
+	"UITemplate.h"
+
+1513094738 c:\users\vikto\desktop\pizza_parlor3003\ui\uitemplate.h
+
+1513094738 source:c:\users\vikto\desktop\pizza_parlor3003\uifunctions\baker_functions.cpp
+	"baker_functions.h"
+
+1513105069 source:c:\users\vikto\desktop\pizza_parlor3003\uifunctions\order_functions.cpp
+	"order_functions.h"
+	"ValidationFunctions.h"
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\data\locationrepo.cpp
+	"LocationRepo.h"
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\data\locationrepo.h
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\data\orderrepo.cpp
+	"OrderRepo.h"
+	<cstdlib>
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\data\orderrepo.h
+	"Order.h"
+	<fstream>
+	<string>
+	<vector>
+
+1513154899 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\objects\order.h
+	"Pizza.h"
+	"PizzaType.h"
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\objects\pizza.h
+	"PizzaStatus.h"
+	"PizzaBottom.h"
+	"Toppings.h"
+	<string.h>
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\datatypes\pizzastatus.h
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\objects\pizzabottom.h
+	"string.h"
+	<iostream>
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\objects\toppings.h
+	<string>
+	<iostream>
+	<cstring>
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\datatypes\pizzatype.h
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\data\pizzabottomrepo.cpp
+	"PizzaBottomRepo.h"
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\data\pizzabottomrepo.h
+	"PizzaBottom.h"
+	<fstream>
+	<vector>
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\data\pizzarepo.cpp
+	"PizzaRepo.h"
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\data\pizzarepo.h
+	"Pizza.h"
+	<fstream>
+	<vector>
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\data\toppingsrepo.cpp
+	"ToppingsRepo.h"
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\data\toppingsrepo.h
+	"Toppings.h"
+	<fstream>
+	<vector>
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\exceptions\invalidaddresseexception.cpp
+	"InvalidAddresseException.h"
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\exceptions\invalidaddresseexception.h
+	<string>
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\exceptions\invalidalphanumexception.cpp
+	"InvalidAlphaNumException.h"
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\exceptions\invalidalphanumexception.h
+	<string>
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\exceptions\invalidalphastringexception.cpp
+	"InvalidAlphaStringException.h"
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\exceptions\invalidalphastringexception.h
+	<string>
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\exceptions\invalidboolexception.cpp
+	"InvalidBoolException.h"
+	<iostream>
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\exceptions\invalidboolexception.h
+	<string>
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\exceptions\invalidcharexception.cpp
+	"InvalidCharException.h"
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\exceptions\invalidcharexception.h
+	<string>
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\exceptions\invaliddoubleexception.cpp
+	"InvalidDoubleException.h"
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\exceptions\invaliddoubleexception.h
+	<string>
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\exceptions\invalidinputexception.cpp
+	"InvalidInputException.h"
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\exceptions\invalidinputexception.h
+	<string>
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\exceptions\invalidname.cpp
+	"InvalidName.h"
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\exceptions\invalidname.h
+	<string>
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\exceptions\invalidnumberexception.cpp
+	"InvalidNumberException.h"
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\exceptions\invalidnumberexception.h
+	<string>
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\exceptions\invalidprice.cpp
+	"InvalidPrice.h"
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\exceptions\invalidprice.h
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\exceptions\invalidsize.cpp
+	"InvalidSize.h"
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\exceptions\invalidsize.h
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\logic\orderhandler.cpp
+	"OrderHandler.h"
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\logic\orderhandler.h
+	"OrderRepo.h"
+	"PizzaHandler.h"
+	"PizzaStatus.h"
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\logic\pizzahandler.h
+	"ToppingsHandler.h"
+	"PizzaRepo.h"
+	"PizzaBottomHandler.h"
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\logic\toppingshandler.h
+	"ToppingsRepo.h"
+	<string.h>
+	"InvalidName.h"
+	"InvalidPrice.h"
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\logic\pizzabottomhandler.h
+	"PizzaBottomRepo.h"
+	<string.h>
+	"PizzaBottom.h"
+	"InvalidSize.h"
+	"InvalidPrice.h"
+	"ValidationFunctions.h"
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\logic\validationfunctions.h
+	<strings.h>
+	<iostream>
+	"InvalidNumberException.h"
+	"InvalidAlphaNumException.h"
+	"InvalidDoubleException.h"
+	"InvalidAlphaStringException.h"
+	"InvalidAddresseException.h"
+	"InvalidBoolException.h"
+	"InvalidCharException.h"
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\logic\pizzabottomhandler.cpp
+	"PizzaBottomHandler.h"
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\logic\pizzahandler.cpp
+	"PizzaHandler.h"
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\logic\stdinput.cpp
+	"StdInput.h"
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\logic\stdinput.h
+	<iostream>
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\logic\toppingshandler.cpp
+	"ToppingsHandler.h"
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\main.cpp
+	<iostream>
+	"LoginUI.h"
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\ui\loginui.h
+	<iostream>
+	<stdlib.h>
+	<vector>
+	"ManagerUI.h"
+	"BakerUI.h"
+	"PhoneClerkUI.h"
+	"StoreClerkUI.h"
+	"CustomerUI.h"
+	"InvalidInputException.h"
+	"print_functions.h"
+
+1513162893 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\ui\managerui.h
+	<stdlib.h>
+	<iostream>
+	"InvalidInputException.h"
+	"order_functions.h"
+	"print_functions.h"
+	"OrderHandler.h"
+	"PizzaHandler.h"
+	"ToppingsHandler.h"
+	"SideOrdersHandler.h"
+
+1513156322 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\uifunctions\order_functions.h
+	"print_functions.h"
+	<stdlib.h>
+	"OrderHandler.h"
+	"Pizza.h"
+	<iomanip>
+	"InvalidCharException.h"
+	"InvalidAlphaStringException.h"
+	"Print.h"
+	"PizzaBottom.h"
+	"PizzaBottomHandler.h"
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\uifunctions\print_functions.h
+	<iostream>
+
+1513153417 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\ui\print.h
+	"sorting_function.h"
+	<iomanip>
+	"print_types.h"
+	"OrderHandler.h"
+
+1513153417 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\logic\sorting_function.h
+	"ToppingsRepo.h"
+	"PizzaRepo.h"
+	"OrderRepo.h"
+	<string.h>
+
+1513153417 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\ui\print_types.h
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\ui\bakerui.h
+	<iostream>
+	<stdlib.h>
+	<iostream>
+	"baker_functions.h"
+	"InvalidInputException.h"
+	"print_functions.h"
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\uifunctions\baker_functions.h
+	"OrderHandler.h"
+	"Pizza.h"
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\ui\phoneclerkui.h
+	<stdlib.h>
+	<iostream>
+	"order_functions.h"
+	"print_functions.h"
+	"OrderHandler.h"
+	"PizzaHandler.h"
+	"ToppingsHandler.h"
+	"PizzaBottomHandler.h"
+	"InvalidInputException.h"
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\ui\storeclerkui.h
+	<stdlib.h>
+	<iostream>
+	"InvalidInputException.h"
+	"print_functions.h"
+	"OrderHandler.h"
+	"PizzaHandler.h"
+	"ToppingsHandler.h"
+	"PizzaBottomHandler.h"
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\ui\customerui.h
+	<stdlib.h>
+	<iostream>
+	"InvalidInputException.h"
+	"print_functions.h"
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\objects\pizza.cpp
+	"Pizza.h"
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\objects\pizzabottom.cpp
+	"PizzaBottom.h"
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\objects\toppings.cpp
+	"Toppings.h"
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\ui\bakerui.cpp
+	"BakerUI.h"
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\ui\customerui.cpp
+	"CustomerUI.h"
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\ui\loginui.cpp
+	"LoginUI.h"
+
+1513162938 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\ui\managerui.cpp
+	"ManagerUI.h"
+	"manager_functions.h"
+
+1513163941 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\uifunctions\manager_functions.h
+	"InvalidAlphaStringException.h"
+	"InvalidNumberException.h"
+	"InvalidBoolException.h"
+	"ValidationFunctions.h"
+	"order_functions.h"
+
+1513153417 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\ui\phoneclerkui.cpp
+	"PhoneClerkUI.h"
+
+1513153417 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\ui\storeclerkui.cpp
+	"StoreClerkUI.h"
+	"order_functions.h"
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\ui\uitemplate.cpp
+	"UITemplate.h"
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\ui\uitemplate.h
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\uifunctions\baker_functions.cpp
+	"baker_functions.h"
+
+1513156295 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\uifunctions\order_functions.cpp
+	"order_functions.h"
+	"ValidationFunctions.h"
+
+1513154886 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\objects\order.cpp
+	"Order.h"
+
+1513153417 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\ui\print.cpp
+	"Print.h"
+
+1513109575 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\logic\locationhandler.cpp
+	"LocationHandler.h"
+
+1513109575 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\logic\locationhandler.h
+
+1513153417 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\logic\sorting_function.cpp
+	"sorting_function.h"
+
+1513161338 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\data\sideorderrepo.cpp
+	"SideOrderRepo.h"
+
+1513161345 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\data\sideorderrepo.h
+	"SideOrders.h"
+	<vector>
+	<string>
+	<fstream>
+
+1513164517 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\objects\sideorders.h
+	<cstring>
+	<string>
+	<iostream>
+	"ValidationFunctions.h"
+
+1513164607 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\logic\sideordershandler.cpp
+	"SideOrdersHandler.h"
+
+1513164260 c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\logic\sideordershandler.h
+	"SideOrderRepo.h"
+	"SideOrders.h"
+	"InvalidName.h"
+	"InvalidPrice.h"
+	"ValidationFunctions.h"
+
+1513161328 source:c:\haskoli\verklegt1\pizzaproj\teameagle\pizza_parlor3004\objects\sideorders.cpp
+	"SideOrders.h"
+
+1513106129 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\data\locationrepo.cpp
+	"LocationRepo.h"
+
+1513106053 c:\users\vikto\desktop\teameagle\pizza_parlor3004\data\locationrepo.h
+	"Location.h"
+	<vector>
+	<fstream>
+
+1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\data\orderrepo.cpp
+	"OrderRepo.h"
+	<cstdlib>
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\data\orderrepo.h
+	"Order.h"
+	<fstream>
+	<string>
+	<vector>
+
+1513186089 c:\users\vikto\desktop\teameagle\pizza_parlor3004\objects\order.h
+	"Pizza.h"
+	"PizzaType.h"
+
+1513182142 c:\users\vikto\desktop\teameagle\pizza_parlor3004\objects\pizza.h
+	"PizzaStatus.h"
+	"PizzaBottom.h"
+	"Toppings.h"
+	<string.h>
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\datatypes\pizzastatus.h
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\objects\pizzabottom.h
+	"string.h"
+	<iostream>
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\objects\toppings.h
+	<string>
+	<iostream>
+	<cstring>
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\datatypes\pizzatype.h
+
+1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\data\pizzabottomrepo.cpp
+	"PizzaBottomRepo.h"
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\data\pizzabottomrepo.h
+	"PizzaBottom.h"
+	<fstream>
+	<vector>
+
+1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\data\pizzarepo.cpp
+	"PizzaRepo.h"
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\data\pizzarepo.h
+	"Pizza.h"
+	<fstream>
+	<vector>
+
+1513187659 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\data\toppingsrepo.cpp
+	"ToppingsRepo.h"
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\data\toppingsrepo.h
+	"Toppings.h"
+	<fstream>
+	<vector>
+
+1513187659 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\exceptions\invalidaddresseexception.cpp
+	"InvalidAddresseException.h"
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\exceptions\invalidaddresseexception.h
+	<string>
+
+1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\exceptions\invalidalphanumexception.cpp
+	"InvalidAlphaNumException.h"
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\exceptions\invalidalphanumexception.h
+	<string>
+
+1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\exceptions\invalidalphastringexception.cpp
+	"InvalidAlphaStringException.h"
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\exceptions\invalidalphastringexception.h
+	<string>
+
+1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\exceptions\invalidboolexception.cpp
+	"InvalidBoolException.h"
+	<iostream>
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\exceptions\invalidboolexception.h
+	<string>
+
+1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\exceptions\invalidcharexception.cpp
+	"InvalidCharException.h"
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\exceptions\invalidcharexception.h
+	<string>
+
+1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\exceptions\invaliddoubleexception.cpp
+	"InvalidDoubleException.h"
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\exceptions\invaliddoubleexception.h
+	<string>
+
+1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\exceptions\invalidinputexception.cpp
+	"InvalidInputException.h"
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\exceptions\invalidinputexception.h
+	<string>
+
+1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\exceptions\invalidname.cpp
+	"InvalidName.h"
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\exceptions\invalidname.h
+	<string>
+
+1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\exceptions\invalidnumberexception.cpp
+	"InvalidNumberException.h"
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\exceptions\invalidnumberexception.h
+	<string>
+
+1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\exceptions\invalidprice.cpp
+	"InvalidPrice.h"
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\exceptions\invalidprice.h
+
+1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\exceptions\invalidsize.cpp
+	"InvalidSize.h"
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\exceptions\invalidsize.h
+
+1513184882 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\logic\orderhandler.cpp
+	"OrderHandler.h"
+
+1513184927 c:\users\vikto\desktop\teameagle\pizza_parlor3004\logic\orderhandler.h
+	"OrderRepo.h"
+	"PizzaHandler.h"
+	"PizzaStatus.h"
+	"LocationHandler.h"
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\logic\pizzahandler.h
+	"ToppingsHandler.h"
+	"PizzaRepo.h"
+	"PizzaBottomHandler.h"
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\logic\toppingshandler.h
+	"ToppingsRepo.h"
+	<string.h>
+	"InvalidName.h"
+	"InvalidPrice.h"
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\logic\pizzabottomhandler.h
+	"PizzaBottomRepo.h"
+	<string.h>
+	"PizzaBottom.h"
+	"InvalidSize.h"
+	"InvalidPrice.h"
+	"ValidationFunctions.h"
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\logic\validationfunctions.h
+	<strings.h>
+	<iostream>
+	"InvalidNumberException.h"
+	"InvalidAlphaNumException.h"
+	"InvalidDoubleException.h"
+	"InvalidAlphaStringException.h"
+	"InvalidAddresseException.h"
+	"InvalidBoolException.h"
+	"InvalidCharException.h"
+
+1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\logic\pizzabottomhandler.cpp
+	"PizzaBottomHandler.h"
+
+1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\logic\pizzahandler.cpp
+	"PizzaHandler.h"
+
+1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\logic\stdinput.cpp
+	"StdInput.h"
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\logic\stdinput.h
+	<iostream>
+
+1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\logic\toppingshandler.cpp
+	"ToppingsHandler.h"
+
+1513002684 c:\users\vikto\desktop\teameagle\pizza_parlor3004\objects\location.h
+	<string.h>
+	<string>
+
+1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\data\sideorderrepo.cpp
+	"SideOrderRepo.h"
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\data\sideorderrepo.h
+	"SideOrders.h"
+	<vector>
+	<string>
+	<fstream>
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\objects\sideorders.h
+	<cstring>
+	<string>
+	<iostream>
+	"ValidationFunctions.h"
+
+1513187659 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\logic\locationhandler.cpp
+	"LocationHandler.h"
+	<iostream>
+
+1513175206 c:\users\vikto\desktop\teameagle\pizza_parlor3004\logic\locationhandler.h
+	"LocationRepo.h"
+	"InvalidName.h"
+	"InvalidAlphaNumException.h"
+
+1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\logic\sideordershandler.cpp
+	"SideOrdersHandler.h"
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\logic\sideordershandler.h
+	"SideOrderRepo.h"
+	"SideOrders.h"
+	"InvalidName.h"
+	"InvalidPrice.h"
+	"ValidationFunctions.h"
+
+1513187785 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\logic\sorting_function.cpp
+	"sorting_function.h"
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\logic\sorting_function.h
+	"ToppingsRepo.h"
+	"PizzaRepo.h"
+	"OrderRepo.h"
+	<string.h>
+
+1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\main.cpp
+	<iostream>
+	"LoginUI.h"
+
+1513178297 c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\loginui.h
+	<iostream>
+	<stdlib.h>
+	<vector>
+	"ManagerUI.h"
+	"BakerUI.h"
+	"PhoneClerkUI.h"
+	"StoreClerkUI.h"
+	"CustomerUI.h"
+
+1513178297 c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\managerui.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513175788 c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\uitemplate.h
+	"OrderHandler.h"
+	"PizzaHandler.h"
+	"ToppingsHandler.h"
+	"PizzaBottomHandler.h"
+	"LocationHandler.h"
+	"SideOrdersHandler.h"
+	"print_functions.h"
+	"InvalidInputException.h"
+	"order_functions.h"
+	"baker_functions.h"
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\uifunctions\print_functions.h
+	<iostream>
+
+1513189481 c:\users\vikto\desktop\teameagle\pizza_parlor3004\uifunctions\order_functions.h
+	"print_functions.h"
+	<stdlib.h>
+	"OrderHandler.h"
+	"Pizza.h"
+	<iomanip>
+	"InvalidCharException.h"
+	"InvalidAlphaStringException.h"
+	"Print.h"
+	"PizzaBottom.h"
+	"PizzaBottomHandler.h"
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\print.h
+	"sorting_function.h"
+	<iomanip>
+	"print_types.h"
+	"OrderHandler.h"
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\print_types.h
+
+1513173381 c:\users\vikto\desktop\teameagle\pizza_parlor3004\uifunctions\baker_functions.h
+	"OrderHandler.h"
+	"Pizza.h"
+
+1513178297 c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\bakerui.h
+	<iostream>
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513178297 c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\phoneclerkui.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513178297 c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\storeclerkui.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513178297 c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\customerui.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513009407 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\objects\location.cpp
+	"Location.h"
+
+1513186089 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\objects\order.cpp
+	"Order.h"
+
+1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\objects\pizza.cpp
+	"Pizza.h"
+
+1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\objects\pizzabottom.cpp
+	"PizzaBottom.h"
+
+1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\objects\sideorders.cpp
+	"SideOrders.h"
+
+1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\objects\toppings.cpp
+	"Toppings.h"
+
+1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\bakerui.cpp
+	"BakerUI.h"
+
+1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\customerui.cpp
+	"CustomerUI.h"
+
+1513177844 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\loginui.cpp
+	"LoginUI.h"
+
+1513175921 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\managerui.cpp
+	"ManagerUI.h"
+	"manager_functions.h"
+
+1513177592 c:\users\vikto\desktop\teameagle\pizza_parlor3004\uifunctions\manager_functions.h
+	"InvalidAlphaStringException.h"
+	"InvalidNumberException.h"
+	"InvalidBoolException.h"
+	"ValidationFunctions.h"
+	"order_functions.h"
+
+1513177961 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\phoneclerkui.cpp
+	"PhoneClerkUI.h"
+
+1513173381 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\print.cpp
+	"Print.h"
+
+1513189414 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\storeclerkui.cpp
+	"StoreClerkUI.h"
+	"order_functions.h"
+
+1513175764 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\uitemplate.cpp
+	"UITemplate.h"
+
+1513186107 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\uifunctions\baker_functions.cpp
+	"baker_functions.h"
+
+1513187405 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\uifunctions\order_functions.cpp
+	"order_functions.h"
+	"ValidationFunctions.h"
+
+1513178297 c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\uibridge.h
+	"OrderHandler.h"
+	"PizzaHandler.h"
+	"ToppingsHandler.h"
+	"PizzaBottomHandler.h"
+	"LocationHandler.h"
+	"SideOrdersHandler.h"
+	"print_functions.h"
+	"InvalidInputException.h"
+	"order_functions.h"
+	"baker_functions.h"
+
+1513190400 source:c:\users\vikto\desktop\teameagle\pizza_parlor3004\ui\uibridge.cpp
+	"UIBridge.h"
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/data/OrderRepo.cpp
+	"OrderRepo.h"
+	<cstdlib>
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/data/OrderRepo.h
+	"Order.h"
+	<fstream>
+	<string>
+	<vector>
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/objects/Order.h
+	"Pizza.h"
+	"PizzaType.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/objects/Pizza.h
+	"PizzaStatus.h"
+	"PizzaBottom.h"
+	"Toppings.h"
+	<string.h>
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/datatypes/PizzaStatus.h
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/objects/PizzaBottom.h
+	"string.h"
+	<iostream>
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/objects/Toppings.h
+	<string>
+	<iostream>
+	<cstring>
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/datatypes/PizzaType.h
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/data/PizzaBottomRepo.cpp
+	"PizzaBottomRepo.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/data/PizzaBottomRepo.h
+	"PizzaBottom.h"
+	<fstream>
+	<vector>
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/data/PizzaRepo.cpp
+	"PizzaRepo.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/data/PizzaRepo.h
+	"Pizza.h"
+	<fstream>
+	<vector>
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/exceptions/InvalidAlphaNumException.cpp
+	"InvalidAlphaNumException.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/exceptions/InvalidAlphaNumException.h
+	<string>
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/exceptions/InvalidAlphaStringException.cpp
+	"InvalidAlphaStringException.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/exceptions/InvalidAlphaStringException.h
+	<string>
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/exceptions/InvalidBoolException.cpp
+	"InvalidBoolException.h"
+	<iostream>
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/exceptions/InvalidBoolException.h
+	<string>
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/exceptions/InvalidCharException.cpp
+	"InvalidCharException.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/exceptions/InvalidCharException.h
+	<string>
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/exceptions/InvalidDoubleException.cpp
+	"InvalidDoubleException.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/exceptions/InvalidDoubleException.h
+	<string>
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/exceptions/InvalidInputException.cpp
+	"InvalidInputException.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/exceptions/InvalidInputException.h
+	<string>
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/exceptions/InvalidName.cpp
+	"InvalidName.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/exceptions/InvalidName.h
+	<string>
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/exceptions/InvalidNumberException.cpp
+	"InvalidNumberException.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/exceptions/InvalidNumberException.h
+	<string>
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/exceptions/InvalidPrice.cpp
+	"InvalidPrice.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/exceptions/InvalidPrice.h
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/exceptions/InvalidSize.cpp
+	"InvalidSize.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/exceptions/InvalidSize.h
+
+1513147100 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/logic/PizzaHandler.cpp
+	"PizzaHandler.h"
+
+1513174270 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/logic/PizzaHandler.h
+	"ToppingsHandler.h"
+	"PizzaRepo.h"
+	"PizzaBottomHandler.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/logic/ToppingsHandler.h
+	"ToppingsRepo.h"
+	<string.h>
+	"InvalidName.h"
+	"InvalidPrice.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/data/ToppingsRepo.h
+	"Toppings.h"
+	<fstream>
+	<vector>
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/logic/PizzaBottomHandler.h
+	"PizzaBottomRepo.h"
+	<string.h>
+	"PizzaBottom.h"
+	"InvalidSize.h"
+	"InvalidPrice.h"
+	"ValidationFunctions.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/logic/ValidationFunctions.h
+	<strings.h>
+	<iostream>
+	"InvalidNumberException.h"
+	"InvalidAlphaNumException.h"
+	"InvalidDoubleException.h"
+	"InvalidAlphaStringException.h"
+	"InvalidAddresseException.h"
+	"InvalidBoolException.h"
+	"InvalidCharException.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/exceptions/InvalidAddresseException.h
+	<string>
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/logic/StdInput.cpp
+	"StdInput.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/logic/StdInput.h
+	<iostream>
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/logic/ToppingsHandler.cpp
+	"ToppingsHandler.h"
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/main.cpp
+	<iostream>
+	"LoginUI.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UI/LoginUI.h
+	<iostream>
+	<stdlib.h>
+	<vector>
+	"ManagerUI.h"
+	"BakerUI.h"
+	"PhoneClerkUI.h"
+	"StoreClerkUI.h"
+	"CustomerUI.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UI/ManagerUI.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UI/UIBridge.h
+	"OrderHandler.h"
+	"PizzaHandler.h"
+	"ToppingsHandler.h"
+	"PizzaBottomHandler.h"
+	"LocationHandler.h"
+	"SideOrdersHandler.h"
+	"print_functions.h"
+	"InvalidInputException.h"
+	"order_functions.h"
+	"baker_functions.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/logic/OrderHandler.h
+	"OrderRepo.h"
+	"PizzaHandler.h"
+	"PizzaStatus.h"
+	"LocationHandler.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/logic/LocationHandler.h
+	"LocationRepo.h"
+	"InvalidName.h"
+	"InvalidAlphaNumException.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/data/LocationRepo.h
+	"Location.h"
+	<vector>
+	<fstream>
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/objects/Location.h
+	<string.h>
+	<string>
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/logic/SideOrdersHandler.h
+	"SideOrderRepo.h"
+	"SideOrders.h"
+	"InvalidName.h"
+	"InvalidPrice.h"
+	"ValidationFunctions.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/data/SideOrderRepo.h
+	"SideOrders.h"
+	<vector>
+	<string>
+	<fstream>
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/objects/SideOrders.h
+	<cstring>
+	<string>
+	<iostream>
+	"ValidationFunctions.h"
+
+1513204833 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UIfunctions/print_functions.h
+	<iostream>
+
+1513198000 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UIfunctions/order_functions.h
+	"print_functions.h"
+	<stdlib.h>
+	"OrderHandler.h"
+	"Pizza.h"
+	<iomanip>
+	"InvalidCharException.h"
+	"InvalidAlphaStringException.h"
+	"Print.h"
+	"PizzaBottom.h"
+	"PizzaBottomHandler.h"
+	"get_menu_pizza.h"
+
+1513198129 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UI/Print.h
+	"sorting_function.h"
+	<iomanip>
+	"print_types.h"
+	"OrderHandler.h"
+
+1513117318 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/logic/sorting_function.h
+	"ToppingsRepo.h"
+	"PizzaRepo.h"
+	"OrderRepo.h"
+	<string.h>
+
+1513117372 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UI/print_types.h
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UIfunctions/baker_functions.h
+	"OrderHandler.h"
+	"Pizza.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UI/BakerUI.h
+	<iostream>
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UI/PhoneClerkUI.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UI/StoreClerkUI.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UI/CustomerUI.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513147017 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/objects/Pizza.cpp
+	"Pizza.h"
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/objects/PizzaBottom.cpp
+	"PizzaBottom.h"
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/objects/Toppings.cpp
+	"Toppings.h"
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UI/CustomerUI.cpp
+	"CustomerUI.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/data/LocationRepo.cpp
+	"LocationRepo.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/data/SideOrderRepo.cpp
+	"SideOrderRepo.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/data/ToppingsRepo.cpp
+	"ToppingsRepo.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/exceptions/InvalidAddresseException.cpp
+	"InvalidAddresseException.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/logic/LocationHandler.cpp
+	"LocationHandler.h"
+	<iostream>
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/logic/OrderHandler.cpp
+	"OrderHandler.h"
+
+1513196061 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/logic/PizzaBottomHandler.cpp
+	"PizzaBottomHandler.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/logic/SideOrdersHandler.cpp
+	"SideOrdersHandler.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/logic/sorting_function.cpp
+	"sorting_function.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/objects/Location.cpp
+	"Location.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/objects/Order.cpp
+	"Order.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/objects/SideOrders.cpp
+	"SideOrders.h"
+
+1513196061 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UI/BakerUI.cpp
+	"BakerUI.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UI/LoginUI.cpp
+	"LoginUI.h"
+
+1513202460 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UI/ManagerUI.cpp
+	"ManagerUI.h"
+	"manager_functions.h"
+
+1513199249 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UIfunctions/manager_functions.h
+	"InvalidAlphaStringException.h"
+	"InvalidNumberException.h"
+	"InvalidBoolException.h"
+	"ValidationFunctions.h"
+	"order_functions.h"
+	"add_toppings.h"
+	"SideOrdersHandler.h"
+
+1513197752 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UI/PhoneClerkUI.cpp
+	"PhoneClerkUI.h"
+
+1513205647 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UI/Print.cpp
+	"Print.h"
+
+1513206111 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UI/StoreClerkUI.cpp
+	"StoreClerkUI.h"
+	"order_functions.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UI/UIBridge.cpp
+	"UIBridge.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UIfunctions/baker_functions.cpp
+	"baker_functions.h"
+
+1513206111 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UIfunctions/order_functions.cpp
+	"order_functions.h"
+	"ValidationFunctions.h"
+
+1513205257 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UIfunctions/add_toppings.cpp
+	"add_toppings.h"
+
+1513179235 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UIfunctions/add_toppings.h
+	"sorting_function.h"
+	<string.h>
+	"ToppingsHandler.h"
+	<vector>
+	"print_functions.h"
+
+1513192789 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UIfunctions/get_menu_pizza.cpp
+	"get_menu_pizza.h"
+	"add_toppings.h"
+
+1513189242 /home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UIfunctions/get_menu_pizza.h
+	"Print.h"
+	"PizzaHandler.h"
+	"get_menu_pizza.h"
+	"add_toppings.h"
+	"OrderHandler.h"
+
+1513199464 source:/home/IvarMarrow/TeamEagle/TeamEagle/Pizza_parlor3004/UIfunctions/manager_functions.cpp
+	"manager_functions.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/data/LocationRepo.cpp
+	"LocationRepo.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/data/LocationRepo.h
+	"Location.h"
+	<vector>
+	<fstream>
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/objects/Location.h
+	<string.h>
+	<string>
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/data/OrderRepo.cpp
+	"OrderRepo.h"
+	<cstdlib>
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/data/OrderRepo.h
+	"Order.h"
+	<fstream>
+	<string>
+	<vector>
+
+1513210207 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/objects/Order.h
+	"Pizza.h"
+	"PizzaType.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/objects/Pizza.h
+	"PizzaStatus.h"
+	"PizzaBottom.h"
+	"Toppings.h"
+	<string.h>
+
+1513250731 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/datatypes/PizzaStatus.h
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/objects/PizzaBottom.h
+	"string.h"
+	<iostream>
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/objects/Toppings.h
+	<string>
+	<iostream>
+	<cstring>
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/datatypes/PizzaType.h
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/data/PizzaBottomRepo.cpp
+	"PizzaBottomRepo.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/data/PizzaBottomRepo.h
+	"PizzaBottom.h"
+	<fstream>
+	<vector>
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/data/PizzaRepo.cpp
+	"PizzaRepo.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/data/PizzaRepo.h
+	"Pizza.h"
+	<fstream>
+	<vector>
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/data/SideOrderRepo.cpp
+	"SideOrderRepo.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/data/SideOrderRepo.h
+	"SideOrders.h"
+	<vector>
+	<string>
+	<fstream>
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/objects/SideOrders.h
+	<cstring>
+	<string>
+	<iostream>
+	"ValidationFunctions.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/ValidationFunctions.h
+	<strings.h>
+	<iostream>
+	"InvalidNumberException.h"
+	"InvalidAlphaNumException.h"
+	"InvalidDoubleException.h"
+	"InvalidAlphaStringException.h"
+	"InvalidAddresseException.h"
+	"InvalidBoolException.h"
+	"InvalidCharException.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidNumberException.h
+	<string>
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidAlphaNumException.h
+	<string>
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidDoubleException.h
+	<string>
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidAlphaStringException.h
+	<string>
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidAddresseException.h
+	<string>
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidBoolException.h
+	<string>
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidCharException.h
+	<string>
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/data/ToppingsRepo.cpp
+	"ToppingsRepo.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/data/ToppingsRepo.h
+	"Toppings.h"
+	<fstream>
+	<vector>
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidAddresseException.cpp
+	"InvalidAddresseException.h"
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidAlphaNumException.cpp
+	"InvalidAlphaNumException.h"
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidAlphaStringException.cpp
+	"InvalidAlphaStringException.h"
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidBoolException.cpp
+	"InvalidBoolException.h"
+	<iostream>
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidCharException.cpp
+	"InvalidCharException.h"
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidDoubleException.cpp
+	"InvalidDoubleException.h"
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidInputException.cpp
+	"InvalidInputException.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidInputException.h
+	<string>
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidName.cpp
+	"InvalidName.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidName.h
+	<string>
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidNumberException.cpp
+	"InvalidNumberException.h"
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidPrice.cpp
+	"InvalidPrice.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidPrice.h
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidSize.cpp
+	"InvalidSize.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/exceptions/InvalidSize.h
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/LocationHandler.cpp
+	"LocationHandler.h"
+	<iostream>
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/LocationHandler.h
+	"LocationRepo.h"
+	"InvalidName.h"
+	"InvalidAlphaNumException.h"
+
+1513253178 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/OrderHandler.cpp
+	"OrderHandler.h"
+
+1513254003 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/OrderHandler.h
+	"OrderRepo.h"
+	"PizzaHandler.h"
+	"PizzaStatus.h"
+	"LocationHandler.h"
+
+1513174270 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/PizzaHandler.h
+	"ToppingsHandler.h"
+	"PizzaRepo.h"
+	"PizzaBottomHandler.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/ToppingsHandler.h
+	"ToppingsRepo.h"
+	<string.h>
+	"InvalidName.h"
+	"InvalidPrice.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/PizzaBottomHandler.h
+	"PizzaBottomRepo.h"
+	<string.h>
+	"PizzaBottom.h"
+	"InvalidSize.h"
+	"InvalidPrice.h"
+	"ValidationFunctions.h"
+
+1513196061 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/PizzaBottomHandler.cpp
+	"PizzaBottomHandler.h"
+
+1513147100 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/PizzaHandler.cpp
+	"PizzaHandler.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/SideOrdersHandler.cpp
+	"SideOrdersHandler.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/SideOrdersHandler.h
+	"SideOrderRepo.h"
+	"SideOrders.h"
+	"InvalidName.h"
+	"InvalidPrice.h"
+	"ValidationFunctions.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/sorting_function.cpp
+	"sorting_function.h"
+
+1513117318 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/sorting_function.h
+	"ToppingsRepo.h"
+	"PizzaRepo.h"
+	"OrderRepo.h"
+	<string.h>
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/StdInput.cpp
+	"StdInput.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/StdInput.h
+	<iostream>
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/logic/ToppingsHandler.cpp
+	"ToppingsHandler.h"
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/main.cpp
+	<iostream>
+	"LoginUI.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/LoginUI.h
+	<iostream>
+	<stdlib.h>
+	<vector>
+	"ManagerUI.h"
+	"BakerUI.h"
+	"PhoneClerkUI.h"
+	"StoreClerkUI.h"
+	"CustomerUI.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/ManagerUI.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/UIBridge.h
+	"OrderHandler.h"
+	"PizzaHandler.h"
+	"ToppingsHandler.h"
+	"PizzaBottomHandler.h"
+	"LocationHandler.h"
+	"SideOrdersHandler.h"
+	"print_functions.h"
+	"InvalidInputException.h"
+	"order_functions.h"
+	"baker_functions.h"
+
+1513204833 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UIfunctions/print_functions.h
+	<iostream>
+
+1513250731 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UIfunctions/order_functions.h
+	"print_functions.h"
+	<stdlib.h>
+	"OrderHandler.h"
+	"Pizza.h"
+	<iomanip>
+	"InvalidCharException.h"
+	"InvalidAlphaStringException.h"
+	"Print.h"
+	"PizzaBottom.h"
+	"PizzaBottomHandler.h"
+	"get_menu_pizza.h"
+
+1513198129 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/Print.h
+	"sorting_function.h"
+	<iomanip>
+	"print_types.h"
+	"OrderHandler.h"
+
+1513117372 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/print_types.h
+
+1513189242 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UIfunctions/get_menu_pizza.h
+	"Print.h"
+	"PizzaHandler.h"
+	"get_menu_pizza.h"
+	"add_toppings.h"
+	"OrderHandler.h"
+
+1513179235 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UIfunctions/add_toppings.h
+	"sorting_function.h"
+	<string.h>
+	"ToppingsHandler.h"
+	<vector>
+	"print_functions.h"
+
+1513122867 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UIfunctions/baker_functions.h
+	"OrderHandler.h"
+	"Pizza.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/BakerUI.h
+	<iostream>
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/PhoneClerkUI.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/StoreClerkUI.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513196066 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/CustomerUI.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/objects/Location.cpp
+	"Location.h"
+
+1513210207 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/objects/Order.cpp
+	"Order.h"
+
+1513147017 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/objects/Pizza.cpp
+	"Pizza.h"
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/objects/PizzaBottom.cpp
+	"PizzaBottom.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/objects/SideOrders.cpp
+	"SideOrders.h"
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/objects/Toppings.cpp
+	"Toppings.h"
+
+1513196061 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/BakerUI.cpp
+	"BakerUI.h"
+
+1513122867 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/CustomerUI.cpp
+	"CustomerUI.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/LoginUI.cpp
+	"LoginUI.h"
+
+1513202460 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/ManagerUI.cpp
+	"ManagerUI.h"
+	"manager_functions.h"
+
+1513199249 /home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UIfunctions/manager_functions.h
+	"InvalidAlphaStringException.h"
+	"InvalidNumberException.h"
+	"InvalidBoolException.h"
+	"ValidationFunctions.h"
+	"order_functions.h"
+	"add_toppings.h"
+	"SideOrdersHandler.h"
+
+1513255618 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/PhoneClerkUI.cpp
+	"PhoneClerkUI.h"
+
+1513249199 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/Print.cpp
+	"Print.h"
+
+1513255347 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/StoreClerkUI.cpp
+	"StoreClerkUI.h"
+	"order_functions.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UI/UIBridge.cpp
+	"UIBridge.h"
+
+1513196066 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UIfunctions/baker_functions.cpp
+	"baker_functions.h"
+
+1513255983 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UIfunctions/order_functions.cpp
+	"order_functions.h"
+	"ValidationFunctions.h"
+
+1513199464 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UIfunctions/manager_functions.cpp
+	"manager_functions.h"
+
+1513209932 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UIfunctions/add_toppings.cpp
+	"add_toppings.h"
+
+1513192789 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/UIfunctions/get_menu_pizza.cpp
+	"get_menu_pizza.h"
+	"add_toppings.h"
+
+1513144445 source:/home/IvarMarrow/TeamEagle/TeamEagle/BjarneStroustrupsPizzeria/Pizza_parlor3004/skrt2.cpp
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\data\locationrepo.cpp
+	"LocationRepo.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\data\locationrepo.h
+	"Location.h"
+	<vector>
+	<fstream>
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\objects\location.h
+	<string.h>
+	<string>
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\data\orderrepo.cpp
+	"OrderRepo.h"
+	<cstdlib>
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\data\orderrepo.h
+	"Order.h"
+	<fstream>
+	<string>
+	<vector>
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\objects\order.h
+	"Pizza.h"
+	"PizzaType.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\objects\pizza.h
+	"PizzaStatus.h"
+	"PizzaBottom.h"
+	"Toppings.h"
+	<string.h>
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\datatypes\pizzastatus.h
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\objects\pizzabottom.h
+	"string.h"
+	<iostream>
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\objects\toppings.h
+	<string>
+	<iostream>
+	<cstring>
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\datatypes\pizzatype.h
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\data\pizzabottomrepo.cpp
+	"PizzaBottomRepo.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\data\pizzabottomrepo.h
+	"PizzaBottom.h"
+	<fstream>
+	<vector>
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\data\pizzarepo.cpp
+	"PizzaRepo.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\data\pizzarepo.h
+	"Pizza.h"
+	<fstream>
+	<vector>
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\data\sideorderrepo.cpp
+	"SideOrderRepo.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\data\sideorderrepo.h
+	"SideOrders.h"
+	<vector>
+	<string>
+	<fstream>
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\objects\sideorders.h
+	<cstring>
+	<string>
+	<iostream>
+	"ValidationFunctions.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\validationfunctions.h
+	<strings.h>
+	<iostream>
+	"InvalidNumberException.h"
+	"InvalidAlphaNumException.h"
+	"InvalidDoubleException.h"
+	"InvalidAlphaStringException.h"
+	"InvalidAddresseException.h"
+	"InvalidBoolException.h"
+	"InvalidCharException.h"
+	"InvalidSize.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidnumberexception.h
+	<string>
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidalphanumexception.h
+	<string>
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invaliddoubleexception.h
+	<string>
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidalphastringexception.h
+	<string>
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidaddresseexception.h
+	<string>
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidboolexception.h
+	<string>
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidcharexception.h
+	<string>
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\data\toppingsrepo.cpp
+	"ToppingsRepo.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\data\toppingsrepo.h
+	"Toppings.h"
+	<fstream>
+	<vector>
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidaddresseexception.cpp
+	"InvalidAddresseException.h"
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidalphanumexception.cpp
+	"InvalidAlphaNumException.h"
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidalphastringexception.cpp
+	"InvalidAlphaStringException.h"
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidboolexception.cpp
+	"InvalidBoolException.h"
+	<iostream>
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidcharexception.cpp
+	"InvalidCharException.h"
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invaliddoubleexception.cpp
+	"InvalidDoubleException.h"
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidinputexception.cpp
+	"InvalidInputException.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidinputexception.h
+	<string>
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidname.cpp
+	"InvalidName.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidname.h
+	<string>
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidnumberexception.cpp
+	"InvalidNumberException.h"
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidprice.cpp
+	"InvalidPrice.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidprice.h
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidsize.cpp
+	"InvalidSize.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidsize.h
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\locationhandler.cpp
+	"LocationHandler.h"
+	<iostream>
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\locationhandler.h
+	"LocationRepo.h"
+	"InvalidName.h"
+	"InvalidAlphaNumException.h"
+	"InvalidSize.h"
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\orderhandler.cpp
+	"OrderHandler.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\orderhandler.h
+	"OrderRepo.h"
+	"PizzaHandler.h"
+	"PizzaStatus.h"
+	"LocationHandler.h"
+	"InvalidTopping.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\pizzahandler.h
+	"ToppingsHandler.h"
+	"PizzaRepo.h"
+	"PizzaBottomHandler.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\toppingshandler.h
+	"ToppingsRepo.h"
+	<string.h>
+	"InvalidName.h"
+	"InvalidSize.h"
+	"InvalidPrice.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\pizzabottomhandler.h
+	"PizzaBottomRepo.h"
+	<string.h>
+	"PizzaBottom.h"
+	"InvalidSize.h"
+	"InvalidPrice.h"
+	"ValidationFunctions.h"
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\pizzabottomhandler.cpp
+	"PizzaBottomHandler.h"
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\pizzahandler.cpp
+	"PizzaHandler.h"
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\sideordershandler.cpp
+	"SideOrdersHandler.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\sideordershandler.h
+	"SideOrderRepo.h"
+	"SideOrders.h"
+	"InvalidName.h"
+	"InvalidPrice.h"
+	"ValidationFunctions.h"
+
+1513353816 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\sorting_function.cpp
+	"sorting_function.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\sorting_function.h
+	"ToppingsRepo.h"
+	"PizzaRepo.h"
+	"OrderRepo.h"
+	<string.h>
+	"InvalidSize.h"
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\stdinput.cpp
+	"StdInput.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\stdinput.h
+	<iostream>
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\toppingshandler.cpp
+	"ToppingsHandler.h"
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\main.cpp
+	<iostream>
+	"LoginUI.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\loginui.h
+	<iostream>
+	<stdlib.h>
+	<vector>
+	"ManagerUI.h"
+	"BakerUI.h"
+	"PhoneClerkUI.h"
+	"StoreClerkUI.h"
+	"CustomerUI.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\managerui.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\uibridge.h
+	"OrderHandler.h"
+	"PizzaHandler.h"
+	"ToppingsHandler.h"
+	"PizzaBottomHandler.h"
+	"LocationHandler.h"
+	"SideOrdersHandler.h"
+	"print_functions.h"
+	"InvalidInputException.h"
+	"order_functions.h"
+	"baker_functions.h"
+
+1513355126 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\print_functions.h
+	"PizzaStatus.h"
+	"Print.h"
+	<iostream>
+
+1513355126 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\order_functions.h
+	"print_functions.h"
+	<stdlib.h>
+	"OrderHandler.h"
+	"Pizza.h"
+	<iomanip>
+	"InvalidCharException.h"
+	"InvalidAlphaStringException.h"
+	"PizzaBottom.h"
+	"PizzaBottomHandler.h"
+	"get_menu_pizza.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\print.h
+	"sorting_function.h"
+	<iomanip>
+	"print_types.h"
+	"OrderHandler.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\print_types.h
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\get_menu_pizza.h
+	"Print.h"
+	"PizzaHandler.h"
+	"get_menu_pizza.h"
+	"add_toppings.h"
+	"OrderHandler.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\add_toppings.h
+	"sorting_function.h"
+	<string.h>
+	"ToppingsHandler.h"
+	<vector>
+	"print_functions.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\baker_functions.h
+	"OrderHandler.h"
+	"Pizza.h"
+	"print_functions.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\bakerui.h
+	<iostream>
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\phoneclerkui.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\storeclerkui.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\customerui.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\objects\location.cpp
+	"Location.h"
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\objects\order.cpp
+	"Order.h"
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\objects\pizza.cpp
+	"Pizza.h"
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\objects\pizzabottom.cpp
+	"PizzaBottom.h"
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\objects\sideorders.cpp
+	"SideOrders.h"
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\objects\toppings.cpp
+	"Toppings.h"
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\skrt2.cpp
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\bakerui.cpp
+	"BakerUI.h"
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\customerui.cpp
+	"CustomerUI.h"
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\loginui.cpp
+	"LoginUI.h"
+
+1513355155 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\managerui.cpp
+	"ManagerUI.h"
+	"manager_functions.h"
+
+1513353816 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\manager_functions.h
+	"InvalidAlphaStringException.h"
+	"InvalidNumberException.h"
+	"InvalidBoolException.h"
+	"ValidationFunctions.h"
+	"order_functions.h"
+	"add_toppings.h"
+	"SideOrdersHandler.h"
+
+1513354755 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\phoneclerkui.cpp
+	"PhoneClerkUI.h"
+
+1513354578 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\print.cpp
+	"Print.h"
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\storeclerkui.cpp
+	"StoreClerkUI.h"
+	"order_functions.h"
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\uibridge.cpp
+	"UIBridge.h"
+	"manager_functions.h"
+	"print_functions.h"
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\add_toppings.cpp
+	"add_toppings.h"
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\baker_functions.cpp
+	"baker_functions.h"
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\get_menu_pizza.cpp
+	"get_menu_pizza.h"
+	"add_toppings.h"
+
+1513355466 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\manager_functions.cpp
+	"manager_functions.h"
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\order_functions.cpp
+	"order_functions.h"
+	"ValidationFunctions.h"
+
+1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\data\locationrepo.cpp
+	"LocationRepo.h"
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\data\locationrepo.h
+	"Location.h"
+	<vector>
+	<fstream>
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\objects\location.h
+	<string.h>
+	<string>
+
+1513279784 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\data\orderrepo.cpp
+	"OrderRepo.h"
+	<cstdlib>
+
+1513280685 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\data\orderrepo.h
+	"Order.h"
+	<fstream>
+	<string>
+	<vector>
+
+1513338955 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\objects\order.h
+	"Pizza.h"
+	"PizzaType.h"
+
+1513291033 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\objects\pizza.h
+	"PizzaStatus.h"
+	"PizzaBottom.h"
+	"Toppings.h"
+	<string.h>
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\datatypes\pizzastatus.h
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\objects\pizzabottom.h
+	"string.h"
+	<iostream>
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\objects\toppings.h
+	<string>
+	<iostream>
+	<cstring>
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\datatypes\pizzatype.h
+
+1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\data\pizzabottomrepo.cpp
+	"PizzaBottomRepo.h"
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\data\pizzabottomrepo.h
+	"PizzaBottom.h"
+	<fstream>
+	<vector>
+
+1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\data\pizzarepo.cpp
+	"PizzaRepo.h"
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\data\pizzarepo.h
+	"Pizza.h"
+	<fstream>
+	<vector>
+
+1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\data\sideorderrepo.cpp
+	"SideOrderRepo.h"
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\data\sideorderrepo.h
+	"SideOrders.h"
+	<vector>
+	<string>
+	<fstream>
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\objects\sideorders.h
+	<cstring>
+	<string>
+	<iostream>
+	"ValidationFunctions.h"
+
+1513306414 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\validationfunctions.h
+	<strings.h>
+	<iostream>
+	"InvalidNumberException.h"
+	"InvalidAlphaNumException.h"
+	"InvalidDoubleException.h"
+	"InvalidAlphaStringException.h"
+	"InvalidAddresseException.h"
+	"InvalidBoolException.h"
+	"InvalidCharException.h"
+	"InvalidSize.h"
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidnumberexception.h
+	<string>
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidalphanumexception.h
+	<string>
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invaliddoubleexception.h
+	<string>
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidalphastringexception.h
+	<string>
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidaddresseexception.h
+	<string>
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidboolexception.h
+	<string>
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidcharexception.h
+	<string>
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidsize.h
+
+1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\data\toppingsrepo.cpp
+	"ToppingsRepo.h"
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\data\toppingsrepo.h
+	"Toppings.h"
+	<fstream>
+	<vector>
+
+1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidaddresseexception.cpp
+	"InvalidAddresseException.h"
+
+1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidalphanumexception.cpp
+	"InvalidAlphaNumException.h"
+
+1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidalphastringexception.cpp
+	"InvalidAlphaStringException.h"
+
+1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidboolexception.cpp
+	"InvalidBoolException.h"
+	<iostream>
+
+1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidcharexception.cpp
+	"InvalidCharException.h"
+
+1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invaliddoubleexception.cpp
+	"InvalidDoubleException.h"
+
+1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidinputexception.cpp
+	"InvalidInputException.h"
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidinputexception.h
+	<string>
+
+1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidname.cpp
+	"InvalidName.h"
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidname.h
+	<string>
+
+1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidnumberexception.cpp
+	"InvalidNumberException.h"
+
+1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidprice.cpp
+	"InvalidPrice.h"
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidprice.h
+
+1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidsize.cpp
+	"InvalidSize.h"
+
+1513304613 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\locationhandler.cpp
+	"LocationHandler.h"
+	<iostream>
+
+1513304473 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\locationhandler.h
+	"LocationRepo.h"
+	"InvalidName.h"
+	"InvalidAlphaNumException.h"
+	"InvalidSize.h"
+
+1513348306 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\orderhandler.cpp
+	"OrderHandler.h"
+
+1513348291 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\orderhandler.h
+	"OrderRepo.h"
+	"PizzaHandler.h"
+	"PizzaStatus.h"
+	"LocationHandler.h"
+	"InvalidTopping.h"
+
+1513291064 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\pizzahandler.h
+	"ToppingsHandler.h"
+	"PizzaRepo.h"
+	"PizzaBottomHandler.h"
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\toppingshandler.h
+	"ToppingsRepo.h"
+	<string.h>
+	"InvalidName.h"
+	"InvalidSize.h"
+	"InvalidPrice.h"
+
+1513342064 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\pizzabottomhandler.h
+	"PizzaBottomRepo.h"
+	<string.h>
+	"PizzaBottom.h"
+	"InvalidSize.h"
+	"InvalidPrice.h"
+	"ValidationFunctions.h"
+
+1513342064 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\pizzabottomhandler.cpp
+	"PizzaBottomHandler.h"
+
+1513291049 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\pizzahandler.cpp
+	"PizzaHandler.h"
+
+1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\sideordershandler.cpp
+	"SideOrdersHandler.h"
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\sideordershandler.h
+	"SideOrderRepo.h"
+	"SideOrders.h"
+	"InvalidName.h"
+	"InvalidPrice.h"
+	"ValidationFunctions.h"
+
+1513345656 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\sorting_function.cpp
+	"sorting_function.h"
+
+1513289981 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\sorting_function.h
+	"ToppingsRepo.h"
+	"PizzaRepo.h"
+	"OrderRepo.h"
+	<string.h>
+	"InvalidSize.h"
+
+1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\stdinput.cpp
+	"StdInput.h"
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\stdinput.h
+	<iostream>
+
+1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\toppingshandler.cpp
+	"ToppingsHandler.h"
+
+1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\main.cpp
+	<iostream>
+	"LoginUI.h"
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\loginui.h
+	<iostream>
+	<stdlib.h>
+	<vector>
+	"ManagerUI.h"
+	"BakerUI.h"
+	"PhoneClerkUI.h"
+	"StoreClerkUI.h"
+	"CustomerUI.h"
+
+1513305475 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\managerui.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\uibridge.h
+	"OrderHandler.h"
+	"PizzaHandler.h"
+	"ToppingsHandler.h"
+	"PizzaBottomHandler.h"
+	"LocationHandler.h"
+	"SideOrdersHandler.h"
+	"print_functions.h"
+	"InvalidInputException.h"
+	"order_functions.h"
+	"baker_functions.h"
+
+1513338827 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\print_functions.h
+	"PizzaStatus.h"
+	"Print.h"
+	<iostream>
+
+1513350315 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\order_functions.h
+	"print_functions.h"
+	<stdlib.h>
+	"OrderHandler.h"
+	"Pizza.h"
+	<iomanip>
+	"InvalidCharException.h"
+	"InvalidAlphaStringException.h"
+	"PizzaBottom.h"
+	"PizzaBottomHandler.h"
+	"get_menu_pizza.h"
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\print.h
+	"sorting_function.h"
+	<iomanip>
+	"print_types.h"
+	"OrderHandler.h"
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\print_types.h
+
+1513258473 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\get_menu_pizza.h
+	"Print.h"
+	"PizzaHandler.h"
+	"get_menu_pizza.h"
+	"add_toppings.h"
+	"OrderHandler.h"
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\add_toppings.h
+	"sorting_function.h"
+	<string.h>
+	"ToppingsHandler.h"
+	<vector>
+	"print_functions.h"
+
+1513307732 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\baker_functions.h
+	"OrderHandler.h"
+	"Pizza.h"
+	"print_functions.h"
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\bakerui.h
+	<iostream>
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\phoneclerkui.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\storeclerkui.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\customerui.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\objects\location.cpp
+	"Location.h"
+
+1513338926 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\objects\order.cpp
+	"Order.h"
+
+1513293657 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\objects\pizza.cpp
+	"Pizza.h"
+
+1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\objects\pizzabottom.cpp
+	"PizzaBottom.h"
+
+1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\objects\sideorders.cpp
+	"SideOrders.h"
+
+1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\objects\toppings.cpp
+	"Toppings.h"
+
+1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\skrt2.cpp
+
+1513297439 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\bakerui.cpp
+	"BakerUI.h"
+
+1513350298 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\customerui.cpp
+	"CustomerUI.h"
+
+1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\loginui.cpp
+	"LoginUI.h"
+
+1513305756 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\managerui.cpp
+	"ManagerUI.h"
+	"manager_functions.h"
+
+1513308091 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\manager_functions.h
+	"InvalidAlphaStringException.h"
+	"InvalidNumberException.h"
+	"InvalidBoolException.h"
+	"ValidationFunctions.h"
+	"order_functions.h"
+	"add_toppings.h"
+	"SideOrdersHandler.h"
+
+1513297519 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\phoneclerkui.cpp
+	"PhoneClerkUI.h"
+
+1513285350 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\print.cpp
+	"Print.h"
+
+1513350049 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\storeclerkui.cpp
+	"StoreClerkUI.h"
+	"order_functions.h"
+
+1513307494 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\uibridge.cpp
+	"UIBridge.h"
+	"manager_functions.h"
+	"print_functions.h"
+
+1513345068 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\add_toppings.cpp
+	"add_toppings.h"
+
+1513338827 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\baker_functions.cpp
+	"baker_functions.h"
+
+1513345830 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\get_menu_pizza.cpp
+	"get_menu_pizza.h"
+	"add_toppings.h"
+
+1513308091 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\manager_functions.cpp
+	"manager_functions.h"
+
+1513350298 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\order_functions.cpp
+	"order_functions.h"
+	"ValidationFunctions.h"
+
+1513283976 source:c:\users\vikto\desktop\pizza_parlor3004\data\locationrepo.cpp
+	"LocationRepo.h"
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\data\locationrepo.h
+	"Location.h"
+	<vector>
+	<fstream>
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\objects\location.h
+	<string.h>
+	<string>
+
+1513279784 source:c:\users\vikto\desktop\pizza_parlor3004\data\orderrepo.cpp
+	"OrderRepo.h"
+	<cstdlib>
+
+1513280685 c:\users\vikto\desktop\pizza_parlor3004\data\orderrepo.h
+	"Order.h"
+	<fstream>
+	<string>
+	<vector>
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\objects\order.h
+	"Pizza.h"
+	"PizzaType.h"
+
+1513291033 c:\users\vikto\desktop\pizza_parlor3004\objects\pizza.h
+	"PizzaStatus.h"
+	"PizzaBottom.h"
+	"Toppings.h"
+	<string.h>
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\datatypes\pizzastatus.h
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\objects\pizzabottom.h
+	"string.h"
+	<iostream>
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\objects\toppings.h
+	<string>
+	<iostream>
+	<cstring>
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\datatypes\pizzatype.h
+
+1513283976 source:c:\users\vikto\desktop\pizza_parlor3004\data\pizzabottomrepo.cpp
+	"PizzaBottomRepo.h"
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\data\pizzabottomrepo.h
+	"PizzaBottom.h"
+	<fstream>
+	<vector>
+
+1513283976 source:c:\users\vikto\desktop\pizza_parlor3004\data\pizzarepo.cpp
+	"PizzaRepo.h"
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\data\pizzarepo.h
+	"Pizza.h"
+	<fstream>
+	<vector>
+
+1513283976 source:c:\users\vikto\desktop\pizza_parlor3004\data\sideorderrepo.cpp
+	"SideOrderRepo.h"
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\data\sideorderrepo.h
+	"SideOrders.h"
+	<vector>
+	<string>
+	<fstream>
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\objects\sideorders.h
+	<cstring>
+	<string>
+	<iostream>
+	"ValidationFunctions.h"
+
+1513306414 c:\users\vikto\desktop\pizza_parlor3004\logic\validationfunctions.h
+	<strings.h>
+	<iostream>
+	"InvalidNumberException.h"
+	"InvalidAlphaNumException.h"
+	"InvalidDoubleException.h"
+	"InvalidAlphaStringException.h"
+	"InvalidAddresseException.h"
+	"InvalidBoolException.h"
+	"InvalidCharException.h"
+	"InvalidSize.h"
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\exceptions\invalidnumberexception.h
+	<string>
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\exceptions\invalidalphanumexception.h
+	<string>
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\exceptions\invaliddoubleexception.h
+	<string>
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\exceptions\invalidalphastringexception.h
+	<string>
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\exceptions\invalidaddresseexception.h
+	<string>
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\exceptions\invalidboolexception.h
+	<string>
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\exceptions\invalidcharexception.h
+	<string>
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\exceptions\invalidsize.h
+
+1513283976 source:c:\users\vikto\desktop\pizza_parlor3004\data\toppingsrepo.cpp
+	"ToppingsRepo.h"
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\data\toppingsrepo.h
+	"Toppings.h"
+	<fstream>
+	<vector>
+
+1513283976 source:c:\users\vikto\desktop\pizza_parlor3004\exceptions\invalidaddresseexception.cpp
+	"InvalidAddresseException.h"
+
+1513283976 source:c:\users\vikto\desktop\pizza_parlor3004\exceptions\invalidalphanumexception.cpp
+	"InvalidAlphaNumException.h"
+
+1513283976 source:c:\users\vikto\desktop\pizza_parlor3004\exceptions\invalidalphastringexception.cpp
+	"InvalidAlphaStringException.h"
+
+1513283976 source:c:\users\vikto\desktop\pizza_parlor3004\exceptions\invalidboolexception.cpp
+	"InvalidBoolException.h"
+	<iostream>
+
+1513283976 source:c:\users\vikto\desktop\pizza_parlor3004\exceptions\invalidcharexception.cpp
+	"InvalidCharException.h"
+
+1513283976 source:c:\users\vikto\desktop\pizza_parlor3004\exceptions\invaliddoubleexception.cpp
+	"InvalidDoubleException.h"
+
+1513283976 source:c:\users\vikto\desktop\pizza_parlor3004\exceptions\invalidinputexception.cpp
+	"InvalidInputException.h"
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\exceptions\invalidinputexception.h
+	<string>
+
+1513283976 source:c:\users\vikto\desktop\pizza_parlor3004\exceptions\invalidname.cpp
+	"InvalidName.h"
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\exceptions\invalidname.h
+	<string>
+
+1513283976 source:c:\users\vikto\desktop\pizza_parlor3004\exceptions\invalidnumberexception.cpp
+	"InvalidNumberException.h"
+
+1513283976 source:c:\users\vikto\desktop\pizza_parlor3004\exceptions\invalidprice.cpp
+	"InvalidPrice.h"
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\exceptions\invalidprice.h
+
+1513283976 source:c:\users\vikto\desktop\pizza_parlor3004\exceptions\invalidsize.cpp
+	"InvalidSize.h"
+
+1513304613 source:c:\users\vikto\desktop\pizza_parlor3004\logic\locationhandler.cpp
+	"LocationHandler.h"
+	<iostream>
+
+1513304473 c:\users\vikto\desktop\pizza_parlor3004\logic\locationhandler.h
+	"LocationRepo.h"
+	"InvalidName.h"
+	"InvalidAlphaNumException.h"
+	"InvalidSize.h"
+
+1513297009 source:c:\users\vikto\desktop\pizza_parlor3004\logic\orderhandler.cpp
+	"OrderHandler.h"
+
+1513281627 c:\users\vikto\desktop\pizza_parlor3004\logic\orderhandler.h
+	"OrderRepo.h"
+	"PizzaHandler.h"
+	"PizzaStatus.h"
+	"LocationHandler.h"
+
+1513291064 c:\users\vikto\desktop\pizza_parlor3004\logic\pizzahandler.h
+	"ToppingsHandler.h"
+	"PizzaRepo.h"
+	"PizzaBottomHandler.h"
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\logic\toppingshandler.h
+	"ToppingsRepo.h"
+	<string.h>
+	"InvalidName.h"
+	"InvalidSize.h"
+	"InvalidPrice.h"
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\logic\pizzabottomhandler.h
+	"PizzaBottomRepo.h"
+	<string.h>
+	"PizzaBottom.h"
+	"InvalidSize.h"
+	"InvalidPrice.h"
+	"ValidationFunctions.h"
+
+1513298311 source:c:\users\vikto\desktop\pizza_parlor3004\logic\pizzabottomhandler.cpp
+	"PizzaBottomHandler.h"
+
+1513291049 source:c:\users\vikto\desktop\pizza_parlor3004\logic\pizzahandler.cpp
+	"PizzaHandler.h"
+
+1513283976 source:c:\users\vikto\desktop\pizza_parlor3004\logic\sideordershandler.cpp
+	"SideOrdersHandler.h"
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\logic\sideordershandler.h
+	"SideOrderRepo.h"
+	"SideOrders.h"
+	"InvalidName.h"
+	"InvalidPrice.h"
+	"ValidationFunctions.h"
+
+1513290800 source:c:\users\vikto\desktop\pizza_parlor3004\logic\sorting_function.cpp
+	"sorting_function.h"
+
+1513289981 c:\users\vikto\desktop\pizza_parlor3004\logic\sorting_function.h
+	"ToppingsRepo.h"
+	"PizzaRepo.h"
+	"OrderRepo.h"
+	<string.h>
+	"InvalidSize.h"
+
+1513283976 source:c:\users\vikto\desktop\pizza_parlor3004\logic\stdinput.cpp
+	"StdInput.h"
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\logic\stdinput.h
+	<iostream>
+
+1513283976 source:c:\users\vikto\desktop\pizza_parlor3004\logic\toppingshandler.cpp
+	"ToppingsHandler.h"
+
+1513283976 source:c:\users\vikto\desktop\pizza_parlor3004\main.cpp
+	<iostream>
+	"LoginUI.h"
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\ui\loginui.h
+	<iostream>
+	<stdlib.h>
+	<vector>
+	"ManagerUI.h"
+	"BakerUI.h"
+	"PhoneClerkUI.h"
+	"StoreClerkUI.h"
+	"CustomerUI.h"
+
+1513305475 c:\users\vikto\desktop\pizza_parlor3004\ui\managerui.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\ui\uibridge.h
+	"OrderHandler.h"
+	"PizzaHandler.h"
+	"ToppingsHandler.h"
+	"PizzaBottomHandler.h"
+	"LocationHandler.h"
+	"SideOrdersHandler.h"
+	"print_functions.h"
+	"InvalidInputException.h"
+	"order_functions.h"
+	"baker_functions.h"
+
+1513308091 c:\users\vikto\desktop\pizza_parlor3004\uifunctions\print_functions.h
+	"PizzaStatus.h"
+	"Print.h"
+	<iostream>
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\ui\print.h
+	"sorting_function.h"
+	<iomanip>
+	"print_types.h"
+	"OrderHandler.h"
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\ui\print_types.h
+
+1513308091 c:\users\vikto\desktop\pizza_parlor3004\uifunctions\order_functions.h
+	"print_functions.h"
+	<stdlib.h>
+	"OrderHandler.h"
+	"Pizza.h"
+	<iomanip>
+	"InvalidCharException.h"
+	"InvalidAlphaStringException.h"
+	"PizzaBottom.h"
+	"PizzaBottomHandler.h"
+	"get_menu_pizza.h"
+
+1513258473 c:\users\vikto\desktop\pizza_parlor3004\uifunctions\get_menu_pizza.h
+	"Print.h"
+	"PizzaHandler.h"
+	"get_menu_pizza.h"
+	"add_toppings.h"
+	"OrderHandler.h"
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\uifunctions\add_toppings.h
+	"sorting_function.h"
+	<string.h>
+	"ToppingsHandler.h"
+	<vector>
+	"print_functions.h"
+
+1513307732 c:\users\vikto\desktop\pizza_parlor3004\uifunctions\baker_functions.h
+	"OrderHandler.h"
+	"Pizza.h"
+	"print_functions.h"
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\ui\bakerui.h
+	<iostream>
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\ui\phoneclerkui.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\ui\storeclerkui.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513283976 c:\users\vikto\desktop\pizza_parlor3004\ui\customerui.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513283976 source:c:\users\vikto\desktop\pizza_parlor3004\objects\location.cpp
+	"Location.h"
+
+1513297009 source:c:\users\vikto\desktop\pizza_parlor3004\objects\order.cpp
+	"Order.h"
+
+1513293657 source:c:\users\vikto\desktop\pizza_parlor3004\objects\pizza.cpp
+	"Pizza.h"
+
+1513283976 source:c:\users\vikto\desktop\pizza_parlor3004\objects\pizzabottom.cpp
+	"PizzaBottom.h"
+
+1513283976 source:c:\users\vikto\desktop\pizza_parlor3004\objects\sideorders.cpp
+	"SideOrders.h"
+
+1513283976 source:c:\users\vikto\desktop\pizza_parlor3004\objects\toppings.cpp
+	"Toppings.h"
+
+1513283976 source:c:\users\vikto\desktop\pizza_parlor3004\skrt2.cpp
+
+1513297439 source:c:\users\vikto\desktop\pizza_parlor3004\ui\bakerui.cpp
+	"BakerUI.h"
+
+1513283976 source:c:\users\vikto\desktop\pizza_parlor3004\ui\customerui.cpp
+	"CustomerUI.h"
+
+1513283976 source:c:\users\vikto\desktop\pizza_parlor3004\ui\loginui.cpp
+	"LoginUI.h"
+
+1513305756 source:c:\users\vikto\desktop\pizza_parlor3004\ui\managerui.cpp
+	"ManagerUI.h"
+	"manager_functions.h"
+
+1513308091 c:\users\vikto\desktop\pizza_parlor3004\uifunctions\manager_functions.h
+	"InvalidAlphaStringException.h"
+	"InvalidNumberException.h"
+	"InvalidBoolException.h"
+	"ValidationFunctions.h"
+	"order_functions.h"
+	"add_toppings.h"
+	"SideOrdersHandler.h"
+
+1513297519 source:c:\users\vikto\desktop\pizza_parlor3004\ui\phoneclerkui.cpp
+	"PhoneClerkUI.h"
+
+1513285350 source:c:\users\vikto\desktop\pizza_parlor3004\ui\print.cpp
+	"Print.h"
+
+1513289981 source:c:\users\vikto\desktop\pizza_parlor3004\ui\storeclerkui.cpp
+	"StoreClerkUI.h"
+	"order_functions.h"
+
+1513307494 source:c:\users\vikto\desktop\pizza_parlor3004\ui\uibridge.cpp
+	"UIBridge.h"
+	"manager_functions.h"
+	"print_functions.h"
+
+1513284794 source:c:\users\vikto\desktop\pizza_parlor3004\uifunctions\add_toppings.cpp
+	"add_toppings.h"
+
+1513308091 source:c:\users\vikto\desktop\pizza_parlor3004\uifunctions\baker_functions.cpp
+	"baker_functions.h"
+
+1513290382 source:c:\users\vikto\desktop\pizza_parlor3004\uifunctions\get_menu_pizza.cpp
+	"get_menu_pizza.h"
+	"add_toppings.h"
+
+1513308091 source:c:\users\vikto\desktop\pizza_parlor3004\uifunctions\manager_functions.cpp
+	"manager_functions.h"
+
+1513308091 source:c:\users\vikto\desktop\pizza_parlor3004\uifunctions\order_functions.cpp
+	"order_functions.h"
+	"ValidationFunctions.h"
+
+1513308091 source:c:\users\vikto\desktop\pizza_parlor3004\uifunctions\print_functions.cpp
+	"print_functions.h"
+
+1513339139 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\print_functions.cpp
+	"print_functions.h"
+
+1513342529 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidtopping.cpp
+	"InvalidTopping.h"
+
+1513342529 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidtopping.h
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidtopping.cpp
+	"InvalidTopping.h"
+
+1513353193 c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidtopping.h
+
+1513353193 source:c:\users\vikto\desktop\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\print_functions.cpp
+	"print_functions.h"
+
+1513353193 source:c:\users\vikto\desktop\final\data\locationrepo.cpp
+	"LocationRepo.h"
+
+1513353193 c:\users\vikto\desktop\final\data\locationrepo.h
+	"Location.h"
+	<vector>
+	<fstream>
+
+1513353193 c:\users\vikto\desktop\final\objects\location.h
+	<string.h>
+	<string>
+
+1513353193 source:c:\users\vikto\desktop\final\data\orderrepo.cpp
+	"OrderRepo.h"
+	<cstdlib>
+
+1513353193 c:\users\vikto\desktop\final\data\orderrepo.h
+	"Order.h"
+	<fstream>
+	<string>
+	<vector>
+
+1513353193 c:\users\vikto\desktop\final\objects\order.h
+	"Pizza.h"
+	"PizzaType.h"
+
+1513353193 c:\users\vikto\desktop\final\objects\pizza.h
+	"PizzaStatus.h"
+	"PizzaBottom.h"
+	"Toppings.h"
+	<string.h>
+
+1513353193 c:\users\vikto\desktop\final\datatypes\pizzastatus.h
+
+1513353193 c:\users\vikto\desktop\final\objects\pizzabottom.h
+	"string.h"
+	<iostream>
+
+1513353193 c:\users\vikto\desktop\final\objects\toppings.h
+	<string>
+	<iostream>
+	<cstring>
+
+1513353193 c:\users\vikto\desktop\final\datatypes\pizzatype.h
+
+1513353193 source:c:\users\vikto\desktop\final\data\pizzabottomrepo.cpp
+	"PizzaBottomRepo.h"
+
+1513353193 c:\users\vikto\desktop\final\data\pizzabottomrepo.h
+	"PizzaBottom.h"
+	<fstream>
+	<vector>
+
+1513353193 source:c:\users\vikto\desktop\final\data\pizzarepo.cpp
+	"PizzaRepo.h"
+
+1513353193 c:\users\vikto\desktop\final\data\pizzarepo.h
+	"Pizza.h"
+	<fstream>
+	<vector>
+
+1513353193 source:c:\users\vikto\desktop\final\data\sideorderrepo.cpp
+	"SideOrderRepo.h"
+
+1513353193 c:\users\vikto\desktop\final\data\sideorderrepo.h
+	"SideOrders.h"
+	<vector>
+	<string>
+	<fstream>
+
+1513353193 c:\users\vikto\desktop\final\objects\sideorders.h
+	<cstring>
+	<string>
+	<iostream>
+	"ValidationFunctions.h"
+
+1513353193 c:\users\vikto\desktop\final\logic\validationfunctions.h
+	<strings.h>
+	<iostream>
+	"InvalidNumberException.h"
+	"InvalidAlphaNumException.h"
+	"InvalidDoubleException.h"
+	"InvalidAlphaStringException.h"
+	"InvalidAddresseException.h"
+	"InvalidBoolException.h"
+	"InvalidCharException.h"
+	"InvalidSize.h"
+
+1513353193 c:\users\vikto\desktop\final\exceptions\invalidnumberexception.h
+	<string>
+
+1513353193 c:\users\vikto\desktop\final\exceptions\invalidalphanumexception.h
+	<string>
+
+1513353193 c:\users\vikto\desktop\final\exceptions\invaliddoubleexception.h
+	<string>
+
+1513353193 c:\users\vikto\desktop\final\exceptions\invalidalphastringexception.h
+	<string>
+
+1513353193 c:\users\vikto\desktop\final\exceptions\invalidaddresseexception.h
+	<string>
+
+1513353193 c:\users\vikto\desktop\final\exceptions\invalidboolexception.h
+	<string>
+
+1513353193 c:\users\vikto\desktop\final\exceptions\invalidcharexception.h
+	<string>
+
+1513353193 c:\users\vikto\desktop\final\exceptions\invalidsize.h
+
+1513353193 source:c:\users\vikto\desktop\final\data\toppingsrepo.cpp
+	"ToppingsRepo.h"
+
+1513353193 c:\users\vikto\desktop\final\data\toppingsrepo.h
+	"Toppings.h"
+	<fstream>
+	<vector>
+
+1513353193 source:c:\users\vikto\desktop\final\exceptions\invalidaddresseexception.cpp
+	"InvalidAddresseException.h"
+
+1513353193 source:c:\users\vikto\desktop\final\exceptions\invalidalphanumexception.cpp
+	"InvalidAlphaNumException.h"
+
+1513353193 source:c:\users\vikto\desktop\final\exceptions\invalidalphastringexception.cpp
+	"InvalidAlphaStringException.h"
+
+1513353193 source:c:\users\vikto\desktop\final\exceptions\invalidboolexception.cpp
+	"InvalidBoolException.h"
+	<iostream>
+
+1513353193 source:c:\users\vikto\desktop\final\exceptions\invalidcharexception.cpp
+	"InvalidCharException.h"
+
+1513353193 source:c:\users\vikto\desktop\final\exceptions\invaliddoubleexception.cpp
+	"InvalidDoubleException.h"
+
+1513353193 source:c:\users\vikto\desktop\final\exceptions\invalidinputexception.cpp
+	"InvalidInputException.h"
+
+1513353193 c:\users\vikto\desktop\final\exceptions\invalidinputexception.h
+	<string>
+
+1513353193 source:c:\users\vikto\desktop\final\exceptions\invalidname.cpp
+	"InvalidName.h"
+
+1513353193 c:\users\vikto\desktop\final\exceptions\invalidname.h
+	<string>
+
+1513353193 source:c:\users\vikto\desktop\final\exceptions\invalidnumberexception.cpp
+	"InvalidNumberException.h"
+
+1513353193 source:c:\users\vikto\desktop\final\exceptions\invalidprice.cpp
+	"InvalidPrice.h"
+
+1513353193 c:\users\vikto\desktop\final\exceptions\invalidprice.h
+
+1513353193 source:c:\users\vikto\desktop\final\exceptions\invalidsize.cpp
+	"InvalidSize.h"
+
+1513353193 source:c:\users\vikto\desktop\final\exceptions\invalidtopping.cpp
+	"InvalidTopping.h"
+
+1513353193 c:\users\vikto\desktop\final\exceptions\invalidtopping.h
+
+1513356068 source:c:\users\vikto\desktop\final\logic\locationhandler.cpp
+	"LocationHandler.h"
+	<iostream>
+
+1513353193 c:\users\vikto\desktop\final\logic\locationhandler.h
+	"LocationRepo.h"
+	"InvalidName.h"
+	"InvalidAlphaNumException.h"
+	"InvalidSize.h"
+
+1513356068 source:c:\users\vikto\desktop\final\logic\orderhandler.cpp
+	"OrderHandler.h"
+
+1513353193 c:\users\vikto\desktop\final\logic\orderhandler.h
+	"OrderRepo.h"
+	"PizzaHandler.h"
+	"PizzaStatus.h"
+	"LocationHandler.h"
+	"InvalidTopping.h"
+
+1513353193 c:\users\vikto\desktop\final\logic\pizzahandler.h
+	"ToppingsHandler.h"
+	"PizzaRepo.h"
+	"PizzaBottomHandler.h"
+
+1513353193 c:\users\vikto\desktop\final\logic\toppingshandler.h
+	"ToppingsRepo.h"
+	<string.h>
+	"InvalidName.h"
+	"InvalidSize.h"
+	"InvalidPrice.h"
+
+1513353193 c:\users\vikto\desktop\final\logic\pizzabottomhandler.h
+	"PizzaBottomRepo.h"
+	<string.h>
+	"PizzaBottom.h"
+	"InvalidSize.h"
+	"InvalidPrice.h"
+	"ValidationFunctions.h"
+
+1513356161 source:c:\users\vikto\desktop\final\logic\pizzabottomhandler.cpp
+	"PizzaBottomHandler.h"
+
+1513356161 source:c:\users\vikto\desktop\final\logic\pizzahandler.cpp
+	"PizzaHandler.h"
+
+1513353193 source:c:\users\vikto\desktop\final\logic\sideordershandler.cpp
+	"SideOrdersHandler.h"
+
+1513353193 c:\users\vikto\desktop\final\logic\sideordershandler.h
+	"SideOrderRepo.h"
+	"SideOrders.h"
+	"InvalidName.h"
+	"InvalidPrice.h"
+	"ValidationFunctions.h"
+
+1513356161 source:c:\users\vikto\desktop\final\logic\sorting_function.cpp
+	"sorting_function.h"
+
+1513353193 c:\users\vikto\desktop\final\logic\sorting_function.h
+	"ToppingsRepo.h"
+	"PizzaRepo.h"
+	"OrderRepo.h"
+	<string.h>
+	"InvalidSize.h"
+
+1513353193 source:c:\users\vikto\desktop\final\logic\stdinput.cpp
+	"StdInput.h"
+
+1513353193 c:\users\vikto\desktop\final\logic\stdinput.h
+	<iostream>
+
+1513356201 source:c:\users\vikto\desktop\final\logic\toppingshandler.cpp
+	"ToppingsHandler.h"
+
+1513353193 source:c:\users\vikto\desktop\final\main.cpp
+	<iostream>
+	"LoginUI.h"
+
+1513353193 c:\users\vikto\desktop\final\ui\loginui.h
+	<iostream>
+	<stdlib.h>
+	<vector>
+	"ManagerUI.h"
+	"BakerUI.h"
+	"PhoneClerkUI.h"
+	"StoreClerkUI.h"
+	"CustomerUI.h"
+
+1513353193 c:\users\vikto\desktop\final\ui\managerui.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513353193 c:\users\vikto\desktop\final\ui\uibridge.h
+	"OrderHandler.h"
+	"PizzaHandler.h"
+	"ToppingsHandler.h"
+	"PizzaBottomHandler.h"
+	"LocationHandler.h"
+	"SideOrdersHandler.h"
+	"print_functions.h"
+	"InvalidInputException.h"
+	"order_functions.h"
+	"baker_functions.h"
+
+1513355126 c:\users\vikto\desktop\final\uifunctions\print_functions.h
+	"PizzaStatus.h"
+	"Print.h"
+	<iostream>
+
+1513353193 c:\users\vikto\desktop\final\ui\print.h
+	"sorting_function.h"
+	<iomanip>
+	"print_types.h"
+	"OrderHandler.h"
+
+1513353193 c:\users\vikto\desktop\final\ui\print_types.h
+
+1513355126 c:\users\vikto\desktop\final\uifunctions\order_functions.h
+	"print_functions.h"
+	<stdlib.h>
+	"OrderHandler.h"
+	"Pizza.h"
+	<iomanip>
+	"InvalidCharException.h"
+	"InvalidAlphaStringException.h"
+	"PizzaBottom.h"
+	"PizzaBottomHandler.h"
+	"get_menu_pizza.h"
+
+1513353193 c:\users\vikto\desktop\final\uifunctions\get_menu_pizza.h
+	"Print.h"
+	"PizzaHandler.h"
+	"get_menu_pizza.h"
+	"add_toppings.h"
+	"OrderHandler.h"
+
+1513353193 c:\users\vikto\desktop\final\uifunctions\add_toppings.h
+	"sorting_function.h"
+	<string.h>
+	"ToppingsHandler.h"
+	<vector>
+	"print_functions.h"
+
+1513353193 c:\users\vikto\desktop\final\uifunctions\baker_functions.h
+	"OrderHandler.h"
+	"Pizza.h"
+	"print_functions.h"
+
+1513353193 c:\users\vikto\desktop\final\ui\bakerui.h
+	<iostream>
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513353193 c:\users\vikto\desktop\final\ui\phoneclerkui.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513353193 c:\users\vikto\desktop\final\ui\storeclerkui.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513353193 c:\users\vikto\desktop\final\ui\customerui.h
+	<stdlib.h>
+	<iostream>
+	"UIBridge.h"
+
+1513353193 source:c:\users\vikto\desktop\final\objects\location.cpp
+	"Location.h"
+
+1513353193 source:c:\users\vikto\desktop\final\objects\order.cpp
+	"Order.h"
+
+1513353193 source:c:\users\vikto\desktop\final\objects\pizza.cpp
+	"Pizza.h"
+
+1513353193 source:c:\users\vikto\desktop\final\objects\pizzabottom.cpp
+	"PizzaBottom.h"
+
+1513353193 source:c:\users\vikto\desktop\final\objects\sideorders.cpp
+	"SideOrders.h"
+
+1513353193 source:c:\users\vikto\desktop\final\objects\toppings.cpp
+	"Toppings.h"
+
+1513353193 source:c:\users\vikto\desktop\final\skrt2.cpp
+
+1513353193 source:c:\users\vikto\desktop\final\ui\bakerui.cpp
+	"BakerUI.h"
+
+1513353193 source:c:\users\vikto\desktop\final\ui\customerui.cpp
+	"CustomerUI.h"
+
+1513353193 source:c:\users\vikto\desktop\final\ui\loginui.cpp
+	"LoginUI.h"
+
+1513355155 source:c:\users\vikto\desktop\final\ui\managerui.cpp
+	"ManagerUI.h"
+	"manager_functions.h"
+
+1513353816 c:\users\vikto\desktop\final\uifunctions\manager_functions.h
+	"InvalidAlphaStringException.h"
+	"InvalidNumberException.h"
+	"InvalidBoolException.h"
+	"ValidationFunctions.h"
+	"order_functions.h"
+	"add_toppings.h"
+	"SideOrdersHandler.h"
+
+1513354755 source:c:\users\vikto\desktop\final\ui\phoneclerkui.cpp
+	"PhoneClerkUI.h"
+
+1513356332 source:c:\users\vikto\desktop\final\ui\print.cpp
+	"Print.h"
+
+1513353193 source:c:\users\vikto\desktop\final\ui\storeclerkui.cpp
+	"StoreClerkUI.h"
+	"order_functions.h"
+
+1513353193 source:c:\users\vikto\desktop\final\ui\uibridge.cpp
+	"UIBridge.h"
+	"manager_functions.h"
+	"print_functions.h"
+
+1513356555 source:c:\users\vikto\desktop\final\uifunctions\add_toppings.cpp
+	"add_toppings.h"
+
+1513353193 source:c:\users\vikto\desktop\final\uifunctions\baker_functions.cpp
+	"baker_functions.h"
+
+1513353193 source:c:\users\vikto\desktop\final\uifunctions\get_menu_pizza.cpp
+	"get_menu_pizza.h"
+	"add_toppings.h"
+
+1513355466 source:c:\users\vikto\desktop\final\uifunctions\manager_functions.cpp
+	"manager_functions.h"
+
+1513353193 source:c:\users\vikto\desktop\final\uifunctions\order_functions.cpp
+	"order_functions.h"
+	"ValidationFunctions.h"
+
+1513353193 source:c:\users\vikto\desktop\final\uifunctions\print_functions.cpp
+	"print_functions.h"
+
