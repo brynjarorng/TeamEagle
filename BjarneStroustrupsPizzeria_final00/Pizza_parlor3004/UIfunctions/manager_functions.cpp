@@ -369,43 +369,7 @@ void remove_size(PizzaBottomHandler& bottomhandler) {
     }
 }
 
-void make_new_side_order(SideOrdersHandler& sideorderhandler) {
-    bool cont = 0;
-    string name = " ";
-    string price = " ";
-    clear();
-    cout << "---Create a new side order---" << endl;
-    do{
-        try{
-            cout << "Input the name of new side order: ";
-            cin >> ws;
-            getline(cin, name, '\n');
-            validate_string_input(name);
-            cont = 0;
-        }
-        catch(InvalidAlphaStringException e) {
-            clear();
-            cont = 1;
-            cout << e.get_err() << endl;
-        }
-    } while(cont);
-    do {
-        try{
-            cout << "Input the price of new side order: ";
-            cin >> ws;
-            getline(cin, price, '\n');
-            validate_double(price);
-            cont = 0;
-        }
-        catch(InvalidDoubleException e) {
-            clear();
-            cont = 1;
-            cout << e.get_err() << endl;
-        }
-    } while(cont);
 
-    sideorderhandler.make_side_order(name, price);
-}
 
 void add_location(LocationHandler& lochandler) {
     string name;
