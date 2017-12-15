@@ -2942,7 +2942,7 @@
 	<iostream>
 	"ValidationFunctions.h"
 
-1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\validationfunctions.h
+1513306414 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\validationfunctions.h
 	<strings.h>
 	<iostream>
 	"InvalidNumberException.h"
@@ -3027,14 +3027,15 @@
 1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\exceptions\invalidsize.cpp
 	"InvalidSize.h"
 
-1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\locationhandler.cpp
+1513304613 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\locationhandler.cpp
 	"LocationHandler.h"
 	<iostream>
 
-1513283976 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\locationhandler.h
+1513304473 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\locationhandler.h
 	"LocationRepo.h"
 	"InvalidName.h"
 	"InvalidAlphaNumException.h"
+	"InvalidSize.h"
 
 1513297009 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\logic\orderhandler.cpp
 	"OrderHandler.h"
@@ -3114,7 +3115,7 @@
 	"StoreClerkUI.h"
 	"CustomerUI.h"
 
-1513282129 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\managerui.h
+1513305475 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\managerui.h
 	<stdlib.h>
 	<iostream>
 	"UIBridge.h"
@@ -3224,11 +3225,11 @@
 1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\loginui.cpp
 	"LoginUI.h"
 
-1513298608 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\managerui.cpp
+1513305756 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\managerui.cpp
 	"ManagerUI.h"
 	"manager_functions.h"
 
-1513282881 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\manager_functions.h
+1513305653 c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\manager_functions.h
 	"InvalidAlphaStringException.h"
 	"InvalidNumberException.h"
 	"InvalidBoolException.h"
@@ -3247,8 +3248,9 @@
 	"StoreClerkUI.h"
 	"order_functions.h"
 
-1513283976 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\uibridge.cpp
+1513306096 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\ui\uibridge.cpp
 	"UIBridge.h"
+	"manager_functions.h"
 
 1513284794 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\add_toppings.cpp
 	"add_toppings.h"
@@ -3260,7 +3262,7 @@
 	"get_menu_pizza.h"
 	"add_toppings.h"
 
-1513297979 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\manager_functions.cpp
+1513306180 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\manager_functions.cpp
 	"manager_functions.h"
 
 1513298608 source:c:\users\vikto\desktop\new folder\teameagle\bjarnestroustrupspizzeria_final00\pizza_parlor3004\uifunctions\order_functions.cpp

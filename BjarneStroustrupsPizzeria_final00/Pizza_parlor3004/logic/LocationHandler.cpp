@@ -16,6 +16,7 @@ void LocationHandler::add_location(Location location) {
     }
 
     loc_repo.write(location);
+    locations.push_back(location);
 }
 
 vector<Location> LocationHandler::get_locations() {
@@ -25,7 +26,6 @@ vector<Location> LocationHandler::get_locations() {
 
 bool LocationHandler::validate_location_name(string location) {
     for(unsigned int i = 0; i < location.size(); i++) {
-            cout << location[i];
         if(!isalnum(location[i]) && !isspace(location[0])) {
             return false;
 
@@ -49,5 +49,14 @@ void LocationHandler::got_list() {
         locations = loc_repo.read();
         has_list = true;
     }
+}
+
+void LocationHandler::remove_location(int index) {
+    if(index < 0 || index >= locations.size()) {
+        throw InvalidSize();
+    }
+
+    locations.erase(locations.begin() + index);
+    loc_repo.overwrite(locations);
 }
 

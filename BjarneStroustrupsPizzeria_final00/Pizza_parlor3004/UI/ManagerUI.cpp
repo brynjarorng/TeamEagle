@@ -15,8 +15,7 @@ bool ManagerUI::manager_menu(bool run, bool& continueRun) {
             cout << "(I) Pizza information" << endl;
             cout << "(T) Manage Toppings" << endl;
             cout << "(P) Manage pizza bottom" << endl;
-            cout << "(S) Manage side orders" << endl;
-            cout << "(L) Add new location" << endl;
+            cout << "(L) Manage locations" << endl;
             cout << "(N) Make a new Pizza" << endl;
             cout << "(A) Archive orders" << endl;
 
@@ -58,15 +57,6 @@ bool ManagerUI::manager_menu(bool run, bool& continueRun) {
                 ///To size menu
                 break;
 
-            case 's':
-                run = 0;
-                do{
-                    run = side_order_menu(run, continueRun);
-                } while(continueRun);
-                continueRun = 1;
-                ///To size menu
-                break;
-
             case 'n':
                 run = 0;
                 do{
@@ -78,9 +68,9 @@ bool ManagerUI::manager_menu(bool run, bool& continueRun) {
 
             case 'l':
                 run = 0;
-                print_locations(locationhandler);
-                add_location(locationhandler);
-
+                do{
+                    run = location_menu(run, continueRun);
+                } while(continueRun);
                 continueRun = 1;
                 break;
 
@@ -357,14 +347,14 @@ bool ManagerUI::menu_pizza_menu(bool run, bool& continueRun) {
     }
 }
 
-bool ManagerUI::side_order_menu(bool run, bool& continueRun) {
+bool ManagerUI::location_menu(bool run, bool& continueRun) {
 try {
         clear();
 
-        cout << "----Pizza menu portal----" << endl;
-        cout << "(N) Create a new side order" << endl;
-        cout << "(S) See all side orders" << endl;
-        cout << "(R) Remove side order" << endl;
+        cout << "----Location menu portal----" << endl;
+        cout << "(N) Add new location" << endl;
+        cout << "(S) See all locations" << endl;
+        cout << "(R) Remove location" << endl;
         cout << "(B) Go back" << endl;
         cout << "(Q) Quit" << endl;
         if(run){
@@ -378,17 +368,24 @@ try {
         switch (select) {
         case 'n':
             clear();
-            cout << "Create a new side order" << endl;
-            make_new_side_order(sideorderhandler);
-
+            cout << "Add new location" << endl;
+            add_location(locationhandler);
             continueRun = 1;
+            return 0;
+            break;
+
+        case 's':
+            clear();
+            cout << "See all locations" << endl;
+            print_locations(locationhandler, false);
+            pause_screen();
             return 0;
             break;
 
         case 'r':
             clear();
             cout << "Remove a pizza from menu" << endl;
-
+            remove_locations(locationhandler);
             continueRun = 1;
             return 0;
             break;

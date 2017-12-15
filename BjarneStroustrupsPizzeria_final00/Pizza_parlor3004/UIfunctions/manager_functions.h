@@ -27,7 +27,9 @@ void remove_size(PizzaBottomHandler& bottomhandler);
 
 void add_location(LocationHandler& lochandler);
 
-void print_locations(LocationHandler& lochandler);
+void print_locations(LocationHandler& lochandler, bool numbered);
+
+void remove_locations(LocationHandler& lochandler);
 
 void make_new_side_order(SideOrdersHandler& sideorderhandler);
 

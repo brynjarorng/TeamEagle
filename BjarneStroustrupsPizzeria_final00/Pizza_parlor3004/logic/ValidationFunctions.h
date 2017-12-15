@@ -15,13 +15,14 @@
 using namespace std;
 
 inline void validate_int(string number) {
-    if(number.size() > 9) {
-        throw(InvalidSize());
-    }
+
     for(unsigned int i = 0; i < number.size(); i++) {
         if(!isdigit(number[i])){
             throw(InvalidNumberException());
         }
+    }
+    if(number.size() > 9) {
+        throw(InvalidSize());
     }
 }
 //This function needs a try - catch for InvalidNumberException
@@ -32,7 +33,6 @@ inline void validate_string_input(string input) {
             throw(InvalidAlphaStringException());
         }
     }
-
 }
 //This function needs a try - catch for InvalidStringException
 

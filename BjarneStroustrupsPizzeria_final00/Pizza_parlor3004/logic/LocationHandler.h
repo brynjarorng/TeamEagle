@@ -3,6 +3,7 @@
 #include "LocationRepo.h"
 #include "InvalidName.h"
 #include "InvalidAlphaNumException.h"
+#include "InvalidSize.h"
 
 
 class LocationHandler
@@ -22,6 +23,8 @@ class LocationHandler
         //If a location already has the same name it return false;
         void got_list();
         //If handler has yet to fetch list from repo then gets it, if it has list then does nothing
+        void remove_location(int index);
+        //Removes location with the corresponding index.
     protected:
 
     private:

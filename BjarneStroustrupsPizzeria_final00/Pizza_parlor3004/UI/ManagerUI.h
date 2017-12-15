@@ -21,7 +21,7 @@ class ManagerUI: public UIBridge {
         //Displays the menu for adding and removing pizza sizes
         bool menu_pizza_menu(bool run, bool& continueRun);
         //Displays the menu for adding and removing pizzas from the menu
-        bool side_order_menu(bool run, bool& continueRun);
+        bool location_menu(bool run, bool& continueRun);
         //menu for side orders
         bool archive_menu(bool run, bool& continueRun);
         //menu for archive functions

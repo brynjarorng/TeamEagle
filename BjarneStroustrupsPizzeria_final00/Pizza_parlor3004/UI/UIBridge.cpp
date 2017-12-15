@@ -1,5 +1,5 @@
 #include "UIBridge.h"
-
+#include "manager_functions.h"
 UIBridge::UIBridge()
 {
     //ctor
@@ -12,13 +12,11 @@ void UIBridge::choose_location() {
 
     while(!valid) {
         clear();
-        unsigned int i = 0;
-        for(;i < locations.size(); i++) {
-            cout << "[" << i + 1  << "]\t" << locations.at(i).get_name() << endl;
-        }
+        print_locations(locationhandler, true);
         string inp;
         cout << endl << "Choose a location from the list (number): ";
-        cin >> inp;
+        cin >> ws;
+        getline(cin, inp);
         try{
             validate_int(inp);
             if((unsigned)stoi(inp) > 0 && (unsigned)stoi(inp) <= locations.size()) {

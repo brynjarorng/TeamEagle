@@ -419,20 +419,49 @@ void make_new_side_order(SideOrdersHandler& sideorderhandler) {
 
 void add_location(LocationHandler& lochandler) {
     string name;
-    cout << "Name: " << endl;
-    cin.ignore();
+    cout << "Name: ";
+    cin >> ws;
     getline(cin, name);
     Location location;
     location.set_name(name);
     lochandler.add_location(location);
 }
 
-void print_locations(LocationHandler& lochandler) {
+void print_locations(LocationHandler& lochandler, bool numbered) {
     vector<Location> locations = lochandler.get_locations();
     for(unsigned int i = 0; i < locations.size(); i++) {
-
-        cout << locations.at(i).get_name() << endl;
+        if(numbered){
+            cout << "[" << i + 1 << "]\t";
+        }
+        cout <<  locations.at(i).get_name() << endl;
     }
+}
+
+void remove_locations(LocationHandler& lochandler) {
+    print_locations(lochandler, true);
+
+    string ans;
+    getline(cin, ans);
+    bool cont = true;
+    do{
+        try{
+            cout << "Insert number of location to remove (0 to quit): ";
+            cin >> ws;
+            getline(cin, ans);
+            validate_int(ans);
+            if(stoi(ans) == 0) {
+                break;
+            }
+            lochandler.remove_location(stoi(ans) - 1);
+            cont = false;
+        }
+        catch(InvalidNumberException e) {
+            cout << "Not a number" << endl;
+        }
+        catch(InvalidSize e) {
+            cout << "Location not on list" << endl;
+        }
+    }while(cont);
 }
 
 void archive_orders(OrderHandler& orderhandler) {
