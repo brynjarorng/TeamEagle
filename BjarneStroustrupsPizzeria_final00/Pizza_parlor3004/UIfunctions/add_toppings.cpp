@@ -22,15 +22,23 @@ vector<int> input_to_int(string in) {
     return in_to_int;
 }
 
-bool longer_than_eigth(string in) {
+bool longer_than_eigth(string in, int range) {
 
     string first = "";
     bool exit = false;
+
+
     while (!exit) {
-        if(first_without_whitespace(in, first)) {
+        exit = first_without_whitespace(in, first);
+        if (first.size() > 4 || stoi(first) > range) {
             return true;
         }
+
+        if (in.size() <= 3) {
+            exit = true;
+        }
     }
+
     return false;
 }
 
@@ -396,9 +404,9 @@ bool validate_number(string digits, int range) {
     //if (digits.size() > 8) {
       //  return false;
     //}
-   // if(longer_than_eigth(digits)) {
-     //   return false;
-    //}
+    if(longer_than_eigth(digits, range)) {
+        return false;
+    }
 
     for (int i = 0; i < digits.size(); i++) {
 
