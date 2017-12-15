@@ -46,6 +46,7 @@ public:
     //Returns the current order count list.
     void got_list();
     //If handler has yet to fetch list from repo then gets it, if it has list then does nothing
+    Order get_order_by_number(int order_number);
     void set_location(string location);
     void change_status(int ordernumber, int pizzaindex, PizzaStatus status);
     bool valid_order_nr(int nr);

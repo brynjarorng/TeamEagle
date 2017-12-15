@@ -112,6 +112,17 @@ Order OrderHandler::get_from_orders(int index) {
     got_list();
     return orders.at(index);
 }
+
+Order OrderHandler::get_order_by_number(int order_number) {
+    got_list();
+    for(int i = 0; i < orders.size(); i++) {
+        if(order_number == orders.at(i).get_order_number()) {
+            return orders.at(i);
+        }
+    }
+    throw InvalidSize();
+}
+
 int OrderHandler::get_order_count() {
     got_list();
     return this ->orders.size();

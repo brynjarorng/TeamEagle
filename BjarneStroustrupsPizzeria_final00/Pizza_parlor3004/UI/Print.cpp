@@ -536,7 +536,7 @@ string Print::is_sent(Order& order) {
     if(order.get_sent()) {
         temp = "Deliver to: " + order.get_addresse();
     } else {
-        temp = "Picked up at: local"; ///+ future pickup location
+        temp = "Picked up.";
     }
 
     return temp;

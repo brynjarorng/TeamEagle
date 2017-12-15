@@ -354,8 +354,49 @@ void print_navigation (Print& print, print_item type, char in,  bool loop) {
     }
 }
 
-void mark_paid(OrderHandler& orderhandler) {
+void mark_paid_or_delivered(OrderHandler& orderhandler) {
+    string ord;
+    bool cont = true;
+        do{
+        try {
+            cout << "Enter order number to fetch order (0 to quit): ";
+            cin >> ws;
+            getline(cin, ord);
+            validate_int(ord);
+            if(stoi(ord) == 0) {
+                break;
+            }
+            Order order = orderhandler.get_order_by_number(stoi(ord));
+            print_order(order);
+            string ans;
+            cout << "Enter (p) to mark paid, (d) to mark delivered, (b) to go back: ";
+            cin >> ws;
+            getline(cin, ans);
+            if(ans == "b") {
+                break;
+            }
+            else if(ans == "p") {
+                orderhandler.paid(stoi(ord));
+                cont = false;
+            }
+            else if(ans == "d") {
+                orderhandler.delivered(stoi(ord));
+                cont = false;
+            }
+        }
+        catch(InvalidNumberException e) {
+            cout << "Invalid number" << endl;
+        }
+        catch(InvalidSize e) {
+            cout << "Order not found" << endl;
+        }
 
+    }while(cont);
+
+
+}
+
+void see_order_and_mark(OrderHandler& orderhandler) {
     vector<Order> order_list = orderhandler.get_orders();
     int next = 0;
     string in;
@@ -364,61 +405,80 @@ void mark_paid(OrderHandler& orderhandler) {
     if (order_list.size() > 0) {
 
         while (next < order_list.size()) {
-            if (!order_list[next].get_paid() && !order_list[next].get_delivered()) {
+             order_list = orderhandler.get_orders();
+            if (!order_list[next].get_paid() || !order_list[next].get_delivered()) {
                 clear();
                 print_order(order_list[next]);
-                cout << "(m) to mark paid (n) for next order: ";
-                cin >> in;
+                cout << "(p) to mark paid, (d) to mark delivered, (n) for next order: ";
+                cin >> ws;
+                getline(cin, in);
                 counter++;
-                if (in[0] == 'm') {
+
+                if (in == "p") {
+                    order_nr = order_list[next].get_order_number();
+                    orderhandler.paid(order_nr);
+                }
+                else if(in == "d") {
+                    order_nr = order_list[next].get_order_number();
+                    orderhandler.delivered(order_nr);
+                }
+                else if(in == "b") {
                     break;
                 }
+                else if(in == "n") {
+                    next++;
+                    if(next == order_list.size() - 1) {
+                        next = 0;
+                    }
+
+
+
+                }
+                else {
+                    cout << "Invalid input, try again" << endl;
+                    counter--;
+                    pause_screen();
+                }
+
+
             }
-            next++;
+            else {
+                next++;
+            }
         }
-        order_nr = order_list[next].get_order_number();
-        orderhandler.paid(order_nr);
+
+
     }
 
     if (counter == 0) {
-        cout << "No orders!, input any character to go back ";
+        cout << "BASKSNo orders!, input any character to go back ";
         cin >> in;
     }
+
 }
 
-void mark_delivered(OrderHandler& orderhandler) {
-
-    vector<Order> order_list = orderhandler.get_orders();
-    int next = 0;
-    char in = '\0';
-    int order_nr;
-    int counter = 0;
-    if (order_list.size() > 0) {
-
-        while (next < order_list.size()) {
-            if (!order_list[next].get_delivered()) {
-                clear();
-                print_order(order_list[next]);
-                cout << "(m) to mark delivered (n) for next order: ";
-                cin >> in;
-                counter++;
-                if (in == 'm') {
-                    break;
-                }
+void see_your_order(OrderHandler& orderhandler) {
+    try {
+            string ord;
+            cout << "Enter order number to fetch order (0 to quit): ";
+            cin >> ws;
+            getline(cin, ord);
+            validate_int(ord);
+            if(stoi(ord) == 0) {
+                return;
             }
-            next++;
-        }
-        order_nr = order_list[next].get_order_number();
-        orderhandler.delivered(order_nr);
+            Order order = orderhandler.get_order_by_number(stoi(ord));
+            print_order(order);
     }
-
-    if (counter == 0) {
-        cout << "No orders!, press b to go back";
-        cin >> in;
-
+    catch(InvalidNumberException e) {
+        cout << "Invalid number" << endl;
     }
+    catch(InvalidSize e) {
+        cout << "Order not found" << endl;
+    }
+    pause_screen();
+
 }
-
 void comment(Order& order) {
     clear();
     bool cont = 1;

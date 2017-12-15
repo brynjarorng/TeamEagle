@@ -54,8 +54,8 @@ bool CustomerUI::customer_menu(bool run, bool& continueRun) {
 
         case 'o':
             clear();
-            cout << "See all your order status" << endl;
-            pause_screen();
+            cout << "See your order status" << endl;
+            see_your_order(orderhandler);
 
             continueRun = 1;
             return 0;

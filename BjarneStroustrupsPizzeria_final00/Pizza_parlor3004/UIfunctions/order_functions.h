@@ -12,11 +12,11 @@
 #include "PizzaBottomHandler.h"
 #include "get_menu_pizza.h"
 
-void mark_delivered(OrderHandler& orderhandler);
+void see_order_and_mark(OrderHandler& orderhandler);
 //Lets the user mark an order delivered.
-void mark_paid(OrderHandler& orderhandler);
+void mark_paid_or_delivered(OrderHandler& orderhandler);
 //Lets the user mark an order paid.
-
+void see_your_order(OrderHandler& orderhandler);
 bool new_order(OrderHandler& orderhandler, PizzaHandler& pizzahandler, ToppingsHandler& toppingshandler, PizzaBottomHandler& bottomhandler);
 //Precondition: The user is ready to enter a new order.
 //Postcondition: The user gets a menu where he can create a new order.
@@ -45,8 +45,6 @@ bool add_menu_pizza(Order& order, PizzaHandler& pizzahandler, PizzaBottomHandler
 void add_special_pizza(Order& order,PizzaHandler& pizzahandler, ToppingsHandler& toppingshandler, PizzaBottomHandler& bottomhandler);
 //Pizza with selected toppings is added to the order.
 
-void mark_delivered(OrderHandler& orderhandler);
-//Lets the user mark an order delivered.
 
 void sent_or_picked_up(Order& order);
 //asks if customer wants to get a delivery
