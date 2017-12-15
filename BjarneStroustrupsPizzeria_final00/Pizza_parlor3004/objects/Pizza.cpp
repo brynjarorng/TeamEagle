@@ -45,11 +45,11 @@ void Pizza::append_null() {
 	name[name_count] = '\0';
 }
 void Pizza::set_price(double price) {
-    this->price = price;
+    this->price += price;
 }
 
 void Pizza::set_price(string price) {
-    this->price = stod(price);
+    this->price += stod(price);
 }
 
 void Pizza::add_topping(Toppings topping) {

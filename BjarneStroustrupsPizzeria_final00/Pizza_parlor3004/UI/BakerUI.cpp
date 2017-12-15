@@ -13,6 +13,5 @@ bool BakerUI::baker_menu(bool run, bool& continueRun) {
         print_pizza_baking_list(orderhandler);
         cont = change_status(orderhandler);
     }
-    pause_screen();
     return 0;
 }

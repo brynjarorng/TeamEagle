@@ -64,7 +64,6 @@ bool PhoneClerkUI::phone_menu(bool run, bool& continueRun) {
             print_orders(all, orderhandler);
             cout << "Press (c) to continue: ";
             cin >> in;
-            pause_screen();
             continueRun = 1;
             return 0;
             break;
@@ -72,7 +71,6 @@ bool PhoneClerkUI::phone_menu(bool run, bool& continueRun) {
         case 't':
             clear();
             print_topping_list();
-            pause_screen();
 
             continueRun = 1;
             return 0;

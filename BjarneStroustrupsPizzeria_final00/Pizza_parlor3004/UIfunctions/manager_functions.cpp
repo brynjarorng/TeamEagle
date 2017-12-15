@@ -347,7 +347,7 @@ bool add_pizza_size(PizzaBottomHandler& bottomhandler) {
 }
 
 void remove_size(PizzaBottomHandler& bottomhandler) {
-    bool cont = 0;
+    bool cont = true;
     clear();
     cout << "---Remove a size---" << endl;
     while(true) {
@@ -358,20 +358,25 @@ void remove_size(PizzaBottomHandler& bottomhandler) {
                 cout << "Input the number of the size to remove, 0 to quit: ";
                 cin  >> number;
                 validate_int(number);
-                cont = 0;
+                if(stoi(number) == 0) {
+                    break;
+                }
+                bottomhandler.remove_size_from_list(stoi(number) - 1);
+                cont = false;
             }
             catch(InvalidNumberException e) {
-                cont = 1;
-                cout << e.get_err() << endl;
+                cout << "Not a number" << endl;
+            }
+            catch(InvalidSize e) {
+                cout << "Size not found" << endl;
             }
         } while(cont);
 
         if(stoi(number) == 0) {
             break;
         }
-        bottomhandler.remove_size_from_list(stoi(number) - 1);
+
     }
-    pause_screen();
 }
 
 void make_new_side_order(SideOrdersHandler& sideorderhandler) {

@@ -84,6 +84,7 @@ int PizzaBottomHandler::get_pizza_size_list_size() {
 void PizzaBottomHandler::got_list() {
     if(!has_list) {
         pizza_size_vector = pizza_size_repo.read();
+        has_list = true;
     }
 }
 
@@ -96,6 +97,9 @@ void PizzaBottomHandler::validate_size(string size) throw (InvalidSize){
 }
 
 void PizzaBottomHandler::add_size(string size, string price) {
+    validate_size(size);
+    validate_double(price);
+
     bottom.set_size(stoi(size));
     bottom.set_price(stod(price));
 
@@ -104,6 +108,10 @@ void PizzaBottomHandler::add_size(string size, string price) {
 
 void PizzaBottomHandler::remove_size_from_list(int index) {
     got_list();
+    if(index < 0 || index >= pizza_size_vector.size()) {
+        throw InvalidSize();
+    }
+
     pizza_size_vector.erase(pizza_size_vector.begin() + index);
     pizza_size_repo.overwrite(pizza_size_vector);
 }

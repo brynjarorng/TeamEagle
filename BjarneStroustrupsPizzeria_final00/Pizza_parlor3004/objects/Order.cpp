@@ -62,13 +62,15 @@ void Order::all_pizzas_ready() {
 		}
 	}
 	order_ready == true;
-
 }
-bool Order::ready() {
+
+bool Order::get_ready() {
 
 	all_pizzas_ready();
 	return this ->order_ready;
 }
+
+
 void Order::set_order_number(int number) {
 
 	this ->order_number = number;
@@ -112,19 +114,9 @@ void Order::set_paid() {
     this -> order_paid = true;
 }
 
-void Order::set_ready() {
-    this -> order_ready = true;
-}
 
 bool Order::get_paid() {
     if(this -> order_paid) {
-        return true;
-    }
-    return false;
-}
-
-bool Order::get_ready() {
-    if(this -> order_ready) {
         return true;
     }
     return false;

@@ -117,23 +117,19 @@ void OrderHandler::change_status(int ordernumber, int pizzaindex, PizzaStatus st
     got_list();
     int location_in_order = 0;
     int counter = 0;
+    if(ordernumber <= 0 || pizzaindex < 0 || orders.size() == 0){
+        throw InvalidSize();
+    }
 
     for(unsigned int i = 0; i < orders.size(); i++) {
         if(orders.at(i).get_order_number() == ordernumber) {
+            if(pizzaindex >= orders.at(i).get_order_count()) {
+                throw InvalidSize();
+            }
             orders.at(i).get_pizzas_in_order()[pizzaindex].set_status(status);
             order_repo.overwrite(orders, location);
             location_in_order = i;
         }
-    }
-
-    for(int i = 0; i < orders.at(location_in_order).get_order_count(); i++) {
-        if(orders.at(location_in_order).get_pizzas_in_order()[i].get_status() == "ready") {
-            counter++;
-        }
-    }
-
-    if(counter == orders.at(location_in_order).get_order_count()) {
-        orders.at(location_in_order).set_ready();
     }
 }
 

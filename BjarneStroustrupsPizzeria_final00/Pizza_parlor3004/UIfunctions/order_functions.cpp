@@ -413,6 +413,7 @@ void print_navigation (Print& print, print_item type, char in,  bool loop) {
             try{
                 print_pizza(pizza);
                 cout << "Do you want to add this pizza to the order? (y/n) ";
+                cin >> ws;
                 getline(cin, input, '\n');
                 validate_bool_question(input);
                 cont = 0;
@@ -447,8 +448,8 @@ void print_pizza(Pizza pizza) {
 
     cout << "*" << pizza.get_name() <<endl;
     print_pizzas_toppings(pizza);
-    cout << "Price: " << pizza.get_price() + pizza.get_bottom().get_price() << " ISK" << endl;
-    cout << "Size : " << pizza.get_bottom().get_size() << "\"" << endl;
+    cout << "Price: $" << pizza.get_price() << endl;
+    cout << "Size : $" << pizza.get_bottom().get_size() << "\"" << endl;
 
 }
 
@@ -558,7 +559,7 @@ void print_sizes(PizzaBottomHandler& bottomhandler) {
 
     cout << "See all sizes:" << endl;
     for(unsigned int i = 0; i < size_vector.size(); i++){
-        cout << size_vector[i].get_price() << " ISK, ";
+        cout << "$" << size_vector[i].get_price() << ", ";
         cout << size_vector[i].get_size() << "\"" << endl;
     }
     cout << endl;
@@ -578,7 +579,7 @@ void print_sizes_numbers(PizzaBottomHandler& bottomhandler) {
     cout << "See all sizes:" << endl;
     for(unsigned int i = 0; i < size_vector.size(); i++){
         cout << "[" << i + 1 << "]" << " ";
-        cout << size_vector[i ].get_price() << " ISK, ";
+        cout << "$" << size_vector[i ].get_price() << ", ";
         cout << size_vector[i].get_size() << "\"" << endl;
     }
     cout << endl;
@@ -591,7 +592,7 @@ void print_size_with_numbers(PizzaBottomHandler& bottomhandler) {
 
     for(unsigned int i = 0; i < size_vector.size(); i++) {
         cout << "[" << i + 1 << "]\t";
-        cout << size_vector[i].get_price() << " ISK, ";
+        cout << "$" << size_vector[i].get_price() << ", ";
         cout << size_vector[i].get_size() << "\"" << endl;
     }
 }

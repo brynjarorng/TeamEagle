@@ -138,7 +138,6 @@ bool ManagerUI::info_menu(bool run, bool& continueRun) {
         switch (select) {
         case 't':
             print_topping_list();
-            pause_screen();
             continueRun = 1;
             return 0;
             break;
@@ -151,7 +150,7 @@ bool ManagerUI::info_menu(bool run, bool& continueRun) {
 
         case 's':
             print_sizes(bottomhandler);
-
+            pause_screen();
             continueRun = 1;
             return 0;
             break;
@@ -202,14 +201,12 @@ bool ManagerUI::topping_menu(bool run, bool& continueRun) {
         switch (select) {
         case 'a':
             create_topping(toppingshandler);
-
             continueRun = 1;
             return 0;
             break;
 
         case 's':
             print_topping_list();
-            pause_screen();
             continueRun = 1;
             return 0;
             break;
@@ -261,21 +258,19 @@ bool ManagerUI::size_menu(bool run, bool& continueRun) {
         switch (select) {
         case 'a':
             add_pizza_size(bottomhandler);
-
             continueRun = 1;
             return 0;
             break;
 
         case 'r':
             remove_size(bottomhandler);
-
             continueRun = 1;
             return 0;
             break;
 
         case 's':
             print_sizes(bottomhandler);
-
+            pause_screen();
             continueRun = 1;
             return 0;
             break;

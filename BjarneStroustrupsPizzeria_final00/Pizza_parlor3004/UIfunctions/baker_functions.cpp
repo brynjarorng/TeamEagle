@@ -10,7 +10,7 @@ void pprint_lines (int line_count) {
 void print_pizza_baking_list(OrderHandler& orderhandler) {
     vector<Order> orders = orderhandler.get_orders();
     for (int i = 0; i < orderhandler.get_order_count(); i++) {
-        if (!orders.at(i).ready()) {
+        if (!orders.at(i).get_ready()) {
             cout << "\033[1;31m" << "Order #" << orders.at(i).get_order_number() << "\033[0m\ " << endl;
             print_pizzas_in_order(orders.at(i));
             pprint_lines(10);
@@ -57,17 +57,22 @@ bool change_status(OrderHandler& orderhandler) {
         validate_int(pizza_number);
         cout << "Status: (b for in oven, r for ready) ";
         cin >> status;
-        if(status == "b") {
-            orderhandler.change_status(stoi(order_number), stoi(pizza_number) - 1, baking);
+        try{
+            if(status == "b") {
+                orderhandler.change_status(stoi(order_number), stoi(pizza_number) - 1, baking);
+            }
+            else if(status == "r") {
+                orderhandler.change_status(stoi(order_number), stoi(pizza_number) - 1, ready);
+            }
+            else {
+                cout << "Not a valid status" << endl;
+                pause_screen();
+            }
         }
-        else if(status == "r") {
-            orderhandler.change_status(stoi(order_number), stoi(pizza_number) - 1, ready);
-        }
-        else {
-            cout << "Not a valid status" << endl;
+        catch(InvalidSize e) {
+            cout << "Pizza not found, try again" << endl;
             pause_screen();
         }
-
     }
     catch(InvalidNumberException e) {
         cout << "Not a number" << endl;
