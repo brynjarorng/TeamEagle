@@ -71,7 +71,7 @@ void print_pizza_selection(vector<Pizza>& selection) {
 }
 Pizza get_selected_pizza(int index, sort_by order) {
 
-    Pizza pizza = get_sorted_pizza_at( (index), order );
+    Pizza pizza = get_sorted_pizza_at( (index - 1), order );
     return pizza;
 }
 
